@@ -1,0 +1,13 @@
+registry_id: benchmark_registry
+version: 0.1.0
+description: Benchmark families for toy and foundational comparisons.
+entries:
+  - id: bmk_toy_finite_family_placeholder
+    title: Toy finite benchmark family placeholder
+    benchmark_type: toy
+  - id: bmk_arithmetic_truth_decidability_placeholder
+    title: Arithmetic truth decidability benchmark placeholder
+    benchmark_type: arithmetic
+  - id: bmk_set_theory_invariance_placeholder
+    title: Set theoretic invariance benchmark placeholder
+    benchmark_type: set_theory

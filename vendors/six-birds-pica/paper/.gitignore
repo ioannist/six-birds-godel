@@ -1,0 +1,14 @@
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.pdf
+fig/*.aux
+fig/*.log
+fig/*.fls
+fig/*.fdb_latexmk
+scripts/__pycache__/
+scripts/*.pyc
+!fig/
+!fig/*.pdf

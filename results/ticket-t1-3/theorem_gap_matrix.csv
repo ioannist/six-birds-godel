@@ -1,0 +1,11 @@
+node_id,class,status,owner,gap_type,next_action
+finite_frontier_setup_exists,proved_in_house,closed,lean,none,none
+finite_frontier_enumeration_invariant,proved_in_house,closed,lean,none,none
+closure_iterate_saturates_one_step,proved_in_house,closed,lean,none,none
+frozen_package_no_persistent_growth,proved_in_house,closed,lean,none,none
+persistent_growth_witness_implies_package_change,proved_in_house,closed,lean,none,none
+frontier_object_layer,definitional_formalization_complete,closed,lean,none,none
+arithmetic_canonicality_statement_shape,definitional_formalization_complete,closed,lean,none,none
+restricted_in_house_alignment_lemma,plausible_in_house_proof_target,open,lean,proof_work,select one restricted cone lemma for in-house proof push
+arithmetic_canonical_family_alignment_on_cone,external_theorem_dependency,open,external_literature,dependency,bind exact external theorem package and assumptions
+finite_nondominated_exists,currently_unsupported_or_too_vague,open,in_house,axiom_isolated,keep isolated from arithmetic candidate path

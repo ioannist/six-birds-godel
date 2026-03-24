@@ -1,0 +1,13 @@
+{
+  "figdata_files_found": 65,
+  "ledger_files_found": 8,
+  "primitives_loaded": true,
+  "rust_probe": {
+    "cargo_metadata_attempted": true,
+    "cargo_metadata_ok": true,
+    "detail": "ok",
+    "workspace_detected": true
+  },
+  "vendor_root": "/home/repos/six-birds-godel/vendors/six-birds-pica",
+  "vendor_root_found": true
+}

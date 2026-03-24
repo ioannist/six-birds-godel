@@ -1,0 +1,54 @@
+{
+  "checks_by_status": {
+    "FAIL": [
+      "R7"
+    ],
+    "PARTIAL": [
+      "R2",
+      "R4",
+      "R11"
+    ],
+    "PASS": [
+      "R1",
+      "R3",
+      "R5",
+      "R6",
+      "R8",
+      "R9",
+      "R10",
+      "R12"
+    ],
+    "PENDING": []
+  },
+  "exp_id": "campaign_v3_union",
+  "found_artifacts": {
+    "F3_QA": true,
+    "F4_QA": true,
+    "F6_QA": true,
+    "F7_QA": true,
+    "F7_tau_stats": true,
+    "F8_QA": true,
+    "F8_REV_stats": true,
+    "F8_sigma_stats": true,
+    "T2_QA": true,
+    "T3_QA": true,
+    "T5_QA": true,
+    "run_summary": true,
+    "scan": true
+  },
+  "missing_artifacts": {},
+  "status_by_check": {
+    "R1": "PASS",
+    "R10": "PASS",
+    "R11": "PARTIAL",
+    "R12": "PASS",
+    "R2": "PARTIAL",
+    "R3": "PASS",
+    "R4": "PARTIAL",
+    "R5": "PASS",
+    "R6": "PASS",
+    "R7": "FAIL",
+    "R8": "PASS",
+    "R9": "PASS"
+  }
+}

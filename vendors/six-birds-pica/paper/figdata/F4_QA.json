@@ -1,0 +1,442 @@
+{
+  "n128": {
+    "min_support": 5,
+    "panels": {
+      "F4a": {
+        "_panel_support_proxy": {
+          "all_configs_have_at_least_1_rung": true,
+          "has_any_config_with_at_least_2_rungs": true
+        },
+        "baseline": {
+          "max_n_valid": 10,
+          "median_n_valid": 10.0,
+          "min_n_valid": 4,
+          "overall_missingness_rate": 0.0,
+          "rungs_dropped_support": [
+            64
+          ],
+          "rungs_kept": [
+            2,
+            4,
+            8,
+            16,
+            32
+          ]
+        },
+        "full_action": {
+          "max_n_valid": 10,
+          "median_n_valid": 10.0,
+          "min_n_valid": 0,
+          "overall_missingness_rate": 0.0,
+          "rungs_dropped_support": [
+            64
+          ],
+          "rungs_kept": [
+            2,
+            4,
+            8,
+            16,
+            32
+          ]
+        },
+        "full_all": {
+          "max_n_valid": 10,
+          "median_n_valid": 10.0,
+          "min_n_valid": 0,
+          "overall_missingness_rate": 0.0,
+          "rungs_dropped_support": [
+            64
+          ],
+          "rungs_kept": [
+            2,
+            4,
+            8,
+            16,
+            32
+          ]
+        }
+      },
+      "F4b": {
+        "_panel_support_proxy": {
+          "all_configs_have_at_least_1_rung": true,
+          "has_any_config_with_at_least_2_rungs": true
+        },
+        "baseline": {
+          "max_n_valid": 10,
+          "median_n_valid": 10.0,
+          "min_n_valid": 4,
+          "overall_missingness_rate": 0.0,
+          "rungs_dropped_support": [
+            64
+          ],
+          "rungs_kept": [
+            2,
+            4,
+            8,
+            16,
+            32
+          ]
+        },
+        "full_action": {
+          "max_n_valid": 10,
+          "median_n_valid": 10.0,
+          "min_n_valid": 0,
+          "overall_missingness_rate": 0.0,
+          "rungs_dropped_support": [
+            64
+          ],
+          "rungs_kept": [
+            2,
+            4,
+            8,
+            16,
+            32
+          ]
+        },
+        "full_all": {
+          "max_n_valid": 10,
+          "median_n_valid": 10.0,
+          "min_n_valid": 0,
+          "overall_missingness_rate": 0.0,
+          "rungs_dropped_support": [
+            64
+          ],
+          "rungs_kept": [
+            2,
+            4,
+            8,
+            16,
+            32
+          ]
+        }
+      },
+      "F4c": {
+        "_panel_support_proxy": {
+          "all_configs_have_at_least_1_rung": true,
+          "has_any_config_with_at_least_2_rungs": true
+        },
+        "baseline": {
+          "max_n_valid": 10,
+          "median_n_valid": 10.0,
+          "min_n_valid": 0,
+          "overall_missingness_rate": 0.18518518518518517,
+          "rungs_dropped_support": [
+            2,
+            64
+          ],
+          "rungs_kept": [
+            4,
+            8,
+            16,
+            32
+          ]
+        },
+        "full_action": {
+          "max_n_valid": 10,
+          "median_n_valid": 8.5,
+          "min_n_valid": 0,
+          "overall_missingness_rate": 0.2127659574468085,
+          "rungs_dropped_support": [
+            2,
+            64
+          ],
+          "rungs_kept": [
+            4,
+            8,
+            16,
+            32
+          ]
+        },
+        "full_all": {
+          "max_n_valid": 10,
+          "median_n_valid": 8.5,
+          "min_n_valid": 0,
+          "overall_missingness_rate": 0.2127659574468085,
+          "rungs_dropped_support": [
+            2,
+            64
+          ],
+          "rungs_kept": [
+            4,
+            8,
+            16,
+            32
+          ]
+        }
+      },
+      "F4d": {
+        "_panel_support_proxy": {
+          "all_configs_have_at_least_1_rung": true,
+          "has_any_config_with_at_least_2_rungs": true
+        },
+        "baseline": {
+          "max_n_valid": 10,
+          "median_n_valid": 10.0,
+          "min_n_valid": 0,
+          "overall_missingness_rate": 0.18518518518518517,
+          "rungs_dropped_support": [
+            2,
+            64
+          ],
+          "rungs_kept": [
+            4,
+            8,
+            16,
+            32
+          ]
+        },
+        "full_action": {
+          "max_n_valid": 10,
+          "median_n_valid": 8.5,
+          "min_n_valid": 0,
+          "overall_missingness_rate": 0.2127659574468085,
+          "rungs_dropped_support": [
+            2,
+            64
+          ],
+          "rungs_kept": [
+            4,
+            8,
+            16,
+            32
+          ]
+        },
+        "full_all": {
+          "max_n_valid": 10,
+          "median_n_valid": 8.5,
+          "min_n_valid": 0,
+          "overall_missingness_rate": 0.2127659574468085,
+          "rungs_dropped_support": [
+            2,
+            64
+          ],
+          "rungs_kept": [
+            4,
+            8,
+            16,
+            32
+          ]
+        }
+      }
+    }
+  },
+  "n256": {
+    "min_support": 5,
+    "panels": {
+      "F4a": {
+        "_panel_support_proxy": {
+          "all_configs_have_at_least_1_rung": true,
+          "has_any_config_with_at_least_2_rungs": true
+        },
+        "baseline": {
+          "max_n_valid": 10,
+          "median_n_valid": 10.0,
+          "min_n_valid": 10,
+          "overall_missingness_rate": 0.0,
+          "rungs_dropped_support": [],
+          "rungs_kept": [
+            2,
+            4,
+            8,
+            16,
+            32,
+            64
+          ]
+        },
+        "full_action": {
+          "max_n_valid": 10,
+          "median_n_valid": 10.0,
+          "min_n_valid": 0,
+          "overall_missingness_rate": 0.0,
+          "rungs_dropped_support": [
+            64
+          ],
+          "rungs_kept": [
+            2,
+            4,
+            8,
+            16,
+            32
+          ]
+        },
+        "full_all": {
+          "max_n_valid": 10,
+          "median_n_valid": 10.0,
+          "min_n_valid": 0,
+          "overall_missingness_rate": 0.0,
+          "rungs_dropped_support": [
+            64
+          ],
+          "rungs_kept": [
+            2,
+            4,
+            8,
+            16,
+            32
+          ]
+        }
+      },
+      "F4b": {
+        "_panel_support_proxy": {
+          "all_configs_have_at_least_1_rung": true,
+          "has_any_config_with_at_least_2_rungs": true
+        },
+        "baseline": {
+          "max_n_valid": 10,
+          "median_n_valid": 10.0,
+          "min_n_valid": 10,
+          "overall_missingness_rate": 0.0,
+          "rungs_dropped_support": [],
+          "rungs_kept": [
+            2,
+            4,
+            8,
+            16,
+            32,
+            64
+          ]
+        },
+        "full_action": {
+          "max_n_valid": 10,
+          "median_n_valid": 10.0,
+          "min_n_valid": 0,
+          "overall_missingness_rate": 0.0,
+          "rungs_dropped_support": [
+            64
+          ],
+          "rungs_kept": [
+            2,
+            4,
+            8,
+            16,
+            32
+          ]
+        },
+        "full_all": {
+          "max_n_valid": 10,
+          "median_n_valid": 10.0,
+          "min_n_valid": 0,
+          "overall_missingness_rate": 0.0,
+          "rungs_dropped_support": [
+            64
+          ],
+          "rungs_kept": [
+            2,
+            4,
+            8,
+            16,
+            32
+          ]
+        }
+      },
+      "F4c": {
+        "_panel_support_proxy": {
+          "all_configs_have_at_least_1_rung": true,
+          "has_any_config_with_at_least_2_rungs": true
+        },
+        "baseline": {
+          "max_n_valid": 10,
+          "median_n_valid": 10.0,
+          "min_n_valid": 0,
+          "overall_missingness_rate": 0.16666666666666666,
+          "rungs_dropped_support": [
+            2
+          ],
+          "rungs_kept": [
+            4,
+            8,
+            16,
+            32,
+            64
+          ]
+        },
+        "full_action": {
+          "max_n_valid": 10,
+          "median_n_valid": 10.0,
+          "min_n_valid": 0,
+          "overall_missingness_rate": 0.2,
+          "rungs_dropped_support": [
+            2,
+            64
+          ],
+          "rungs_kept": [
+            4,
+            8,
+            16,
+            32
+          ]
+        },
+        "full_all": {
+          "max_n_valid": 10,
+          "median_n_valid": 9.5,
+          "min_n_valid": 0,
+          "overall_missingness_rate": 0.20408163265306123,
+          "rungs_dropped_support": [
+            2,
+            64
+          ],
+          "rungs_kept": [
+            4,
+            8,
+            16,
+            32
+          ]
+        }
+      },
+      "F4d": {
+        "_panel_support_proxy": {
+          "all_configs_have_at_least_1_rung": true,
+          "has_any_config_with_at_least_2_rungs": true
+        },
+        "baseline": {
+          "max_n_valid": 10,
+          "median_n_valid": 10.0,
+          "min_n_valid": 0,
+          "overall_missingness_rate": 0.16666666666666666,
+          "rungs_dropped_support": [
+            2
+          ],
+          "rungs_kept": [
+            4,
+            8,
+            16,
+            32,
+            64
+          ]
+        },
+        "full_action": {
+          "max_n_valid": 10,
+          "median_n_valid": 10.0,
+          "min_n_valid": 0,
+          "overall_missingness_rate": 0.2,
+          "rungs_dropped_support": [
+            2,
+            64
+          ],
+          "rungs_kept": [
+            4,
+            8,
+            16,
+            32
+          ]
+        },
+        "full_all": {
+          "max_n_valid": 10,
+          "median_n_valid": 9.5,
+          "min_n_valid": 0,
+          "overall_missingness_rate": 0.20408163265306123,
+          "rungs_dropped_support": [
+            2,
+            64
+          ],
+          "rungs_kept": [
+            4,
+            8,
+            16,
+            32
+          ]
+        }
+      }
+    }
+  }
+}

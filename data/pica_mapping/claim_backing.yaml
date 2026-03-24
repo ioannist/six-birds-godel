@@ -1,0 +1,35 @@
+mapping_id: pica_claim_backing
+version: 0.1.0
+vendor_root: vendors/six-birds-pica
+entries:
+  - claim_id: clm_fixed_closure_saturation
+    empirical_backing: toy_only
+    vendor_surfaces:
+      - vendors/six-birds-pica/lab/ledger/closures.jsonl
+      - vendors/six-birds-pica/lab/ledger/results.jsonl
+    note: toy closure behaviors align with finite closure tracking surfaces.
+  - claim_id: clm_strict_growth_requires_change
+    empirical_backing: toy_only
+    vendor_surfaces:
+      - vendors/six-birds-pica/lab/ledger/experiments.jsonl
+      - vendors/six-birds-pica/lab/ledger/closures.jsonl
+    note: toy experiments can test growth under rewrite/extension controls.
+  - claim_id: clm_godel_i_closure_gap
+    empirical_backing: not_empirical
+    vendor_surfaces: []
+    note: logical incompleteness claim is citation/theory level, not empirical.
+  - claim_id: clm_godel_ii_internal_audit_barrier
+    empirical_backing: not_empirical
+    vendor_surfaces: []
+    note: consistency-audit barrier is formal-theory level, not empirical.
+  - claim_id: clm_canonical_efficiency_candidate
+    empirical_backing: vendor_backable
+    vendor_surfaces:
+      - vendors/six-birds-pica/lab/ledger/experiments.jsonl
+      - vendors/six-birds-pica/paper/figdata/T6_robustness.csv
+      - vendors/six-birds-pica/paper/figdata/run_summary_table.csv.gz
+    note: candidate efficiency statements can be stress-tested against vendor runs.
+  - claim_id: clm_set_theoretic_invariance_frontier
+    empirical_backing: not_empirical
+    vendor_surfaces: []
+    note: set-theoretic invariance frontier claim is not empirical in current vendor scope.

@@ -1,0 +1,39 @@
+{
+  "best_singleton_or_surrogate": "surrogate_bounded_lift_le_1",
+  "best_singleton_or_surrogate_instability": 0.656157282550347,
+  "checks": {
+    "equivalence_check": true,
+    "mode_diversity_check": true,
+    "pool_ratio_floor_check": true,
+    "relative_improvement_check": false
+  },
+  "closest_simpler_explanation": "baseline_raw",
+  "equivalence_rates_to_survivor": {
+    "baseline_raw": 0.8973214285714286,
+    "singleton__cell_pkg_gate": 0.8973214285714286,
+    "singleton__cell_pkg_mode_from_acct": 0.8973214285714286,
+    "surrogate_bounded_lift_le_1": 0.8616071428571429,
+    "surrogate_bounded_lift_le_2": 0.8973214285714286,
+    "surrogate_closure_only": 0.14285714285714285
+  },
+  "max_equivalence_rate": 0.8973214285714286,
+  "mean_pool_ratio_vs_baseline": 0.7523196462928576,
+  "mean_raw_instability": 0.7979446550766993,
+  "mode_usage": {
+    "mode_counts": {
+      "balanced": 248,
+      "raw": 180,
+      "strict": 20
+    },
+    "mode_frequencies": {
+      "balanced": 0.5535714285714286,
+      "raw": 0.4017857142857143,
+      "strict": 0.044642857142857144
+    },
+    "total_contexts": 448
+  },
+  "nontriviality_floor_cleared": false,
+  "relative_improvement_vs_best_singleton_or_surrogate": -0.216087478257125,
+  "survivor_id": "pair__cell_pkg_gate__cell_pkg_mode_from_acct",
+  "theorem_ready_slice_found": false
+}

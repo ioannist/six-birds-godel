@@ -1,0 +1,11 @@
+status_id: ticket_t1_4_alignment_status
+lemma_id: restricted_in_house_alignment_lemma
+formalized_in_lean: true
+proved_in_lean: true
+proof_variant: efficiency_transfer_to_cone_equivalent_representative
+depends_on_new_axioms: false
+depends_on_arithmetic_external_theorems: false
+remaining_gap_to_arithmetic_candidate:
+  - canonical-family-on-cone external identification
+  - external consistency/reflection progression bridge assumptions
+boundary_statement: only external canonical-family/cone literature dependency remains

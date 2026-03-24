@@ -1,0 +1,13 @@
+gate_id: theorem_led_paper_mode_gate
+version: 0.1.0
+decision_class: theorem_led_conditional_ready
+rubric:
+  in_house_theorem_ladder_completeness: pass
+  bridge_theorem_completeness: pass
+  conditional_arithmetic_theorem_completeness: pass
+  minimality_clarity_of_external_assumptions: pass
+  alignment_with_vision_md: pass
+  consistency_with_toy_vendor_boundaries: pass
+  dependence_on_unresolved_literature_discharge: conditional_only
+  experimental_side_supporting_not_central: pass
+decision_rationale: internal theorem ladder is complete through a conditional arithmetic lift; remaining gap is explicit external discharge rather than unresolved internal framework work

@@ -1,0 +1,217 @@
+{
+  "competition_configs": {
+    "defined": [
+      "A14_only",
+      "A16_only",
+      "A17_only",
+      "A14_A17",
+      "P4_row"
+    ],
+    "found": [
+      "A14_A17",
+      "A14_only",
+      "A16_only",
+      "A17_only",
+      "P4_row"
+    ],
+    "missing": []
+  },
+  "correction_method": "BH-FDR (per-n over 6 tests)",
+  "correlation": {
+    "128": {
+      "lagr_geo_r2|lagr_diff_kl": {
+        "N_pair": 689,
+        "p_method": "scipy",
+        "scipy_used": true
+      },
+      "pla2_gap|lagr_diff_kl": {
+        "N_pair": 689,
+        "p_method": "scipy",
+        "scipy_used": true
+      },
+      "pla2_gap|lagr_geo_r2": {
+        "N_pair": 689,
+        "p_method": "scipy",
+        "scipy_used": true
+      },
+      "pla2_gap|step_entropy": {
+        "N_pair": 690,
+        "p_method": "scipy",
+        "scipy_used": true
+      },
+      "step_entropy|lagr_diff_kl": {
+        "N_pair": 689,
+        "p_method": "scipy",
+        "scipy_used": true
+      },
+      "step_entropy|lagr_geo_r2": {
+        "N_pair": 689,
+        "p_method": "scipy",
+        "scipy_used": true
+      }
+    },
+    "256": {
+      "lagr_geo_r2|lagr_diff_kl": {
+        "N_pair": 237,
+        "p_method": "scipy",
+        "scipy_used": true
+      },
+      "pla2_gap|lagr_diff_kl": {
+        "N_pair": 237,
+        "p_method": "scipy",
+        "scipy_used": true
+      },
+      "pla2_gap|lagr_geo_r2": {
+        "N_pair": 237,
+        "p_method": "scipy",
+        "scipy_used": true
+      },
+      "pla2_gap|step_entropy": {
+        "N_pair": 237,
+        "p_method": "scipy",
+        "scipy_used": true
+      },
+      "step_entropy|lagr_diff_kl": {
+        "N_pair": 237,
+        "p_method": "scipy",
+        "scipy_used": true
+      },
+      "step_entropy|lagr_geo_r2": {
+        "N_pair": 237,
+        "p_method": "scipy",
+        "scipy_used": true
+      }
+    },
+    "32": {
+      "lagr_geo_r2|lagr_diff_kl": {
+        "N_pair": 543,
+        "p_method": "scipy",
+        "scipy_used": true
+      },
+      "pla2_gap|lagr_diff_kl": {
+        "N_pair": 544,
+        "p_method": "scipy",
+        "scipy_used": true
+      },
+      "pla2_gap|lagr_geo_r2": {
+        "N_pair": 543,
+        "p_method": "scipy",
+        "scipy_used": true
+      },
+      "pla2_gap|step_entropy": {
+        "N_pair": 684,
+        "p_method": "scipy",
+        "scipy_used": true
+      },
+      "step_entropy|lagr_diff_kl": {
+        "N_pair": 544,
+        "p_method": "scipy",
+        "scipy_used": true
+      },
+      "step_entropy|lagr_geo_r2": {
+        "N_pair": 543,
+        "p_method": "scipy",
+        "scipy_used": true
+      }
+    },
+    "64": {
+      "lagr_geo_r2|lagr_diff_kl": {
+        "N_pair": 649,
+        "p_method": "scipy",
+        "scipy_used": true
+      },
+      "pla2_gap|lagr_diff_kl": {
+        "N_pair": 649,
+        "p_method": "scipy",
+        "scipy_used": true
+      },
+      "pla2_gap|lagr_geo_r2": {
+        "N_pair": 649,
+        "p_method": "scipy",
+        "scipy_used": true
+      },
+      "pla2_gap|step_entropy": {
+        "N_pair": 690,
+        "p_method": "scipy",
+        "scipy_used": true
+      },
+      "step_entropy|lagr_diff_kl": {
+        "N_pair": 649,
+        "p_method": "scipy",
+        "scipy_used": true
+      },
+      "step_entropy|lagr_geo_r2": {
+        "N_pair": 649,
+        "p_method": "scipy",
+        "scipy_used": true
+      }
+    }
+  },
+  "counts_per_n": {
+    "128": {
+      "missingness_rate_after_rev_exclusion": {
+        "lagr_diff_kl": 0.0014492753623188406,
+        "lagr_geo_r2": 0.0014492753623188406,
+        "pla2_gap": 0.0,
+        "step_entropy": 0.0
+      },
+      "rows_k4_after_rev_exclusion": 690,
+      "rows_k4_before_rev_exclusion": 690
+    },
+    "256": {
+      "missingness_rate_after_rev_exclusion": {
+        "lagr_diff_kl": 0.0,
+        "lagr_geo_r2": 0.0,
+        "pla2_gap": 0.0,
+        "step_entropy": 0.0
+      },
+      "rows_k4_after_rev_exclusion": 237,
+      "rows_k4_before_rev_exclusion": 237
+    },
+    "32": {
+      "missingness_rate_after_rev_exclusion": {
+        "lagr_diff_kl": 0.2046783625730994,
+        "lagr_geo_r2": 0.20614035087719298,
+        "pla2_gap": 0.0,
+        "step_entropy": 0.0
+      },
+      "rows_k4_after_rev_exclusion": 684,
+      "rows_k4_before_rev_exclusion": 690
+    },
+    "64": {
+      "missingness_rate_after_rev_exclusion": {
+        "lagr_diff_kl": 0.059420289855072465,
+        "lagr_geo_r2": 0.059420289855072465,
+        "pla2_gap": 0.0,
+        "step_entropy": 0.0
+      },
+      "rows_k4_after_rev_exclusion": 690,
+      "rows_k4_before_rev_exclusion": 690
+    }
+  },
+  "exp_id": "campaign_v3_union",
+  "k_rung": 4,
+  "regression": {
+    "128": {
+      "N_competition": 50,
+      "N_noncompetition": 639,
+      "N_total": 689
+    },
+    "256": {
+      "N_competition": 21,
+      "N_noncompetition": 216,
+      "N_total": 237
+    },
+    "32": {
+      "N_competition": 43,
+      "N_noncompetition": 501,
+      "N_total": 544
+    },
+    "64": {
+      "N_competition": 48,
+      "N_noncompetition": 601,
+      "N_total": 649
+    }
+  },
+  "scipy_available": true
+}

@@ -1,0 +1,18 @@
+ticket_id: ticket-w10
+status: pass
+carry_forward_w4_status_present: true
+carry_forward_w5_status_present: true
+carry_forward_w6_status_present: true
+carry_forward_w7_status_present: true
+carry_forward_w8_status_present: true
+carry_forward_w9_status_present: true
+appendices_inserted_correctly: true
+appendices_map_cleanly_to_main_text: true
+new_thesis_level_claims_introduced: false
+theorem_package_and_external_boundary_fully_documented: true
+make_check: pass
+paper_build:
+  status: pass
+  output_pdf: paper/main.pdf
+  notes:
+    - non-blocking overfull box warnings remain in long theorem-name passages

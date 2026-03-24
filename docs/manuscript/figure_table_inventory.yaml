@@ -1,0 +1,18 @@
+inventory_id: figure_table_inventory
+version: 0.1.0
+entries:
+  - id: tbl_theorem_ladder
+    placement: main_text
+    required: true
+  - id: tbl_assumption_discharge
+    placement: main_text
+    required: true
+  - id: tbl_toy_vendor_boundary
+    placement: main_text
+    required: true
+  - id: tbl_vendor_baseline_a14_support
+    placement: appendix
+    required: false
+  - id: tbl_internal_proof_inventory
+    placement: appendix
+    required: true

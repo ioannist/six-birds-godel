@@ -1,0 +1,13 @@
+ticket_id: ticket-w3
+status: pass
+carry_forward_w2_status_present: true
+title_set: "Six Birds for Incompleteness: Fixed Packages, Package Change, and Conditional Arithmetic Lift"
+abstract_inserted: true
+intro_opening_inserted: true
+section_titles_and_labels_normalized: true
+later_sections_left_placeholder_only: true
+six_primitives_visible_early: true
+primitive_asymmetry_stated_clearly: true
+conditional_route_visible_by_page_2: true
+make_check: pass
+paper_build: pass

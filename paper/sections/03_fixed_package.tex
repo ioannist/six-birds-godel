@@ -1,0 +1,69 @@
+\section{Fixed-package saturation and package change}\label{sec:fixed-package}
+
+This section establishes the first two levels of the theorem ladder. The base result is that a genuinely fixed idempotent package saturates after one step. The bridge result is that any genuine persistent strict-growth witness forces package change. The point is to make visible, in mathematical form, the structural distinction that the rest of the paper depends on: self-iteration of a fixed package is not itself a source of persistent growth.
+
+\subsection*{Persistent growth in a fixed package}
+
+Let $\mathrm{pkg}=(X,\operatorname{op})$ be a closure package in the sense of Section~\ref{sec:primitive-roles}. Recall that a point $x\in X$ is a persistent growth witness for $\mathrm{pkg}$ if there exists $n\ge 1$ such that
+\[
+\operatorname{op}^{[n+1]}(x)\neq \operatorname{op}^{[n]}(x).
+\]
+This is the only notion of growth used in the present section. It is intentionally internal to a fixed package: the question is whether repeated application of the same idempotent closure rule can continue to generate genuinely new stages.
+
+\subsection*{One-step saturation}
+
+\begin{proposition}[One-step saturation]\label{prop:one-step-saturation}
+Let \(\mathrm{pkg}=(X,\operatorname{op})\) be a closure package. Then for every \(x\in X\) and every \(n\in \mathbb{N}\),
+\[
+\operatorname{op}^{[n+1]}(x)=\operatorname{op}(x).
+\]
+Equivalently, once the fixed package has acted once, further self-iteration does not move the result any farther.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+The argument is a direct induction on \(n\). The base case is exactly the idempotence of \(\operatorname{op}\). For the induction step, one rewrites
+\[
+\operatorname{op}^{[n+2]}(x)=\operatorname{op}\bigl(\operatorname{op}^{[n+1]}(x)\bigr)
+\]
+and then substitutes the induction hypothesis to obtain
+\[
+\operatorname{op}\bigl(\operatorname{op}(x)\bigr)=\operatorname{op}(x).
+\]
+In Lean this is the theorem \lid{closure\_iterate\_saturates\_one\_step}.
+\end{proof}
+
+The structural content of Proposition~\ref{prop:one-step-saturation} is simple but decisive. A fixed \(P5\) object may still be iterated syntactically, but those iterates do not form a ladder of persistent strict growth once idempotence has been imposed. The next theorem turns this observation into an explicit no-growth statement.
+
+\begin{theorem}[No persistent growth in a frozen package]\label{thm:no-persistent-growth}
+Let \(\mathrm{pkg}=(X,\operatorname{op})\) be a closure package and let \(x\in X\). Then \(x\) is not a persistent growth witness for \(\mathrm{pkg}\).
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+If \(x\) were a persistent growth witness, there would exist \(n\ge 1\) such that
+\[
+\operatorname{op}^{[n+1]}(x)\neq \operatorname{op}^{[n]}(x).
+\]
+But Proposition~\ref{prop:one-step-saturation} gives
+\[
+\operatorname{op}^{[n+1]}(x)=\operatorname{op}(x)=\operatorname{op}^{[n]}(x),
+\]
+a contradiction. In Lean this is formalized as \lid{frozen\_package\_no\_persistent\_growth}.
+\end{proof}
+
+\subsection*{Package change as necessity}
+
+Theorem~\ref{thm:no-persistent-growth} is negative: a fixed package cannot itself sustain persistent growth. The bridge theorem turns that negative fact into a positive structural principle. If a genuine persistent growth witness is present, then one is no longer in the regime of a single fixed package. Something about the package has changed.
+
+\begin{theorem}[Strict growth requires package change]\label{thm:package-change-necessity}
+Suppose a persistent growth witness is claimed for what is being treated as a single fixed closure package. Then the fixed-package description fails. Equivalently, any genuine persistent strict-growth witness forces package change.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Assume a persistent growth witness exists while the package is still being treated as fixed. By Theorem~\ref{thm:no-persistent-growth}, no such witness can occur under a genuinely fixed idempotent package. Hence the assumption that the same package remained fixed must fail. The proof is therefore by contradiction against the no-growth theorem rather than by a constructive description of the new package. In Lean this structural implication is recorded by \lid{persistent\_growth\_witness\_implies\_package\_change}, with the closely aligned bridge surface \lid{bridge\_candidate\_holds\_in\_frozen\_idempotent\_setting}.
+\end{proof}
+
+\subsection*{Interpretation}
+
+Theorems~\ref{thm:no-persistent-growth} and \ref{thm:package-change-necessity} fix the first decisive boundary of the paper. Persistent strict growth cannot be attributed to repeated self-application of a fixed idempotent package. Once such growth is genuinely present, explanatory responsibility shifts away from \(P5\) alone and toward package-change mechanisms, that is, toward the \(P1/P2\) side of the primitive assignment.
+
+This section therefore does not yet identify which package change has occurred, nor does it rank package changes against one another. It only rules out a tempting but incorrect description of growth as mere self-iteration of one frozen closure package. The next section adds the comparative layer needed to discuss package changes under a fixed ledger: frozen slices, support cones, dominance, efficiency, and restricted representative alignment.

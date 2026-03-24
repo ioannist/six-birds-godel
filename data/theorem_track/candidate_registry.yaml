@@ -1,0 +1,63 @@
+registry_id: theorem_track_candidate_registry
+version: 0.2.0
+vision_target:
+  target_id: thm_target_canonical_efficiency
+  source: vision.md
+  target_label: Canonical efficiency theorem for extension operators
+  target_shape: frontier-efficient extension operators collapse to consistency/reflection progression class
+entries:
+  - id: thm_finite_frontier_setup
+    label: Finite frontier setup theorem
+    theorem_tier: base
+    hypothesis_bundle:
+      - finite non-empty candidate set
+      - deterministic scalar yield/cost fields
+      - fixed dominance convention
+    conclusion_shape: base existence of candidate element and permutation invariance of nondominated predicate
+    support_modes:
+      - lean
+      - toy_boundary
+    known_counterexample_boundary: does not imply canonicality or robustness under benchmark/cost perturbation
+    viability_status: backup
+  - id: thm_closure_saturation_operator_change
+    label: Closure saturation implies operator/theory change for strict growth
+    theorem_tier: bridge
+    hypothesis_bundle:
+      - fixed closure operator package with monotone inflationary idempotent behavior
+      - fixed benchmark and cost definitions
+      - strict growth interpreted as additional decided/stable benchmark mass
+    conclusion_shape: if strict growth occurs then operator/theory package must change; fixed package saturates
+    support_modes:
+      - lean
+      - citation
+      - toy_boundary
+      - vendor_relevance
+    known_counterexample_boundary: does not classify global canonical operator family across varying audit conventions
+    viability_status: lead
+  - id: thm_frozen_slice_representative_canonicality
+    label: Frozen-slice representative canonicality
+    theorem_tier: bridge
+    hypothesis_bundle:
+      - fixed operator family
+      - fixed benchmark profile
+      - fixed cost function
+      - fixed tie policy and quotient convention
+    conclusion_shape: frontier has representative in narrow normal-form class up to frozen quotient rule
+    support_modes:
+      - lean
+      - toy_boundary
+    known_counterexample_boundary: fails once benchmark/cost/tie/quotient axes are externalized
+    viability_status: backup
+  - id: thm_global_canonical_efficiency
+    label: Global canonical efficiency collapse
+    theorem_tier: overreach
+    hypothesis_bundle:
+      - broad monotone extension operators
+      - broad benchmark and cost perturbations
+      - cross-scale robustness
+    conclusion_shape: frontier-efficient operators collapse globally to consistency/reflection progression class
+    support_modes:
+      - citation
+      - vendor_relevance
+    known_counterexample_boundary: conflicts with toy falsification and current hybrid-only vendor status
+    viability_status: discard

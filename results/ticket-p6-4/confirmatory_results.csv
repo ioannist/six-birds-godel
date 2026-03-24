@@ -1,0 +1,12 @@
+config,scale,canonical_primary_metric_name,primary_metric_mean,delta_vs_baseline_frob_from_rank1,delta_vs_A13_A14_frob_from_rank1,delta_vs_A14_A19_frob_from_rank1,delta_vs_full_action_frob_from_rank1,delta_vs_full_all_frob_from_rank1,seed_coverage_observed,seed_coverage_required,anchor_k4_coverage_ratio,run_status_flags
+A13_A14,64,delta_vs_baseline_frob_from_rank1,0.93045964,-0.1112329,0.0,-0.25615912,-0.36619396,0.02035675,4,10,1.0,incomplete_primary_seed_coverage
+A14_A19,64,delta_vs_baseline_frob_from_rank1,1.18661877,0.14492623,0.25615912,0.0,-0.11003483,0.27651587,4,10,0.75,incomplete_primary_seed_coverage|anchor_k4_missing
+A14_only,64,delta_vs_baseline_frob_from_rank1,1.06900134,0.0273088,0.13854169,-0.11761743,-0.22765226,0.15889844,4,10,1.0,incomplete_primary_seed_coverage
+baseline,64,delta_vs_baseline_frob_from_rank1,1.04169254,0.0,0.1112329,-0.14492623,-0.25496106,0.13158964,4,10,1.0,incomplete_primary_seed_coverage
+full_action,64,delta_vs_baseline_frob_from_rank1,1.2966536,0.25496106,0.36619396,0.11003483,0.0,0.3865507,4,10,0.75,incomplete_primary_seed_coverage|anchor_k4_missing
+full_all,64,delta_vs_baseline_frob_from_rank1,0.9101029,-0.13158964,-0.02035675,-0.27651587,-0.3865507,0.0,4,10,0.75,incomplete_primary_seed_coverage|anchor_k4_missing
+A13_A14,128,delta_vs_baseline_frob_from_rank1,1.13880739,0.11248936,0.0,0.14553129,0.14047049,,2,10,1.0,incomplete_primary_seed_coverage
+A14_A19,128,delta_vs_baseline_frob_from_rank1,0.9932761,-0.03304193,-0.14553129,0.0,-0.0050608,,2,10,0.0,incomplete_primary_seed_coverage|anchor_k4_missing
+A14_only,128,delta_vs_baseline_frob_from_rank1,1.1854566,0.15913857,0.0466492,0.19218049,0.18711969,,2,10,1.0,incomplete_primary_seed_coverage
+baseline,128,delta_vs_baseline_frob_from_rank1,1.02631803,0.0,-0.11248936,0.03304193,0.02798112,,2,10,1.0,incomplete_primary_seed_coverage
+full_action,128,delta_vs_baseline_frob_from_rank1,0.99833691,-0.02798112,-0.14047049,0.0050608,0.0,,2,10,1.0,incomplete_primary_seed_coverage

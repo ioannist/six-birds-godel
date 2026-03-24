@@ -1,0 +1,18 @@
+{
+  "exclude_dirs": [
+    ".git",
+    ".lake",
+    ".venv",
+    "venv",
+    "knowledge-base",
+    "__pycache__",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".ipynb_checkpoints",
+    "build",
+    "dist",
+    "tmp",
+    "target"
+  ]
+}

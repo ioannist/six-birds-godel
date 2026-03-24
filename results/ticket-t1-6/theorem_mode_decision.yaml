@@ -1,0 +1,6 @@
+decision_id: theorem_mode_decision
+selected_decision_class: theorem_led_conditional_ready
+supports_theorem_led_mode: true
+frozen_claim_level: conditional
+one_last_narrowing_needed: false
+rationale: current route is strong enough for theorem-led conditional paper mode because the internal ladder and conditional lift are complete and the remaining external boundary is explicit and minimal

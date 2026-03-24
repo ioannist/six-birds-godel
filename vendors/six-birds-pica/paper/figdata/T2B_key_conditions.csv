@@ -1,0 +1,6 @@
+config_name,short_label,E_enabled_count,enabled_cells,lens_selector,packaging_selector,p3_p3_tau_cap,tau_median_all,active_tau_defined_rate_all,p2_p6_sbrc_strength,p6_p6_dpi_cap_scale,p6_p4_ep_boost,p3_p6_mixer_strength,p3_p6_frob_scale,rm_refresh_interval,partition_interval,packaging_interval,l1_audit_interval,p6_refresh_interval
+empty,Null,0,,MinRM,MinRM,10000,1.0,0.0,5.0,0.1,2.0,2.0,1.5,100,100,100,200,100
+baseline,Baseline,2,P2<-P4;P4<-P4,MinRM,MinRM,10000,2.0,0.0,5.0,0.1,2.0,2.0,1.5,100,100,100,200,100
+full_action,Full-Action,24,P1<-P1;P1<-P2;P1<-P3;P1<-P4;P1<-P5;P1<-P6;P2<-P1;P2<-P2;P2<-P3;P2<-P4;P2<-P5;P2<-P6;P3<-P3;P3<-P4;P3<-P5;P3<-P6;P4<-P3;P4<-P4;P4<-P6;P5<-P3;P5<-P4;P5<-P6;P6<-P4;P6<-P6,MinRM,MinRM,10000,9.0,1.0,5.0,0.1,2.0,2.0,1.5,100,100,100,200,100
+full_all,Full-All,25,P1<-P1;P1<-P2;P1<-P3;P1<-P4;P1<-P5;P1<-P6;P2<-P1;P2<-P2;P2<-P3;P2<-P4;P2<-P5;P2<-P6;P3<-P3;P3<-P4;P3<-P5;P3<-P6;P4<-P3;P4<-P4;P4<-P5;P4<-P6;P5<-P3;P5<-P4;P5<-P6;P6<-P4;P6<-P6,MinRM,MinRM,10000,8.0,1.0,5.0,0.1,2.0,2.0,1.5,100,100,100,200,100
+gen6_core_A12_A25,Gen6-core,8,P2<-P4;P2<-P6;P3<-P3;P3<-P4;P3<-P6;P4<-P3;P4<-P4;P6<-P6,MinRM,MinRM,10000,10.0,1.0,5.0,0.1,2.0,2.0,1.5,100,100,100,200,100

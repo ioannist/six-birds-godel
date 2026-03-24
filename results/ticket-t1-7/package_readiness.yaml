@@ -1,0 +1,7 @@
+status_id: theorem_package_readiness
+frozen: true
+citation_linked: true
+lean_linked: true
+ready_for_paper_drafting: true
+stable_main_theorem_name: paper_main_conditional_arithmetic_frontier_canonicality
+hidden_assumptions_present: false

@@ -1,0 +1,128 @@
+\begin{thebibliography}{10}
+
+\bibitem{Anderson1972}
+P.~W. Anderson.
+\newblock More is different.
+\newblock {\em Science}, 177(4047):393--396, 1972.
+
+\bibitem{WilsonKogut1974}
+Kenneth~G. Wilson and John Kogut.
+\newblock The renormalization group and the {$\epsilon$} expansion.
+\newblock {\em Physics Reports}, 12(2):75--199, 1974.
+
+\bibitem{Zwanzig1960}
+Robert Zwanzig.
+\newblock Ensemble method in the theory of irreversibility.
+\newblock {\em The Journal of Chemical Physics}, 33(5):1338--1341, 1960.
+
+\bibitem{LebowitzSpohn1999}
+Joel~L. Lebowitz and Herbert Spohn.
+\newblock A {Gallavotti}--{Cohen}-type symmetry in the large deviation
+  functional for stochastic dynamics.
+\newblock {\em Journal of Statistical Physics}, 95(1-2):333--366, 1999.
+
+\bibitem{Crooks1999}
+Gavin~E. Crooks.
+\newblock Entropy production fluctuation theorem and the nonequilibrium work
+  relation for free energy differences.
+\newblock {\em Physical Review E}, 60(3):2721--2726, 1999.
+
+\bibitem{Seifert2012}
+Udo Seifert.
+\newblock Stochastic thermodynamics, fluctuation theorems and molecular
+  machines.
+\newblock {\em Reports on Progress in Physics}, 75(12):126001, 2012.
+
+\bibitem{EspositoVanDenBroeck2010}
+Massimiliano Esposito and Christian {Van den Broeck}.
+\newblock Three faces of the second law. {I}. {M}aster equation formulation.
+\newblock {\em Physical Review E}, 82(1):011143, 2010.
+
+\bibitem{Schnakenberg1976}
+J.~Schnakenberg.
+\newblock Network theory of microscopic and macroscopic behavior of master
+  equation systems.
+\newblock {\em Reviews of Modern Physics}, 48(4):571--585, 1976.
+
+\bibitem{Esposito2012CoarseGraining}
+Massimiliano Esposito.
+\newblock Stochastic thermodynamics under coarse graining.
+\newblock {\em Physical Review E}, 85(4):041125, 2012.
+
+\bibitem{KawaguchiNakayama2013}
+Kyogo Kawaguchi and Yohei Nakayama.
+\newblock Fluctuation theorem for hidden entropy production.
+\newblock {\em Physical Review E}, 88(2):022147, 2013.
+
+\bibitem{Prinz2011}
+Jan-Hendrik Prinz, Hao Wu, Marco Sarich, Bettina Keller, Martin Senne, Martin
+  Held, John~D. Chodera, Christof Sch{\"u}tte, and Frank No{\'e}.
+\newblock Markov models of molecular kinetics: Generation and validation.
+\newblock {\em The Journal of Chemical Physics}, 134(17):174105, 2011.
+
+\bibitem{SarichNoeSchuette2010}
+Marco Sarich, Frank No{\'e}, and Christof Sch{\"u}tte.
+\newblock On the approximation quality of markov state models.
+\newblock {\em Multiscale Modeling \& Simulation}, 8(4):1154--1177, 2010.
+
+\bibitem{NoeNuske2013}
+Frank No{\'e} and Feliks N{\"u}ske.
+\newblock A variational approach to modeling slow processes in stochastic
+  dynamical systems.
+\newblock {\em Multiscale Modeling \& Simulation}, 11(2):635--655, 2013.
+
+\bibitem{DeuflhardWeber2005}
+Peter Deuflhard and Marcus Weber.
+\newblock Robust perron cluster analysis in conformation dynamics.
+\newblock {\em Linear Algebra and its Applications}, 398:161--184, 2005.
+
+\bibitem{VonLuxburg2007}
+Ulrike {von Luxburg}.
+\newblock A tutorial on spectral clustering.
+\newblock {\em Statistics and Computing}, 17(4):395--416, 2007.
+
+\bibitem{CoifmanLafon2006}
+Ronald~R. Coifman and St{\'e}phane Lafon.
+\newblock Diffusion maps.
+\newblock {\em Applied and Computational Harmonic Analysis}, 21(1):5--30, 2006.
+
+\bibitem{KemenySnell1976}
+John~G. Kemeny and J.~Laurie Snell.
+\newblock {\em Finite {Markov} Chains}.
+\newblock Undergraduate Texts in Mathematics. Springer, 1976.
+
+\bibitem{Buchholz1994}
+Peter Buchholz.
+\newblock Exact and ordinary lumpability in finite markov chains.
+\newblock {\em Journal of Applied Probability}, 31(1):59--75, 1994.
+
+\bibitem{Tsiokos2026SixBirds}
+Ioannis Tsiokos.
+\newblock Six birds: Foundations of emergence calculus, 2026.
+\newblock arXiv:2602.00134 [cs.LO].
+  \url{https://doi.org/10.48550/arXiv.2602.00134}.
+
+\bibitem{Tsiokos2026MinSubstrate}
+Ioannis Tsiokos.
+\newblock To lay a stone with six birds: Finite-state semantics for packaging,
+  directionality, and coarse-graining, 2026.
+\newblock Preprints, 2026021699.
+  \url{https://doi.org/10.20944/preprints202602.1699.v1}.
+
+\bibitem{OnsagerMachlup1953}
+Lars Onsager and Stuart Machlup.
+\newblock Fluctuations and irreversible processes.
+\newblock {\em Physical Review}, 91(6):1505--1511, 1953.
+
+\bibitem{PresseEtAl2013}
+Steve Press{\'e}, Kingshuk Ghosh, Julian Lee, and Ken~A. Dill.
+\newblock Principles of maximum entropy and maximum caliber in statistical
+  physics.
+\newblock {\em Reviews of Modern Physics}, 85(3):1115--1141, 2013.
+
+\bibitem{Tsiokos2026Life}
+Ioannis Tsiokos.
+\newblock To wake a stone with six birds: A life is a theory, 2026.
+\newblock Zenodo. \url{https://doi.org/10.5281/zenodo.18420406}.
+
+\end{thebibliography}

@@ -1,0 +1,19 @@
+schema_id: transformation_registry_schema
+registry_id: transformation_registry
+id_prefix: trn_
+required_top_level_fields:
+  - registry_id
+  - version
+  - entries
+required_entry_fields:
+  - id
+  - title
+  - transform_type
+controlled_vocabularies:
+  transform_type:
+    - closure_iteration
+    - theory_extension
+    - consistency_extension
+    - reflection_extension
+    - forcing_extension_placeholder
+    - operator_rewrite

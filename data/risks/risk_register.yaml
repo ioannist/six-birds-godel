@@ -1,0 +1,24 @@
+registry_id: risk_register
+version: 0.1.0
+description: Project risks relevant to theorem claims and benchmarking choices.
+entries:
+  - id: rsk_theorem_overclaim_canonical_efficiency
+    title: Theorem overclaim risk for canonical efficiency theorem
+    status: open
+    level: high
+  - id: rsk_benchmark_dependence
+    title: Benchmark dependence risk
+    status: monitor
+    level: medium
+  - id: rsk_cost_choice_sensitivity
+    title: Cost choice sensitivity risk
+    status: open
+    level: high
+  - id: rsk_forcing_proxy_conflation
+    title: Forcing proxy conflation risk
+    status: monitor
+    level: medium
+  - id: rsk_framework_vagueness
+    title: Framework vagueness risk
+    status: open
+    level: high

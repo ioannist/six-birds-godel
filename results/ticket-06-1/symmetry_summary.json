@@ -1,0 +1,34 @@
+{
+  "boolean_models": {
+    "B1": {
+      "operator_count": 2,
+      "symmetry_class_count": 2
+    },
+    "B2": {
+      "operator_count": 9,
+      "symmetry_class_count": 6
+    },
+    "B3": {
+      "operator_count": 216,
+      "symmetry_class_count": 50
+    }
+  },
+  "by_slice": {
+    "all_monotone_inflationary": {
+      "max_frontier_symmetry_classes": 8.0,
+      "mean_frontier_symmetry_classes": 4.666666666666667
+    },
+    "bounded_lift_le_1": {
+      "max_frontier_symmetry_classes": 8.0,
+      "mean_frontier_symmetry_classes": 4.666666666666667
+    },
+    "bounded_lift_le_2": {
+      "max_frontier_symmetry_classes": 8.0,
+      "mean_frontier_symmetry_classes": 4.666666666666667
+    },
+    "closure_only": {
+      "max_frontier_symmetry_classes": 11.0,
+      "mean_frontier_symmetry_classes": 4.916666666666667
+    }
+  }
+}

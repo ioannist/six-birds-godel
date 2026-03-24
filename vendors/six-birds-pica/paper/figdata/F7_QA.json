@@ -1,0 +1,85 @@
+{
+  "active_tau_annotation": {
+    "128": {
+      "baseline": "0/10",
+      "empty": "0/10",
+      "full_action": "10/10",
+      "full_all": "10/10"
+    },
+    "256": {
+      "baseline": "0/10",
+      "empty": "0/10",
+      "full_action": "10/10",
+      "full_all": "10/10"
+    },
+    "32": {
+      "baseline": "0/10",
+      "empty": "0/10",
+      "full_action": "10/10",
+      "full_all": "10/10"
+    },
+    "64": {
+      "baseline": "0/10",
+      "empty": "0/10",
+      "full_action": "10/10",
+      "full_all": "10/10"
+    }
+  },
+  "dataset_id": "campaign_v3_union",
+  "group_counts": {
+    "128": {
+      "baseline": 10,
+      "empty": 10,
+      "full_action": 10,
+      "full_all": 10
+    },
+    "256": {
+      "baseline": 10,
+      "empty": 10,
+      "full_action": 10,
+      "full_all": 10
+    },
+    "32": {
+      "baseline": 10,
+      "empty": 10,
+      "full_action": 10,
+      "full_all": 10
+    },
+    "64": {
+      "baseline": 10,
+      "empty": 10,
+      "full_action": 10,
+      "full_all": 10
+    }
+  },
+  "key_configs": [
+    "empty",
+    "baseline",
+    "full_action",
+    "full_all"
+  ],
+  "key_configs_present": {
+    "128": {
+      "all_present": true,
+      "missing": []
+    },
+    "256": {
+      "all_present": true,
+      "missing": []
+    },
+    "32": {
+      "all_present": true,
+      "missing": []
+    },
+    "64": {
+      "all_present": true,
+      "missing": []
+    }
+  },
+  "n_values": [
+    32,
+    64,
+    128,
+    256
+  ]
+}

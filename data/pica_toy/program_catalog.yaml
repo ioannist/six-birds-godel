@@ -1,0 +1,84 @@
+catalog_id: pica_toy_program_catalog
+version: 0.1.0
+entries:
+  - id: baseline_raw
+    description: raw operator-first baseline with no interaction cells
+    active_cells: []
+  - id: packaging_core
+    description: packaging-centric interaction profile
+    active_cells:
+      - cell_pkg_mode_from_acct
+      - cell_pkg_rewrite
+      - cell_pkg_gate
+  - id: accounting_core
+    description: accounting-centric interaction profile
+    active_cells:
+      - cell_acct_gate
+      - cell_acct_tie_protocol
+      - cell_pkg_mode_from_acct
+  - id: lens_protocol_core
+    description: protocol and lens interaction profile
+    active_cells:
+      - cell_lens_protocol
+      - cell_acct_tie_protocol
+  - id: combined_core
+    description: all required cells active
+    active_cells:
+      - cell_pkg_rewrite
+      - cell_pkg_gate
+      - cell_acct_gate
+      - cell_lens_protocol
+      - cell_acct_tie_protocol
+      - cell_pkg_mode_from_acct
+  - id: combined_minus_pkg_rewrite
+    description: leave-one-out ablation of combined_core
+    active_cells:
+      - cell_pkg_gate
+      - cell_acct_gate
+      - cell_lens_protocol
+      - cell_acct_tie_protocol
+      - cell_pkg_mode_from_acct
+  - id: combined_minus_pkg_gate
+    description: leave-one-out ablation of combined_core
+    active_cells:
+      - cell_pkg_rewrite
+      - cell_acct_gate
+      - cell_lens_protocol
+      - cell_acct_tie_protocol
+      - cell_pkg_mode_from_acct
+  - id: combined_minus_acct_gate
+    description: leave-one-out ablation of combined_core
+    active_cells:
+      - cell_pkg_rewrite
+      - cell_pkg_gate
+      - cell_lens_protocol
+      - cell_acct_tie_protocol
+      - cell_pkg_mode_from_acct
+  - id: combined_minus_lens_protocol
+    description: leave-one-out ablation of combined_core
+    active_cells:
+      - cell_pkg_rewrite
+      - cell_pkg_gate
+      - cell_acct_gate
+      - cell_acct_tie_protocol
+      - cell_pkg_mode_from_acct
+  - id: combined_minus_acct_tie_protocol
+    description: leave-one-out ablation of combined_core
+    active_cells:
+      - cell_pkg_rewrite
+      - cell_pkg_gate
+      - cell_acct_gate
+      - cell_lens_protocol
+      - cell_pkg_mode_from_acct
+  - id: combined_minus_pkg_mode_from_acct
+    description: leave-one-out ablation of combined_core
+    active_cells:
+      - cell_pkg_rewrite
+      - cell_pkg_gate
+      - cell_acct_gate
+      - cell_lens_protocol
+      - cell_acct_tie_protocol
+  - id: chain_step_fallback
+    description: chain-only fallback restricted to step-family
+    active_cells:
+      - cell_acct_tie_protocol

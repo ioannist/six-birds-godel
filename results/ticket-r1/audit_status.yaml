@@ -1,0 +1,7 @@
+ticket: ticket-r1
+status: pass
+make_check: pass
+biggest_math_surfacing_gap: body definitions and theorem statements remain mostly prose-only rather than displayed mathematical objects and theorem surfaces
+most_urgent_section_to_rewrite: paper/sections/02_primitive_roles.tex
+paper_rescuable_without_scope_change: true
+manuscript_rewritten_in_ticket: false

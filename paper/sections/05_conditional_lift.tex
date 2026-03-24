@@ -1,0 +1,77 @@
+\section{Conditional arithmetic lift}\label{sec:conditional-lift}
+
+Sections~\ref{sec:fixed-package} and \ref{sec:frozen-frontier} provide the complete in-house theorem ladder used in the paper: fixed-package saturation, package-change necessity, and restricted alignment on a frozen slice. The present section states the main theorem obtained by combining that internal ladder with an explicit external arithmetic contract. The point is to make the conditional lift visible as a theorem, not merely as commentary on a theorem.
+
+\subsection*{Standing notation and assumption box}
+
+Fix a state space $X$, a class $\mathcal{E}$ of endomaps on $X$, a comparison domain $D\subseteq \mathcal{E}$, a frozen slice
+\[
+s=(Y_s,K_s,C_s),
+\]
+and a designated canonical family
+\[
+\mathcal{K}\subseteq D.
+\]
+Let $e\in D$ be an \lid{ExtensionOperator} in the theorem-track sense, assumed recursive and monotone. The main theorem is stated relative to the following assumption box.
+
+\begin{center}
+\fbox{\hspace{0.4em}\begin{minipage}{0.90\textwidth}
+\textbf{Assumption box for the conditional lift.}
+\begin{enumerate}[leftmargin=3.2em]
+\item[(A1)] \(s=(Y_s,K_s,C_s)\) is a frozen slice and \(D\subseteq \mathcal{E}\) is a comparison domain.
+\item[(A2)] \(e\in D\) is a recursive monotone extension operator.
+\item[(A3)] The slice \(s\) is invariant on its cone \(C_s\).
+\item[(A4)] \(\mathcal{K}\subseteq D\) is the designated canonical family.
+\item[(A5)] The external contract supplies cone-level canonicalization for the operator under study: there exists \(c\in\mathcal{K}\) such that
+\[
+\operatorname{AgreeOnCone}_{C_s}(e,c).
+\]
+\item[(A6)] The external dependency contract holds for the tuple \((s,D,C_s,\mathcal{K},e)\) in the theorem-track sense of \lid{ExternalDependencyContract} and \lid{ExternalContractHolds}.
+\item[(A7)] In the intended arithmetic reading, the family \(\mathcal{K}\) is interpreted as the relevant consistency/reflection progression family~\cite{Turing1939,Feferman1962,BeklemishevReflection,PakhomovWalsh2021,MontalbanWalshConsistency}.
+\end{enumerate}
+\end{minipage}\hspace{0.4em}}
+\end{center}
+
+Assumptions (A1)--(A4) are internal setup assumptions. Assumptions (A5) and (A6) are the proof-driving external boundary. Assumption (A7) is interpretation-driving rather than proof-driving for the formal conditional theorem.
+
+\subsection*{Main conditional theorem}
+
+\begin{theorem}[Conditional arithmetic lift]\label{thm:conditional-arithmetic-lift}
+Assume \textup{(A1)}--\textup{(A6)}. If
+\[
+\operatorname{FrontierEfficient}_{s,D}(e),
+\]
+then there exists \(c\in \mathcal{K}\) such that
+\[
+\operatorname{ArithmeticCanonicalityTarget}(s,D,C_s,\mathcal{K},c).
+\]
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+The proof has three layers.
+
+\emph{Internal theorem package.}
+By the in-house comparative theorem \lid{restricted\_in\_house\_alignment\_lemma}, efficiency transfers to a representative from the designated family whenever cone agreement is available and the frozen slice is invariant on its cone.
+
+\emph{External contract assumptions.}
+Assumption \textup{(A5)} supplies exactly the required cone-equivalent representative \(c\in\mathcal{K}\). Assumption \textup{(A6)} records that the remaining external contract data needed for the arithmetic target are in force.
+
+\emph{Conclusion.}
+Applying the restricted alignment lemma to the representative \(c\) obtained from \textup{(A5)}, and then reading the result through the external contract recorded in \textup{(A6)}, yields
+\[
+\operatorname{ArithmeticCanonicalityTarget}(s,D,C_s,\mathcal{K},c).
+\]
+In Lean this conditional route is formalized by \lid{conditional\_arithmetic\_canonicality\_lift}, and the stable exported theorem surface for the manuscript is \PaperMainTheorem.
+\end{proof}
+
+\subsection*{Remark on the arithmetic reading}
+
+\begin{remark}[Intended arithmetic reading]\label{rem:arithmetic-reading}
+Under assumption \textup{(A7)}, the designated family \(\mathcal{K}\) is read as the relevant consistency/reflection progression family. Theorem~\ref{thm:conditional-arithmetic-lift} then says that, under the explicit external contract, a frontier-efficient recursive monotone extension operator admits a canonical representative on the comparison cone tracked by the frozen slice.
+\end{remark}
+
+\subsection*{Boundary of the theorem}
+
+Theorem~\ref{thm:conditional-arithmetic-lift} is the theorem-bearing summit of the paper. It is conditional, not unconditional. It does not claim a global canonical-collapse theorem, and it does not assert that every possible ledger or support regime selects the same representative family. It says only that once the comparison domain, support cone, and frozen ledger have been fixed, and once the explicit external contract has been granted, frontier-efficient growth admits a canonical representative on the relevant cone.
+
+The section also fixes the proof boundary. The internal theorem package carries the saturation, package-change, and restricted-alignment work. The external contract carries the remaining arithmetic burden. No vendor-backed evidence appears in the proof route. That material remains supportive and disciplinary, not proof-carrying. Section~\ref{sec:vendor-support} returns to that distinction explicitly.

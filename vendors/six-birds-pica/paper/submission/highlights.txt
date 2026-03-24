@@ -1,0 +1,5 @@
+Toy universe from a minimal stochastic substrate shows physics-like laws
+Six primitives with 36 interactions define a canonical closure interaction algebra
+Coarse-grained Markov kernels exhibit geometry-like and thermodynamic regimes
+Ablations across 69 interaction subsets reveal minimal generators of regimes
+Coarse-graining can retain irreversibility while dynamics remain stochastic

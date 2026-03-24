@@ -1,0 +1,20 @@
+T24 Paper Lint Report
+=
+compile_exit_code: 0
+undefined citations: 0 | undefined references: 0 | there-were-undefined-refs: 0
+
+labels=39 refs=38 missing_ref_targets=0 duplicate_labels=0
+cite_keys=23 missing_bib_keys=0
+includegraphics=24 missing_fig_assets=0
+
+Notation hits:
+- \\sigma_\\pi: count=0 lines=[]
+- geo\_: count=0 lines=[]
+- sigma_pi: count=0 lines=[]
+- lagr_geo_r2: count=0 lines=[]
+- \Epat_occurrences: count=0 lines=[]
+- \Etauf_occurrences: count=6 lines=[21, 45, 75, 85, 118, 126]
+
+unicode_chars: 0
+placeholders: 3
+unexpected_placeholders: 0

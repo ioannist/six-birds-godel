@@ -1,0 +1,11 @@
+schema_id: core_definitions_schema
+registry_id: core_definitions
+id_prefix: def_
+required_top_level_fields:
+  - registry_id
+  - version
+  - entries
+required_entry_fields:
+  - id
+  - name
+  - statement

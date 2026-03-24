@@ -1,0 +1,33 @@
+catalog_id: pica_toy_cell_catalog
+version: 0.1.0
+entries:
+  - id: cell_pkg_rewrite
+    actor: P1
+    informant: P5
+    role: packaging_informed_rewrite_repair
+    semantics: rewrite non-idempotent candidates via bounded iterate-to-stabilize repair
+  - id: cell_pkg_gate
+    actor: P2
+    informant: P5
+    role: packaging_informed_gating
+    semantics: gate candidates by packaging mode constraints (closure-only and/or bounded lift)
+  - id: cell_acct_gate
+    actor: P2
+    informant: P6
+    role: accounting_budget_informed_gating
+    semantics: apply deterministic budget cap on moved points
+  - id: cell_lens_protocol
+    actor: P3
+    informant: P4
+    role: lens_informed_protocol_choice
+    semantics: switch between raw operator lens and Boolean symmetry-quotient lens
+  - id: cell_acct_tie_protocol
+    actor: P3
+    informant: P6
+    role: accounting_informed_tie_protocol
+    semantics: choose tie handling protocol (keep-all or dedup) via budget-aware rule
+  - id: cell_pkg_mode_from_acct
+    actor: P5
+    informant: P6
+    role: accounting_informed_packaging_choice
+    semantics: choose packaging mode from fixed set {raw, balanced, strict}

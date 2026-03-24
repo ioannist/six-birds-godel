@@ -1,0 +1,14 @@
+appendix,block_id,classification,notes
+A,a_intro,appendix-appropriate,inventory framing and Lean-map purpose
+A,a_table,appendix-appropriate,theorem ladder and Lean mapping table
+A,a_boundary_note,boundary/documentary,internal-vs-external split note
+B,b_intro,appendix-appropriate,contract-documentation framing
+B,b_contract_table,appendix-appropriate,proof-driving vs interpretation-driving contract details
+B,b_body_pointer,boundary/documentary,points back to Section 5 instead of restating theorem
+B,b_claim_source_map,appendix-appropriate,documentary source map only
+C,c_intro,appendix-appropriate,supporting-only framing
+C,c_artifact_classes,appendix-appropriate,vendor artifact categories and roles
+C,c_boundary_note,boundary/documentary,explicit no-theorem-support boundary
+D,d_intro,boundary/documentary,scope framing only
+D,d_exclusions,boundary/documentary,discarded overreach and non-claims
+D,d_positive_scope,boundary/documentary,compact contrastive scope statement

@@ -1,0 +1,88 @@
+mapping_id: pica_ledger_surfaces
+version: 0.1.0
+vendor_root: vendors/six-birds-pica
+surfaces:
+  - id: ldg_hypotheses
+    logical_name: hypotheses
+    source_path: vendors/six-birds-pica/lab/ledger/hypotheses.jsonl
+    file_type: jsonl
+    records_parsed: true
+    observed_fields:
+      - amendment
+      - claim
+      - evidence
+      - falsification_criterion
+      - id
+      - input_closures
+      - primitives_used
+      - proposed_experiment
+      - result
+      - status
+      - tests_remaining
+      - timestamp
+    schema_note: hypothesis records include claim statement and falsification metadata.
+  - id: ldg_experiments
+    logical_name: experiments
+    source_path: vendors/six-birds-pica/lab/ledger/experiments.jsonl
+    file_type: jsonl
+    records_parsed: true
+    observed_fields:
+      - amendment
+      - artifacts
+      - description
+      - hypothesis_id
+      - id
+      - metrics
+      - note
+      - parameters
+      - result
+      - status
+      - timestamp
+    schema_note: experiment records tie parameters/metrics to hypothesis identifiers.
+  - id: ldg_closures
+    logical_name: closures
+    source_path: vendors/six-birds-pica/lab/ledger/closures.jsonl
+    file_type: jsonl
+    records_parsed: true
+    observed_fields:
+      - amendment
+      - amendment_type
+      - amends
+      - description
+      - details
+      - detection_method
+      - epsilon
+      - experiment_id
+      - experiment_ids
+      - finding
+      - hypothesis_id
+      - id
+      - implication
+      - key_finding
+      - layer
+      - note
+      - persistence_threshold
+      - primitives_involved
+      - robustness_rate
+      - stability_score
+      - status
+      - supporting_experiments
+      - supporting_runs
+      - timestamp
+      - verdict
+    schema_note: closure records include verdict and robustness indicators.
+  - id: ldg_results
+    logical_name: results
+    source_path: vendors/six-birds-pica/lab/ledger/results.jsonl
+    file_type: jsonl
+    records_parsed: true
+    observed_fields:
+      - campaign_id
+      - description
+      - experiment_id
+      - id
+      - metrics
+      - stage
+      - status
+      - timestamp
+    schema_note: results records track campaign stage outputs and metrics.

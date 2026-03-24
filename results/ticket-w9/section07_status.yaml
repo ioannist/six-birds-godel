@@ -1,0 +1,18 @@
+ticket_id: ticket-w9
+status: pass
+carry_forward_w4_status_present: true
+carry_forward_w5_status_present: true
+carry_forward_w6_status_present: true
+carry_forward_w7_status_present: true
+carry_forward_w8_status_present: true
+section_07_inserted_correctly: true
+only_relevant_prior_six_birds_papers_cited: true
+limits_explicit: true
+broad_canonicality_overreach_excluded: true
+make_check: pass
+paper_build:
+  status: pass
+  output_pdf: paper/main.pdf
+  notes:
+    - bibliography now populated only for cited prior Six-Birds papers in this section
+    - non-blocking overfull box warnings remain in long theorem-name passages

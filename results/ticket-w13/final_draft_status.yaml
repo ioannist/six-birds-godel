@@ -1,0 +1,10 @@
+ticket: ticket-w13
+status: pass
+title_frozen: true
+abstract_frozen: true
+bibliography_clean: true
+todo_scan_clean: true
+paper_build_passed: true
+ready_for_substantive_review: true
+known_nonblocking_warnings:
+  - overfull_hboxes_in_long_theorem_name_tables

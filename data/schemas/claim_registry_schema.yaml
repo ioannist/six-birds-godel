@@ -1,0 +1,38 @@
+schema_id: claim_registry_schema
+registry_id: claim_registry
+id_prefix: clm_
+required_top_level_fields:
+  - registry_id
+  - version
+  - entries
+required_entry_fields:
+  - id
+  - title
+  - status
+  - empirical_backing
+  - source_ids
+  - dependencies
+  - risk_level
+  - intended_support_modes
+controlled_vocabularies:
+  status:
+    - known_citation_backed
+    - conjectural
+    - to_be_formalized
+    - to_be_tested_in_toy_models
+  risk_level:
+    - low
+    - medium
+    - high
+    - critical
+  intended_support_modes:
+    - citation
+    - lean_formalization
+    - toy_model_search
+    - structured_atlas
+    - external_theorem_dependency
+  empirical_backing:
+    - not_empirical
+    - toy_only
+    - vendor_backable
+    - vendor_supported

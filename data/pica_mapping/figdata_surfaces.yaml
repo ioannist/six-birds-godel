@@ -1,0 +1,35 @@
+mapping_id: pica_figdata_surfaces
+version: 0.1.0
+vendor_root: vendors/six-birds-pica
+source_path: vendors/six-birds-pica/paper/figdata
+entries:
+  - id: fig_claim_map
+    file_path: vendors/six-birds-pica/paper/figdata/claim_map.json
+    format: json
+    coarse_category: claim_map
+    relevance: claims
+  - id: fig_run_summary
+    file_path: vendors/six-birds-pica/paper/figdata/run_summary_table.csv.gz
+    format: csv.gz
+    coarse_category: run_summary
+    relevance: audits
+  - id: fig_scan_rung
+    file_path: vendors/six-birds-pica/paper/figdata/scan_rung_table.csv.gz
+    format: csv.gz
+    coarse_category: headline_metrics
+    relevance: headline_metrics
+  - id: fig_t6_robustness
+    file_path: vendors/six-birds-pica/paper/figdata/T6_robustness.csv
+    format: csv
+    coarse_category: robustness
+    relevance: audits
+  - id: fig_f2_insets
+    file_path: vendors/six-birds-pica/paper/figdata/F2_insets_enabled.json
+    format: json
+    coarse_category: cells
+    relevance: cells
+  - id: fig_loo_cell_map
+    file_path: vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+    format: csv
+    coarse_category: ablation
+    relevance: cells

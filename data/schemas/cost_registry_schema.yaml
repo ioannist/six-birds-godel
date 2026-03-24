@@ -1,0 +1,17 @@
+schema_id: cost_registry_schema
+registry_id: cost_registry
+id_prefix: cst_
+required_top_level_fields:
+  - registry_id
+  - version
+  - entries
+required_entry_fields:
+  - id
+  - title
+  - cost_type
+controlled_vocabularies:
+  cost_type:
+    - proof_theoretic
+    - consistency_strength
+    - computational
+    - conceptual_placeholder

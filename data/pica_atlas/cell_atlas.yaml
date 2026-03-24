@@ -1,0 +1,250 @@
+atlas_id: pica_cell_atlas
+version: 0.1.0
+entries:
+- id: cell_p1_p1
+  label: "P1\u2190P1"
+  primitive_pair:
+    actor: P1
+    informant: P1
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: cell_p1_p2
+  label: "P1\u2190P2"
+  primitive_pair:
+    actor: P1
+    informant: P2
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: cell_p1_p3
+  label: "P1\u2190P3"
+  primitive_pair:
+    actor: P1
+    informant: P3
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: cell_p1_p4
+  label: "P1\u2190P4"
+  primitive_pair:
+    actor: P1
+    informant: P4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: cell_p1_p5
+  label: "P1\u2190P5"
+  primitive_pair:
+    actor: P1
+    informant: P5
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: cell_p1_p6
+  label: "P1\u2190P6"
+  primitive_pair:
+    actor: P1
+    informant: P6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: cell_p2_p1
+  label: "P2\u2190P1"
+  primitive_pair:
+    actor: P2
+    informant: P1
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: cell_p2_p2
+  label: "P2\u2190P2"
+  primitive_pair:
+    actor: P2
+    informant: P2
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: cell_p2_p3
+  label: "P2\u2190P3"
+  primitive_pair:
+    actor: P2
+    informant: P3
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: cell_p2_p4
+  label: "P2\u2190P4"
+  primitive_pair:
+    actor: P2
+    informant: P4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: cell_p2_p5
+  label: "P2\u2190P5"
+  primitive_pair:
+    actor: P2
+    informant: P5
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: cell_p2_p6
+  label: "P2\u2190P6"
+  primitive_pair:
+    actor: P2
+    informant: P6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: cell_p3_p3
+  label: "P3\u2190P3"
+  primitive_pair:
+    actor: P3
+    informant: P3
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: cell_p3_p4
+  label: "P3\u2190P4"
+  primitive_pair:
+    actor: P3
+    informant: P4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: cell_p3_p5
+  label: "P3\u2190P5"
+  primitive_pair:
+    actor: P3
+    informant: P5
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: cell_p3_p6
+  label: "P3\u2190P6"
+  primitive_pair:
+    actor: P3
+    informant: P6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: cell_p4_p3
+  label: "P4\u2190P3"
+  primitive_pair:
+    actor: P4
+    informant: P3
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: cell_p4_p4
+  label: "P4\u2190P4"
+  primitive_pair:
+    actor: P4
+    informant: P4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: cell_p4_p5
+  label: "P4\u2190P5"
+  primitive_pair:
+    actor: P4
+    informant: P5
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: cell_p4_p6
+  label: "P4\u2190P6"
+  primitive_pair:
+    actor: P4
+    informant: P6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: cell_p5_p3
+  label: "P5\u2190P3"
+  primitive_pair:
+    actor: P5
+    informant: P3
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: cell_p5_p4
+  label: "P5\u2190P4"
+  primitive_pair:
+    actor: P5
+    informant: P4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: cell_p5_p6
+  label: "P5\u2190P6"
+  primitive_pair:
+    actor: P5
+    informant: P6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: cell_p6_p4
+  label: "P6\u2190P4"
+  primitive_pair:
+    actor: P6
+    informant: P4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: cell_p6_p6
+  label: "P6\u2190P6"
+  primitive_pair:
+    actor: P6
+    informant: P6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed

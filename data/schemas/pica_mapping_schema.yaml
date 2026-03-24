@@ -1,0 +1,19 @@
+schema_id: pica_mapping_schema
+version: 0.1.0
+required_files:
+  - data/pica_mapping/primitives_cells.yaml
+  - data/pica_mapping/ledger_surfaces.yaml
+  - data/pica_mapping/figdata_surfaces.yaml
+  - data/pica_mapping/claim_backing.yaml
+controlled_vocabularies:
+  empirical_backing:
+    - not_empirical
+    - toy_only
+    - vendor_backable
+    - vendor_supported
+  figdata_relevance:
+    - audits
+    - cells
+    - claims
+    - headline_metrics
+    - unknown

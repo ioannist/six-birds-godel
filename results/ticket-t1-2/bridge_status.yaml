@@ -1,0 +1,14 @@
+status_id: ticket_t1_2_bridge_status
+candidate_id: thm_closure_saturation_operator_change
+statement_formalized: true
+core_saturation_proved: true
+bridge_result_proved: true
+depends_on_axioms_on_bridge_path: false
+boundary_consistent_with_current_evidence: true
+bridge_path_axioms: []
+isolated_non_bridge_axioms:
+  - finite_nondominated_exists
+promotion_gate_result: pass
+notes:
+  - bridge theorem uses idempotent frozen-package abstraction only
+  - finite_nondominated_exists remains outside bridge dependency graph

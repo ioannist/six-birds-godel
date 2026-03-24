@@ -1,0 +1,58 @@
+version: 0.1.0
+items:
+  - id: thm_one_step_saturation
+    paper_name: one-step saturation
+    lean_name: closure_iterate_saturates_one_step
+    current_body_status: displayed
+    current_location: paper/sections/03_fixed_package.tex
+    needs_displayed_statement: no
+    priority: medium
+  - id: thm_no_persistent_growth
+    paper_name: no persistent growth in a frozen package
+    lean_name: frozen_package_no_persistent_growth
+    current_body_status: described_only
+    current_location: paper/sections/03_fixed_package.tex
+    needs_displayed_statement: yes
+    priority: high
+  - id: thm_package_change_necessity
+    paper_name: strict growth requires package change
+    lean_name: persistent_growth_witness_implies_package_change
+    current_body_status: described_only
+    current_location: paper/sections/03_fixed_package.tex
+    needs_displayed_statement: yes
+    priority: high
+  - id: thm_bridge_surface
+    paper_name: bridge candidate in frozen idempotent setting
+    lean_name: bridge_candidate_holds_in_frozen_idempotent_setting
+    current_body_status: described_only
+    current_location: paper/sections/03_fixed_package.tex
+    needs_displayed_statement: yes
+    priority: medium
+  - id: thm_dominance_congruence
+    paper_name: dominance under cone-equivalent replacement
+    lean_name: frontier_dominates_congr_right
+    current_body_status: described_only
+    current_location: paper/sections/04_frozen_frontier.tex
+    needs_displayed_statement: yes
+    priority: high
+  - id: thm_efficiency_transfer
+    paper_name: efficiency transfers to a cone-equivalent representative
+    lean_name: frontier_efficiency_transfer_to_cone_equivalent
+    current_body_status: described_only
+    current_location: paper/sections/04_frozen_frontier.tex
+    needs_displayed_statement: yes
+    priority: high
+  - id: thm_restricted_alignment
+    paper_name: restricted alignment lemma
+    lean_name: restricted_in_house_alignment_lemma
+    current_body_status: described_only
+    current_location: paper/sections/04_frozen_frontier.tex
+    needs_displayed_statement: yes
+    priority: high
+  - id: thm_conditional_lift
+    paper_name: main conditional arithmetic theorem
+    lean_name: paper_main_conditional_arithmetic_frontier_canonicality
+    current_body_status: described_only
+    current_location: paper/sections/05_conditional_lift.tex
+    needs_displayed_statement: yes
+    priority: high

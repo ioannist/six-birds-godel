@@ -1,0 +1,26 @@
+contract_id: arithmetic_external_dependency_contract
+version: 0.4.0
+candidate_id: thm_arithmetic_frontier_canonicality
+paper_mode_read: theorem_led_conditional_ready
+stable_main_theorem_name: paper_main_conditional_arithmetic_frontier_canonicality
+primitive_role_read:
+  P6: frozen evaluation regime
+  P4: indexing/support axis
+  P3: diagnostic-only and not proof-driving
+assumptions:
+  - id: ext_canonical_family_closed_in_domain
+    lean_name: canonicalFamilyClosedInDomain
+    statement_shape: every operator in the canonical family lies in the frozen P6 comparison domain
+    source_mode: external_literature
+    proof_driving: true
+  - id: ext_cone_canonicalization
+    lean_name: coneCanonicalization
+    statement_shape: every efficient operator on the frozen slice aligns on the cone with some canonical-family representative
+    source_mode: external_literature
+    proof_driving: true
+  - id: ext_arithmetic_interpretation
+    lean_name: canonical_family_interpreted_as_consistency_or_reflection
+    statement_shape: the canonical family is interpreted as the intended consistency/reflection progression family
+    source_mode: citation_layer_only
+    proof_driving: false
+minimality_note: only the first two assumptions are proof-driving for the Lean conditional lift

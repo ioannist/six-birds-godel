@@ -1,0 +1,31 @@
+\section{Internal theorem inventory}\label{app:theorem-inventory}
+
+This appendix serves as an inventory and Lean map for the in-house theorem package used in the body. It does not restate the theorem sections. Its purpose is documentary: to show which theorem surfaces belong to the internal ladder, where they live in Lean, and how they contribute to the conditional main theorem.
+
+The formalization for the in-house part of the theorem ladder is carried out in Lean 4 on top of mathlib~\cite{deMouraUllrich2021,Mathlib2020}. The repository for the paper, data products, and theorem-track implementation is \url{https://github.com/ioannist/six-birds-godel}.
+
+\begin{table}[h]
+\caption{Internal theorem inventory and Lean map.}
+\label{tab:theorem-inventory}
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}l X X l@{}}
+\toprule
+Ladder tier & Lean theorem surface & Role in the paper & Status \\
+\midrule
+Base & \lid{closure\_iterate\_saturates\_one\_step} & one-step saturation of a fixed closure package & in-house \\[4pt]
+Base & \lid{frozen\_package\_no\_persistent\_growth} & excludes persistent growth under self-iteration of a fixed package & in-house \\[4pt]
+Bridge & \lid{persistent\_growth\_witness\_implies\_package\_change} & turns no-growth into package-change necessity & in-house \\[4pt]
+Bridge & \lid{bridge\_candidate\_holds\_in\_frozen\_idempotent\_setting} & aligned bridge surface for theorem-track packaging & in-house \\[4pt]
+Comparative & \lid{frontier\_dominates\_congr\_right} & cone-equivalent replacement preserves dominance & in-house \\[4pt]
+Comparative & \lid{frontier\_efficiency\_transfer\_to\_cone\_equivalent} & cone-equivalent replacement preserves efficiency & in-house \\[4pt]
+Comparative & \lid{restricted\_in\_house\_alignment\_lemma} & aligned representative inherits efficiency on the support cone & in-house \\[4pt]
+Conditional & \lid{conditional\_arithmetic\_canonicality\_lift} & conditional lift from internal ladder plus explicit contract & conditional \\[4pt]
+Exported & \lid{paper\_main\_conditional\_arithmetic\_frontier\_canonicality} & stable manuscript theorem surface & conditional \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The theorem inventory is stratified in exactly the same way as the body. The base and bridge layers are presented in Section~\ref{sec:fixed-package}. The comparative layer is presented in Section~\ref{sec:frozen-frontier}. The conditional main route is presented in Section~\ref{sec:conditional-lift}. This appendix only records the Lean anchors and ladder roles.
+
+The inventory also fixes the internal/external boundary. Everything listed above the conditional main route is proved in-house. The exported main theorem remains conditional because it depends on the external contract documented in Appendix~\ref{app:external-contract}. No additional hidden theorem surface is introduced here.

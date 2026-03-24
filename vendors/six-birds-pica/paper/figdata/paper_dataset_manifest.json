@@ -1,0 +1,194 @@
+{
+  "asset_mapping": {
+    "F3_multiscale": {
+      "dataset_ids": [
+        "ds_exp112_wave3_n32_64_128_all",
+        "ds_expf1_wave2_n256_empty",
+        "ds_exp107_wave2_n256_sweep"
+      ],
+      "intended_configs": {
+        "n_256": [
+          "empty",
+          "baseline",
+          "full_action",
+          "full_all"
+        ],
+        "n_32_64_128": [
+          "empty",
+          "baseline",
+          "full_action",
+          "full_all"
+        ]
+      },
+      "n256_provenance": {
+        "baseline": "EXP-107",
+        "empty": "EXP-F1",
+        "full_action": "EXP-107",
+        "full_all": "EXP-107"
+      }
+    },
+    "F4_lagrange": {
+      "dataset_ids": [
+        "ds_exp112_wave3_n32_64_128_all",
+        "ds_exp107_wave2_n256_sweep"
+      ],
+      "intended_configs": [
+        "baseline",
+        "full_action",
+        "full_all"
+      ],
+      "intended_n": [
+        128,
+        256
+      ]
+    },
+    "F5_regime_scatter": {
+      "dataset_ids": [
+        "ds_exp112_wave3_n32_64_128_all",
+        "ds_expf1_wave2_n256_empty",
+        "ds_exp107_wave2_n256_sweep",
+        "ds_exp112_wave2_n256_selective_unique"
+      ],
+      "intended_note": "n=256 is a selected suite; seed counts vary for EXP-112 selective due to truncation."
+    },
+    "F6_ablation": {
+      "dataset_ids": [
+        "ds_exp112_wave3_n32_64_128_all",
+        "ds_exp112_wave2_n256_selective_unique"
+      ],
+      "n256_targeted_panel": true
+    },
+    "T2_dataset_overview": {
+      "dataset_ids": [
+        "ds_exp112_wave3_n32_64_128_all",
+        "ds_expf1_wave2_n256_empty",
+        "ds_exp107_wave2_n256_sweep",
+        "ds_exp112_wave2_n256_selective_unique"
+      ]
+    },
+    "T3_headline_metrics": {
+      "dataset_ids": [
+        "ds_exp112_wave3_n32_64_128_all",
+        "ds_expf1_wave2_n256_empty",
+        "ds_exp107_wave2_n256_sweep",
+        "ds_exp112_wave2_n256_selective_unique"
+      ]
+    },
+    "T5_correlations_regression": {
+      "dataset_ids": [
+        "ds_exp112_wave3_n32_64_128_all",
+        "ds_exp107_wave2_n256_sweep"
+      ]
+    },
+    "T6_robustness": {
+      "dataset_ids": [
+        "ds_exp112_wave3_n32_64_128_all",
+        "ds_expf1_wave2_n256_empty",
+        "ds_exp107_wave2_n256_sweep",
+        "ds_exp112_wave2_n256_selective_unique"
+      ]
+    }
+  },
+  "created_utc": "2026-03-02T08:09:35.503134+00:00",
+  "datasets": {
+    "ds_exp107_wave2_n256_sweep": {
+      "expected_runs": 130,
+      "filters": {
+        "exp_id": "EXP-107",
+        "log_file_contains": "/wave_2/",
+        "n": 256
+      },
+      "source": "lab/runs/campaign_v3/audits_all.jsonl",
+      "summary": {
+        "counts_by_exp_id": {
+          "EXP-107": 130
+        },
+        "counts_by_n": {
+          "256": 130
+        },
+        "records": 130
+      }
+    },
+    "ds_exp112_wave2_n256_selective_unique": {
+      "expected_runs": 97,
+      "filters": {
+        "config_name_not_in": [
+          "baseline",
+          "empty",
+          "full_action",
+          "full_all"
+        ],
+        "exp_id": "EXP-112",
+        "log_file_contains": "/wave_2/",
+        "n": 256
+      },
+      "source": "lab/runs/campaign_v3/audits_all.jsonl",
+      "summary": {
+        "counts_by_exp_id": {
+          "EXP-112": 97
+        },
+        "counts_by_n": {
+          "256": 97
+        },
+        "records": 97
+      }
+    },
+    "ds_exp112_wave3_n32_64_128_all": {
+      "expected_runs": 2070,
+      "filters": {
+        "exp_id": "EXP-112",
+        "log_file_contains": "/wave_3/",
+        "n_in": [
+          32,
+          64,
+          128
+        ]
+      },
+      "source": "lab/runs/campaign_v3/audits_all.jsonl",
+      "summary": {
+        "counts_by_exp_id": {
+          "EXP-112": 2070
+        },
+        "counts_by_n": {
+          "128": 690,
+          "32": 690,
+          "64": 690
+        },
+        "records": 2070
+      }
+    },
+    "ds_expf1_wave2_n256_empty": {
+      "expected_runs": 10,
+      "filters": {
+        "exp_id": "EXP-F1",
+        "log_file_contains": "/wave_2/",
+        "n": 256
+      },
+      "source": "lab/runs/campaign_v3/audits_all.jsonl",
+      "summary": {
+        "counts_by_exp_id": {
+          "EXP-F1": 10
+        },
+        "counts_by_n": {
+          "256": 10
+        },
+        "records": 10
+      }
+    }
+  },
+  "exclusions": {
+    "exclude_waves": [
+      "wave_1"
+    ]
+  },
+  "inputs": {
+    "audits_all_jsonl": "lab/runs/campaign_v3/audits_all.jsonl",
+    "wave2_audits_jsonl": "lab/runs/campaign_v3/wave_2/audits.jsonl"
+  },
+  "manifest_version": "1.0",
+  "notes": {
+    "wave2_missing_logs_csv": "paper/figdata/wave2_missing_audit_logs.csv",
+    "wave2_seed_coverage_csv_gz": "paper/figdata/wave2_seed_coverage_by_exp_config.csv.gz",
+    "wave2_truncation_count": 26
+  }
+}

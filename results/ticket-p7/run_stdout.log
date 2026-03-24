@@ -1,0 +1,6 @@
+Loaded 2 jobs from /home/repos/six-birds-godel/results/ticket-p7/jobs.json
+Launching 2 jobs with parallelism=2, timeout=3600s
+  [1/2] EXP-112 s=0 n=64 cfg=baseline -> ok (27.7s)
+  [2/2] EXP-112 s=0 n=64 cfg=A14_only -> ok (31.2s)
+
+Done: 2/2 ok

@@ -1,0 +1,383 @@
+{
+  "Q1_n_by_config_k4_nonrev": {
+    "A11_A22": 10,
+    "A13_only": 10,
+    "A14_only": 8,
+    "A16_only": 5,
+    "A17_only": 8,
+    "A19_only": 10,
+    "A24_only": 10,
+    "A25_only": 10,
+    "P1_row_A13": 10,
+    "baseline": 10,
+    "chain": 10,
+    "chain_A24": 10,
+    "chain_SBRC": 10,
+    "empty": 10,
+    "fa_no_P1row": 8,
+    "fa_no_P2mod": 9,
+    "fa_no_P3row": 7,
+    "full_action": 10,
+    "full_all": 10,
+    "gen3_A13_A14_A19": 9,
+    "gen4_core": 9,
+    "loo_A13": 8,
+    "loo_A14": 8,
+    "loo_A18": 9,
+    "loo_A19": 9,
+    "sbrc": 10
+  },
+  "Q3_control_fingerprints": {
+    "baseline": {
+      "EXP-107_n256": {
+        "enabled_count": 2,
+        "fingerprint": "cc9d91f32d0d8a73",
+        "log_file": "lab/runs/campaign_v3/wave_2/wave_2/EXP-107_s0_n256_baseline.log"
+      },
+      "EXP-112_n128": {
+        "enabled_count": 2,
+        "fingerprint": "cc9d91f32d0d8a73",
+        "log_file": "/home/repos/six-birds-ladder/lab/runs/campaign_v3/wave_3/wave_3/EXP-112_s0_n128_baseline.log"
+      },
+      "match_exp107_n256_vs_exp112_n128": true
+    },
+    "full_action": {
+      "EXP-107_n256": {
+        "enabled_count": 24,
+        "fingerprint": "b0a8b4c5c6612f18",
+        "log_file": "lab/runs/campaign_v3/wave_2/wave_2/EXP-107_s0_n256_full_action.log"
+      },
+      "EXP-112_n128": {
+        "enabled_count": 24,
+        "fingerprint": "b0a8b4c5c6612f18",
+        "log_file": "/home/repos/six-birds-ladder/lab/runs/campaign_v3/wave_3/wave_3/EXP-112_s0_n128_full_action.log"
+      },
+      "match_exp107_n256_vs_exp112_n128": true
+    },
+    "full_all": {
+      "EXP-107_n256": {
+        "enabled_count": 25,
+        "fingerprint": "9fea8ac3da42bf7f",
+        "log_file": "lab/runs/campaign_v3/wave_2/wave_2/EXP-107_s0_n256_full_all.log"
+      },
+      "EXP-112_n128": {
+        "enabled_count": 25,
+        "fingerprint": "9fea8ac3da42bf7f",
+        "log_file": "/home/repos/six-birds-ladder/lab/runs/campaign_v3/wave_3/wave_3/EXP-112_s0_n128_full_all.log"
+      },
+      "match_exp107_n256_vs_exp112_n128": true
+    }
+  },
+  "Q4_rev_by_config_n256": {
+    "A11_A22": {
+      "N_total": 10,
+      "REV_count": 0,
+      "REV_rate": 0.0
+    },
+    "A13_only": {
+      "N_total": 10,
+      "REV_count": 0,
+      "REV_rate": 0.0
+    },
+    "A14_only": {
+      "N_total": 8,
+      "REV_count": 0,
+      "REV_rate": 0.0
+    },
+    "A16_only": {
+      "N_total": 5,
+      "REV_count": 0,
+      "REV_rate": 0.0
+    },
+    "A17_only": {
+      "N_total": 8,
+      "REV_count": 0,
+      "REV_rate": 0.0
+    },
+    "A19_only": {
+      "N_total": 10,
+      "REV_count": 0,
+      "REV_rate": 0.0
+    },
+    "A24_only": {
+      "N_total": 10,
+      "REV_count": 0,
+      "REV_rate": 0.0
+    },
+    "A25_only": {
+      "N_total": 10,
+      "REV_count": 0,
+      "REV_rate": 0.0
+    },
+    "P1_row_A13": {
+      "N_total": 10,
+      "REV_count": 0,
+      "REV_rate": 0.0
+    },
+    "baseline": {
+      "N_total": 10,
+      "REV_count": 0,
+      "REV_rate": 0.0
+    },
+    "chain": {
+      "N_total": 10,
+      "REV_count": 0,
+      "REV_rate": 0.0
+    },
+    "chain_A24": {
+      "N_total": 10,
+      "REV_count": 0,
+      "REV_rate": 0.0
+    },
+    "chain_SBRC": {
+      "N_total": 10,
+      "REV_count": 0,
+      "REV_rate": 0.0
+    },
+    "empty": {
+      "N_total": 10,
+      "REV_count": 0,
+      "REV_rate": 0.0
+    },
+    "fa_no_P1row": {
+      "N_total": 8,
+      "REV_count": 0,
+      "REV_rate": 0.0
+    },
+    "fa_no_P2mod": {
+      "N_total": 9,
+      "REV_count": 0,
+      "REV_rate": 0.0
+    },
+    "fa_no_P3row": {
+      "N_total": 7,
+      "REV_count": 0,
+      "REV_rate": 0.0
+    },
+    "full_action": {
+      "N_total": 10,
+      "REV_count": 0,
+      "REV_rate": 0.0
+    },
+    "full_all": {
+      "N_total": 10,
+      "REV_count": 0,
+      "REV_rate": 0.0
+    },
+    "gen3_A13_A14_A19": {
+      "N_total": 9,
+      "REV_count": 0,
+      "REV_rate": 0.0
+    },
+    "gen4_core": {
+      "N_total": 9,
+      "REV_count": 0,
+      "REV_rate": 0.0
+    },
+    "loo_A13": {
+      "N_total": 8,
+      "REV_count": 0,
+      "REV_rate": 0.0
+    },
+    "loo_A14": {
+      "N_total": 8,
+      "REV_count": 0,
+      "REV_rate": 0.0
+    },
+    "loo_A18": {
+      "N_total": 9,
+      "REV_count": 0,
+      "REV_rate": 0.0
+    },
+    "loo_A19": {
+      "N_total": 9,
+      "REV_count": 0,
+      "REV_rate": 0.0
+    },
+    "sbrc": {
+      "N_total": 10,
+      "REV_count": 0,
+      "REV_rate": 0.0
+    }
+  },
+  "Q4_rev_by_n": {
+    "32": {
+      "N_total": 690,
+      "REV_count": 6,
+      "REV_rate": 0.008695652173913044,
+      "ci_high": 0.01884031042654485,
+      "ci_low": 0.003991214872648825
+    },
+    "64": {
+      "N_total": 690,
+      "REV_count": 0,
+      "REV_rate": 0.0,
+      "ci_high": 0.005536508047851971,
+      "ci_low": 0.0
+    },
+    "128": {
+      "N_total": 690,
+      "REV_count": 0,
+      "REV_rate": 0.0,
+      "ci_high": 0.005536508047851971,
+      "ci_low": 0.0
+    },
+    "256": {
+      "N_total": 237,
+      "REV_count": 0,
+      "REV_rate": 0.0,
+      "ci_high": 0.01595015592209181,
+      "ci_low": 0.0
+    }
+  },
+  "Q5_enabled_info_by_config": {
+    "A11_A22": {
+      "enabled_count": 4,
+      "enabled_fingerprint": "439972df25199169",
+      "log_file_used": "lab/runs/campaign_v3/wave_2/wave_2/EXP-107_s0_n256_A11_A22.log"
+    },
+    "A13_only": {
+      "enabled_count": 3,
+      "enabled_fingerprint": "1677ba72e83fa410",
+      "log_file_used": "lab/runs/campaign_v3/wave_2/wave_2/EXP-107_s0_n256_A13_only.log"
+    },
+    "A14_only": {
+      "enabled_count": 3,
+      "enabled_fingerprint": "d08054c4e4fac74d",
+      "log_file_used": "lab/runs/campaign_v3/wave_2/wave_2/EXP-112_s0_n256_A14_only.log"
+    },
+    "A16_only": {
+      "enabled_count": 3,
+      "enabled_fingerprint": "8e68abd18f99abb3",
+      "log_file_used": "lab/runs/campaign_v3/wave_2/wave_2/EXP-112_s0_n256_A16_only.log"
+    },
+    "A17_only": {
+      "enabled_count": 3,
+      "enabled_fingerprint": "7241b720ab7a469f",
+      "log_file_used": "lab/runs/campaign_v3/wave_2/wave_2/EXP-112_s0_n256_A17_only.log"
+    },
+    "A19_only": {
+      "enabled_count": 3,
+      "enabled_fingerprint": "0f2497d488ecac7e",
+      "log_file_used": "lab/runs/campaign_v3/wave_2/wave_2/EXP-107_s0_n256_A19_only.log"
+    },
+    "A24_only": {
+      "enabled_count": 3,
+      "enabled_fingerprint": "cc0f8a83c131ced1",
+      "log_file_used": "lab/runs/campaign_v3/wave_2/wave_2/EXP-107_s0_n256_A24_only.log"
+    },
+    "A25_only": {
+      "enabled_count": 3,
+      "enabled_fingerprint": "168aacf2576d5347",
+      "log_file_used": "lab/runs/campaign_v3/wave_2/wave_2/EXP-107_s0_n256_A25_only.log"
+    },
+    "P1_row_A13": {
+      "enabled_count": 9,
+      "enabled_fingerprint": "99d192f6407de52c",
+      "log_file_used": "lab/runs/campaign_v3/wave_2/wave_2/EXP-107_s0_n256_P1_row_A13.log"
+    },
+    "baseline": {
+      "enabled_count": 2,
+      "enabled_fingerprint": "cc9d91f32d0d8a73",
+      "log_file_used": "lab/runs/campaign_v3/wave_2/wave_2/EXP-107_s0_n256_baseline.log"
+    },
+    "chain": {
+      "enabled_count": 5,
+      "enabled_fingerprint": "9b090d290dfa22e5",
+      "log_file_used": "lab/runs/campaign_v3/wave_2/wave_2/EXP-107_s0_n256_chain.log"
+    },
+    "chain_A24": {
+      "enabled_count": 6,
+      "enabled_fingerprint": "719ffc4ca69bfe8e",
+      "log_file_used": "lab/runs/campaign_v3/wave_2/wave_2/EXP-107_s0_n256_chain_A24.log"
+    },
+    "chain_SBRC": {
+      "enabled_count": 6,
+      "enabled_fingerprint": "2d473c242aa41972",
+      "log_file_used": "lab/runs/campaign_v3/wave_2/wave_2/EXP-107_s0_n256_chain_SBRC.log"
+    },
+    "empty": {
+      "enabled_count": 0,
+      "enabled_fingerprint": "415d687c468bb19a",
+      "log_file_used": "lab/runs/campaign_v3/wave_2/wave_2/EXP-F1_s0_n256.log"
+    },
+    "fa_no_P1row": {
+      "enabled_count": 18,
+      "enabled_fingerprint": "ef7aaf115cd11326",
+      "log_file_used": "lab/runs/campaign_v3/wave_2/wave_2/EXP-112_s0_n256_fa_no_P1row.log"
+    },
+    "fa_no_P2mod": {
+      "enabled_count": 19,
+      "enabled_fingerprint": "9f78ffde3da517a1",
+      "log_file_used": "lab/runs/campaign_v3/wave_2/wave_2/EXP-112_s0_n256_fa_no_P2mod.log"
+    },
+    "fa_no_P3row": {
+      "enabled_count": 20,
+      "enabled_fingerprint": "ae0d4d4fea79b572",
+      "log_file_used": "lab/runs/campaign_v3/wave_2/wave_2/EXP-112_s0_n256_fa_no_P3row.log"
+    },
+    "full_action": {
+      "enabled_count": 24,
+      "enabled_fingerprint": "b0a8b4c5c6612f18",
+      "log_file_used": "lab/runs/campaign_v3/wave_2/wave_2/EXP-107_s0_n256_full_action.log"
+    },
+    "full_all": {
+      "enabled_count": 25,
+      "enabled_fingerprint": "9fea8ac3da42bf7f",
+      "log_file_used": "lab/runs/campaign_v3/wave_2/wave_2/EXP-107_s0_n256_full_all.log"
+    },
+    "gen3_A13_A14_A19": {
+      "enabled_count": 5,
+      "enabled_fingerprint": "d1782a36bc22f642",
+      "log_file_used": "lab/runs/campaign_v3/wave_2/wave_2/EXP-112_s0_n256_gen3_A13_A14_A19.log"
+    },
+    "gen4_core": {
+      "enabled_count": 6,
+      "enabled_fingerprint": "15013646d373e5df",
+      "log_file_used": "lab/runs/campaign_v3/wave_2/wave_2/EXP-112_s0_n256_gen4_core.log"
+    },
+    "loo_A13": {
+      "enabled_count": 23,
+      "enabled_fingerprint": "def21862d64b819e",
+      "log_file_used": "lab/runs/campaign_v3/wave_2/wave_2/EXP-112_s0_n256_loo_A13.log"
+    },
+    "loo_A14": {
+      "enabled_count": 23,
+      "enabled_fingerprint": "90f88d6790f4c945",
+      "log_file_used": "lab/runs/campaign_v3/wave_2/wave_2/EXP-112_s0_n256_loo_A14.log"
+    },
+    "loo_A18": {
+      "enabled_count": 23,
+      "enabled_fingerprint": "ae1d6aed31d53993",
+      "log_file_used": "lab/runs/campaign_v3/wave_2/wave_2/EXP-112_s0_n256_loo_A18.log"
+    },
+    "loo_A19": {
+      "enabled_count": 23,
+      "enabled_fingerprint": "9d0b1694ef5301b0",
+      "log_file_used": "lab/runs/campaign_v3/wave_2/wave_2/EXP-112_s0_n256_loo_A19.log"
+    },
+    "sbrc": {
+      "enabled_count": 3,
+      "enabled_fingerprint": "c8a8acd61d633b00",
+      "log_file_used": "lab/runs/campaign_v3/wave_2/wave_2/EXP-107_s0_n256_sbrc.log"
+    }
+  },
+  "Q5_spearman": {
+    "n_configs": 26,
+    "perm_pvalue": 0.05458908218356329,
+    "rho": 0.38666485896440544
+  },
+  "bootstrap": 5000,
+  "manifest_path": "paper/figdata/paper_dataset_manifest.json",
+  "perm": 5000,
+  "rows_by_question": {
+    "Q1": 16,
+    "Q2": 8,
+    "Q3": 188,
+    "Q4": 30,
+    "Q5": 3
+  },
+  "rows_total": 245,
+  "seed": 12345,
+  "wave2_truncation_count": 26
+}

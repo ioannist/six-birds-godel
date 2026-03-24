@@ -1,0 +1,26 @@
+trigger_id: ticket_p6_2_minimal_trigger
+version: 0.1.0
+theorem_ready: false
+hybrid_ready: true
+new_run_needed: true
+smallest_trigger:
+  label: a14_only_vs_baseline_primary_regime_confirmatory
+  cost_class: cheap_new_run
+  target_configs:
+  - baseline
+  - A14_only
+  - full_action
+  - full_all
+  target_comparators:
+  - baseline
+  - full_action
+  - full_all
+  target_scales:
+  - 64
+  - 128
+  optional_scale:
+  - 256
+  exact_ambiguity_resolved: Closes theorem-threshold robustness/comparator-separation
+    gap under primary regime without relying on n=32.
+  note: Only execute if theorem-ready status is required now; hybrid-ready already
+    clears shipped thresholds.

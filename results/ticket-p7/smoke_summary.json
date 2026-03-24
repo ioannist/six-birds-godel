@@ -1,0 +1,10 @@
+{
+  "status": "ok",
+  "n_jobs_expected": 2,
+  "n_ok": 2,
+  "n_failed": 0,
+  "n_timeout": 0,
+  "vendor_artifact_stage_path": "vendors/six-birds-pica/lab/runs/ticket_p7_cleanroom_smoke",
+  "jobs_with_audit": 2,
+  "run_returncode": 0
+}

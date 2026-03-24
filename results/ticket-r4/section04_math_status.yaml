@@ -1,0 +1,13 @@
+ticket: ticket-r4
+status: pass
+section: paper/sections/04_frozen_frontier.tex
+carry_forward_r3_status_present: true
+comparative_theorem_section: true
+displayed_definitions_present: true
+dominance_congruence_present: true
+efficiency_transfer_present: true
+restricted_alignment_present: true
+lemma_dependency_visible: true
+arithmetic_overreach: false
+make_check: pass
+paper_build: pass

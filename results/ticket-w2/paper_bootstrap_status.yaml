@@ -1,0 +1,13 @@
+ticket_id: ticket-w2
+status: pass
+manuscript_tree_created: true
+include_order_matches_scaffold: true
+substantive_prose_added: false
+make_check: pass
+paper_build:
+  mode: latexmk_pdf
+  status: pass
+  output_pdf: paper/main.pdf
+  notes:
+    - empty bibliography warning is expected at scaffold stage
+tooling_blockers: []

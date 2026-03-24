@@ -1,0 +1,38 @@
+version: 0.1.0
+items:
+  - id: asm_frozen_slice
+    assumption_label: frozen evaluation slice
+    current_body_status: explicit_prose_only
+    in_house_or_external: in_house
+    proof_driving: yes
+    needs_mathematical_box_in_body: yes
+  - id: asm_slice_invariant_on_cone
+    assumption_label: cone invariance of frozen slice
+    current_body_status: explicit_prose_only
+    in_house_or_external: in_house
+    proof_driving: yes
+    needs_mathematical_box_in_body: yes
+  - id: asm_recursive_monotone_operator
+    assumption_label: recursive monotone extension operator
+    current_body_status: explicit_prose_only
+    in_house_or_external: in_house
+    proof_driving: yes
+    needs_mathematical_box_in_body: yes
+  - id: asm_ext_canonical_family_closed_in_domain
+    assumption_label: canonical family closed in the comparison domain
+    current_body_status: explicit_prose_only
+    in_house_or_external: external
+    proof_driving: yes
+    needs_mathematical_box_in_body: yes
+  - id: asm_ext_cone_canonicalization
+    assumption_label: cone canonicalization into the designated family
+    current_body_status: explicit_prose_only
+    in_house_or_external: external
+    proof_driving: yes
+    needs_mathematical_box_in_body: yes
+  - id: asm_ext_arithmetic_interpretation
+    assumption_label: arithmetic interpretation of the canonical family
+    current_body_status: explicit_prose_only
+    in_house_or_external: external
+    proof_driving: no
+    needs_mathematical_box_in_body: yes

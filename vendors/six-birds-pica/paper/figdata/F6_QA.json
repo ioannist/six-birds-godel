@@ -1,0 +1,85 @@
+{
+  "anomalies": [],
+  "columns_sorted_by": "actor_then_informant",
+  "exp_id": "EXP-112",
+  "loo_configs_total": 22,
+  "loo_configs_valid_single_removal": 22,
+  "loo_configs_with_anomalies": 0,
+  "metric_n256_es_summary": {
+    "tilde_geo_r2": {
+      "max": 0.6037268675500015,
+      "median": 0.007702841584840442,
+      "min": -0.40156902809945016
+    },
+    "tilde_pla2_gap": {
+      "max": 0.6160115923552649,
+      "median": -0.09492422678487991,
+      "min": -0.9348058402622216
+    },
+    "tilde_sigma_pi": {
+      "max": 0.15955761649935904,
+      "median": -0.5540159142426496,
+      "min": -1.2464651156860709
+    }
+  },
+  "metric_pooled_es_summary": {
+    "tilde_geo_r2": {
+      "max": 0.9427158434742667,
+      "median": -0.09062020387576541,
+      "min": -1.9999999993064967
+    },
+    "tilde_pla2_gap": {
+      "max": 1.8681488943442035,
+      "median": 0.730410688822352,
+      "min": -0.9064897752252898
+    },
+    "tilde_sigma_pi": {
+      "max": 1.1914802538053204,
+      "median": 0.5642446396683403,
+      "min": 0.0
+    }
+  },
+  "n256_matrix_mismatch_count": 0,
+  "n256_matrix_mismatches": [],
+  "n256_missing_loo_configs": [
+    "loo_A1",
+    "loo_A11",
+    "loo_A12",
+    "loo_A17",
+    "loo_A2",
+    "loo_A20",
+    "loo_A21",
+    "loo_A22",
+    "loo_A23",
+    "loo_A24",
+    "loo_A25",
+    "loo_A3",
+    "loo_A4",
+    "loo_A5",
+    "loo_A6",
+    "loo_A7",
+    "loo_A8",
+    "loo_A9"
+  ],
+  "n256_missing_loo_configs_count": 18,
+  "n256_panel_cell_labels": [
+    "P3\u2190P3",
+    "P3\u2190P4",
+    "P3\u2190P6",
+    "P4\u2190P3"
+  ],
+  "n256_panel_loo_configs": [
+    "loo_A18",
+    "loo_A19",
+    "loo_A13",
+    "loo_A14"
+  ],
+  "n256_present_loo_configs": [
+    "loo_A13",
+    "loo_A14",
+    "loo_A18",
+    "loo_A19"
+  ],
+  "removed_cells_unique_count": 22,
+  "valid_single_removal_summary": "valid_single_removal = 22 / 22"
+}

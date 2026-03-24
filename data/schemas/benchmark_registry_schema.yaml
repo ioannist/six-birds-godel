@@ -1,0 +1,17 @@
+schema_id: benchmark_registry_schema
+registry_id: benchmark_registry
+id_prefix: bmk_
+required_top_level_fields:
+  - registry_id
+  - version
+  - entries
+required_entry_fields:
+  - id
+  - title
+  - benchmark_type
+controlled_vocabularies:
+  benchmark_type:
+    - toy
+    - arithmetic
+    - set_theory
+    - cross_domain_placeholder

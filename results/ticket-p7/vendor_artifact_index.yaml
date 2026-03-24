@@ -1,0 +1,12 @@
+stage: ticket_p7_cleanroom_smoke
+artifacts:
+- config: baseline
+  scale: 64
+  seed: 0
+  status: ok
+  log_path: vendors/six-birds-pica/lab/runs/ticket_p7_cleanroom_smoke/EXP-112_s0_n64_baseline.log
+- config: A14_only
+  scale: 64
+  seed: 0
+  status: ok
+  log_path: vendors/six-birds-pica/lab/runs/ticket_p7_cleanroom_smoke/EXP-112_s0_n64_A14_only.log

@@ -1,0 +1,345 @@
+{
+  "compile_exit_code": 0,
+  "compile_stdout_tail": "make: Entering directory '/home/repos/six-birds-ladder/paper'\nRc files read:\n  /etc/LatexMk\nLatexmk: This is Latexmk, John Collins, 20 November 2021, version: 4.76.\nNothing to do\nLatexmk: All targets (main.pdf) are up-to-date\nmake: Leaving directory '/home/repos/six-birds-ladder/paper'",
+  "undefined_citations_count": 0,
+  "undefined_references_count": 0,
+  "there_were_undefined_references_count": 0,
+  "labels_count": 39,
+  "refs_count": 38,
+  "missing_ref_targets": [],
+  "unused_labels": [
+    "eq:diff-kl",
+    "eq:edge-action",
+    "eq:endomap",
+    "eq:frob",
+    "eq:macro-kernel",
+    "eq:pla2",
+    "eq:rm",
+    "eq:sigma-pi",
+    "eq:step-entropy",
+    "eq:tau-default",
+    "sec:conclusion",
+    "sec:discussion",
+    "sec:introduction",
+    "sec:methods",
+    "sec:methods:analysis",
+    "sec:methods:audits",
+    "sec:methods:coarse",
+    "sec:methods:notation",
+    "sec:methods:pat",
+    "sec:methods:substrate",
+    "sec:results"
+  ],
+  "duplicate_labels": [],
+  "cite_keys_count": 23,
+  "cite_keys": [
+    "Anderson1972",
+    "Buchholz1994",
+    "CoifmanLafon2006",
+    "Crooks1999",
+    "DeuflhardWeber2005",
+    "Esposito2012CoarseGraining",
+    "EspositoVanDenBroeck2010",
+    "KawaguchiNakayama2013",
+    "KemenySnell1976",
+    "LebowitzSpohn1999",
+    "NoeNuske2013",
+    "OnsagerMachlup1953",
+    "PresseEtAl2013",
+    "Prinz2011",
+    "SarichNoeSchuette2010",
+    "Schnakenberg1976",
+    "Seifert2012",
+    "Tsiokos2026Life",
+    "Tsiokos2026MinSubstrate",
+    "Tsiokos2026SixBirds",
+    "VonLuxburg2007",
+    "WilsonKogut1974",
+    "Zwanzig1960"
+  ],
+  "bib_keys_count": 23,
+  "missing_bib_keys": [],
+  "unused_bib_keys": [],
+  "includegraphics_count": 24,
+  "includegraphics_tokens": [
+    {
+      "token": "F1_pipeline",
+      "line": 125
+    },
+    {
+      "token": "F2_PICA_grid",
+      "line": 157
+    },
+    {
+      "token": "F3a_n32",
+      "line": 516
+    },
+    {
+      "token": "F3a_n64",
+      "line": 517
+    },
+    {
+      "token": "F3a_n128",
+      "line": 518
+    },
+    {
+      "token": "F3a_n256",
+      "line": 519
+    },
+    {
+      "token": "F3b_n32",
+      "line": 524
+    },
+    {
+      "token": "F3b_n64",
+      "line": 525
+    },
+    {
+      "token": "F3b_n128",
+      "line": 526
+    },
+    {
+      "token": "F3b_n256",
+      "line": 527
+    },
+    {
+      "token": "F4a_PLA2_n128",
+      "line": 594
+    },
+    {
+      "token": "F4a_PLA2_n256",
+      "line": 595
+    },
+    {
+      "token": "F4b_step_entropy_n128",
+      "line": 596
+    },
+    {
+      "token": "F4b_step_entropy_n256",
+      "line": 597
+    },
+    {
+      "token": "F4c_geo_r2_n128",
+      "line": 598
+    },
+    {
+      "token": "F4c_geo_r2_n256",
+      "line": 599
+    },
+    {
+      "token": "F4d_diff_kl_n128",
+      "line": 600
+    },
+    {
+      "token": "F4d_diff_kl_n256",
+      "line": 601
+    },
+    {
+      "token": "F5_regime_scatter_n128",
+      "line": 615
+    },
+    {
+      "token": "F5_regime_scatter_n256",
+      "line": 619
+    },
+    {
+      "token": "F6_LOO_heatmap",
+      "line": 632
+    },
+    {
+      "token": "F7_tau_distribution",
+      "line": 653
+    },
+    {
+      "token": "F8_sigma_ratio_distribution",
+      "line": 660
+    },
+    {
+      "token": "F8_REV_frequency_heatmap",
+      "line": 663
+    }
+  ],
+  "resolved_fig_assets": [
+    {
+      "token": "F1_pipeline",
+      "line": 125,
+      "resolved": "paper/fig/F1_pipeline.pdf"
+    },
+    {
+      "token": "F2_PICA_grid",
+      "line": 157,
+      "resolved": "paper/fig/F2_PICA_grid.pdf"
+    },
+    {
+      "token": "F3a_n32",
+      "line": 516,
+      "resolved": "paper/fig/F3a_n32.pdf"
+    },
+    {
+      "token": "F3a_n64",
+      "line": 517,
+      "resolved": "paper/fig/F3a_n64.pdf"
+    },
+    {
+      "token": "F3a_n128",
+      "line": 518,
+      "resolved": "paper/fig/F3a_n128.pdf"
+    },
+    {
+      "token": "F3a_n256",
+      "line": 519,
+      "resolved": "paper/fig/F3a_n256.pdf"
+    },
+    {
+      "token": "F3b_n32",
+      "line": 524,
+      "resolved": "paper/fig/F3b_n32.pdf"
+    },
+    {
+      "token": "F3b_n64",
+      "line": 525,
+      "resolved": "paper/fig/F3b_n64.pdf"
+    },
+    {
+      "token": "F3b_n128",
+      "line": 526,
+      "resolved": "paper/fig/F3b_n128.pdf"
+    },
+    {
+      "token": "F3b_n256",
+      "line": 527,
+      "resolved": "paper/fig/F3b_n256.pdf"
+    },
+    {
+      "token": "F4a_PLA2_n128",
+      "line": 594,
+      "resolved": "paper/fig/F4a_PLA2_n128.pdf"
+    },
+    {
+      "token": "F4a_PLA2_n256",
+      "line": 595,
+      "resolved": "paper/fig/F4a_PLA2_n256.pdf"
+    },
+    {
+      "token": "F4b_step_entropy_n128",
+      "line": 596,
+      "resolved": "paper/fig/F4b_step_entropy_n128.pdf"
+    },
+    {
+      "token": "F4b_step_entropy_n256",
+      "line": 597,
+      "resolved": "paper/fig/F4b_step_entropy_n256.pdf"
+    },
+    {
+      "token": "F4c_geo_r2_n128",
+      "line": 598,
+      "resolved": "paper/fig/F4c_geo_r2_n128.pdf"
+    },
+    {
+      "token": "F4c_geo_r2_n256",
+      "line": 599,
+      "resolved": "paper/fig/F4c_geo_r2_n256.pdf"
+    },
+    {
+      "token": "F4d_diff_kl_n128",
+      "line": 600,
+      "resolved": "paper/fig/F4d_diff_kl_n128.pdf"
+    },
+    {
+      "token": "F4d_diff_kl_n256",
+      "line": 601,
+      "resolved": "paper/fig/F4d_diff_kl_n256.pdf"
+    },
+    {
+      "token": "F5_regime_scatter_n128",
+      "line": 615,
+      "resolved": "paper/fig/F5_regime_scatter_n128.pdf"
+    },
+    {
+      "token": "F5_regime_scatter_n256",
+      "line": 619,
+      "resolved": "paper/fig/F5_regime_scatter_n256.pdf"
+    },
+    {
+      "token": "F6_LOO_heatmap",
+      "line": 632,
+      "resolved": "paper/fig/F6_LOO_heatmap.pdf"
+    },
+    {
+      "token": "F7_tau_distribution",
+      "line": 653,
+      "resolved": "paper/fig/F7_tau_distribution.pdf"
+    },
+    {
+      "token": "F8_sigma_ratio_distribution",
+      "line": 660,
+      "resolved": "paper/fig/F8_sigma_ratio_distribution.pdf"
+    },
+    {
+      "token": "F8_REV_frequency_heatmap",
+      "line": 663,
+      "resolved": "paper/fig/F8_REV_frequency_heatmap.pdf"
+    }
+  ],
+  "missing_fig_assets": [],
+  "notation_hits": {
+    "\\\\sigma_\\\\pi": {
+      "count": 0,
+      "lines": []
+    },
+    "geo\\_": {
+      "count": 0,
+      "lines": []
+    },
+    "sigma_pi": {
+      "count": 0,
+      "lines": []
+    },
+    "lagr_geo_r2": {
+      "count": 0,
+      "lines": []
+    },
+    "\\Epat_occurrences": {
+      "count": 0,
+      "lines": [],
+      "first_3_lines": []
+    },
+    "\\Etauf_occurrences": {
+      "count": 6,
+      "lines": [
+        21,
+        45,
+        75,
+        85,
+        118,
+        126
+      ],
+      "first_3_lines": [
+        21,
+        45,
+        75
+      ]
+    }
+  },
+  "unicode_chars": [],
+  "placeholders": [
+    {
+      "token": "TODO",
+      "line": 819,
+      "context": "% TODO: Replace with actual funder/grant information if applicable.",
+      "classification": "allowed_placeholder"
+    },
+    {
+      "token": "TBD",
+      "line": 823,
+      "context": "The code, configurations, and processed run artifacts required to reproduce the figures and tables will be deposited as a reproducibility package in the Mendeley Data repository (DOI: TBD).",
+      "classification": "allowed_placeholder"
+    },
+    {
+      "token": "TODO",
+      "line": 832,
+      "context": "% TODO: Add acknowledgements (individuals, institutions, discussions, proofreading) if applicable.",
+      "classification": "allowed_placeholder"
+    }
+  ]
+}

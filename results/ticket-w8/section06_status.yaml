@@ -1,0 +1,16 @@
+ticket_id: ticket-w8
+status: pass
+carry_forward_w4_status_present: true
+carry_forward_w5_status_present: true
+carry_forward_w6_status_present: true
+carry_forward_w7_status_present: true
+section_06_inserted_correctly: true
+proof_empirical_support_explicitly_separated: true
+theorem_claims_do_not_lean_on_vendor_evidence: true
+make_check: pass
+paper_build:
+  status: pass
+  output_pdf: paper/main.pdf
+  notes:
+    - empty bibliography warning is expected until citations are added
+    - non-blocking overfull box warnings remain in long theorem-name passages

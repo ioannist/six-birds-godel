@@ -1,0 +1,129 @@
+{
+  "bib_exists": true,
+  "bib_file": "paper/references.bib",
+  "figures": [
+    {
+      "exists": true,
+      "resolved_path": "paper/fig/F1_pipeline.pdf",
+      "token": "fig/F1_pipeline.pdf"
+    },
+    {
+      "exists": true,
+      "resolved_path": "paper/fig/F2_PICA_grid.pdf",
+      "token": "fig/F2_PICA_grid.pdf"
+    },
+    {
+      "exists": true,
+      "resolved_path": "paper/fig/F3a_n32.pdf",
+      "token": "fig/F3a_n32.pdf"
+    },
+    {
+      "exists": true,
+      "resolved_path": "paper/fig/F3a_n64.pdf",
+      "token": "fig/F3a_n64.pdf"
+    },
+    {
+      "exists": true,
+      "resolved_path": "paper/fig/F3a_n128.pdf",
+      "token": "fig/F3a_n128.pdf"
+    },
+    {
+      "exists": true,
+      "resolved_path": "paper/fig/F3a_n256.pdf",
+      "token": "fig/F3a_n256.pdf"
+    },
+    {
+      "exists": true,
+      "resolved_path": "paper/fig/F3b_n32.pdf",
+      "token": "fig/F3b_n32.pdf"
+    },
+    {
+      "exists": true,
+      "resolved_path": "paper/fig/F3b_n64.pdf",
+      "token": "fig/F3b_n64.pdf"
+    },
+    {
+      "exists": true,
+      "resolved_path": "paper/fig/F3b_n128.pdf",
+      "token": "fig/F3b_n128.pdf"
+    },
+    {
+      "exists": true,
+      "resolved_path": "paper/fig/F3b_n256.pdf",
+      "token": "fig/F3b_n256.pdf"
+    },
+    {
+      "exists": true,
+      "resolved_path": "paper/fig/F4a_PLA2_n128.pdf",
+      "token": "fig/F4a_PLA2_n128.pdf"
+    },
+    {
+      "exists": true,
+      "resolved_path": "paper/fig/F4a_PLA2_n256.pdf",
+      "token": "fig/F4a_PLA2_n256.pdf"
+    },
+    {
+      "exists": true,
+      "resolved_path": "paper/fig/F4b_step_entropy_n128.pdf",
+      "token": "fig/F4b_step_entropy_n128.pdf"
+    },
+    {
+      "exists": true,
+      "resolved_path": "paper/fig/F4b_step_entropy_n256.pdf",
+      "token": "fig/F4b_step_entropy_n256.pdf"
+    },
+    {
+      "exists": true,
+      "resolved_path": "paper/fig/F4c_geo_r2_n128.pdf",
+      "token": "fig/F4c_geo_r2_n128.pdf"
+    },
+    {
+      "exists": true,
+      "resolved_path": "paper/fig/F4c_geo_r2_n256.pdf",
+      "token": "fig/F4c_geo_r2_n256.pdf"
+    },
+    {
+      "exists": true,
+      "resolved_path": "paper/fig/F4d_diff_kl_n128.pdf",
+      "token": "fig/F4d_diff_kl_n128.pdf"
+    },
+    {
+      "exists": true,
+      "resolved_path": "paper/fig/F4d_diff_kl_n256.pdf",
+      "token": "fig/F4d_diff_kl_n256.pdf"
+    },
+    {
+      "exists": true,
+      "resolved_path": "paper/fig/F5_regime_scatter_n128.pdf",
+      "token": "fig/F5_regime_scatter_n128.pdf"
+    },
+    {
+      "exists": true,
+      "resolved_path": "paper/fig/F5_regime_scatter_n256.pdf",
+      "token": "fig/F5_regime_scatter_n256.pdf"
+    },
+    {
+      "exists": true,
+      "resolved_path": "paper/fig/F6_LOO_heatmap.pdf",
+      "token": "fig/F6_LOO_heatmap.pdf"
+    },
+    {
+      "exists": true,
+      "resolved_path": "paper/fig/F7_tau_distribution.pdf",
+      "token": "fig/F7_tau_distribution.pdf"
+    },
+    {
+      "exists": true,
+      "resolved_path": "paper/fig/F8_sigma_ratio_distribution.pdf",
+      "token": "fig/F8_sigma_ratio_distribution.pdf"
+    },
+    {
+      "exists": true,
+      "resolved_path": "paper/fig/F8_REV_frequency_heatmap.pdf",
+      "token": "fig/F8_REV_frequency_heatmap.pdf"
+    }
+  ],
+  "missing_assets": [],
+  "n_figures_total": 24,
+  "tex_file": "paper/main.tex"
+}

@@ -1,0 +1,18 @@
+appendix_id: appendix_split
+version: 0.1.0
+appendices:
+  - appendix: app_lean_theorem_inventory
+    contents:
+      - internal_proof_inventory
+      - theorem_placement_map
+  - appendix: app_external_dependency_contract
+    contents:
+      - assumption_box
+      - external_discharge_inventory
+  - appendix: app_vendor_evidence_details
+    contents:
+      - vendor_supporting_tables_only
+  - appendix: app_discarded_overreach_boundaries
+    contents:
+      - out_of_scope
+      - discarded_claim_boundaries

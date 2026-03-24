@@ -1,0 +1,955 @@
+atlas_id: pica_program_atlas
+version: 0.1.0
+entries:
+- id: prog_a12_a25
+  label: A12_A25
+  program_kind: row_group
+  member_cells:
+  - cell_p2_p4
+  - cell_p2_p6
+  - cell_p4_p4
+  - cell_p6_p6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_a13_a11
+  label: A13_A11
+  program_kind: row_group
+  member_cells:
+  - cell_p2_p4
+  - cell_p2_p5
+  - cell_p3_p6
+  - cell_p4_p4
+  - cell_p5_p4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_a13_a14
+  label: A13_A14
+  program_kind: row_group
+  member_cells:
+  - cell_p2_p4
+  - cell_p3_p6
+  - cell_p4_p3
+  - cell_p4_p4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_a14_a17
+  label: A14_A17
+  program_kind: row_group
+  member_cells:
+  - cell_p2_p4
+  - cell_p4_p3
+  - cell_p4_p4
+  - cell_p4_p6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_a14_a19
+  label: A14_A19
+  program_kind: row_group
+  member_cells:
+  - cell_p2_p4
+  - cell_p3_p4
+  - cell_p4_p3
+  - cell_p4_p4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_a14_a25
+  label: A14_A25
+  program_kind: row_group
+  member_cells:
+  - cell_p2_p4
+  - cell_p4_p3
+  - cell_p4_p4
+  - cell_p6_p6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_a14_only
+  label: A14_only
+  program_kind: row_group
+  member_cells:
+  - cell_p2_p4
+  - cell_p4_p3
+  - cell_p4_p4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_a16_only
+  label: A16_only
+  program_kind: row_group
+  member_cells:
+  - cell_p2_p4
+  - cell_p4_p4
+  - cell_p4_p5
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_a17_only
+  label: A17_only
+  program_kind: row_group
+  member_cells:
+  - cell_p2_p4
+  - cell_p4_p4
+  - cell_p4_p6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_a18_a19
+  label: A18_A19
+  program_kind: row_group
+  member_cells:
+  - cell_p2_p4
+  - cell_p3_p3
+  - cell_p3_p4
+  - cell_p4_p4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_a18_only
+  label: A18_only
+  program_kind: row_group
+  member_cells:
+  - cell_p2_p4
+  - cell_p3_p3
+  - cell_p4_p4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_a20_only
+  label: A20_only
+  program_kind: row_group
+  member_cells:
+  - cell_p2_p4
+  - cell_p3_p5
+  - cell_p4_p4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_a22_only
+  label: A22_only
+  program_kind: row_group
+  member_cells:
+  - cell_p2_p4
+  - cell_p4_p4
+  - cell_p5_p4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_a4_a19
+  label: A4_A19
+  program_kind: row_group
+  member_cells:
+  - cell_p1_p4
+  - cell_p2_p4
+  - cell_p3_p4
+  - cell_p4_p4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_baseline
+  label: baseline
+  program_kind: baseline_style
+  member_cells:
+  - cell_p2_p4
+  - cell_p4_p4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  - vendors/six-birds-pica/paper/figdata/run_summary_table.csv.gz
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_col_p1
+  label: col_P1
+  program_kind: row_group
+  member_cells:
+  - cell_p1_p1
+  - cell_p2_p1
+  - cell_p2_p4
+  - cell_p4_p4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_col_p2
+  label: col_P2
+  program_kind: row_group
+  member_cells:
+  - cell_p1_p2
+  - cell_p2_p2
+  - cell_p2_p4
+  - cell_p4_p4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_col_p3
+  label: col_P3
+  program_kind: row_group
+  member_cells:
+  - cell_p1_p3
+  - cell_p2_p3
+  - cell_p2_p4
+  - cell_p3_p3
+  - cell_p4_p3
+  - cell_p4_p4
+  - cell_p5_p3
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_col_p4
+  label: col_P4
+  program_kind: row_group
+  member_cells:
+  - cell_p1_p4
+  - cell_p2_p4
+  - cell_p3_p4
+  - cell_p4_p4
+  - cell_p5_p4
+  - cell_p6_p4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_col_p5
+  label: col_P5
+  program_kind: row_group
+  member_cells:
+  - cell_p1_p5
+  - cell_p2_p4
+  - cell_p2_p5
+  - cell_p3_p5
+  - cell_p4_p4
+  - cell_p4_p5
+  - cell_p5_p4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_col_p6
+  label: col_P6
+  program_kind: row_group
+  member_cells:
+  - cell_p1_p6
+  - cell_p2_p4
+  - cell_p2_p6
+  - cell_p3_p6
+  - cell_p4_p4
+  - cell_p4_p6
+  - cell_p5_p6
+  - cell_p6_p6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_empty
+  label: empty
+  program_kind: baseline_style
+  member_cells: []
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  - vendors/six-birds-pica/paper/figdata/run_summary_table.csv.gz
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_fa_no_inf_p3
+  label: fa_no_inf_P3
+  program_kind: row_group
+  member_cells:
+  - cell_p1_p1
+  - cell_p1_p2
+  - cell_p1_p4
+  - cell_p1_p5
+  - cell_p1_p6
+  - cell_p2_p1
+  - cell_p2_p2
+  - cell_p2_p4
+  - cell_p2_p5
+  - cell_p2_p6
+  - cell_p3_p4
+  - cell_p3_p5
+  - cell_p3_p6
+  - cell_p4_p4
+  - cell_p4_p6
+  - cell_p5_p4
+  - cell_p5_p6
+  - cell_p6_p4
+  - cell_p6_p6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_fa_no_inf_p4
+  label: fa_no_inf_P4
+  program_kind: row_group
+  member_cells:
+  - cell_p1_p1
+  - cell_p1_p2
+  - cell_p1_p3
+  - cell_p1_p5
+  - cell_p1_p6
+  - cell_p2_p1
+  - cell_p2_p2
+  - cell_p2_p3
+  - cell_p2_p4
+  - cell_p2_p5
+  - cell_p2_p6
+  - cell_p3_p3
+  - cell_p3_p5
+  - cell_p3_p6
+  - cell_p4_p3
+  - cell_p4_p4
+  - cell_p4_p6
+  - cell_p5_p3
+  - cell_p5_p6
+  - cell_p6_p6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_fa_no_inf_p5
+  label: fa_no_inf_P5
+  program_kind: row_group
+  member_cells:
+  - cell_p1_p1
+  - cell_p1_p2
+  - cell_p1_p3
+  - cell_p1_p4
+  - cell_p1_p6
+  - cell_p2_p1
+  - cell_p2_p2
+  - cell_p2_p3
+  - cell_p2_p4
+  - cell_p2_p6
+  - cell_p3_p3
+  - cell_p3_p4
+  - cell_p3_p6
+  - cell_p4_p3
+  - cell_p4_p4
+  - cell_p4_p6
+  - cell_p5_p3
+  - cell_p5_p4
+  - cell_p5_p6
+  - cell_p6_p4
+  - cell_p6_p6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_fa_no_inf_p6
+  label: fa_no_inf_P6
+  program_kind: row_group
+  member_cells:
+  - cell_p1_p1
+  - cell_p1_p2
+  - cell_p1_p3
+  - cell_p1_p4
+  - cell_p1_p5
+  - cell_p2_p1
+  - cell_p2_p2
+  - cell_p2_p3
+  - cell_p2_p4
+  - cell_p2_p5
+  - cell_p3_p3
+  - cell_p3_p4
+  - cell_p3_p5
+  - cell_p4_p3
+  - cell_p4_p4
+  - cell_p5_p3
+  - cell_p5_p4
+  - cell_p6_p4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_fa_no_p1row
+  label: fa_no_P1row
+  program_kind: row_group
+  member_cells:
+  - cell_p2_p1
+  - cell_p2_p2
+  - cell_p2_p3
+  - cell_p2_p4
+  - cell_p2_p5
+  - cell_p2_p6
+  - cell_p3_p3
+  - cell_p3_p4
+  - cell_p3_p5
+  - cell_p3_p6
+  - cell_p4_p3
+  - cell_p4_p4
+  - cell_p4_p6
+  - cell_p5_p3
+  - cell_p5_p4
+  - cell_p5_p6
+  - cell_p6_p4
+  - cell_p6_p6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_fa_no_p2mod
+  label: fa_no_P2mod
+  program_kind: row_group
+  member_cells:
+  - cell_p1_p1
+  - cell_p1_p2
+  - cell_p1_p3
+  - cell_p1_p4
+  - cell_p1_p5
+  - cell_p1_p6
+  - cell_p2_p4
+  - cell_p3_p3
+  - cell_p3_p4
+  - cell_p3_p5
+  - cell_p3_p6
+  - cell_p4_p3
+  - cell_p4_p4
+  - cell_p4_p6
+  - cell_p5_p3
+  - cell_p5_p4
+  - cell_p5_p6
+  - cell_p6_p4
+  - cell_p6_p6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_fa_no_p3row
+  label: fa_no_P3row
+  program_kind: row_group
+  member_cells:
+  - cell_p1_p1
+  - cell_p1_p2
+  - cell_p1_p3
+  - cell_p1_p4
+  - cell_p1_p5
+  - cell_p1_p6
+  - cell_p2_p1
+  - cell_p2_p2
+  - cell_p2_p3
+  - cell_p2_p4
+  - cell_p2_p5
+  - cell_p2_p6
+  - cell_p4_p3
+  - cell_p4_p4
+  - cell_p4_p6
+  - cell_p5_p3
+  - cell_p5_p4
+  - cell_p5_p6
+  - cell_p6_p4
+  - cell_p6_p6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_full_action
+  label: full_action
+  program_kind: baseline_style
+  member_cells:
+  - cell_p1_p1
+  - cell_p1_p2
+  - cell_p1_p3
+  - cell_p1_p4
+  - cell_p1_p5
+  - cell_p1_p6
+  - cell_p2_p1
+  - cell_p2_p2
+  - cell_p2_p3
+  - cell_p2_p4
+  - cell_p2_p5
+  - cell_p2_p6
+  - cell_p3_p3
+  - cell_p3_p4
+  - cell_p3_p5
+  - cell_p3_p6
+  - cell_p4_p3
+  - cell_p4_p4
+  - cell_p4_p6
+  - cell_p5_p3
+  - cell_p5_p4
+  - cell_p5_p6
+  - cell_p6_p4
+  - cell_p6_p6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  - vendors/six-birds-pica/paper/figdata/run_summary_table.csv.gz
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_full_all
+  label: full_all
+  program_kind: row_group
+  member_cells:
+  - cell_p1_p1
+  - cell_p1_p2
+  - cell_p1_p3
+  - cell_p1_p4
+  - cell_p1_p5
+  - cell_p1_p6
+  - cell_p2_p1
+  - cell_p2_p2
+  - cell_p2_p3
+  - cell_p2_p4
+  - cell_p2_p5
+  - cell_p2_p6
+  - cell_p3_p3
+  - cell_p3_p4
+  - cell_p3_p5
+  - cell_p3_p6
+  - cell_p4_p3
+  - cell_p4_p4
+  - cell_p4_p5
+  - cell_p4_p6
+  - cell_p5_p3
+  - cell_p5_p4
+  - cell_p5_p6
+  - cell_p6_p4
+  - cell_p6_p6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_gen2_a14_a13
+  label: gen2_A14_A13
+  program_kind: row_group
+  member_cells:
+  - cell_p2_p4
+  - cell_p3_p6
+  - cell_p4_p3
+  - cell_p4_p4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_gen3_a13_a14_a19
+  label: gen3_A13_A14_A19
+  program_kind: row_group
+  member_cells:
+  - cell_p2_p4
+  - cell_p3_p4
+  - cell_p3_p6
+  - cell_p4_p3
+  - cell_p4_p4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_gen3_a13_a18_a19
+  label: gen3_A13_A18_A19
+  program_kind: row_group
+  member_cells:
+  - cell_p2_p4
+  - cell_p3_p3
+  - cell_p3_p4
+  - cell_p3_p6
+  - cell_p4_p4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_gen4_core
+  label: gen4_core
+  program_kind: row_group
+  member_cells:
+  - cell_p2_p4
+  - cell_p3_p3
+  - cell_p3_p4
+  - cell_p3_p6
+  - cell_p4_p3
+  - cell_p4_p4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_gen5_core_a25
+  label: gen5_core_A25
+  program_kind: row_group
+  member_cells:
+  - cell_p2_p4
+  - cell_p3_p3
+  - cell_p3_p4
+  - cell_p3_p6
+  - cell_p4_p3
+  - cell_p4_p4
+  - cell_p6_p6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_gen6_core_a12_a25
+  label: gen6_core_A12_A25
+  program_kind: row_group
+  member_cells:
+  - cell_p2_p4
+  - cell_p2_p6
+  - cell_p3_p3
+  - cell_p3_p4
+  - cell_p3_p6
+  - cell_p4_p3
+  - cell_p4_p4
+  - cell_p6_p6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_loo_a1
+  label: loo_A1
+  program_kind: key_ablation
+  member_cells:
+  - cell_p1_p1
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_loo_a11
+  label: loo_A11
+  program_kind: key_ablation
+  member_cells:
+  - cell_p2_p5
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_loo_a12
+  label: loo_A12
+  program_kind: key_ablation
+  member_cells:
+  - cell_p2_p6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_loo_a13
+  label: loo_A13
+  program_kind: key_ablation
+  member_cells:
+  - cell_p3_p6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_loo_a14
+  label: loo_A14
+  program_kind: key_ablation
+  member_cells:
+  - cell_p4_p3
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_loo_a17
+  label: loo_A17
+  program_kind: key_ablation
+  member_cells:
+  - cell_p4_p6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_loo_a18
+  label: loo_A18
+  program_kind: key_ablation
+  member_cells:
+  - cell_p3_p3
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_loo_a19
+  label: loo_A19
+  program_kind: key_ablation
+  member_cells:
+  - cell_p3_p4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_loo_a2
+  label: loo_A2
+  program_kind: key_ablation
+  member_cells:
+  - cell_p1_p2
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_loo_a20
+  label: loo_A20
+  program_kind: key_ablation
+  member_cells:
+  - cell_p3_p5
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_loo_a21
+  label: loo_A21
+  program_kind: key_ablation
+  member_cells:
+  - cell_p5_p3
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_loo_a22
+  label: loo_A22
+  program_kind: key_ablation
+  member_cells:
+  - cell_p5_p4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_loo_a23
+  label: loo_A23
+  program_kind: key_ablation
+  member_cells:
+  - cell_p5_p6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_loo_a24
+  label: loo_A24
+  program_kind: key_ablation
+  member_cells:
+  - cell_p6_p4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_loo_a25
+  label: loo_A25
+  program_kind: key_ablation
+  member_cells:
+  - cell_p6_p6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_loo_a3
+  label: loo_A3
+  program_kind: key_ablation
+  member_cells:
+  - cell_p1_p3
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_loo_a4
+  label: loo_A4
+  program_kind: key_ablation
+  member_cells:
+  - cell_p1_p4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_loo_a5
+  label: loo_A5
+  program_kind: key_ablation
+  member_cells:
+  - cell_p1_p5
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_loo_a6
+  label: loo_A6
+  program_kind: key_ablation
+  member_cells:
+  - cell_p1_p6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_loo_a7
+  label: loo_A7
+  program_kind: key_ablation
+  member_cells:
+  - cell_p2_p1
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_loo_a8
+  label: loo_A8
+  program_kind: key_ablation
+  member_cells:
+  - cell_p2_p2
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_loo_a9
+  label: loo_A9
+  program_kind: key_ablation
+  member_cells:
+  - cell_p2_p3
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/loo_cell_map.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_p1_p3_rows
+  label: P1_P3_rows
+  program_kind: row_group
+  member_cells:
+  - cell_p1_p1
+  - cell_p1_p2
+  - cell_p1_p3
+  - cell_p1_p4
+  - cell_p1_p6
+  - cell_p2_p4
+  - cell_p3_p3
+  - cell_p3_p4
+  - cell_p3_p6
+  - cell_p4_p4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_p1_row
+  label: P1_row
+  program_kind: row_group
+  member_cells:
+  - cell_p1_p1
+  - cell_p1_p2
+  - cell_p1_p3
+  - cell_p1_p4
+  - cell_p1_p6
+  - cell_p2_p4
+  - cell_p4_p4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_p2_p3_rows
+  label: P2_P3_rows
+  program_kind: row_group
+  member_cells:
+  - cell_p2_p1
+  - cell_p2_p2
+  - cell_p2_p3
+  - cell_p2_p4
+  - cell_p2_p6
+  - cell_p3_p3
+  - cell_p3_p4
+  - cell_p3_p6
+  - cell_p4_p4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_p2_row
+  label: P2_row
+  program_kind: row_group
+  member_cells:
+  - cell_p2_p1
+  - cell_p2_p2
+  - cell_p2_p3
+  - cell_p2_p4
+  - cell_p2_p6
+  - cell_p4_p4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_p3_p4_rows
+  label: P3_P4_rows
+  program_kind: row_group
+  member_cells:
+  - cell_p2_p4
+  - cell_p3_p3
+  - cell_p3_p4
+  - cell_p3_p6
+  - cell_p4_p3
+  - cell_p4_p4
+  - cell_p4_p5
+  - cell_p4_p6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_p3_row
+  label: P3_row
+  program_kind: row_group
+  member_cells:
+  - cell_p2_p4
+  - cell_p3_p3
+  - cell_p3_p4
+  - cell_p3_p6
+  - cell_p4_p4
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_p4_p5_rows
+  label: P4_P5_rows
+  program_kind: row_group
+  member_cells:
+  - cell_p2_p4
+  - cell_p4_p3
+  - cell_p4_p4
+  - cell_p4_p5
+  - cell_p4_p6
+  - cell_p5_p3
+  - cell_p5_p4
+  - cell_p5_p6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_p4_row
+  label: P4_row
+  program_kind: row_group
+  member_cells:
+  - cell_p2_p4
+  - cell_p4_p3
+  - cell_p4_p4
+  - cell_p4_p5
+  - cell_p4_p6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_p5_row
+  label: P5_row
+  program_kind: row_group
+  member_cells:
+  - cell_p2_p4
+  - cell_p4_p4
+  - cell_p5_p3
+  - cell_p5_p4
+  - cell_p5_p6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed
+- id: prog_p6_row
+  label: P6_row
+  program_kind: row_group
+  member_cells:
+  - cell_p2_p4
+  - cell_p4_p4
+  - cell_p6_p4
+  - cell_p6_p6
+  source_paths:
+  - vendors/six-birds-pica/paper/figdata/T4_taxonomy_generators.csv
+  provenance_type: figdata
+  evidence_status: observed

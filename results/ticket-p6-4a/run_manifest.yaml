@@ -1,0 +1,11 @@
+run_id: ticket_p6_4a_resume
+version: 0.1.0
+exp_lineage: EXP-112
+canonical_metric_name: delta_vs_baseline_frob_from_rank1
+run_dirs_considered:
+- vendors/six-birds-pica/lab/runs/ticket_p6_4/ticket_p6_4_primary
+- vendors/six-birds-pica/lab/runs/ticket_p6_4/ticket_p6_4a_resume
+attempted_unique_cells_seen: 120
+parsed_completed_cells: 120
+primary_coverage_complete: true
+resume_jobs_remaining: 0

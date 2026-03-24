@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="540">
+<rect x="0" y="0" width="1000" height="540" fill="#ffffff"/>
+<text x="280" y="28" font-size="18" font-family="monospace">Sensitivity Metrics by Family</text>
+<text x="10" y="78" font-size="12" font-family="monospace">boolean_all_monotone_inflationary | benchmark</text>
+<rect x="280" y="50" width="234" height="30" fill="#3c78d8"/>
+<text x="520" y="78" font-size="12" font-family="monospace">0.2296</text>
+<text x="10" y="116" font-size="12" font-family="monospace">boolean_all_monotone_inflationary | cost</text>
+<rect x="280" y="88" width="61" height="30" fill="#3c78d8"/>
+<text x="347" y="116" font-size="12" font-family="monospace">0.0601</text>
+<text x="10" y="154" font-size="12" font-family="monospace">boolean_all_monotone_inflationary | tie-change-rate</text>
+<rect x="280" y="126" width="680" height="30" fill="#3c78d8"/>
+<text x="966" y="154" font-size="12" font-family="monospace">0.6667</text>
+<text x="10" y="192" font-size="12" font-family="monospace">chain_all_monotone_inflationary | benchmark</text>
+<rect x="280" y="164" width="373" height="30" fill="#3c78d8"/>
+<text x="659" y="192" font-size="12" font-family="monospace">0.3659</text>
+<text x="10" y="230" font-size="12" font-family="monospace">chain_all_monotone_inflationary | cost</text>
+<rect x="280" y="202" width="119" height="30" fill="#3c78d8"/>
+<text x="405" y="230" font-size="12" font-family="monospace">0.1174</text>
+<text x="10" y="268" font-size="12" font-family="monospace">chain_all_monotone_inflationary | tie-change-rate</text>
+<rect x="280" y="240" width="471" height="30" fill="#3c78d8"/>
+<text x="757" y="268" font-size="12" font-family="monospace">0.4625</text>
+<text x="10" y="306" font-size="12" font-family="monospace">chain_closure_only | benchmark</text>
+<rect x="280" y="278" width="397" height="30" fill="#3c78d8"/>
+<text x="683" y="306" font-size="12" font-family="monospace">0.3893</text>
+<text x="10" y="344" font-size="12" font-family="monospace">chain_closure_only | cost</text>
+<rect x="280" y="316" width="113" height="30" fill="#3c78d8"/>
+<text x="399" y="344" font-size="12" font-family="monospace">0.1115</text>
+<text x="10" y="382" font-size="12" font-family="monospace">chain_closure_only | tie-change-rate</text>
+<rect x="280" y="354" width="395" height="30" fill="#3c78d8"/>
+<text x="681" y="382" font-size="12" font-family="monospace">0.3875</text>
+<text x="10" y="420" font-size="12" font-family="monospace">chain_step_family | benchmark</text>
+<rect x="280" y="392" width="0" height="30" fill="#3c78d8"/>
+<text x="286" y="420" font-size="12" font-family="monospace">0.0000</text>
+<text x="10" y="458" font-size="12" font-family="monospace">chain_step_family | cost</text>
+<rect x="280" y="430" width="107" height="30" fill="#3c78d8"/>
+<text x="393" y="458" font-size="12" font-family="monospace">0.1050</text>
+<text x="10" y="496" font-size="12" font-family="monospace">chain_step_family | tie-change-rate</text>
+<rect x="280" y="468" width="204" height="30" fill="#3c78d8"/>
+<text x="490" y="496" font-size="12" font-family="monospace">0.2000</text>
+</svg>

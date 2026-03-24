@@ -1,0 +1,34 @@
+candidate_id: thm_arithmetic_frontier_canonicality
+source_target: vision.md
+primitive_role_read:
+  P6: frozen evaluation regime
+  P4: indexing/support axis
+  P3: diagnostic only, excluded from proof-driving path
+paper_gate_status: theorem_led_conditional_ready
+statement_shape:
+  context:
+    - fixed frozen slice (benchmark/cost/transformation/tie/quotient)
+    - recursive monotone extension operator
+    - frontier-efficiency in fixed domain
+    - cone/index bookkeeping treated as support structure
+  conclusion:
+    - alignment on a restricted cone with a narrow canonical operator family
+    - canonical family interpreted as consistency/reflection progression analogue
+proof_status:
+  formal_statement_in_lean: true
+  restricted_in_house_alignment_lemma_proved: true
+  conditional_lift_proved_in_lean: true
+  proved_in_house: false
+  bridge_contribution:
+    - fixed P5 package cannot support persistent strict growth
+    - persistent growth witnesses force P1/P2-style package change
+  external_dependencies:
+    - canonical family members lie in the frozen comparison domain
+    - efficient operator admits a canonical-family representative on the cone
+    - literature-calibrated interpretation of the canonical family as consistency/reflection progression
+  external_boundary_frozen: true
+blocked_overgeneralizations:
+  - global canonical collapse across unconstrained benchmark/cost perturbations
+  - uniqueness claims without frozen slice restrictions
+  - promotion to theorem-ready without external dependency closure
+current_status: theorem_led_conditional_ready

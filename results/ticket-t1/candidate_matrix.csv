@@ -1,0 +1,5 @@
+id,label,viability_status,vision_alignment,toy_conflict,vendor_conflict,lean_bootstrap_ready,notes
+thm_finite_frontier_setup,Finite frontier setup theorem,backup,partial,no,no,yes,Demoted to base theorem tier
+thm_closure_saturation_operator_change,Closure saturation implies operator/theory change,lead,medium_high,no,no,yes,Selected bridge candidate
+thm_frozen_slice_representative_canonicality,Frozen-slice representative canonicality,backup,medium,partial,partial,partial,Bridge backup only under strict frozen conventions
+thm_global_canonical_efficiency,Global canonical efficiency collapse,discard,high,yes,yes,no,Conflicts with toy falsification and hybrid-only vendor verdict

@@ -1,0 +1,10 @@
+plan_id: ticket_p6_additional_run_plan
+version: 0.1.0
+genuinely_unanswered_count: 1
+items:
+- question_class: theorem_or_hybrid_paper_decision_readiness
+  next_action: moderate_new_run
+  label: interaction_delta_confirmatory_grid
+  ambiguity_resolved: Confirms interaction-gain and robustness with explicit subprogram
+    baselines across seeds/scales.
+  cost_class: moderate_new_run

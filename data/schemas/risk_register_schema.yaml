@@ -1,0 +1,23 @@
+schema_id: risk_register_schema
+registry_id: risk_register
+id_prefix: rsk_
+required_top_level_fields:
+  - registry_id
+  - version
+  - entries
+required_entry_fields:
+  - id
+  - title
+  - status
+  - level
+controlled_vocabularies:
+  status:
+    - open
+    - monitor
+    - mitigated
+    - closed
+  level:
+    - low
+    - medium
+    - high
+    - critical

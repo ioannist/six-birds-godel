@@ -1,0 +1,8 @@
+ticket: ticket-r2
+status: pass
+section: paper/sections/02_primitive_roles.tex
+carry_forward_r1_results_present: true
+explicit_theorem_setup: true
+required_definitions_present: true
+make_check: pass
+paper_build: pass

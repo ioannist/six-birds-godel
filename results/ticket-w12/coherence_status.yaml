@@ -1,0 +1,7 @@
+ticket: ticket-w12
+status: pass
+notation_normalized_consistently: true
+theorem_naming_consistent_with_theorem_package: true
+contradictory_scope_language_left: false
+make_check: pass
+paper_build: pass

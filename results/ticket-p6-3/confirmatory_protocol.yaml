@@ -1,0 +1,46 @@
+protocol_id: ticket_p6_3_confirmatory_freeze
+version: 0.1.0
+target_hypothesis: A14_only is the strongest narrow interaction candidate once hardened
+  against nearest shipped comparators.
+candidate_target: A14_only
+candidate_target_retained: true
+scale_policy:
+  primary_regime: &id002
+  - 64
+  - 128
+  optional_extension: &id003
+  - 256
+  control_only:
+  - 32
+  decision_note: n=32 is non-decision-driving.
+frozen_comparator_set: &id001
+- A14_only
+- baseline
+- full_action
+- full_all
+- A13_A14
+- A14_A19
+metric_bundle:
+  primary_metric:
+    name: delta_vs_baseline_frob_from_rank1
+    definition: Per-(config,n) mean(frob_from_rank1) - mean_baseline(frob_from_rank1),
+      evaluated at n=64 and n=128.
+    decision_aggregation: primary_mean_abs = mean(|delta| over n in {64,128})
+  secondary_metric:
+    name: primary_regime_seed_coverage_and_anchor_scan
+    definition: Each (config,n) in primary regime must have seed_count >= 10 and anchor
+      rung support at k=4 logged for decision metrics.
+    purpose: Prevents fragile conclusions from thin or non-comparable slices.
+minimal_run_budget:
+  configs: *id001
+  primary_scales: *id002
+  optional_scale: *id003
+  n256_required: false
+  minimum_seed_footprint: 10 seeds per (config,n) for n in {64,128}; optional 5+ seeds
+    at n=256 if extension is run.
+  minimum_scan_rung_footprint: k_rung=4 required for all primary (config,n); optional
+    mini-check at k_rung in {2,8} for sensitivity.
+  cost_class: cheap_new_run
+lineage:
+  source_thresholds: results/ticket-p6-2/decision_thresholds.yaml
+  source_trigger: results/ticket-p6-2/run_trigger_spec.yaml

@@ -1,0 +1,16 @@
+ticket_id: ticket-w7
+status: pass
+carry_forward_w4_status_present: true
+carry_forward_w5_status_present: true
+carry_forward_w6_status_present: true
+section_05_inserted_correctly: true
+main_theorem_stated_once_cleanly: true
+assumptions_match_theorem_package: true
+hidden_dependencies_introduced: false
+make_check: pass
+paper_build:
+  status: pass
+  output_pdf: paper/main.pdf
+  notes:
+    - empty bibliography warning is expected until citations are added
+    - non-blocking overfull box warnings remain in long theorem-name passages

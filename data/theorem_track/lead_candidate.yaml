@@ -1,0 +1,27 @@
+lead_candidate_id: thm_closure_saturation_operator_change
+selection_status: lead_selected
+formalization_status:
+  lean_statement_formalized: true
+  core_saturation_lemma_proved: true
+  bridge_result_proved: true
+  bridge_path_depends_on_axioms: false
+exact_hypotheses:
+  - closure package is fixed
+  - operator is idempotent (core frozen-package assumption)
+  - persistent strict growth witness means iterate(n+1,x) != iterate(n,x) for some n >= 1
+exact_conclusion:
+  - iterates saturate after one step under fixed idempotent package
+  - no persistent strict-growth witness can hold under fixed package
+  - therefore any persistent strict-growth witness implies frozen-package assumption is invalid
+blocked_generalizations:
+  - no benchmark/cost perturbation robustness claim
+  - no cross-package canonical collapse claim
+  - no uniqueness claim for globally efficient operators
+alignment_with_vision: bridge toward canonical-efficiency target via necessary package-change condition
+conflict_status_with_toy_vendor: compatible with toy/vendor boundaries
+lean_tractability: achieved_for_bridge_shape
+boundary_evidence_refs:
+  - results/ticket-05/report.md
+  - results/ticket-06/report.md
+  - results/ticket-06-4/report.md
+  - results/ticket-p6-4b/readiness_rescore.yaml

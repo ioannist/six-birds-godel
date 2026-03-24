@@ -1,0 +1,75 @@
+registry_id: external_support
+version: 0.1.0
+scope_note: External theorem dependencies and framing anchors.
+entries:
+  - id: src_ext_godel_1931
+    canonical_key: godel_1931_incompleteness
+    title: On formally undecidable propositions in Principia Mathematica and related systems
+    source_cluster: godel_incompleteness
+    claim_links:
+      - clm_godel_i_closure_gap
+      - clm_godel_ii_internal_audit_barrier
+    support_roles:
+      - core_theorem_background
+      - theorem_dependency
+  - id: src_ext_rosser_1936
+    canonical_key: rosser_1936_extension_of_godel
+    title: Extensions of some theorems of Godel and Church
+    source_cluster: rosser_undecidability
+    claim_links:
+      - clm_godel_i_closure_gap
+    support_roles:
+      - theorem_dependency
+  - id: src_ext_derivability_conditions_hbl
+    canonical_key: hbl_derivability_conditions
+    title: Hilbert-Bernays-Lob derivability conditions background
+    source_cluster: derivability_conditions
+    claim_links:
+      - clm_godel_i_closure_gap
+      - clm_godel_ii_internal_audit_barrier
+    support_roles:
+      - core_theorem_background
+  - id: src_ext_beklemishev_reflection_progressions
+    canonical_key: beklemishev_reflection_progressions
+    title: Reflection progressions and provability algebra
+    source_cluster: reflection_progressions
+    claim_links:
+      - clm_godel_ii_internal_audit_barrier
+    support_roles:
+      - theorem_dependency
+      - framing_context
+  - id: src_ext_montalban_walsh_consistency_operator
+    canonical_key: montalban_walsh_inevitability_consistency
+    title: Inevitability of a consistency operator over computably enumerable theories
+    source_cluster: inevitability_consistency_operator
+    claim_links:
+      - clm_godel_ii_internal_audit_barrier
+    support_roles:
+      - theorem_dependency
+  - id: src_ext_steel_maximize_unify
+    canonical_key: steel_maximize_unify
+    title: Maximize and Unify
+    source_cluster: maximize_unify
+    claim_links:
+      - clm_canonical_efficiency_candidate
+    support_roles:
+      - framing_context
+      - application_context
+  - id: src_ext_shoenfield_absoluteness
+    canonical_key: shoenfield_absoluteness_classic
+    title: Shoenfield absoluteness theorem background
+    source_cluster: shoenfield_absoluteness
+    claim_links:
+      - clm_set_theoretic_invariance_frontier
+    support_roles:
+      - theorem_dependency
+      - application_context
+  - id: src_ext_generic_absoluteness_large_cardinals
+    canonical_key: generic_absoluteness_large_cardinals
+    title: Generic absoluteness and large-cardinal interface background
+    source_cluster: generic_absoluteness_large_cardinals
+    claim_links:
+      - clm_set_theoretic_invariance_frontier
+    support_roles:
+      - theorem_dependency
+      - application_context

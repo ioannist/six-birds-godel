@@ -1,0 +1,6 @@
+package_id: theorem_package_conditional_arithmetic_frontier
+version: 0.1.0
+main_theorem_name: paper_main_conditional_arithmetic_frontier_canonicality
+main_theorem_level: conditional
+main_theorem_file: src/lean/ClosureFrontier/TheoremTrack/PaperMain.lean
+package_scope: theorem_led_conditional_ready

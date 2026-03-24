@@ -1,0 +1,19 @@
+claim_id: frozen_theorem_led_paper_claim
+short_label: Conditional arithmetic frontier canonicality theorem
+statement_level: conditional
+stable_main_theorem_name: paper_main_conditional_arithmetic_frontier_canonicality
+centerpiece_statement: under a fixed frozen evaluation slice, if an efficient arithmetic extension operator aligns on the cone with a canonical-family representative and the canonical family lies in the comparison domain, then a canonical representative satisfies the arithmetic canonicality target
+proved_internally:
+  - fixed-package saturation under P5
+  - persistent-growth-implies-package-change bridge under P1/P2 reading
+  - restricted in-house alignment lemma under frozen P6 slice
+  - conditional arithmetic lift from explicit external contract
+external_literature_delegated:
+  - discharge of canonical-family-on-cone assumption
+  - discharge of canonical-family-in-domain assumption in the intended arithmetic setting
+  - interpretation of the canonical family as consistency/reflection progression family
+out_of_scope:
+  - unconditional global canonical collapse theorem
+  - benchmark/cost perturbation robustness theorem
+  - theorem claims driven by P3 protocol diagnostics
+narrowed_candidate_if_not_accepted: none

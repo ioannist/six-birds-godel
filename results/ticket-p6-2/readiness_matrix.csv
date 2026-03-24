@@ -1,0 +1,7 @@
+dimension,observed,theorem_threshold,hybrid_threshold,theorem_pass,hybrid_pass
+interaction_signal_strength,"primary_abs_deltas=0.083826,0.334664; control_abs_delta=0.187560",>=0.15 at both n=64 and n=128,"mean >=0.10 across n=64,128",0,1
+comparator_separation,"primary_interaction=0.083826,0.334664; comparators=baseline",resolved comparator >=0.10 at n=64 and n=128,resolved comparator >=0.10 at >=1 primary n,0,1
+robustness_across_shipped_scales,robustness_fail=1; robustness_partial=3,fail=0 and partial<=1,fail<=1 and partial<=3,0,1
+ablation_support,core_loo_effect_rows=44,>=80,>=40,0,1
+low_scale_dependence_only,False,False,False,1,1
+overall_decision_status,hybrid_ready,all theorem criteria true,all hybrid criteria true,0,1

@@ -1,0 +1,42 @@
+atlas_id: pica_concept_crosswalk
+version: 0.2.0
+entries:
+- our_concept: packaging_fixed_object_P5
+  nearest_pica_target: cell_p1_p5
+  status: partial
+  supporting_atlas_ids:
+  - cell_p1_p5
+  - prog_baseline
+  - prog_full_action
+- our_concept: package_change_rewrite_P1
+  nearest_pica_target: cell_p1_p5
+  status: partial
+  supporting_atlas_ids:
+  - cell_p1_p5
+- our_concept: package_change_gating_P2
+  nearest_pica_target: cell_p2_p5
+  status: direct
+  supporting_atlas_ids:
+  - cell_p2_p5
+- our_concept: frozen_evaluation_regime_P6
+  nearest_pica_target: cell_p2_p6
+  status: direct
+  supporting_atlas_ids:
+  - cell_p2_p6
+- our_concept: indexing_support_axis_P4
+  nearest_pica_target: cell_p3_p4
+  status: partial
+  supporting_atlas_ids:
+  - cell_p3_p4
+- our_concept: diagnostic_only_P3
+  nearest_pica_target: cell_p3_p4
+  status: partial
+  supporting_atlas_ids:
+  - cell_p3_p4
+primitive_ids_seen:
+- P1
+- P2
+- P3
+- P4
+- P5
+- P6

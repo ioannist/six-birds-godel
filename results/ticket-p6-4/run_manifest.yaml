@@ -1,0 +1,23 @@
+run_id: ticket_p6_4_confirmatory
+version: 0.1.0
+canonical_metric_name: delta_vs_baseline_frob_from_rank1
+attempted_jobs: 46
+parsed_completed_jobs: 34
+configs:
+- A14_only
+- baseline
+- full_action
+- full_all
+- A13_A14
+- A14_A19
+primary_scales:
+- 64
+- 128
+optional_scales:
+- 256
+primary_seed_requirement: 10
+primary_coverage_complete: false
+notes:
+- Initial EXP-107 launch was config-mismatched for A14 comparators and was superseded
+  by EXP-112 run manifest.
+- 'Readiness scoring is conservative: incomplete primary seed coverage forces not_ready.'

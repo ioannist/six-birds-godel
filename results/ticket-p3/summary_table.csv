@@ -1,0 +1,11 @@
+source_path,source_family,coarse_type,parsed_status,record_count,key_summary
+vendors/six-birds-pica/lab/ledger/hypotheses.jsonl,ledger,hypotheses,ok,73,"amendment,claim,evidence,falsification_criterion,id,input_closures,primitives_used,proposed_experiment,result,status,tests_remaining,timestamp"
+vendors/six-birds-pica/lab/ledger/experiments.jsonl,ledger,experiments,ok,59,"amendment,artifacts,description,hypothesis_id,id,metrics,note,parameters,result,status,timestamp"
+vendors/six-birds-pica/lab/ledger/closures.jsonl,ledger,closures,ok,78,"amendment,amendment_type,amends,description,details,detection_method,epsilon,experiment_id,experiment_ids,finding,hypothesis_id,id,implication,key_finding,layer,note,persistence_threshold,primitives_involved,robustness_rate,stability_score,status,supporting_experiments,supporting_runs,timestamp,verdict"
+vendors/six-birds-pica/lab/ledger/results.jsonl,ledger,results,ok,17,"campaign_id,description,experiment_id,id,metrics,stage,status,timestamp"
+vendors/six-birds-pica/paper/figdata/claim_map.json,figdata,claim_map,ok,1,"assets,claims,context,decision,inputs"
+vendors/six-birds-pica/paper/figdata/run_summary_table.csv.gz,figdata,run_summary,ok,2307,"exp_id,config_name,n,seed,tau,active_tau,log_file,sigma,sigma_u,sigma_ratio,frob_from_rank1,macro_gap,cyc_max,n_chiral,n_absorb,trans_ep,n_trans,tilde_frob,tilde_sigma_pi,tilde_step_entropy,tilde_pla2_gap,tilde_geo_r2,tilde_diff_kl,tilde_diff_alpha,k_points_core,is_REV"
+vendors/six-birds-pica/paper/figdata/scan_rung_table.csv.gz,figdata,headline_metrics,ok,9595,"exp_id,config_name,n,seed,tau,active_tau,log_file,k_eff,k_rung,k_logdist,frob,sigma_pi,step_entropy,pla2_gap,lagr_geo_r2,lagr_diff_kl,lagr_diff_alpha,t_rel,gap_ratio,eigen_entropy,spectral_participation,slow_modes_r50,slow_modes_r70,slow_modes_r90"
+vendors/six-birds-pica/paper/figdata/T6_robustness.csv,figdata,robustness,ok,12,"check_id,check_name,definition,result_status,autofilled,autofilled_fields,evidence_assets,value_summary,notes"
+vendors/six-birds-pica/paper/figdata/F2_insets_enabled.json,figdata,cells,ok,1,"baseline,full_action,full_all,gen6_core_A12_A25"
+vendors/six-birds-pica/paper/figdata/loo_cell_map.csv,figdata,ablation,ok,22,"config_name,actor,informant,cell_label"

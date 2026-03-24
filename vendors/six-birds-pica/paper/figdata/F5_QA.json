@@ -1,0 +1,157 @@
+{
+  "n128": {
+    "baseline_centroid": {
+      "x": 0.0914961208357772,
+      "y": 1.0467311829039665
+    },
+    "configs_plotted": [
+      "A12_A25",
+      "A13_A11",
+      "A13_A14",
+      "A14_A17",
+      "A14_A19",
+      "A14_A25",
+      "A14_only",
+      "A16_only",
+      "A17_only",
+      "A18_A19",
+      "A18_only",
+      "A20_only",
+      "A22_only",
+      "A4_A19",
+      "P1_P3_rows",
+      "P1_row",
+      "P2_P3_rows",
+      "P2_row",
+      "P3_P4_rows",
+      "P3_row",
+      "P4_P5_rows",
+      "P4_row",
+      "P5_row",
+      "P6_row",
+      "baseline",
+      "col_P1",
+      "col_P2",
+      "col_P3",
+      "col_P4",
+      "col_P5",
+      "col_P6",
+      "empty",
+      "fa_no_P1row",
+      "fa_no_P2mod",
+      "fa_no_P3row",
+      "fa_no_inf_P3",
+      "fa_no_inf_P4",
+      "fa_no_inf_P5",
+      "fa_no_inf_P6",
+      "full_action",
+      "full_all",
+      "gen2_A14_A13",
+      "gen3_A13_A14_A19",
+      "gen3_A13_A18_A19",
+      "gen4_core",
+      "gen5_core_A25",
+      "gen6_core_A12_A25",
+      "loo_A1",
+      "loo_A11",
+      "loo_A12",
+      "loo_A13",
+      "loo_A14",
+      "loo_A17",
+      "loo_A18",
+      "loo_A19",
+      "loo_A2",
+      "loo_A20",
+      "loo_A21",
+      "loo_A22",
+      "loo_A23",
+      "loo_A24",
+      "loo_A25",
+      "loo_A3",
+      "loo_A4",
+      "loo_A5",
+      "loo_A6",
+      "loo_A7",
+      "loo_A8",
+      "loo_A9"
+    ],
+    "counts_by_exp_id": {
+      "EXP-112": 690
+    },
+    "exp_ids_present": [
+      "EXP-112"
+    ],
+    "full_action_centroid": {
+      "x": 0.1237252130849515,
+      "y": 0.032538410471733406
+    },
+    "full_all_centroid": {
+      "x": 0.11504922959007524,
+      "y": 0.026404618036834072
+    },
+    "n": 128,
+    "rows_excluded_REV": 0,
+    "rows_excluded_nan": 1,
+    "rows_plotted": 689,
+    "rows_total": 690,
+    "unique_configs_plotted": 69
+  },
+  "n256": {
+    "baseline_centroid": {
+      "x": 0.15262430146473255,
+      "y": 0.3070374011782264
+    },
+    "configs_plotted": [
+      "A11_A22",
+      "A13_only",
+      "A14_only",
+      "A16_only",
+      "A17_only",
+      "A19_only",
+      "A24_only",
+      "A25_only",
+      "P1_row_A13",
+      "baseline",
+      "chain",
+      "chain_A24",
+      "chain_SBRC",
+      "empty",
+      "fa_no_P1row",
+      "fa_no_P2mod",
+      "fa_no_P3row",
+      "full_action",
+      "full_all",
+      "gen3_A13_A14_A19",
+      "gen4_core",
+      "loo_A13",
+      "loo_A14",
+      "loo_A18",
+      "loo_A19",
+      "sbrc"
+    ],
+    "counts_by_exp_id": {
+      "EXP-107": 130,
+      "EXP-112": 97,
+      "EXP-F1": 10
+    },
+    "exp_ids_present": [
+      "EXP-107",
+      "EXP-112",
+      "EXP-F1"
+    ],
+    "full_action_centroid": {
+      "x": 0.2232924738585472,
+      "y": 0.012659426726249243
+    },
+    "full_all_centroid": {
+      "x": 0.16013056877389303,
+      "y": 0.011437837820075753
+    },
+    "n": 256,
+    "rows_excluded_REV": 0,
+    "rows_excluded_nan": 0,
+    "rows_plotted": 237,
+    "rows_total": 237,
+    "unique_configs_plotted": 26
+  }
+}

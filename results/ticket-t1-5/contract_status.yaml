@@ -1,0 +1,11 @@
+status_id: ticket_t1_5_contract_status
+contract_frozen: true
+conditional_lift_formalized: true
+conditional_lift_proved: true
+hidden_global_axioms_introduced: false
+proof_driving_external_assumptions:
+  - ext_canonical_family_closed_in_domain
+  - ext_cone_canonicalization
+non_proof_interpretive_assumptions:
+  - ext_arithmetic_interpretation
+current_boundary: conditional arithmetic theorem is proved in Lean; only literature discharge remains

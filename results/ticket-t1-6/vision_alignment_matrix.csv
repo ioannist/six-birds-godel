@@ -1,0 +1,9 @@
+dimension,status,notes
+in_house_theorem_ladder_completeness,pass,base bridge and restricted alignment are proved
+bridge_theorem_completeness,pass,P5 saturation and P1/P2 change reading are explicit
+conditional_arithmetic_theorem_completeness,pass,conditional lift is formalized and proved in Lean
+minimality_clarity_of_external_assumptions,pass,external contract has two proof-driving assumptions plus one interpretive assumption
+alignment_with_vision_md,pass,current route still targets canonical efficiency through a narrow arithmetic representative theorem
+consistency_with_toy_vendor_boundaries,pass,current claim avoids falsified broad uniqueness and robustness claims
+dependence_on_unresolved_literature_discharge,conditional_only,central theorem remains conditional on explicit arithmetic literature discharge
+experimental_side_supporting_not_central,pass,experimental results now constrain boundaries rather than drive the theorem core

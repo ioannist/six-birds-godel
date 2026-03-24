@@ -1,0 +1,14 @@
+gate_id: theorem_track_bridge_promotion_gate
+version: 0.1.0
+candidate_id: thm_closure_saturation_operator_change
+checks:
+  statement_formalized:
+    required: true
+  core_saturation_proved:
+    required: true
+  bridge_result_proved:
+    required: true
+  depends_on_axioms_on_bridge_path:
+    required: false
+  boundary_consistent_with_current_evidence:
+    required: true

@@ -1,0 +1,7 @@
+primitive,role_in_this_paper,lean_anchor,theorem_track_status,experiment_track_status
+P1,package_change_mechanism,PackageChangeWitness,aligned,unchanged
+P2,package_change_mechanism,PackageChangeWitness,aligned,unchanged
+P3,diagnostic_only,DiagnosticOnlyTag,aligned,unchanged
+P4,indexing_support_axis,StageIndex,aligned,unchanged
+P5,fixed_package_object,ClosurePackage,aligned,unchanged
+P6,frozen_evaluation_regime,FrozenSlice,aligned,unchanged

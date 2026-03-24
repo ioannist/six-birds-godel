@@ -1,0 +1,8 @@
+map_id: assumption_box_placement
+version: 0.1.0
+placements:
+  introduced_in: sec_conditional_arithmetic_lift
+  reused_in:
+    - sec_theorem_package
+    - app_external_dependency_contract
+  repetition_policy: main_text_plus_appendix

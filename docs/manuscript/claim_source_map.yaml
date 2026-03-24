@@ -1,0 +1,27 @@
+map_id: claim_source_map
+version: 0.1.0
+entries:
+  - claim_unit: frozen_main_conditional_claim
+    in_house_lean:
+      - paper_main_conditional_arithmetic_frontier_canonicality
+    external_sources:
+      - src_ext_beklemishev_reflection_progressions
+      - src_ext_montalban_walsh_consistency_operator
+      - src_ext_godel_1931
+    vendor_supporting_only:
+      - results/ticket-p6-4b/readiness_rescore.yaml
+  - claim_unit: bridge_subclaim
+    in_house_lean:
+      - persistent_growth_witness_implies_package_change
+    external_sources: []
+    vendor_supporting_only:
+      - results/ticket-05/report.md
+      - results/ticket-06/report.md
+  - claim_unit: theorem_scope_boundary
+    in_house_lean: []
+    external_sources: []
+    vendor_supporting_only:
+      - results/ticket-p5/toy_vs_vendor_comparison.md
+      - results/ticket-p6-4b/readiness_rescore.yaml
+notes:
+  - proof support and empirical support are intentionally separated

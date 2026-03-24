@@ -1,0 +1,44 @@
+\section{External dependency contract}\label{app:external-contract}
+
+This appendix documents the external dependency contract used by the main conditional theorem. It does not restate the theorem section. Its purpose is to separate proof-driving external assumptions from interpretation-driving ones and to record the expected discharge route for each.
+
+The theorem-track contract surface is represented in Lean by \lid{ExternalDependencyContract} together with the predicate \lid{ExternalContractHolds}. For the present paper, the contract contains three external items.
+
+\begin{table}[ht]
+\caption{External dependency contract items.}
+\label{tab:external-contract}
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}X l X X@{}}
+\toprule
+Contract item & Type & Role in the theorem & Discharge route \\
+\midrule
+Canonical family closed in the comparison domain & proof-driving & keeps the designated family inside the comparison domain & arithmetic literature / explicit assumption \\[6pt]
+Cone-level canonicalization & proof-driving & supplies a canonical-family representative agreeing on the relevant cone & arithmetic literature / explicit assumption \\[6pt]
+Arithmetic interpretation of the canonical family & interp.-driving & reads the designated family as the intended consistency/reflection progression family & citation layer / explicit assumption \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The first two items are the proof-driving external boundary. If either fails, the conditional lift does not go through. The third item does not do proof work inside the formal theorem route, but it is required for the intended arithmetic reading of the paper. For the intended arithmetic reading, this places the canonical family in the standard line from ordinal logics and transfinite recursive progressions to modern reflection-rank analysis~\cite{Turing1939,Feferman1962,BeklemishevReflection,PakhomovWalsh2021,MontalbanWalshConsistency}.
+
+This split matches the body treatment in Section~\ref{sec:conditional-lift}. The body states the assumption box and the main theorem. The present appendix records the contract details behind the external assumptions rather than re-presenting the theorem.
+
+Table~\ref{tab:claim-source-map} records the claim-to-source map for the conditional route.
+
+\begin{table}[ht]
+\caption{Claim-to-source map for the conditional theorem route.}
+\label{tab:claim-source-map}
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}l X l X@{}}
+\toprule
+Claim unit & In-house theorem surface & Ext.\ discharge & Empirical role \\
+\midrule
+Fixed-package saturation & \lid{closure\_iterate\_saturates\_one\_step};\newline \lid{frozen\_package\_no\_persistent\_growth} & none & none \\[6pt]
+Package-change necessity & \lid{persistent\_growth\_witness\_implies\_package\_change};\newline \lid{bridge\_candidate\_holds\_in\_frozen\_idempotent\_setting} & none & none \\[6pt]
+Restricted alignment & \lid{frontier\_efficiency\_transfer\_to\_cone\_equivalent};\newline \lid{restricted\_in\_house\_alignment\_lemma} & none & none \\[6pt]
+Conditional arithmetic lift & \lid{paper\_main\_conditional\_arithmetic\_frontier\_canonicality} & \cite{Turing1939,Feferman1962,BeklemishevReflection,PakhomovWalsh2021,MontalbanWalshConsistency} & supporting-only scope discipline; see Section~\ref{sec:vendor-support} and Appendix~\ref{app:vendor-support-details} \\
+\bottomrule
+\end{tabularx}
+\end{table}

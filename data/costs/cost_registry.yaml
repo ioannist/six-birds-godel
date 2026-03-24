@@ -1,0 +1,16 @@
+registry_id: cost_registry
+version: 0.1.0
+description: Cost dimensions used in frontier and dominance analysis.
+entries:
+  - id: cst_proof_theoretic_strength
+    title: Proof theoretic strength
+    cost_type: proof_theoretic
+  - id: cst_consistency_strength
+    title: Consistency strength
+    cost_type: consistency_strength
+  - id: cst_computational_complexity
+    title: Computational complexity
+    cost_type: computational
+  - id: cst_conceptual_complexity_placeholder
+    title: Conceptual complexity placeholder
+    cost_type: conceptual_placeholder

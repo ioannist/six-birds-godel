@@ -1,0 +1,14 @@
+ticket_id: ticket-w5
+status: pass
+carry_forward_w4_status_present: true
+section_03_inserted_correctly: true
+lean_theorem_name_alignment: true
+base_bridge_distinction_explicit: true
+arithmetic_overreach_introduced: false
+make_check: pass
+paper_build:
+  status: pass
+  output_pdf: paper/main.pdf
+  notes:
+    - empty bibliography warning is expected until citations are added
+    - non-blocking overfull box warnings remain in long theorem-name passages

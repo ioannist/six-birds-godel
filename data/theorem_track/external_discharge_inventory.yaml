@@ -1,0 +1,18 @@
+inventory_id: external_discharge_inventory
+version: 0.1.0
+entries:
+  - id: ext_canonical_family_closed_in_domain
+    exact_role: ensures canonical representatives are admissible comparison-domain objects
+    expected_discharge_route: reflection progression / consistency-operator literature route
+    current_citation_support_status: seeded
+    may_remain_explicit_assumption_in_paper: true
+  - id: ext_cone_canonicalization
+    exact_role: supplies the canonical representative agreeing on the cone for efficient operators
+    expected_discharge_route: arithmetic canonical-family literature route
+    current_citation_support_status: seeded
+    may_remain_explicit_assumption_in_paper: true
+  - id: ext_arithmetic_interpretation
+    exact_role: identifies the canonical family with the intended consistency/reflection progression family
+    expected_discharge_route: framing plus theorem-dependency citations
+    current_citation_support_status: seeded
+    may_remain_explicit_assumption_in_paper: true

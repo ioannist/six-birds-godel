@@ -1,0 +1,2611 @@
+{
+  "definitions": {
+    "benchmark_sensitivity_score": "mean pairwise Jaccard distance of frontier sets across benchmark profiles, fixing family/model/cost/tie.",
+    "cost_sensitivity_score": "mean pairwise Jaccard distance of frontier sets across cost choices, fixing family/model/benchmark/tie.",
+    "tie_frontier_change_count": "number of benchmark-cost settings where frontier set differs between tie modes."
+  },
+  "family_summary": {
+    "boolean_all_monotone_inflationary": {
+      "benchmark_sensitivity_score": 0.2296128530656536,
+      "cost_sensitivity_score": 0.06009790656920217,
+      "frontier_appearance_frequency": [
+        {
+          "count": 32,
+          "frequency": 0.3333333333333333,
+          "operator_id": "B1:(0,1)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.3333333333333333,
+          "operator_id": "B1:(1,1)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.3333333333333333,
+          "operator_id": "B2:(0,1,2,3)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.3333333333333333,
+          "operator_id": "B2:(0,1,3,3)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.3333333333333333,
+          "operator_id": "B2:(1,3,3,3)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.3333333333333333,
+          "operator_id": "B3:(0,1,2,3,4,5,6,7)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.3333333333333333,
+          "operator_id": "B3:(0,1,2,3,4,5,7,7)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.3333333333333333,
+          "operator_id": "B3:(1,4,4,5,7,7,7,7)"
+        },
+        {
+          "count": 24,
+          "frequency": 0.25,
+          "operator_id": "B2:(0,3,3,3)"
+        },
+        {
+          "count": 24,
+          "frequency": 0.25,
+          "operator_id": "B3:(0,1,2,3,4,7,7,7)"
+        },
+        {
+          "count": 24,
+          "frequency": 0.25,
+          "operator_id": "B3:(0,1,2,3,7,7,7,7)"
+        },
+        {
+          "count": 24,
+          "frequency": 0.25,
+          "operator_id": "B3:(0,1,2,5,7,7,7,7)"
+        },
+        {
+          "count": 24,
+          "frequency": 0.25,
+          "operator_id": "B3:(0,1,4,5,7,7,7,7)"
+        },
+        {
+          "count": 24,
+          "frequency": 0.25,
+          "operator_id": "B3:(0,4,4,5,7,7,7,7)"
+        },
+        {
+          "count": 16,
+          "frequency": 0.16666666666666666,
+          "operator_id": "B2:(0,3,2,3)"
+        },
+        {
+          "count": 16,
+          "frequency": 0.16666666666666666,
+          "operator_id": "B2:(2,3,3,3)"
+        },
+        {
+          "count": 16,
+          "frequency": 0.16666666666666666,
+          "operator_id": "B3:(0,1,2,3,4,7,6,7)"
+        },
+        {
+          "count": 16,
+          "frequency": 0.16666666666666666,
+          "operator_id": "B3:(0,1,2,3,7,5,6,7)"
+        },
+        {
+          "count": 16,
+          "frequency": 0.16666666666666666,
+          "operator_id": "B3:(0,1,2,5,4,5,7,7)"
+        },
+        {
+          "count": 16,
+          "frequency": 0.16666666666666666,
+          "operator_id": "B3:(0,1,4,5,4,5,7,7)"
+        },
+        {
+          "count": 16,
+          "frequency": 0.16666666666666666,
+          "operator_id": "B3:(1,5,4,5,7,7,7,7)"
+        },
+        {
+          "count": 16,
+          "frequency": 0.16666666666666666,
+          "operator_id": "B3:(2,4,4,6,7,7,7,7)"
+        },
+        {
+          "count": 16,
+          "frequency": 0.16666666666666666,
+          "operator_id": "B3:(2,4,6,6,7,7,7,7)"
+        },
+        {
+          "count": 16,
+          "frequency": 0.16666666666666666,
+          "operator_id": "B3:(3,5,6,5,7,7,7,7)"
+        },
+        {
+          "count": 16,
+          "frequency": 0.16666666666666666,
+          "operator_id": "B3:(3,5,6,6,7,7,7,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B2:(1,1,3,3)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,1,2,3,7,5,7,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,1,2,3,7,7,6,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,1,2,6,4,7,6,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,1,2,6,7,7,7,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,1,4,3,4,5,7,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,1,4,3,7,7,7,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,1,4,6,7,7,7,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,1,6,3,7,5,6,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,1,6,3,7,7,7,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,1,6,5,7,7,7,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,1,6,6,7,7,7,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,4,2,3,4,7,6,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,4,2,3,7,7,7,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,4,2,5,7,7,7,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,4,2,6,4,7,6,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,4,2,6,7,7,7,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,4,4,3,7,7,7,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,4,4,6,7,7,7,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,4,6,3,7,7,7,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,4,6,5,7,7,7,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,4,6,6,7,7,7,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,5,2,3,7,5,6,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,5,2,3,7,7,7,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,5,2,5,7,7,7,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,5,2,6,7,7,7,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,5,4,3,7,7,7,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,5,4,5,7,7,7,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,5,4,6,7,7,7,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,5,6,3,7,5,6,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,5,6,3,7,7,7,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,5,6,5,7,7,7,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(0,5,6,6,7,7,7,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(1,1,4,5,4,5,7,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(1,1,4,5,4,7,7,7)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.125,
+          "operator_id": "B3:(1,4,4,5,4,7,7,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B2:(2,3,2,3)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,1,2,5,4,7,7,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,1,2,5,7,5,7,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,1,2,6,4,7,7,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,1,2,6,7,7,6,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,1,4,3,4,7,7,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,1,4,3,7,5,7,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,1,4,5,4,7,7,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,1,4,5,7,5,7,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,1,4,6,4,7,7,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,1,6,3,7,5,7,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,1,6,3,7,7,6,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,1,6,5,7,5,7,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,1,6,6,7,7,6,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,4,2,3,4,7,7,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,4,2,3,7,7,6,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,4,2,5,4,7,7,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,4,2,6,4,7,7,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,4,2,6,7,7,6,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,4,4,3,4,7,7,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,4,4,5,4,7,7,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,4,4,6,4,7,7,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,4,6,3,7,7,6,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,4,6,6,7,7,6,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,5,2,3,7,5,7,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,5,2,3,7,7,6,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,5,2,5,7,5,7,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,5,2,6,7,7,6,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,5,4,3,7,5,7,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,5,4,5,7,5,7,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,5,6,3,7,5,7,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,5,6,3,7,7,6,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,5,6,5,7,5,7,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(0,5,6,6,7,7,6,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(1,1,4,5,7,5,7,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(1,5,4,5,7,5,7,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(2,4,2,6,4,7,6,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(2,4,2,6,4,7,7,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(2,4,2,6,7,7,6,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(2,4,4,6,4,7,7,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(2,4,6,6,7,7,6,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(3,5,6,3,7,5,6,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(3,5,6,3,7,5,7,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(3,5,6,3,7,7,6,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(3,5,6,5,7,5,7,7)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.08333333333333333,
+          "operator_id": "B3:(3,5,6,6,7,7,6,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B2:(3,3,3,3)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(1,1,4,5,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(1,4,4,7,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(1,4,7,5,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(1,4,7,7,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(1,5,4,7,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(1,5,7,5,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(1,5,7,7,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(1,7,4,5,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(1,7,4,7,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(1,7,7,5,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(1,7,7,7,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(2,4,2,6,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(2,4,4,7,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(2,4,6,7,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(2,4,7,6,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(2,4,7,7,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(2,7,4,6,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(2,7,4,7,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(2,7,6,6,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(2,7,6,7,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(2,7,7,6,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(2,7,7,7,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(3,5,6,3,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(3,5,6,7,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(3,5,7,5,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(3,5,7,6,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(3,5,7,7,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(3,7,6,5,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(3,7,6,6,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(3,7,6,7,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(3,7,7,5,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(3,7,7,6,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(3,7,7,7,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(4,4,4,7,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(4,4,7,7,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(4,7,4,7,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(4,7,7,7,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(5,5,7,5,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(5,5,7,7,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(5,7,7,5,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(5,7,7,7,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(6,7,6,6,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(6,7,6,7,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(6,7,7,6,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(6,7,7,7,7,7,7,7)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.041666666666666664,
+          "operator_id": "B3:(7,7,7,7,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,1,2,7,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,1,4,7,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,1,6,7,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,1,7,3,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,1,7,5,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,1,7,6,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,1,7,7,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,4,2,7,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,4,4,7,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,4,6,7,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,4,7,3,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,4,7,5,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,4,7,6,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,4,7,7,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,5,2,7,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,5,4,7,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,5,6,7,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,5,7,3,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,5,7,5,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,5,7,6,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,5,7,7,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,7,2,3,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,7,2,5,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,7,2,6,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,7,2,7,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,7,4,3,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,7,4,5,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,7,4,6,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,7,4,7,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,7,6,3,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,7,6,5,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,7,6,6,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,7,6,7,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,7,7,3,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,7,7,5,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,7,7,6,7,7,7,7)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.03125,
+          "operator_id": "B3:(0,7,7,7,7,7,7,7)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.020833333333333332,
+          "operator_id": "B3:(0,1,2,7,4,7,7,7)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.020833333333333332,
+          "operator_id": "B3:(0,1,4,7,4,7,7,7)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.020833333333333332,
+          "operator_id": "B3:(0,1,7,3,7,5,7,7)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.020833333333333332,
+          "operator_id": "B3:(0,1,7,5,7,5,7,7)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.020833333333333332,
+          "operator_id": "B3:(0,4,2,7,4,7,7,7)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.020833333333333332,
+          "operator_id": "B3:(0,4,4,7,4,7,7,7)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.020833333333333332,
+          "operator_id": "B3:(0,5,7,3,7,5,7,7)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.020833333333333332,
+          "operator_id": "B3:(0,5,7,5,7,5,7,7)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.020833333333333332,
+          "operator_id": "B3:(0,7,2,3,7,7,6,7)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.020833333333333332,
+          "operator_id": "B3:(0,7,2,6,7,7,6,7)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.020833333333333332,
+          "operator_id": "B3:(0,7,6,3,7,7,6,7)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.020833333333333332,
+          "operator_id": "B3:(0,7,6,6,7,7,6,7)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.020833333333333332,
+          "operator_id": "B3:(1,1,4,7,4,7,7,7)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.020833333333333332,
+          "operator_id": "B3:(1,1,7,5,7,5,7,7)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.020833333333333332,
+          "operator_id": "B3:(1,4,4,7,4,7,7,7)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.020833333333333332,
+          "operator_id": "B3:(1,5,7,5,7,5,7,7)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.020833333333333332,
+          "operator_id": "B3:(2,4,2,7,4,7,7,7)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.020833333333333332,
+          "operator_id": "B3:(2,4,4,7,4,7,7,7)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.020833333333333332,
+          "operator_id": "B3:(2,7,2,6,7,7,6,7)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.020833333333333332,
+          "operator_id": "B3:(2,7,6,6,7,7,6,7)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.020833333333333332,
+          "operator_id": "B3:(3,5,7,3,7,5,7,7)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.020833333333333332,
+          "operator_id": "B3:(3,5,7,5,7,5,7,7)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.020833333333333332,
+          "operator_id": "B3:(3,7,6,3,7,7,6,7)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.020833333333333332,
+          "operator_id": "B3:(3,7,6,6,7,7,6,7)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.020833333333333332,
+          "operator_id": "B3:(4,4,4,7,4,7,7,7)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.020833333333333332,
+          "operator_id": "B3:(5,5,7,5,7,5,7,7)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.020833333333333332,
+          "operator_id": "B3:(6,7,6,6,7,7,6,7)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.010416666666666666,
+          "operator_id": "B3:(1,1,4,7,7,7,7,7)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.010416666666666666,
+          "operator_id": "B3:(1,1,7,5,7,7,7,7)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.010416666666666666,
+          "operator_id": "B3:(1,1,7,7,7,7,7,7)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.010416666666666666,
+          "operator_id": "B3:(2,4,2,7,7,7,7,7)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.010416666666666666,
+          "operator_id": "B3:(2,7,2,6,7,7,7,7)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.010416666666666666,
+          "operator_id": "B3:(2,7,2,7,7,7,7,7)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.010416666666666666,
+          "operator_id": "B3:(3,5,7,3,7,7,7,7)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.010416666666666666,
+          "operator_id": "B3:(3,7,6,3,7,7,7,7)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.010416666666666666,
+          "operator_id": "B3:(3,7,7,3,7,7,7,7)"
+        }
+      ],
+      "frontier_runs": 96,
+      "operator_pool_count": 227,
+      "tie_frontier_change_count": 32,
+      "tie_frontier_change_rate": 0.6666666666666666,
+      "tie_frontier_total_count": 48
+    },
+    "chain_all_monotone_inflationary": {
+      "benchmark_sensitivity_score": 0.365936678885789,
+      "cost_sensitivity_score": 0.11742789833321066,
+      "frontier_appearance_frequency": [
+        {
+          "count": 32,
+          "frequency": 0.2,
+          "operator_id": "C2:(0,1)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.2,
+          "operator_id": "C2:(1,1)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.2,
+          "operator_id": "C3:(0,1,2)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.2,
+          "operator_id": "C3:(1,2,2)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.2,
+          "operator_id": "C4:(0,1,2,3)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.2,
+          "operator_id": "C4:(1,2,3,3)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.2,
+          "operator_id": "C5:(0,1,2,3,4)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.2,
+          "operator_id": "C5:(1,2,3,4,4)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.2,
+          "operator_id": "C6:(0,1,2,3,4,5)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.2,
+          "operator_id": "C6:(1,2,3,4,5,5)"
+        },
+        {
+          "count": 24,
+          "frequency": 0.15,
+          "operator_id": "C3:(0,2,2)"
+        },
+        {
+          "count": 24,
+          "frequency": 0.15,
+          "operator_id": "C4:(0,1,3,3)"
+        },
+        {
+          "count": 24,
+          "frequency": 0.15,
+          "operator_id": "C4:(0,2,3,3)"
+        },
+        {
+          "count": 24,
+          "frequency": 0.15,
+          "operator_id": "C5:(0,1,3,4,4)"
+        },
+        {
+          "count": 24,
+          "frequency": 0.15,
+          "operator_id": "C5:(0,2,3,4,4)"
+        },
+        {
+          "count": 24,
+          "frequency": 0.15,
+          "operator_id": "C6:(0,1,3,4,5,5)"
+        },
+        {
+          "count": 24,
+          "frequency": 0.15,
+          "operator_id": "C6:(0,2,3,4,5,5)"
+        },
+        {
+          "count": 16,
+          "frequency": 0.1,
+          "operator_id": "C5:(0,1,2,4,4)"
+        },
+        {
+          "count": 16,
+          "frequency": 0.1,
+          "operator_id": "C6:(0,1,2,3,5,5)"
+        },
+        {
+          "count": 16,
+          "frequency": 0.1,
+          "operator_id": "C6:(0,1,2,4,5,5)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.075,
+          "operator_id": "C3:(1,1,2)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.075,
+          "operator_id": "C4:(1,1,2,3)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.075,
+          "operator_id": "C4:(1,2,2,3)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.075,
+          "operator_id": "C5:(0,1,3,3,4)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.075,
+          "operator_id": "C5:(1,1,2,3,4)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.075,
+          "operator_id": "C5:(1,2,2,3,4)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.075,
+          "operator_id": "C5:(1,2,3,3,4)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.075,
+          "operator_id": "C6:(0,1,2,4,4,5)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.075,
+          "operator_id": "C6:(0,1,3,4,4,5)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.075,
+          "operator_id": "C6:(1,1,2,3,4,5)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.075,
+          "operator_id": "C6:(1,2,2,3,4,5)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.075,
+          "operator_id": "C6:(1,2,3,3,4,5)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.075,
+          "operator_id": "C6:(1,2,3,4,4,5)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.05,
+          "operator_id": "C4:(0,2,2,3)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.05,
+          "operator_id": "C5:(0,2,3,3,4)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.05,
+          "operator_id": "C6:(0,1,3,3,4,5)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.05,
+          "operator_id": "C6:(0,2,3,4,4,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C3:(2,2,2)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C4:(1,1,3,3)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C4:(1,3,3,3)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C4:(2,2,3,3)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C4:(2,3,3,3)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C4:(3,3,3,3)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C5:(0,2,2,3,4)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C5:(0,2,2,4,4)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C5:(1,1,2,4,4)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C5:(1,1,3,3,4)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C5:(1,1,3,4,4)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C5:(1,2,2,4,4)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C5:(1,2,4,4,4)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C5:(1,3,3,4,4)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C5:(1,3,4,4,4)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C5:(1,4,4,4,4)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C5:(2,2,3,4,4)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C5:(2,2,4,4,4)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C5:(2,3,3,4,4)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C5:(2,3,4,4,4)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C5:(2,4,4,4,4)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C5:(3,3,3,4,4)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C5:(3,3,4,4,4)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C5:(3,4,4,4,4)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C5:(4,4,4,4,4)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(0,1,3,3,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(0,2,2,3,4,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(0,2,2,3,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(0,2,2,4,4,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(0,2,2,4,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(0,2,3,3,4,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(0,2,3,3,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(1,1,2,3,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(1,1,2,4,4,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(1,1,2,4,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(1,1,3,3,4,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(1,1,3,3,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(1,1,3,4,4,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(1,1,3,4,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(1,2,2,3,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(1,2,2,4,4,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(1,2,2,4,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(1,2,3,3,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(1,2,3,5,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(1,2,4,4,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(1,2,4,5,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(1,2,5,5,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(1,3,3,4,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(1,3,3,5,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(1,3,4,4,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(1,3,4,5,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(1,3,5,5,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(1,4,4,4,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(1,4,4,5,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(1,4,5,5,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(1,5,5,5,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(2,2,3,4,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(2,2,3,5,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(2,2,4,4,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(2,2,4,5,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(2,2,5,5,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(2,3,3,4,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(2,3,3,5,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(2,3,4,4,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(2,3,4,5,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(2,3,5,5,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(2,4,4,4,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(2,4,4,5,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(2,4,5,5,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(2,5,5,5,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(3,3,3,4,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(3,3,3,5,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(3,3,4,4,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(3,3,4,5,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(3,3,5,5,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(3,4,4,4,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(3,4,4,5,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(3,4,5,5,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(3,5,5,5,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(4,4,4,4,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(4,4,4,5,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(4,4,5,5,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(4,5,5,5,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(5,5,5,5,5,5)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.01875,
+          "operator_id": "C4:(0,3,3,3)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.01875,
+          "operator_id": "C5:(0,1,4,4,4)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.01875,
+          "operator_id": "C5:(0,2,4,4,4)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.01875,
+          "operator_id": "C5:(0,3,3,4,4)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.01875,
+          "operator_id": "C5:(0,3,4,4,4)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.01875,
+          "operator_id": "C5:(0,4,4,4,4)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.01875,
+          "operator_id": "C6:(0,1,3,5,5,5)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.01875,
+          "operator_id": "C6:(0,1,4,4,5,5)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.01875,
+          "operator_id": "C6:(0,1,4,5,5,5)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.01875,
+          "operator_id": "C6:(0,1,5,5,5,5)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.01875,
+          "operator_id": "C6:(0,2,3,5,5,5)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.01875,
+          "operator_id": "C6:(0,2,4,4,5,5)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.01875,
+          "operator_id": "C6:(0,2,4,5,5,5)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.01875,
+          "operator_id": "C6:(0,2,5,5,5,5)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.01875,
+          "operator_id": "C6:(0,3,3,4,5,5)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.01875,
+          "operator_id": "C6:(0,3,3,5,5,5)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.01875,
+          "operator_id": "C6:(0,3,4,4,5,5)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.01875,
+          "operator_id": "C6:(0,3,4,5,5,5)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.01875,
+          "operator_id": "C6:(0,3,5,5,5,5)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.01875,
+          "operator_id": "C6:(0,4,4,4,5,5)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.01875,
+          "operator_id": "C6:(0,4,4,5,5,5)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.01875,
+          "operator_id": "C6:(0,4,5,5,5,5)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.01875,
+          "operator_id": "C6:(0,5,5,5,5,5)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C4:(2,2,2,3)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C5:(0,3,3,3,4)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C5:(1,3,3,3,4)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C5:(2,2,2,3,4)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C5:(2,2,3,3,4)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C5:(2,3,3,3,4)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C5:(3,3,3,3,4)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C6:(0,1,2,5,5,5)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C6:(0,1,4,4,4,5)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C6:(0,2,4,4,4,5)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C6:(0,3,3,4,4,5)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C6:(0,3,4,4,4,5)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C6:(0,4,4,4,4,5)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C6:(1,2,4,4,4,5)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C6:(1,3,3,3,4,5)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C6:(1,3,3,4,4,5)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C6:(1,3,4,4,4,5)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C6:(1,4,4,4,4,5)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C6:(2,2,2,3,4,5)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C6:(2,2,3,3,4,5)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C6:(2,2,3,4,4,5)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C6:(2,2,4,4,4,5)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C6:(2,3,3,3,4,5)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C6:(2,3,3,4,4,5)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C6:(2,3,4,4,4,5)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C6:(2,4,4,4,4,5)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C6:(3,3,3,3,4,5)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C6:(3,3,3,4,4,5)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C6:(3,3,4,4,4,5)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C6:(3,4,4,4,4,5)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C6:(4,4,4,4,4,5)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.00625,
+          "operator_id": "C5:(1,1,4,4,4)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.00625,
+          "operator_id": "C5:(2,2,2,4,4)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.00625,
+          "operator_id": "C6:(0,2,2,5,5,5)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.00625,
+          "operator_id": "C6:(0,3,3,3,4,5)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.00625,
+          "operator_id": "C6:(0,3,3,3,5,5)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.00625,
+          "operator_id": "C6:(1,1,2,5,5,5)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.00625,
+          "operator_id": "C6:(1,1,3,5,5,5)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.00625,
+          "operator_id": "C6:(1,1,4,4,4,5)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.00625,
+          "operator_id": "C6:(1,1,4,4,5,5)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.00625,
+          "operator_id": "C6:(1,1,4,5,5,5)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.00625,
+          "operator_id": "C6:(1,1,5,5,5,5)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.00625,
+          "operator_id": "C6:(1,2,2,5,5,5)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.00625,
+          "operator_id": "C6:(1,3,3,3,5,5)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.00625,
+          "operator_id": "C6:(2,2,2,3,5,5)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.00625,
+          "operator_id": "C6:(2,2,2,4,4,5)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.00625,
+          "operator_id": "C6:(2,2,2,4,5,5)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.00625,
+          "operator_id": "C6:(2,2,2,5,5,5)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.00625,
+          "operator_id": "C6:(2,2,3,3,5,5)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.00625,
+          "operator_id": "C6:(2,3,3,3,5,5)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.00625,
+          "operator_id": "C6:(3,3,3,3,5,5)"
+        }
+      ],
+      "frontier_runs": 160,
+      "operator_pool_count": 195,
+      "tie_frontier_change_count": 37,
+      "tie_frontier_change_rate": 0.4625,
+      "tie_frontier_total_count": 80
+    },
+    "chain_closure_only": {
+      "benchmark_sensitivity_score": 0.38927401302401304,
+      "cost_sensitivity_score": 0.11146137716450218,
+      "frontier_appearance_frequency": [
+        {
+          "count": 32,
+          "frequency": 0.2,
+          "operator_id": "C2:(0,1)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.2,
+          "operator_id": "C2:(1,1)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.2,
+          "operator_id": "C3:(0,1,2)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.2,
+          "operator_id": "C3:(2,2,2)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.2,
+          "operator_id": "C4:(0,1,2,3)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.2,
+          "operator_id": "C4:(3,3,3,3)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.2,
+          "operator_id": "C5:(0,1,2,3,4)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.2,
+          "operator_id": "C5:(4,4,4,4,4)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.2,
+          "operator_id": "C6:(0,1,2,3,4,5)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.2,
+          "operator_id": "C6:(5,5,5,5,5,5)"
+        },
+        {
+          "count": 25,
+          "frequency": 0.15625,
+          "operator_id": "C4:(1,1,3,3)"
+        },
+        {
+          "count": 24,
+          "frequency": 0.15,
+          "operator_id": "C3:(0,2,2)"
+        },
+        {
+          "count": 24,
+          "frequency": 0.15,
+          "operator_id": "C4:(0,1,3,3)"
+        },
+        {
+          "count": 22,
+          "frequency": 0.1375,
+          "operator_id": "C6:(1,1,3,3,5,5)"
+        },
+        {
+          "count": 22,
+          "frequency": 0.1375,
+          "operator_id": "C6:(2,2,2,5,5,5)"
+        },
+        {
+          "count": 19,
+          "frequency": 0.11875,
+          "operator_id": "C5:(1,1,4,4,4)"
+        },
+        {
+          "count": 19,
+          "frequency": 0.11875,
+          "operator_id": "C6:(0,1,3,3,5,5)"
+        },
+        {
+          "count": 18,
+          "frequency": 0.1125,
+          "operator_id": "C4:(0,3,3,3)"
+        },
+        {
+          "count": 18,
+          "frequency": 0.1125,
+          "operator_id": "C5:(0,1,4,4,4)"
+        },
+        {
+          "count": 18,
+          "frequency": 0.1125,
+          "operator_id": "C5:(0,4,4,4,4)"
+        },
+        {
+          "count": 18,
+          "frequency": 0.1125,
+          "operator_id": "C6:(0,5,5,5,5,5)"
+        },
+        {
+          "count": 16,
+          "frequency": 0.1,
+          "operator_id": "C5:(0,1,2,4,4)"
+        },
+        {
+          "count": 16,
+          "frequency": 0.1,
+          "operator_id": "C5:(1,1,3,3,4)"
+        },
+        {
+          "count": 16,
+          "frequency": 0.1,
+          "operator_id": "C6:(0,1,2,3,5,5)"
+        },
+        {
+          "count": 13,
+          "frequency": 0.08125,
+          "operator_id": "C5:(0,2,2,4,4)"
+        },
+        {
+          "count": 13,
+          "frequency": 0.08125,
+          "operator_id": "C6:(1,1,5,5,5,5)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.075,
+          "operator_id": "C3:(1,1,2)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.075,
+          "operator_id": "C4:(1,1,2,3)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.075,
+          "operator_id": "C5:(0,1,3,3,4)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.075,
+          "operator_id": "C5:(1,1,2,3,4)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.075,
+          "operator_id": "C6:(0,1,2,4,4,5)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.075,
+          "operator_id": "C6:(0,1,5,5,5,5)"
+        },
+        {
+          "count": 12,
+          "frequency": 0.075,
+          "operator_id": "C6:(1,1,2,3,4,5)"
+        },
+        {
+          "count": 10,
+          "frequency": 0.0625,
+          "operator_id": "C5:(2,2,2,4,4)"
+        },
+        {
+          "count": 10,
+          "frequency": 0.0625,
+          "operator_id": "C6:(0,1,2,5,5,5)"
+        },
+        {
+          "count": 10,
+          "frequency": 0.0625,
+          "operator_id": "C6:(1,1,3,3,4,5)"
+        },
+        {
+          "count": 9,
+          "frequency": 0.05625,
+          "operator_id": "C4:(2,2,2,3)"
+        },
+        {
+          "count": 9,
+          "frequency": 0.05625,
+          "operator_id": "C5:(2,2,2,3,4)"
+        },
+        {
+          "count": 9,
+          "frequency": 0.05625,
+          "operator_id": "C5:(3,3,3,3,4)"
+        },
+        {
+          "count": 9,
+          "frequency": 0.05625,
+          "operator_id": "C6:(4,4,4,4,4,5)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.05,
+          "operator_id": "C4:(0,2,2,3)"
+        },
+        {
+          "count": 8,
+          "frequency": 0.05,
+          "operator_id": "C6:(0,1,3,3,4,5)"
+        },
+        {
+          "count": 7,
+          "frequency": 0.04375,
+          "operator_id": "C6:(0,2,2,4,4,5)"
+        },
+        {
+          "count": 7,
+          "frequency": 0.04375,
+          "operator_id": "C6:(0,2,2,5,5,5)"
+        },
+        {
+          "count": 7,
+          "frequency": 0.04375,
+          "operator_id": "C6:(1,1,4,4,4,5)"
+        },
+        {
+          "count": 7,
+          "frequency": 0.04375,
+          "operator_id": "C6:(2,2,2,4,4,5)"
+        },
+        {
+          "count": 7,
+          "frequency": 0.04375,
+          "operator_id": "C6:(3,3,3,3,5,5)"
+        },
+        {
+          "count": 5,
+          "frequency": 0.03125,
+          "operator_id": "C5:(0,3,3,3,4)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C5:(0,2,2,3,4)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C5:(1,1,2,4,4)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(0,2,2,3,4,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(0,2,2,3,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(1,1,2,3,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(1,1,2,4,4,5)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.01875,
+          "operator_id": "C6:(0,1,4,4,4,5)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.01875,
+          "operator_id": "C6:(2,2,2,3,4,5)"
+        },
+        {
+          "count": 3,
+          "frequency": 0.01875,
+          "operator_id": "C6:(3,3,3,3,4,5)"
+        },
+        {
+          "count": 2,
+          "frequency": 0.0125,
+          "operator_id": "C6:(0,4,4,4,4,5)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.00625,
+          "operator_id": "C6:(0,3,3,3,4,5)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.00625,
+          "operator_id": "C6:(0,3,3,3,5,5)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.00625,
+          "operator_id": "C6:(1,1,2,5,5,5)"
+        },
+        {
+          "count": 1,
+          "frequency": 0.00625,
+          "operator_id": "C6:(2,2,2,3,5,5)"
+        }
+      ],
+      "frontier_runs": 160,
+      "operator_pool_count": 62,
+      "tie_frontier_change_count": 31,
+      "tie_frontier_change_rate": 0.3875,
+      "tie_frontier_total_count": 80
+    },
+    "chain_step_family": {
+      "benchmark_sensitivity_score": 0.0,
+      "cost_sensitivity_score": 0.10500000000000001,
+      "frontier_appearance_frequency": [
+        {
+          "count": 32,
+          "frequency": 0.2,
+          "operator_id": "C2:(0,1)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.2,
+          "operator_id": "C2:(1,1)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.2,
+          "operator_id": "C3:(0,1,2)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.2,
+          "operator_id": "C3:(1,2,2)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.2,
+          "operator_id": "C4:(0,1,2,3)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.2,
+          "operator_id": "C4:(1,2,3,3)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.2,
+          "operator_id": "C5:(0,1,2,3,4)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.2,
+          "operator_id": "C5:(1,2,3,4,4)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.2,
+          "operator_id": "C6:(0,1,2,3,4,5)"
+        },
+        {
+          "count": 32,
+          "frequency": 0.2,
+          "operator_id": "C6:(1,2,3,4,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C3:(2,2,2)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C4:(2,3,3,3)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C4:(3,3,3,3)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C5:(2,3,4,4,4)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C5:(3,4,4,4,4)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C5:(4,4,4,4,4)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(2,3,4,5,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(3,4,5,5,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(4,5,5,5,5,5)"
+        },
+        {
+          "count": 4,
+          "frequency": 0.025,
+          "operator_id": "C6:(5,5,5,5,5,5)"
+        }
+      ],
+      "frontier_runs": 160,
+      "operator_pool_count": 20,
+      "tie_frontier_change_count": 16,
+      "tie_frontier_change_rate": 0.2,
+      "tie_frontier_total_count": 80
+    }
+  },
+  "search_scope": {
+    "benchmark_profiles": [
+      "uniform",
+      "top_heavy",
+      "bottom_heavy",
+      "middle_heavy"
+    ],
+    "boolean_lattices": [
+      "B1",
+      "B2",
+      "B3"
+    ],
+    "chains": [
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6"
+    ],
+    "cost_choices": [
+      "moved_points_cost",
+      "total_rank_lift_cost",
+      "average_rank_lift_cost",
+      "normalized_total_rank_lift_cost"
+    ],
+    "deterministic": true,
+    "exhaustive_within_family": true,
+    "operator_families": [
+      "chain_all_monotone_inflationary",
+      "chain_closure_only",
+      "chain_step_family",
+      "boolean_all_monotone_inflationary"
+    ],
+    "tie_modes": [
+      "keep_all_nondominated",
+      "dedup_equal_points"
+    ]
+  }
+}

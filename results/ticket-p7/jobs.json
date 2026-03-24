@@ -1,0 +1,22 @@
+[
+  {
+    "exp": "EXP-112",
+    "seed": 0,
+    "scale": 64,
+    "stage": "ticket_p7_cleanroom_smoke",
+    "config": "baseline",
+    "env": {
+      "SIX_BIRDS_AUDIT_RICH": "1"
+    }
+  },
+  {
+    "exp": "EXP-112",
+    "seed": 0,
+    "scale": 64,
+    "stage": "ticket_p7_cleanroom_smoke",
+    "config": "A14_only",
+    "env": {
+      "SIX_BIRDS_AUDIT_RICH": "1"
+    }
+  }
+]

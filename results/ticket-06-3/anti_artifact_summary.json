@@ -1,0 +1,478 @@
+{
+  "baseline_raw": {
+    "quotient_instability": 0.3566175555555556,
+    "raw_composite": 0.6340107777777777,
+    "raw_instability": 0.3578773888888889,
+    "tie_policy_sensitivity": 0.23325972222222222
+  },
+  "best_program_after_anti_artifact_audit": "pair__cell_pkg_gate__cell_pkg_mode_from_acct",
+  "improving_programs_on_raw_instability": [
+    "accounting_core",
+    "lens_protocol_core",
+    "packaging_core",
+    "pair__cell_acct_gate__cell_acct_tie_protocol",
+    "pair__cell_acct_gate__cell_lens_protocol",
+    "pair__cell_acct_gate__cell_pkg_gate",
+    "pair__cell_acct_gate__cell_pkg_mode_from_acct",
+    "pair__cell_acct_tie_protocol__cell_lens_protocol",
+    "pair__cell_lens_protocol__cell_pkg_gate",
+    "pair__cell_lens_protocol__cell_pkg_mode_from_acct",
+    "pair__cell_pkg_gate__cell_pkg_mode_from_acct",
+    "singleton__cell_acct_gate",
+    "singleton__cell_lens_protocol"
+  ],
+  "notes": {
+    "lens_axis_externalized": true,
+    "packaging_mode_state_dependent": true,
+    "tie_policy_externalized": true
+  },
+  "program_metrics": {
+    "accounting_core": {
+      "candidate_pool_ratio_vs_baseline": 0.6277943888888889,
+      "cells": [
+        "cell_acct_gate",
+        "cell_acct_tie_protocol",
+        "cell_pkg_mode_from_acct"
+      ],
+      "flag_excessive_pruning_collapse": false,
+      "flag_hard_coded_packaging_choice": false,
+      "flag_quotient_only_improvement": false,
+      "flag_tie_suppression_artifact": true,
+      "interaction_gain": -0.0056728888888889495,
+      "quotient_instability": 0.3501306666666666,
+      "raw_instability": 0.3552677222222222,
+      "survives_all_artifact_flags": false,
+      "tie_policy_sensitivity": 0.18840266666666663
+    },
+    "baseline_raw": {
+      "candidate_pool_ratio_vs_baseline": 1.0,
+      "cells": [],
+      "flag_excessive_pruning_collapse": false,
+      "flag_hard_coded_packaging_choice": false,
+      "flag_quotient_only_improvement": false,
+      "flag_tie_suppression_artifact": false,
+      "interaction_gain": 0.0,
+      "quotient_instability": 0.3566175555555556,
+      "raw_instability": 0.3578773888888889,
+      "survives_all_artifact_flags": true,
+      "tie_policy_sensitivity": 0.23325972222222222
+    },
+    "chain_step_fallback": {
+      "candidate_pool_ratio_vs_baseline": 1.0,
+      "cells": [
+        "cell_acct_tie_protocol"
+      ],
+      "flag_excessive_pruning_collapse": false,
+      "flag_hard_coded_packaging_choice": false,
+      "flag_quotient_only_improvement": false,
+      "flag_tie_suppression_artifact": true,
+      "interaction_gain": 0.0,
+      "quotient_instability": 0.4054803333333334,
+      "raw_instability": 0.4054803333333334,
+      "survives_all_artifact_flags": false,
+      "tie_policy_sensitivity": 0.20298783333333334
+    },
+    "combined_core": {
+      "candidate_pool_ratio_vs_baseline": 0.5181325555555555,
+      "cells": [
+        "cell_acct_gate",
+        "cell_acct_tie_protocol",
+        "cell_lens_protocol",
+        "cell_pkg_gate",
+        "cell_pkg_mode_from_acct",
+        "cell_pkg_rewrite"
+      ],
+      "flag_excessive_pruning_collapse": false,
+      "flag_hard_coded_packaging_choice": false,
+      "flag_quotient_only_improvement": false,
+      "flag_tie_suppression_artifact": true,
+      "interaction_gain": -0.027982611111111055,
+      "quotient_instability": 0.3853440555555555,
+      "raw_instability": 0.3853440555555555,
+      "survives_all_artifact_flags": false,
+      "tie_policy_sensitivity": 0.11168044444444443
+    },
+    "lens_protocol_core": {
+      "candidate_pool_ratio_vs_baseline": 0.875174888888889,
+      "cells": [
+        "cell_acct_tie_protocol",
+        "cell_lens_protocol"
+      ],
+      "flag_excessive_pruning_collapse": false,
+      "flag_hard_coded_packaging_choice": false,
+      "flag_quotient_only_improvement": false,
+      "flag_tie_suppression_artifact": true,
+      "interaction_gain": 0.0,
+      "quotient_instability": 0.3566175555555556,
+      "raw_instability": 0.3566175555555556,
+      "survives_all_artifact_flags": false,
+      "tie_policy_sensitivity": 0.19038605555555554
+    },
+    "packaging_core": {
+      "candidate_pool_ratio_vs_baseline": 0.6738547222222222,
+      "cells": [
+        "cell_pkg_gate",
+        "cell_pkg_mode_from_acct",
+        "cell_pkg_rewrite"
+      ],
+      "flag_excessive_pruning_collapse": false,
+      "flag_hard_coded_packaging_choice": false,
+      "flag_quotient_only_improvement": false,
+      "flag_tie_suppression_artifact": true,
+      "interaction_gain": 0.020981777777777766,
+      "quotient_instability": 0.35197072222222225,
+      "raw_instability": 0.3563217222222223,
+      "survives_all_artifact_flags": false,
+      "tie_policy_sensitivity": 0.14263199999999998
+    },
+    "pair__cell_acct_gate__cell_acct_tie_protocol": {
+      "candidate_pool_ratio_vs_baseline": 0.5701343888888889,
+      "cells": [
+        "cell_acct_gate",
+        "cell_acct_tie_protocol"
+      ],
+      "flag_excessive_pruning_collapse": false,
+      "flag_hard_coded_packaging_choice": false,
+      "flag_quotient_only_improvement": false,
+      "flag_tie_suppression_artifact": false,
+      "interaction_gain": 0.0,
+      "quotient_instability": 0.3461334444444444,
+      "raw_instability": 0.35127049999999993,
+      "survives_all_artifact_flags": true,
+      "tie_policy_sensitivity": 0.18672699999999998
+    },
+    "pair__cell_acct_gate__cell_lens_protocol": {
+      "candidate_pool_ratio_vs_baseline": 0.5090746666666667,
+      "cells": [
+        "cell_acct_gate",
+        "cell_lens_protocol"
+      ],
+      "flag_excessive_pruning_collapse": false,
+      "flag_hard_coded_packaging_choice": false,
+      "flag_quotient_only_improvement": false,
+      "flag_tie_suppression_artifact": true,
+      "interaction_gain": 0.05663661111111101,
+      "quotient_instability": 0.3461334444444444,
+      "raw_instability": 0.3461334444444444,
+      "survives_all_artifact_flags": false,
+      "tie_policy_sensitivity": 0.14423377777777777
+    },
+    "pair__cell_acct_gate__cell_pkg_gate": {
+      "candidate_pool_ratio_vs_baseline": 0.5701343888888889,
+      "cells": [
+        "cell_acct_gate",
+        "cell_pkg_gate"
+      ],
+      "flag_excessive_pruning_collapse": false,
+      "flag_hard_coded_packaging_choice": false,
+      "flag_quotient_only_improvement": false,
+      "flag_tie_suppression_artifact": false,
+      "interaction_gain": 0.0,
+      "quotient_instability": 0.3461334444444444,
+      "raw_instability": 0.35127049999999993,
+      "survives_all_artifact_flags": true,
+      "tie_policy_sensitivity": 0.18672699999999998
+    },
+    "pair__cell_acct_gate__cell_pkg_mode_from_acct": {
+      "candidate_pool_ratio_vs_baseline": 0.6277943888888889,
+      "cells": [
+        "cell_acct_gate",
+        "cell_pkg_mode_from_acct"
+      ],
+      "flag_excessive_pruning_collapse": false,
+      "flag_hard_coded_packaging_choice": false,
+      "flag_quotient_only_improvement": false,
+      "flag_tie_suppression_artifact": true,
+      "interaction_gain": -0.0056728888888889495,
+      "quotient_instability": 0.3501306666666666,
+      "raw_instability": 0.3552677222222222,
+      "survives_all_artifact_flags": false,
+      "tie_policy_sensitivity": 0.18840266666666663
+    },
+    "pair__cell_acct_gate__cell_pkg_rewrite": {
+      "candidate_pool_ratio_vs_baseline": 0.5361309444444444,
+      "cells": [
+        "cell_acct_gate",
+        "cell_pkg_rewrite"
+      ],
+      "flag_excessive_pruning_collapse": false,
+      "flag_hard_coded_packaging_choice": false,
+      "flag_quotient_only_improvement": false,
+      "flag_tie_suppression_artifact": true,
+      "interaction_gain": -0.04959011111111111,
+      "quotient_instability": 0.400147111111111,
+      "raw_instability": 0.40445044444444433,
+      "survives_all_artifact_flags": false,
+      "tie_policy_sensitivity": 0.1600802222222222
+    },
+    "pair__cell_acct_tie_protocol__cell_lens_protocol": {
+      "candidate_pool_ratio_vs_baseline": 0.875174888888889,
+      "cells": [
+        "cell_acct_tie_protocol",
+        "cell_lens_protocol"
+      ],
+      "flag_excessive_pruning_collapse": false,
+      "flag_hard_coded_packaging_choice": false,
+      "flag_quotient_only_improvement": false,
+      "flag_tie_suppression_artifact": true,
+      "interaction_gain": 0.0,
+      "quotient_instability": 0.3566175555555556,
+      "raw_instability": 0.3566175555555556,
+      "survives_all_artifact_flags": false,
+      "tie_policy_sensitivity": 0.19038605555555554
+    },
+    "pair__cell_acct_tie_protocol__cell_pkg_gate": {
+      "candidate_pool_ratio_vs_baseline": 1.0,
+      "cells": [
+        "cell_acct_tie_protocol",
+        "cell_pkg_gate"
+      ],
+      "flag_excessive_pruning_collapse": false,
+      "flag_hard_coded_packaging_choice": false,
+      "flag_quotient_only_improvement": false,
+      "flag_tie_suppression_artifact": false,
+      "interaction_gain": -0.025542611111111113,
+      "quotient_instability": 0.3566175555555556,
+      "raw_instability": 0.3578773888888889,
+      "survives_all_artifact_flags": true,
+      "tie_policy_sensitivity": 0.23325972222222222
+    },
+    "pair__cell_acct_tie_protocol__cell_pkg_mode_from_acct": {
+      "candidate_pool_ratio_vs_baseline": 1.0,
+      "cells": [
+        "cell_acct_tie_protocol",
+        "cell_pkg_mode_from_acct"
+      ],
+      "flag_excessive_pruning_collapse": false,
+      "flag_hard_coded_packaging_choice": false,
+      "flag_quotient_only_improvement": false,
+      "flag_tie_suppression_artifact": false,
+      "interaction_gain": -0.025542611111111113,
+      "quotient_instability": 0.3566175555555556,
+      "raw_instability": 0.3578773888888889,
+      "survives_all_artifact_flags": true,
+      "tie_policy_sensitivity": 0.23325972222222222
+    },
+    "pair__cell_acct_tie_protocol__cell_pkg_rewrite": {
+      "candidate_pool_ratio_vs_baseline": 0.6911105555555555,
+      "cells": [
+        "cell_acct_tie_protocol",
+        "cell_pkg_rewrite"
+      ],
+      "flag_excessive_pruning_collapse": false,
+      "flag_hard_coded_packaging_choice": false,
+      "flag_quotient_only_improvement": false,
+      "flag_tie_suppression_artifact": true,
+      "interaction_gain": 0.004495444444444496,
+      "quotient_instability": 0.37208644444444444,
+      "raw_instability": 0.3764374444444445,
+      "survives_all_artifact_flags": false,
+      "tie_policy_sensitivity": 0.13900266666666666
+    },
+    "pair__cell_lens_protocol__cell_pkg_gate": {
+      "candidate_pool_ratio_vs_baseline": 0.875174888888889,
+      "cells": [
+        "cell_lens_protocol",
+        "cell_pkg_gate"
+      ],
+      "flag_excessive_pruning_collapse": false,
+      "flag_hard_coded_packaging_choice": false,
+      "flag_quotient_only_improvement": false,
+      "flag_tie_suppression_artifact": true,
+      "interaction_gain": 0.0,
+      "quotient_instability": 0.3566175555555556,
+      "raw_instability": 0.3566175555555556,
+      "survives_all_artifact_flags": false,
+      "tie_policy_sensitivity": 0.19038605555555554
+    },
+    "pair__cell_lens_protocol__cell_pkg_mode_from_acct": {
+      "candidate_pool_ratio_vs_baseline": 0.875174888888889,
+      "cells": [
+        "cell_lens_protocol",
+        "cell_pkg_mode_from_acct"
+      ],
+      "flag_excessive_pruning_collapse": false,
+      "flag_hard_coded_packaging_choice": false,
+      "flag_quotient_only_improvement": false,
+      "flag_tie_suppression_artifact": true,
+      "interaction_gain": 0.0,
+      "quotient_instability": 0.3566175555555556,
+      "raw_instability": 0.3566175555555556,
+      "survives_all_artifact_flags": false,
+      "tie_policy_sensitivity": 0.19038605555555554
+    },
+    "pair__cell_lens_protocol__cell_pkg_rewrite": {
+      "candidate_pool_ratio_vs_baseline": 0.6307402222222221,
+      "cells": [
+        "cell_lens_protocol",
+        "cell_pkg_rewrite"
+      ],
+      "flag_excessive_pruning_collapse": false,
+      "flag_hard_coded_packaging_choice": false,
+      "flag_quotient_only_improvement": false,
+      "flag_tie_suppression_artifact": true,
+      "interaction_gain": 0.07796172222222209,
+      "quotient_instability": 0.3713105555555556,
+      "raw_instability": 0.3713105555555556,
+      "survives_all_artifact_flags": false,
+      "tie_policy_sensitivity": 0.09773155555555557
+    },
+    "pair__cell_pkg_gate__cell_pkg_mode_from_acct": {
+      "candidate_pool_ratio_vs_baseline": 0.8101892222222222,
+      "cells": [
+        "cell_pkg_gate",
+        "cell_pkg_mode_from_acct"
+      ],
+      "flag_excessive_pruning_collapse": false,
+      "flag_hard_coded_packaging_choice": false,
+      "flag_quotient_only_improvement": false,
+      "flag_tie_suppression_artifact": false,
+      "interaction_gain": 0.07334822222222215,
+      "quotient_instability": 0.31651433333333334,
+      "raw_instability": 0.31688855555555556,
+      "survives_all_artifact_flags": true,
+      "tie_policy_sensitivity": 0.19993288888888888
+    },
+    "pair__cell_pkg_gate__cell_pkg_rewrite": {
+      "candidate_pool_ratio_vs_baseline": 0.6911105555555555,
+      "cells": [
+        "cell_pkg_gate",
+        "cell_pkg_rewrite"
+      ],
+      "flag_excessive_pruning_collapse": false,
+      "flag_hard_coded_packaging_choice": false,
+      "flag_quotient_only_improvement": false,
+      "flag_tie_suppression_artifact": true,
+      "interaction_gain": 0.0,
+      "quotient_instability": 0.3734704444444444,
+      "raw_instability": 0.3778214444444445,
+      "survives_all_artifact_flags": false,
+      "tie_policy_sensitivity": 0.1421141111111111
+    },
+    "pair__cell_pkg_mode_from_acct__cell_pkg_rewrite": {
+      "candidate_pool_ratio_vs_baseline": 0.6911105555555555,
+      "cells": [
+        "cell_pkg_mode_from_acct",
+        "cell_pkg_rewrite"
+      ],
+      "flag_excessive_pruning_collapse": false,
+      "flag_hard_coded_packaging_choice": false,
+      "flag_quotient_only_improvement": false,
+      "flag_tie_suppression_artifact": true,
+      "interaction_gain": 0.0,
+      "quotient_instability": 0.3734704444444444,
+      "raw_instability": 0.3778214444444445,
+      "survives_all_artifact_flags": false,
+      "tie_policy_sensitivity": 0.1421141111111111
+    },
+    "singleton__cell_acct_gate": {
+      "candidate_pool_ratio_vs_baseline": 0.5701343888888889,
+      "cells": [
+        "cell_acct_gate"
+      ],
+      "flag_excessive_pruning_collapse": false,
+      "flag_hard_coded_packaging_choice": false,
+      "flag_quotient_only_improvement": false,
+      "flag_tie_suppression_artifact": false,
+      "interaction_gain": 0.0,
+      "quotient_instability": 0.3461334444444444,
+      "raw_instability": 0.35127049999999993,
+      "survives_all_artifact_flags": true,
+      "tie_policy_sensitivity": 0.18672699999999998
+    },
+    "singleton__cell_acct_tie_protocol": {
+      "candidate_pool_ratio_vs_baseline": 1.0,
+      "cells": [
+        "cell_acct_tie_protocol"
+      ],
+      "flag_excessive_pruning_collapse": false,
+      "flag_hard_coded_packaging_choice": false,
+      "flag_quotient_only_improvement": false,
+      "flag_tie_suppression_artifact": false,
+      "interaction_gain": 0.0,
+      "quotient_instability": 0.3566175555555556,
+      "raw_instability": 0.3578773888888889,
+      "survives_all_artifact_flags": true,
+      "tie_policy_sensitivity": 0.23325972222222222
+    },
+    "singleton__cell_lens_protocol": {
+      "candidate_pool_ratio_vs_baseline": 0.875174888888889,
+      "cells": [
+        "cell_lens_protocol"
+      ],
+      "flag_excessive_pruning_collapse": false,
+      "flag_hard_coded_packaging_choice": false,
+      "flag_quotient_only_improvement": false,
+      "flag_tie_suppression_artifact": true,
+      "interaction_gain": 0.0,
+      "quotient_instability": 0.3566175555555556,
+      "raw_instability": 0.3566175555555556,
+      "survives_all_artifact_flags": false,
+      "tie_policy_sensitivity": 0.19038605555555554
+    },
+    "singleton__cell_pkg_gate": {
+      "candidate_pool_ratio_vs_baseline": 1.0,
+      "cells": [
+        "cell_pkg_gate"
+      ],
+      "flag_excessive_pruning_collapse": false,
+      "flag_hard_coded_packaging_choice": false,
+      "flag_quotient_only_improvement": false,
+      "flag_tie_suppression_artifact": false,
+      "interaction_gain": 0.0,
+      "quotient_instability": 0.3566175555555556,
+      "raw_instability": 0.3578773888888889,
+      "survives_all_artifact_flags": true,
+      "tie_policy_sensitivity": 0.23325972222222222
+    },
+    "singleton__cell_pkg_mode_from_acct": {
+      "candidate_pool_ratio_vs_baseline": 1.0,
+      "cells": [
+        "cell_pkg_mode_from_acct"
+      ],
+      "flag_excessive_pruning_collapse": false,
+      "flag_hard_coded_packaging_choice": false,
+      "flag_quotient_only_improvement": false,
+      "flag_tie_suppression_artifact": false,
+      "interaction_gain": 0.0,
+      "quotient_instability": 0.3566175555555556,
+      "raw_instability": 0.3578773888888889,
+      "survives_all_artifact_flags": true,
+      "tie_policy_sensitivity": 0.23325972222222222
+    },
+    "singleton__cell_pkg_rewrite": {
+      "candidate_pool_ratio_vs_baseline": 0.6911105555555555,
+      "cells": [
+        "cell_pkg_rewrite"
+      ],
+      "flag_excessive_pruning_collapse": false,
+      "flag_hard_coded_packaging_choice": false,
+      "flag_quotient_only_improvement": false,
+      "flag_tie_suppression_artifact": true,
+      "interaction_gain": 0.0,
+      "quotient_instability": 0.3734704444444444,
+      "raw_instability": 0.3778214444444445,
+      "survives_all_artifact_flags": false,
+      "tie_policy_sensitivity": 0.1421141111111111
+    }
+  },
+  "programs_surviving_all_artifact_flags": [
+    "baseline_raw",
+    "pair__cell_acct_gate__cell_acct_tie_protocol",
+    "pair__cell_acct_gate__cell_pkg_gate",
+    "pair__cell_acct_tie_protocol__cell_pkg_gate",
+    "pair__cell_acct_tie_protocol__cell_pkg_mode_from_acct",
+    "pair__cell_pkg_gate__cell_pkg_mode_from_acct",
+    "singleton__cell_acct_gate",
+    "singleton__cell_acct_tie_protocol",
+    "singleton__cell_pkg_gate",
+    "singleton__cell_pkg_mode_from_acct"
+  ],
+  "programs_with_positive_interaction_gain": [
+    "packaging_core",
+    "pair__cell_acct_gate__cell_lens_protocol",
+    "pair__cell_acct_tie_protocol__cell_pkg_rewrite",
+    "pair__cell_lens_protocol__cell_pkg_rewrite",
+    "pair__cell_pkg_gate__cell_pkg_mode_from_acct"
+  ]
+}

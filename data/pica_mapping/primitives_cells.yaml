@@ -1,0 +1,36 @@
+mapping_id: pica_primitives_cells
+version: 0.1.0
+vendor_root: vendors/six-birds-pica
+source_paths:
+  primitives_yaml: vendors/six-birds-pica/theory/primitives.yaml
+  primitives_md: vendors/six-birds-pica/theory/primitives.md
+  ledger_hypotheses: vendors/six-birds-pica/lab/ledger/hypotheses.jsonl
+primitives_bridge:
+  source_top_keys:
+    - map
+    - metadata
+    - primitives
+  primitive_ids:
+    - P1
+    - P2
+    - P3
+    - P4
+    - P5
+    - P6
+  enable_structure_present: true
+cells_bridge:
+  source: vendors/six-birds-pica/theory/primitives.yaml
+  interaction_key: map
+  actor_informant_pairs:
+    - actor: P1
+      informant: P5
+    - actor: P2
+      informant: P5
+    - actor: P2
+      informant: P6
+    - actor: P3
+      informant: P4
+    - actor: P3
+      informant: P6
+    - actor: P5
+      informant: P6

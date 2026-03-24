@@ -1,0 +1,93 @@
+version: 0.1.0
+items:
+  - id: def_closure_package
+    object_name: closure package
+    current_body_status: explicit
+    current_location: paper/sections/02_primitive_roles.tex; paper/sections/03_fixed_package.tex
+    lean_anchor: src/lean/ClosureFrontier/TheoremTrack/Core.lean#ClosurePackage
+    needs_body_definition: yes
+    priority: high
+  - id: def_package_change
+    object_name: package change
+    current_body_status: implicit
+    current_location: paper/sections/02_primitive_roles.tex; paper/sections/03_fixed_package.tex
+    lean_anchor: src/lean/ClosureFrontier/TheoremTrack/Candidates.lean#persistent_growth_witness_implies_package_change
+    needs_body_definition: yes
+    priority: high
+  - id: def_persistent_growth_witness
+    object_name: persistent growth witness
+    current_body_status: explicit
+    current_location: paper/sections/03_fixed_package.tex
+    lean_anchor: src/lean/ClosureFrontier/TheoremTrack/Core.lean#PersistentGrowthWitness
+    needs_body_definition: yes
+    priority: high
+  - id: def_frozen_slice
+    object_name: frozen slice
+    current_body_status: explicit
+    current_location: paper/sections/02_primitive_roles.tex; paper/sections/04_frozen_frontier.tex; paper/sections/05_conditional_lift.tex
+    lean_anchor: src/lean/ClosureFrontier/TheoremTrack/Frontier.lean#FrozenSlice
+    needs_body_definition: yes
+    priority: high
+  - id: def_extension_operator
+    object_name: extension operator
+    current_body_status: implicit
+    current_location: paper/sections/04_frozen_frontier.tex; paper/sections/05_conditional_lift.tex
+    lean_anchor: src/lean/ClosureFrontier/TheoremTrack/Frontier.lean#ExtensionOperator
+    needs_body_definition: yes
+    priority: high
+  - id: def_support_cone
+    object_name: support cone
+    current_body_status: explicit
+    current_location: paper/sections/02_primitive_roles.tex; paper/sections/04_frozen_frontier.tex; paper/sections/05_conditional_lift.tex
+    lean_anchor: src/lean/ClosureFrontier/TheoremTrack/Frontier.lean#AgreeOnCone
+    needs_body_definition: yes
+    priority: high
+  - id: def_cone_agreement
+    object_name: cone agreement
+    current_body_status: explicit
+    current_location: paper/sections/04_frozen_frontier.tex
+    lean_anchor: src/lean/ClosureFrontier/TheoremTrack/Frontier.lean#AgreeOnCone
+    needs_body_definition: yes
+    priority: high
+  - id: def_slice_invariance
+    object_name: slice invariance
+    current_body_status: explicit
+    current_location: paper/sections/04_frozen_frontier.tex; paper/sections/05_conditional_lift.tex
+    lean_anchor: src/lean/ClosureFrontier/TheoremTrack/Frontier.lean#SliceInvariantOnCone
+    needs_body_definition: yes
+    priority: high
+  - id: def_frontier_dominance
+    object_name: frontier dominance
+    current_body_status: explicit
+    current_location: paper/sections/04_frozen_frontier.tex
+    lean_anchor: src/lean/ClosureFrontier/TheoremTrack/Frontier.lean#FrontierDominates
+    needs_body_definition: yes
+    priority: high
+  - id: def_frontier_efficiency
+    object_name: frontier efficiency
+    current_body_status: explicit
+    current_location: paper/sections/04_frozen_frontier.tex; paper/sections/05_conditional_lift.tex
+    lean_anchor: src/lean/ClosureFrontier/TheoremTrack/Frontier.lean#FrontierEfficient
+    needs_body_definition: yes
+    priority: high
+  - id: def_canonical_family
+    object_name: canonical representative family
+    current_body_status: explicit
+    current_location: paper/sections/04_frozen_frontier.tex; paper/sections/05_conditional_lift.tex
+    lean_anchor: src/lean/ClosureFrontier/TheoremTrack/ArithmeticCandidate.lean#AlignsOnConeWithCanonicalFamily
+    needs_body_definition: yes
+    priority: high
+  - id: def_arithmetic_target
+    object_name: arithmetic canonicality target
+    current_body_status: explicit
+    current_location: paper/sections/05_conditional_lift.tex
+    lean_anchor: src/lean/ClosureFrontier/TheoremTrack/ArithmeticCandidate.lean#ArithmeticCanonicalityTarget
+    needs_body_definition: yes
+    priority: high
+  - id: def_external_contract
+    object_name: external dependency contract
+    current_body_status: explicit
+    current_location: paper/sections/05_conditional_lift.tex; paper/appendices/B_external_contract.tex
+    lean_anchor: src/lean/ClosureFrontier/TheoremTrack/ExternalBoundary.lean#ExternalDependencyContract
+    needs_body_definition: yes
+    priority: high

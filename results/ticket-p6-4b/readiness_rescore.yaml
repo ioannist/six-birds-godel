@@ -1,0 +1,9 @@
+rescore_id: ticket_p6_4a_readiness_rescore
+version: 0.1.0
+canonical_metric_name: delta_vs_baseline_frob_from_rank1
+decision_logic_source: results/ticket-p6-3/decision_logic.yaml
+thresholds_drifted: false
+primary_coverage_complete: true
+final_verdict: hybrid_ready
+a14_only_remains_focus: true
+remaining_gap_cells: []

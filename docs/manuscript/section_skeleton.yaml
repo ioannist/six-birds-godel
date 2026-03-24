@@ -1,0 +1,13 @@
+scaffold_id: manuscript_section_skeleton
+version: 0.1.0
+sections:
+  - sec_problem_setup
+  - sec_primitive_role_framing
+  - sec_theorem_package
+  - sec_conditional_arithmetic_lift
+  - sec_vendor_backed_supporting_evidence
+  - sec_limits_scope
+  - app_lean_theorem_inventory
+  - app_external_dependency_contract
+  - app_vendor_evidence_details
+  - app_discarded_overreach_boundaries

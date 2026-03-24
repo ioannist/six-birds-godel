@@ -1,0 +1,159 @@
+\section{Primitive roles and theorem objects}\label{sec:primitive-roles}
+
+This section fixes the abstract objects used throughout the theorem route. The aim is to surface the mathematical setup in the body of the paper rather than leaving it implicit in prose or externalized into Lean alone. The resulting definitions are intentionally narrow. They formalize only the slice of the Six-Birds framework needed for the present theorem package: fixed-package saturation, package-change necessity, frozen-slice comparison, and conditional representative alignment.
+
+The closure-oriented vocabulary used here is closest to the classical traditions of consequence operators and fixed-point theorems~\cite{TarskiConsequence1930,TarskiFixedPoint1955}.
+
+\subsection*{Ambient spaces and closure packages}
+
+Fix a nonempty state space $X$. Let $\mathcal{E}$ denote a class of endomaps $e \colon X \to X$, to be interpreted as candidate extension operators or package actions on $X$. The paper uses two levels of structure on this ambient space. At the first level one singles out a fixed idempotent package. At the second level one compares distinct extension operators relative to a frozen evaluation regime.
+
+\paragraph{Definition (closure package).}
+A \emph{closure package} is a pair
+\[
+\mathrm{pkg}=(X,\operatorname{op})
+\]
+where $\operatorname{op}\colon X\to X$ is idempotent:
+\[
+\operatorname{op}(\operatorname{op}(x))=\operatorname{op}(x)\qquad \text{for all }x\in X.
+\]
+The package is the theorem-track realization of the fixed \(P5\) object. When the package is held fixed, repeated application of $\operatorname{op}$ remains inside the same closure regime.
+
+\paragraph{Definition (persistent growth witness).}
+Let $\mathrm{pkg}=(X,\operatorname{op})$ be a closure package. A point $x\in X$ is a \emph{persistent growth witness} for $\mathrm{pkg}$ if there exists $n\ge 1$ such that
+\[
+\operatorname{op}^{[n+1]}(x)\neq \operatorname{op}^{[n]}(x),
+\]
+where $\operatorname{op}^{[m]}$ denotes the $m$-fold iterate of $\operatorname{op}$.
+
+This is the internal notion of strict growth used in the base and bridge theorems. It is deliberately narrow: it asks only whether self-iteration of a fixed package continues to create genuinely new stages.
+
+\paragraph{Definition (package change).}
+Given two closure packages
+\[
+\mathrm{pkg}=(X,\operatorname{op}), \qquad \mathrm{pkg}'=(X,\operatorname{op}'),
+\]
+a \emph{package change} from $\mathrm{pkg}$ to $\mathrm{pkg}'$ is any replacement for which
+\[
+\operatorname{op}\neq \operatorname{op}'
+\]
+as endomaps on $X$. A \emph{package-change witness} is a point $x\in X$ such that
+\[
+\operatorname{op}(x)\neq \operatorname{op}'(x).
+\]
+The present paper does not formalize the full internal mechanics of such changes. Instead it records the structural fact that genuine strict growth cannot be attributed to a fixed package once idempotent saturation has been proved. Package change is therefore the theorem-track locus at which \(P1/P2\) enter.
+
+\subsection*{Frozen slices and comparison domains}
+
+The paper does not compare extension operators against a moving ledger. Comparison is always relative to a fixed evaluation regime.
+
+\paragraph{Definition (frozen slice).}
+A \emph{frozen slice} $s$ on $\mathcal{E}$ consists of:
+\[
+s=(Y_s,K_s,C_s),
+\]
+where
+\[
+Y_s \colon \mathcal{E}\to \mathbb{R},\qquad
+K_s \colon \mathcal{E}\to \mathbb{R},
+\]
+and
+\[
+C_s \subseteq X.
+\]
+Here $Y_s$ is the yield functional, $K_s$ is the cost functional, and $C_s$ is the support cone of the slice. The frozen slice is the theorem-track realization of the \(P6\) evaluation ledger together with the \(P4\) support axis that specifies where representative comparison matters.
+
+\paragraph{Definition (comparison domain).}
+A \emph{comparison domain} is a subset
+\[
+D\subseteq \mathcal{E}
+\]
+of operators admissible for comparison on the frozen slice $s$. The paper keeps $D$ explicit because efficiency claims are always relative both to a ledger and to a chosen admissible domain.
+
+\paragraph{Definition (frontier dominance).}
+Let $s=(Y_s,K_s,C_s)$ be a frozen slice and let $e,f\in D$. One says that $e$ \emph{dominates} $f$ on $s$, written
+\[
+\operatorname{FrontierDominates}_s(e,f),
+\]
+if
+\[
+Y_s(e)\ge Y_s(f),\qquad K_s(e)\le K_s(f),
+\]
+and at least one of these inequalities is strict.
+
+\paragraph{Definition (frontier efficiency).}
+An operator $e\in D$ is \emph{frontier-efficient} on the frozen slice $s$, written
+\[
+\operatorname{FrontierEfficient}_{s,D}(e),
+\]
+if there is no $g\in D$ such that $\operatorname{FrontierDominates}_s(g,e)$.
+
+These definitions give body-level mathematical form to the dominance and efficiency objects that were previously discussed mostly in prose. Their purpose is not to settle which ledger is the right one in general, but to make clear that all comparison in the paper occurs only after such a ledger has been fixed.
+
+\subsection*{Support cones, agreement, and invariance}
+
+The support cone carried by a frozen slice is the indexed region on which representative comparison is meaningful.
+
+\paragraph{Definition (agreement on a cone).}
+Let $C\subseteq X$, and let $e,f\in \mathcal{E}$. One says that $e$ and $f$ \emph{agree on the cone} $C$, written
+\[
+\operatorname{AgreeOnCone}_C(e,f),
+\]
+if
+\[
+e(x)=f(x)\qquad \text{for all }x\in C.
+\]
+
+\paragraph{Definition (slice invariance on a cone).}
+A frozen slice $s=(Y_s,K_s,C_s)$ is \emph{invariant on its cone} if for all $e,f\in \mathcal{E}$,
+\[
+\operatorname{AgreeOnCone}_{C_s}(e,f)
+\quad\Longrightarrow\quad
+Y_s(e)=Y_s(f)\ \text{ and }\ K_s(e)=K_s(f).
+\]
+This is the theorem-track content of \lid{SliceInvariantOnCone}. It says that the ledger carried by the slice does not distinguish operators that coincide on the support region the slice itself tracks.
+
+The role split is now visible at body level. The cone is not a mechanism of package change. It is the \(P4\) indexing/support axis. The invariance condition is not a growth rule. It is a property of the \(P6\) frozen evaluation regime.
+
+\subsection*{Representative families and alignment targets}
+
+The paper's comparative results do not aim at unrestricted syntactic uniqueness. What they need is representative alignment on the relevant support cone.
+
+\paragraph{Definition (canonical representative family).}
+A \emph{canonical representative family} is a distinguished subset
+\[
+\mathcal{K}\subseteq \mathcal{E}.
+\]
+In the internal theory this family is abstract. In the later arithmetic reading it is interpreted through the external contract as the intended consistency/reflection progression family.
+
+\paragraph{Definition (representative alignment target).}
+Let $s=(Y_s,K_s,C_s)$ be a frozen slice, let $D\subseteq \mathcal{E}$ be a comparison domain, let $\mathcal{K}\subseteq \mathcal{E}$ be a canonical representative family, and let $e\in D$. One says that $e$ satisfies the \emph{representative alignment target} relative to $(s,D,\mathcal{K})$ if there exists $c\in \mathcal{K}\cap D$ such that
+\[
+\operatorname{AgreeOnCone}_{C_s}(e,c).
+\]
+This target is the body-level form of the alignment condition later used in the restricted alignment lemma and in the conditional arithmetic lift.
+
+At this stage no arithmetic interpretation is required. The point is only that, once comparison is performed on a frozen slice, the correct target is not global equality with a canonical object but agreement with a representative from the designated family on the support cone the slice actually tracks.
+
+\subsection*{Primitive roles in the theorem setup}
+
+With the definitions now in place, the primitive-role assignment used by the paper can be stated without ambiguity.
+
+\(P5\) is the fixed-package object: it appears here as the closure package $\mathrm{pkg}=(X,\operatorname{op})$. The base theorem concerns exactly this object under idempotent self-iteration.
+
+\(P1/P2\) are the mechanisms of package change. They are not modeled in full internal detail in the present theorem route, but they are the only loci at which genuine growth-producing change can occur once fixed-package saturation has been established.
+
+\(P6\) is the frozen evaluation regime: it appears here as the frozen slice $s=(Y_s,K_s,C_s)$, that is, the fixed ledger relative to which yield, cost, and efficiency are assessed.
+
+\(P4\) is the indexing/support axis: it appears here as the support cone $C_s$ and the comparison-domain/support structure that lets the paper ask only cone-relative representative questions.
+
+\(P3\) remains diagnostic-only. It does not appear among the proof-carrying objects of the present theorem ladder. Its role is to mark route mismatch or protocol sensitivity when broader interaction structure is under discussion, not to do theorem-bearing work in the current paper.
+
+\subsection*{Continuity with the earlier Six-Birds line}
+
+This definitions section narrows the older Six-Birds vocabulary rather than replacing it. The closure emphasis follows the fixed-operator saturation line of \emph{Six Birds: Foundations of Emergence Calculus}~\cite{Tsiokos2026Foundations}, while the treatment of mathematical content as package-relative follows \emph{To Count a Stone with Six Birds: A Mathematics is A Theory}~\cite{Tsiokos2026ToCount}. The asymmetry of primitive roles is likewise continuous with the control-space and class-separation perspective of \emph{To Chart a Stone with Six Birds}~\cite{Tsiokos2026ToChart} and \emph{To Classify a Stone with Six Birds}~\cite{Tsiokos2026ToClassify}.
+
+The present paper therefore uses a restricted theorem-bearing slice of the broader framework. It does not attempt to make every primitive equally active in the main proof route, and it does not infer theorem statements from the broader interactional richness documented in the vendor-backed PICA material~\cite{Tsiokos2026ToCreate}. That material remains supportive and disciplinary; the proof-carrying setup is fixed by the definitions above.
+
+\medskip\noindent
+Sections~\ref{sec:fixed-package}--\ref{sec:conditional-lift} now build on this setup in the expected order. Section~\ref{sec:fixed-package} proves that a fixed package saturates and that genuine strict growth requires package change. Section~\ref{sec:frozen-frontier} introduces the frozen comparative regime and proves representative transfer and restricted alignment on the support cone. Section~\ref{sec:conditional-lift} then states the main conditional arithmetic lift under the explicit external contract.

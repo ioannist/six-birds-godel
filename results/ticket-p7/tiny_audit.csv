@@ -1,0 +1,3 @@
+config,scale,seed,status,has_audit,log_path,frob_from_rank1,macro_gap,tau,k_values
+baseline,64,0,ok,True,vendors/six-birds-pica/lab/runs/ticket_p7_cleanroom_smoke/EXP-112_s0_n64_baseline.log,0.9745772895846976,0.5685616875212375,2,2|4|8|15|23
+A14_only,64,0,ok,True,vendors/six-birds-pica/lab/runs/ticket_p7_cleanroom_smoke/EXP-112_s0_n64_A14_only.log,1.4464846753296725,0.35671387616363737,1,2|4|8|12|18

@@ -1,0 +1,13 @@
+{
+  "mode_counts": {
+    "balanced": 248,
+    "raw": 180,
+    "strict": 20
+  },
+  "mode_frequencies": {
+    "balanced": 0.5535714285714286,
+    "raw": 0.4017857142857143,
+    "strict": 0.044642857142857144
+  },
+  "total_contexts": 448
+}

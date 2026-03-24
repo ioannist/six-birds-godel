@@ -1,0 +1,29 @@
+registry_id: internal_relevance
+version: 0.1.0
+scope_note: Relevant internal Six-Birds sources for current theorem-first phase.
+entries:
+  - id: src_int_six_birds_foundations
+    canonical_key: six_birds_foundations
+    title: "Six Birds: Foundations of Emergence Calculus"
+    claim_links:
+      - clm_fixed_closure_saturation
+      - clm_strict_growth_requires_change
+    concepts_to_borrow:
+      - closure layer semantics
+      - operator-theory separation
+    likely_necessary: true
+    warnings:
+      - avoid importing non-formal narrative sections
+      - keep reuse at definition and operator granularity
+  - id: src_int_to_count
+    canonical_key: to_count_six_birds
+    title: "To Count a Stone with Six Birds: A Mathematics is A Theory"
+    claim_links:
+      - clm_fixed_closure_saturation
+    concepts_to_borrow:
+      - theory-as-closure framing
+      - canonical counting perspective
+    likely_necessary: true
+    warnings:
+      - validate terminology alignment before reuse
+      - do not assume theorem statements transfer unchanged

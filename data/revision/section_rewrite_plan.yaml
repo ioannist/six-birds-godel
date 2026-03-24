@@ -1,0 +1,77 @@
+version: 0.1.0
+sections:
+  - section_id: sec_02
+    file: paper/sections/02_primitive_roles.tex
+    target_section_mode: definitions
+    current_read_too_much_like_commentary: yes
+    stays:
+      - primitive-role asymmetry
+      - relation to earlier Six-Birds papers
+      - theorem ladder overview
+    must_be_rewritten:
+      - packages package-change frozen-evaluation prose into explicit definitions block
+      - theorem objects paragraph into definition-level setup with notation
+    must_add_displayed_math:
+      - ClosurePackage-like definition
+      - package-change placeholder/definition
+      - FrozenSlice-like definition
+      - ExtensionOperator-like definition
+      - support cone notation
+    can_move_to_appendix:
+      - some historical framing sentences about earlier papers
+    priority: high
+  - section_id: sec_03
+    file: paper/sections/03_fixed_package.tex
+    target_section_mode: theorem_section
+    current_read_too_much_like_commentary: medium
+    stays:
+      - one-step saturation proposition
+      - bridge-level interpretation
+    must_be_rewritten:
+      - explicit PersistentGrowthWitness definition in body
+      - no-persistent-growth theorem into displayed statement
+      - package-change necessity into displayed implication/corollary
+    must_add_displayed_math:
+      - PersistentGrowthWitness formula
+      - displayed no-persistent-growth statement
+      - displayed package-change implication
+    can_move_to_appendix:
+      - extended interpretation prose
+    priority: high
+  - section_id: sec_04
+    file: paper/sections/04_frozen_frontier.tex
+    target_section_mode: comparative_theorem_section
+    current_read_too_much_like_commentary: yes
+    stays:
+      - frozen-slice motivation
+      - transfer and restricted alignment narrative order
+    must_be_rewritten:
+      - visible definitions for FrontierDominates FrontierEfficient AgreeOnCone SliceInvariantOnCone
+      - displayed theorem statements for congruence transfer and restricted alignment
+    must_add_displayed_math:
+      - dominance definition
+      - efficiency definition
+      - cone agreement and slice invariance definitions
+      - displayed transfer statements
+    can_move_to_appendix:
+      - some interpretation paragraphs
+    priority: high
+  - section_id: sec_05
+    file: paper/sections/05_conditional_lift.tex
+    target_section_mode: main_theorem_section
+    current_read_too_much_like_commentary: yes
+    stays:
+      - separation of in-house and external assumptions
+      - non-claims paragraph
+    must_be_rewritten:
+      - prose assumption list into mathematical assumption box
+      - main theorem into displayed theorem environment
+      - proof sketch into dependency-aware theorem proof outline
+      - explicit theorem-object notation for ArithmeticCanonicalityTarget and ExternalDependencyContract
+    must_add_displayed_math:
+      - formal assumption box
+      - displayed main conditional theorem statement
+      - explicit notation for canonical family and arithmetic target
+    can_move_to_appendix:
+      - part of the methodological boundary discussion
+    priority: highest

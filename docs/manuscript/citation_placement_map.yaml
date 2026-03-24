@@ -1,0 +1,21 @@
+map_id: citation_placement_map
+version: 0.1.0
+entries:
+  - source_id: src_int_six_birds_foundations
+    first_section: sec_primitive_role_framing
+    support_role: framing
+  - source_id: src_int_to_count
+    first_section: sec_theorem_package
+    support_role: internal_proof_context
+  - source_id: src_ext_godel_1931
+    first_section: sec_problem_setup
+    support_role: framing
+  - source_id: src_ext_beklemishev_reflection_progressions
+    first_section: sec_conditional_arithmetic_lift
+    support_role: external_discharge
+  - source_id: src_ext_montalban_walsh_consistency_operator
+    first_section: sec_conditional_arithmetic_lift
+    support_role: external_discharge
+  - source_id: src_ext_steel_maximize_unify
+    first_section: sec_problem_setup
+    support_role: framing

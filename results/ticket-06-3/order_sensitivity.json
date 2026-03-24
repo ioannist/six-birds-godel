@@ -1,0 +1,500 @@
+{
+  "any_order_sensitivity_detected": false,
+  "details": {
+    "combined_core|B1|all_monotone_inflationary": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "B1",
+      "program_id": "combined_core",
+      "sample_changed_contexts": [],
+      "slice": "all_monotone_inflationary",
+      "total_contexts": 64
+    },
+    "combined_core|B1|bounded_lift_le_1": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "B1",
+      "program_id": "combined_core",
+      "sample_changed_contexts": [],
+      "slice": "bounded_lift_le_1",
+      "total_contexts": 64
+    },
+    "combined_core|B2|all_monotone_inflationary": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "B2",
+      "program_id": "combined_core",
+      "sample_changed_contexts": [],
+      "slice": "all_monotone_inflationary",
+      "total_contexts": 64
+    },
+    "combined_core|B2|bounded_lift_le_1": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "B2",
+      "program_id": "combined_core",
+      "sample_changed_contexts": [],
+      "slice": "bounded_lift_le_1",
+      "total_contexts": 64
+    },
+    "combined_core|B3|all_monotone_inflationary": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "B3",
+      "program_id": "combined_core",
+      "sample_changed_contexts": [],
+      "slice": "all_monotone_inflationary",
+      "total_contexts": 64
+    },
+    "combined_core|B3|bounded_lift_le_1": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "B3",
+      "program_id": "combined_core",
+      "sample_changed_contexts": [],
+      "slice": "bounded_lift_le_1",
+      "total_contexts": 64
+    },
+    "combined_core|C3|all_monotone_inflationary": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C3",
+      "program_id": "combined_core",
+      "sample_changed_contexts": [],
+      "slice": "all_monotone_inflationary",
+      "total_contexts": 64
+    },
+    "combined_core|C3|bounded_lift_le_1": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C3",
+      "program_id": "combined_core",
+      "sample_changed_contexts": [],
+      "slice": "bounded_lift_le_1",
+      "total_contexts": 64
+    },
+    "combined_core|C3|chain_step_family": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C3",
+      "program_id": "combined_core",
+      "sample_changed_contexts": [],
+      "slice": "chain_step_family",
+      "total_contexts": 64
+    },
+    "combined_core|C4|all_monotone_inflationary": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C4",
+      "program_id": "combined_core",
+      "sample_changed_contexts": [],
+      "slice": "all_monotone_inflationary",
+      "total_contexts": 64
+    },
+    "combined_core|C4|bounded_lift_le_1": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C4",
+      "program_id": "combined_core",
+      "sample_changed_contexts": [],
+      "slice": "bounded_lift_le_1",
+      "total_contexts": 64
+    },
+    "combined_core|C4|chain_step_family": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C4",
+      "program_id": "combined_core",
+      "sample_changed_contexts": [],
+      "slice": "chain_step_family",
+      "total_contexts": 64
+    },
+    "combined_core|C5|all_monotone_inflationary": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C5",
+      "program_id": "combined_core",
+      "sample_changed_contexts": [],
+      "slice": "all_monotone_inflationary",
+      "total_contexts": 64
+    },
+    "combined_core|C5|bounded_lift_le_1": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C5",
+      "program_id": "combined_core",
+      "sample_changed_contexts": [],
+      "slice": "bounded_lift_le_1",
+      "total_contexts": 64
+    },
+    "combined_core|C5|chain_step_family": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C5",
+      "program_id": "combined_core",
+      "sample_changed_contexts": [],
+      "slice": "chain_step_family",
+      "total_contexts": 64
+    },
+    "combined_core|C6|all_monotone_inflationary": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C6",
+      "program_id": "combined_core",
+      "sample_changed_contexts": [],
+      "slice": "all_monotone_inflationary",
+      "total_contexts": 64
+    },
+    "combined_core|C6|bounded_lift_le_1": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C6",
+      "program_id": "combined_core",
+      "sample_changed_contexts": [],
+      "slice": "bounded_lift_le_1",
+      "total_contexts": 64
+    },
+    "combined_core|C6|chain_step_family": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C6",
+      "program_id": "combined_core",
+      "sample_changed_contexts": [],
+      "slice": "chain_step_family",
+      "total_contexts": 64
+    },
+    "packaging_core|B1|all_monotone_inflationary": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "B1",
+      "program_id": "packaging_core",
+      "sample_changed_contexts": [],
+      "slice": "all_monotone_inflationary",
+      "total_contexts": 64
+    },
+    "packaging_core|B1|bounded_lift_le_1": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "B1",
+      "program_id": "packaging_core",
+      "sample_changed_contexts": [],
+      "slice": "bounded_lift_le_1",
+      "total_contexts": 64
+    },
+    "packaging_core|B2|all_monotone_inflationary": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "B2",
+      "program_id": "packaging_core",
+      "sample_changed_contexts": [],
+      "slice": "all_monotone_inflationary",
+      "total_contexts": 64
+    },
+    "packaging_core|B2|bounded_lift_le_1": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "B2",
+      "program_id": "packaging_core",
+      "sample_changed_contexts": [],
+      "slice": "bounded_lift_le_1",
+      "total_contexts": 64
+    },
+    "packaging_core|B3|all_monotone_inflationary": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "B3",
+      "program_id": "packaging_core",
+      "sample_changed_contexts": [],
+      "slice": "all_monotone_inflationary",
+      "total_contexts": 64
+    },
+    "packaging_core|B3|bounded_lift_le_1": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "B3",
+      "program_id": "packaging_core",
+      "sample_changed_contexts": [],
+      "slice": "bounded_lift_le_1",
+      "total_contexts": 64
+    },
+    "packaging_core|C3|all_monotone_inflationary": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C3",
+      "program_id": "packaging_core",
+      "sample_changed_contexts": [],
+      "slice": "all_monotone_inflationary",
+      "total_contexts": 64
+    },
+    "packaging_core|C3|bounded_lift_le_1": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C3",
+      "program_id": "packaging_core",
+      "sample_changed_contexts": [],
+      "slice": "bounded_lift_le_1",
+      "total_contexts": 64
+    },
+    "packaging_core|C3|chain_step_family": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C3",
+      "program_id": "packaging_core",
+      "sample_changed_contexts": [],
+      "slice": "chain_step_family",
+      "total_contexts": 64
+    },
+    "packaging_core|C4|all_monotone_inflationary": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C4",
+      "program_id": "packaging_core",
+      "sample_changed_contexts": [],
+      "slice": "all_monotone_inflationary",
+      "total_contexts": 64
+    },
+    "packaging_core|C4|bounded_lift_le_1": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C4",
+      "program_id": "packaging_core",
+      "sample_changed_contexts": [],
+      "slice": "bounded_lift_le_1",
+      "total_contexts": 64
+    },
+    "packaging_core|C4|chain_step_family": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C4",
+      "program_id": "packaging_core",
+      "sample_changed_contexts": [],
+      "slice": "chain_step_family",
+      "total_contexts": 64
+    },
+    "packaging_core|C5|all_monotone_inflationary": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C5",
+      "program_id": "packaging_core",
+      "sample_changed_contexts": [],
+      "slice": "all_monotone_inflationary",
+      "total_contexts": 64
+    },
+    "packaging_core|C5|bounded_lift_le_1": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C5",
+      "program_id": "packaging_core",
+      "sample_changed_contexts": [],
+      "slice": "bounded_lift_le_1",
+      "total_contexts": 64
+    },
+    "packaging_core|C5|chain_step_family": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C5",
+      "program_id": "packaging_core",
+      "sample_changed_contexts": [],
+      "slice": "chain_step_family",
+      "total_contexts": 64
+    },
+    "packaging_core|C6|all_monotone_inflationary": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C6",
+      "program_id": "packaging_core",
+      "sample_changed_contexts": [],
+      "slice": "all_monotone_inflationary",
+      "total_contexts": 64
+    },
+    "packaging_core|C6|bounded_lift_le_1": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C6",
+      "program_id": "packaging_core",
+      "sample_changed_contexts": [],
+      "slice": "bounded_lift_le_1",
+      "total_contexts": 64
+    },
+    "packaging_core|C6|chain_step_family": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C6",
+      "program_id": "packaging_core",
+      "sample_changed_contexts": [],
+      "slice": "chain_step_family",
+      "total_contexts": 64
+    },
+    "pair__cell_pkg_gate__cell_pkg_rewrite|B1|all_monotone_inflationary": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "B1",
+      "program_id": "pair__cell_pkg_gate__cell_pkg_rewrite",
+      "sample_changed_contexts": [],
+      "slice": "all_monotone_inflationary",
+      "total_contexts": 64
+    },
+    "pair__cell_pkg_gate__cell_pkg_rewrite|B1|bounded_lift_le_1": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "B1",
+      "program_id": "pair__cell_pkg_gate__cell_pkg_rewrite",
+      "sample_changed_contexts": [],
+      "slice": "bounded_lift_le_1",
+      "total_contexts": 64
+    },
+    "pair__cell_pkg_gate__cell_pkg_rewrite|B2|all_monotone_inflationary": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "B2",
+      "program_id": "pair__cell_pkg_gate__cell_pkg_rewrite",
+      "sample_changed_contexts": [],
+      "slice": "all_monotone_inflationary",
+      "total_contexts": 64
+    },
+    "pair__cell_pkg_gate__cell_pkg_rewrite|B2|bounded_lift_le_1": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "B2",
+      "program_id": "pair__cell_pkg_gate__cell_pkg_rewrite",
+      "sample_changed_contexts": [],
+      "slice": "bounded_lift_le_1",
+      "total_contexts": 64
+    },
+    "pair__cell_pkg_gate__cell_pkg_rewrite|B3|all_monotone_inflationary": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "B3",
+      "program_id": "pair__cell_pkg_gate__cell_pkg_rewrite",
+      "sample_changed_contexts": [],
+      "slice": "all_monotone_inflationary",
+      "total_contexts": 64
+    },
+    "pair__cell_pkg_gate__cell_pkg_rewrite|B3|bounded_lift_le_1": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "B3",
+      "program_id": "pair__cell_pkg_gate__cell_pkg_rewrite",
+      "sample_changed_contexts": [],
+      "slice": "bounded_lift_le_1",
+      "total_contexts": 64
+    },
+    "pair__cell_pkg_gate__cell_pkg_rewrite|C3|all_monotone_inflationary": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C3",
+      "program_id": "pair__cell_pkg_gate__cell_pkg_rewrite",
+      "sample_changed_contexts": [],
+      "slice": "all_monotone_inflationary",
+      "total_contexts": 64
+    },
+    "pair__cell_pkg_gate__cell_pkg_rewrite|C3|bounded_lift_le_1": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C3",
+      "program_id": "pair__cell_pkg_gate__cell_pkg_rewrite",
+      "sample_changed_contexts": [],
+      "slice": "bounded_lift_le_1",
+      "total_contexts": 64
+    },
+    "pair__cell_pkg_gate__cell_pkg_rewrite|C3|chain_step_family": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C3",
+      "program_id": "pair__cell_pkg_gate__cell_pkg_rewrite",
+      "sample_changed_contexts": [],
+      "slice": "chain_step_family",
+      "total_contexts": 64
+    },
+    "pair__cell_pkg_gate__cell_pkg_rewrite|C4|all_monotone_inflationary": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C4",
+      "program_id": "pair__cell_pkg_gate__cell_pkg_rewrite",
+      "sample_changed_contexts": [],
+      "slice": "all_monotone_inflationary",
+      "total_contexts": 64
+    },
+    "pair__cell_pkg_gate__cell_pkg_rewrite|C4|bounded_lift_le_1": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C4",
+      "program_id": "pair__cell_pkg_gate__cell_pkg_rewrite",
+      "sample_changed_contexts": [],
+      "slice": "bounded_lift_le_1",
+      "total_contexts": 64
+    },
+    "pair__cell_pkg_gate__cell_pkg_rewrite|C4|chain_step_family": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C4",
+      "program_id": "pair__cell_pkg_gate__cell_pkg_rewrite",
+      "sample_changed_contexts": [],
+      "slice": "chain_step_family",
+      "total_contexts": 64
+    },
+    "pair__cell_pkg_gate__cell_pkg_rewrite|C5|all_monotone_inflationary": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C5",
+      "program_id": "pair__cell_pkg_gate__cell_pkg_rewrite",
+      "sample_changed_contexts": [],
+      "slice": "all_monotone_inflationary",
+      "total_contexts": 64
+    },
+    "pair__cell_pkg_gate__cell_pkg_rewrite|C5|bounded_lift_le_1": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C5",
+      "program_id": "pair__cell_pkg_gate__cell_pkg_rewrite",
+      "sample_changed_contexts": [],
+      "slice": "bounded_lift_le_1",
+      "total_contexts": 64
+    },
+    "pair__cell_pkg_gate__cell_pkg_rewrite|C5|chain_step_family": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C5",
+      "program_id": "pair__cell_pkg_gate__cell_pkg_rewrite",
+      "sample_changed_contexts": [],
+      "slice": "chain_step_family",
+      "total_contexts": 64
+    },
+    "pair__cell_pkg_gate__cell_pkg_rewrite|C6|all_monotone_inflationary": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C6",
+      "program_id": "pair__cell_pkg_gate__cell_pkg_rewrite",
+      "sample_changed_contexts": [],
+      "slice": "all_monotone_inflationary",
+      "total_contexts": 64
+    },
+    "pair__cell_pkg_gate__cell_pkg_rewrite|C6|bounded_lift_le_1": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C6",
+      "program_id": "pair__cell_pkg_gate__cell_pkg_rewrite",
+      "sample_changed_contexts": [],
+      "slice": "bounded_lift_le_1",
+      "total_contexts": 64
+    },
+    "pair__cell_pkg_gate__cell_pkg_rewrite|C6|chain_step_family": {
+      "changed": false,
+      "changed_contexts": 0,
+      "model_id": "C6",
+      "program_id": "pair__cell_pkg_gate__cell_pkg_rewrite",
+      "sample_changed_contexts": [],
+      "slice": "chain_step_family",
+      "total_contexts": 64
+    }
+  },
+  "execution_orders_compared": [
+    "rewrite_then_gate",
+    "gate_then_rewrite"
+  ],
+  "programs_checked": [
+    "combined_core",
+    "packaging_core",
+    "pair__cell_pkg_gate__cell_pkg_rewrite"
+  ]
+}

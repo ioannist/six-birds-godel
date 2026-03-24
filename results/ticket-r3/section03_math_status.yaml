@@ -1,0 +1,12 @@
+ticket: ticket-r3
+status: pass
+section: paper/sections/03_fixed_package.tex
+conventional_theorem_section: true
+explicit_persistent_growth_recall: true
+displayed_saturation_proposition: true
+displayed_no_persistent_growth_theorem: true
+displayed_package_change_necessity_theorem: true
+compressed_proof_sketches_aligned_to_lean: true
+arithmetic_overreach: false
+make_check: pass
+paper_build: pass

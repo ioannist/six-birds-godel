@@ -1,0 +1,29 @@
+analysis_type,exp_id,n,k_rung,x_metric,y_metric,rho,p_value,q_value,N_pair,p_method,correction_method,x_term,beta,ci_low,ci_high,N_total,N_competition,N_noncompetition,bootstrap_B
+spearman,campaign_v3_union,32,4,pla2_gap,step_entropy,0.9730040325563154,0.0,0.0,684,scipy,BH-FDR (per-n over 6 tests),,,,,,,,
+spearman,campaign_v3_union,32,4,pla2_gap,lagr_geo_r2,-0.4513909100114657,1.2907366812082e-28,1.5488840174498402e-28,543,scipy,BH-FDR (per-n over 6 tests),,,,,,,,
+spearman,campaign_v3_union,32,4,pla2_gap,lagr_diff_kl,0.7005510980105895,1.8270028237288843e-81,3.6540056474577686e-81,544,scipy,BH-FDR (per-n over 6 tests),,,,,,,,
+spearman,campaign_v3_union,32,4,step_entropy,lagr_geo_r2,-0.4170158404459151,2.9395311334898536e-24,2.9395311334898536e-24,543,scipy,BH-FDR (per-n over 6 tests),,,,,,,,
+spearman,campaign_v3_union,32,4,step_entropy,lagr_diff_kl,0.7832097618433373,6.0671459893248116e-114,1.8201437967974435e-113,544,scipy,BH-FDR (per-n over 6 tests),,,,,,,,
+spearman,campaign_v3_union,32,4,lagr_geo_r2,lagr_diff_kl,-0.4731819322122547,1.2021084419844126e-31,1.803162662976619e-31,543,scipy,BH-FDR (per-n over 6 tests),,,,,,,,
+spearman,campaign_v3_union,64,4,pla2_gap,step_entropy,0.9718036483497899,0.0,0.0,690,scipy,BH-FDR (per-n over 6 tests),,,,,,,,
+spearman,campaign_v3_union,64,4,pla2_gap,lagr_geo_r2,-0.14646307930457933,0.00018094520618024758,0.00018094520618024755,649,scipy,BH-FDR (per-n over 6 tests),,,,,,,,
+spearman,campaign_v3_union,64,4,pla2_gap,lagr_diff_kl,0.2573016260613188,2.840589510766922e-11,4.260884266150383e-11,649,scipy,BH-FDR (per-n over 6 tests),,,,,,,,
+spearman,campaign_v3_union,64,4,step_entropy,lagr_geo_r2,-0.18828542251639202,1.3606414895730102e-06,1.6327697874876121e-06,649,scipy,BH-FDR (per-n over 6 tests),,,,,,,,
+spearman,campaign_v3_union,64,4,step_entropy,lagr_diff_kl,0.26554100985579837,6.174981879229432e-12,1.2349963758458865e-11,649,scipy,BH-FDR (per-n over 6 tests),,,,,,,,
+spearman,campaign_v3_union,64,4,lagr_geo_r2,lagr_diff_kl,-0.4426391875674599,1.6226519270070588e-32,4.867955781021176e-32,649,scipy,BH-FDR (per-n over 6 tests),,,,,,,,
+spearman,campaign_v3_union,128,4,pla2_gap,step_entropy,0.9747488909841517,0.0,0.0,690,scipy,BH-FDR (per-n over 6 tests),,,,,,,,
+spearman,campaign_v3_union,128,4,pla2_gap,lagr_geo_r2,0.3063161668609557,1.9626258342733288e-16,2.3551510011279944e-16,689,scipy,BH-FDR (per-n over 6 tests),,,,,,,,
+spearman,campaign_v3_union,128,4,pla2_gap,lagr_diff_kl,-0.7154588064318086,4.33121323795452e-109,1.2993639713863561e-108,689,scipy,BH-FDR (per-n over 6 tests),,,,,,,,
+spearman,campaign_v3_union,128,4,step_entropy,lagr_geo_r2,0.2417432834208802,1.2798061222761599e-10,1.2798061222761599e-10,689,scipy,BH-FDR (per-n over 6 tests),,,,,,,,
+spearman,campaign_v3_union,128,4,step_entropy,lagr_diff_kl,-0.7102594896263513,7.731023855932405e-107,1.546204771186481e-106,689,scipy,BH-FDR (per-n over 6 tests),,,,,,,,
+spearman,campaign_v3_union,128,4,lagr_geo_r2,lagr_diff_kl,-0.3096863525968591,8.831952935716531e-17,1.3247929403574797e-16,689,scipy,BH-FDR (per-n over 6 tests),,,,,,,,
+spearman,campaign_v3_union,256,4,pla2_gap,step_entropy,0.994073782934947,1.7356415814021562e-228,1.0413849488412937e-227,237,scipy,BH-FDR (per-n over 6 tests),,,,,,,,
+spearman,campaign_v3_union,256,4,pla2_gap,lagr_geo_r2,0.2045401277192628,0.001546873150173679,0.0023203097252605187,237,scipy,BH-FDR (per-n over 6 tests),,,,,,,,
+spearman,campaign_v3_union,256,4,pla2_gap,lagr_diff_kl,-0.8273112607138866,8.688182518135315e-61,1.737636503627063e-60,237,scipy,BH-FDR (per-n over 6 tests),,,,,,,,
+spearman,campaign_v3_union,256,4,step_entropy,lagr_geo_r2,0.15013594060441285,0.020765870554268543,0.024919044665122254,237,scipy,BH-FDR (per-n over 6 tests),,,,,,,,
+spearman,campaign_v3_union,256,4,step_entropy,lagr_diff_kl,-0.8309099005866721,9.179683857581467e-62,2.7539051572744403e-61,237,scipy,BH-FDR (per-n over 6 tests),,,,,,,,
+spearman,campaign_v3_union,256,4,lagr_geo_r2,lagr_diff_kl,-0.07747081964612172,0.23478262434427508,0.23478262434427508,237,scipy,BH-FDR (per-n over 6 tests),,,,,,,,
+regression,campaign_v3_union,32,4,,lagr_diff_kl,,,,,,,is_competition,0.02735221863441878,0.0025134682031103684,0.051720987249174344,544,43,501,5000
+regression,campaign_v3_union,64,4,,lagr_diff_kl,,,,,,,is_competition,0.012371614874747347,-0.0063304809084490645,0.03283548620563425,649,48,601,5000
+regression,campaign_v3_union,128,4,,lagr_diff_kl,,,,,,,is_competition,0.02925135687830632,0.014256214739892336,0.04303129229959685,689,50,639,5000
+regression,campaign_v3_union,256,4,,lagr_diff_kl,,,,,,,is_competition,0.09681299314506522,0.05544481845111581,0.13810625701874896,237,21,216,5000

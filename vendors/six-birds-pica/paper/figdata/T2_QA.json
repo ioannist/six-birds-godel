@@ -1,0 +1,119 @@
+{
+  "configs_by_n": {
+    "128": 69,
+    "256": 26,
+    "32": 69,
+    "64": 69
+  },
+  "counts_by_n": {
+    "128": 690,
+    "256": 237,
+    "32": 690,
+    "64": 690
+  },
+  "dataset_ids": [
+    "ds_exp107_wave2_n256_sweep",
+    "ds_exp112_wave2_n256_selective_unique",
+    "ds_exp112_wave3_n32_64_128_all",
+    "ds_expf1_wave2_n256_empty"
+  ],
+  "dataset_mode": "manifest_union",
+  "key_config_enabled_summary": {
+    "baseline": {
+      "enabled_count": 2,
+      "enabled_hash": "000000|000100|000000|000100|000000|000000",
+      "variants": 1
+    },
+    "empty": {
+      "enabled_count": 0,
+      "enabled_hash": "000000|000000|000000|000000|000000|000000",
+      "variants": 1
+    },
+    "full_action": {
+      "enabled_count": 24,
+      "enabled_hash": "111111|111111|001111|001101|001101|000101",
+      "variants": 1
+    },
+    "full_all": {
+      "enabled_count": 25,
+      "enabled_hash": "111111|111111|001111|001111|001101|000101",
+      "variants": 1
+    },
+    "gen6_core_A12_A25": {
+      "enabled_count": 8,
+      "enabled_hash": "000000|000101|001101|001100|000000|000001",
+      "variants": 1
+    }
+  },
+  "key_configs_missing": [],
+  "key_configs_required": [
+    "empty",
+    "baseline",
+    "full_action",
+    "full_all",
+    "gen6_core_A12_A25"
+  ],
+  "manifest_path": "paper/figdata/paper_dataset_manifest.json",
+  "pica_config_consistency_all_configs": true,
+  "pica_config_consistency_key_configs": {
+    "baseline": true,
+    "empty": true,
+    "full_action": true,
+    "full_all": true,
+    "gen6_core_A12_A25": true
+  },
+  "runs_total": 2307,
+  "seeds_per_config_n_summary": {
+    "max": 10,
+    "median": 10.0,
+    "min": 5
+  },
+  "used_wave2_experiments_in_paper": [
+    "EXP-107",
+    "EXP-112",
+    "EXP-F1"
+  ],
+  "wave2_suite_summary": {
+    "EXP-100": {
+      "audits_extracted": 130,
+      "jobs_expected": 130,
+      "used_in_paper": "no"
+    },
+    "EXP-101": {
+      "audits_extracted": 70,
+      "jobs_expected": 70,
+      "used_in_paper": "no"
+    },
+    "EXP-106": {
+      "audits_extracted": 130,
+      "jobs_expected": 130,
+      "used_in_paper": "no"
+    },
+    "EXP-107": {
+      "audits_extracted": 130,
+      "jobs_expected": 130,
+      "used_in_paper": "yes"
+    },
+    "EXP-109": {
+      "audits_extracted": 10,
+      "jobs_expected": 10,
+      "used_in_paper": "no"
+    },
+    "EXP-110": {
+      "audits_extracted": 10,
+      "jobs_expected": 10,
+      "used_in_paper": "no"
+    },
+    "EXP-112": {
+      "audits_extracted": 124,
+      "jobs_expected": 150,
+      "used_in_paper": "yes"
+    },
+    "EXP-F1": {
+      "audits_extracted": 10,
+      "jobs_expected": 10,
+      "used_in_paper": "yes"
+    }
+  },
+  "wave2_truncation_count": 26
+}

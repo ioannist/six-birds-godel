@@ -1,0 +1,15 @@
+schema_id: internal_relevance_schema
+registry_id: internal_relevance
+id_prefix: src_int_
+required_top_level_fields:
+  - registry_id
+  - version
+  - entries
+required_entry_fields:
+  - id
+  - canonical_key
+  - title
+  - claim_links
+  - concepts_to_borrow
+  - likely_necessary
+  - warnings

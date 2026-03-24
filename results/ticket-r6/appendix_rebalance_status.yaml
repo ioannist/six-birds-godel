@@ -1,0 +1,11 @@
+ticket: ticket-r6
+status: pass
+carry_forward_r5_status_present: true
+appendices_rebalanced: true
+body_essential_math_still_stranded_in_appendices: false
+appendix_a_role: theorem_inventory_and_lean_mapping
+appendix_b_role: external_contract_details
+appendix_c_role: vendor_support_details
+appendix_d_role: discarded_overreach_and_boundaries
+make_check: pass
+paper_build: pass

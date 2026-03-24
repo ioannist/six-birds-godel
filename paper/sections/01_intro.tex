@@ -1,0 +1,85 @@
+\section{Introduction}\label{sec:introduction}
+
+G\"odel's incompleteness theorems show that no sufficiently expressive effective
+formal system closes over all arithmetic truth, and that no such system proves
+its own global consistency in the usual way~\cite{Godel1931,HilbertBernays1939}. What they do not by
+themselves provide is a structural language for theory growth: what is held
+fixed, what changes, and under which ledger distinct changes are compared.
+Foundational discussion often shifts among axiom strength, maximality, and
+informal mathematical practice without fixing that structural
+vocabulary~\cite{Maddy1988,SteelMaximizeUnify}. This paper proposes a more explicit
+alternative.
+
+The paper treats a formal theory as a packaged closure object rather than as a
+bare list of axioms. Once that shift is made, a basic distinction appears.
+Iterating a fixed idempotent package is not the same operation as changing the
+package. The first saturates; the second is the only source of persistent strict
+growth. This distinction is structural before it is arithmetical.
+
+Across the Six-Birds line, six primitive operations recur: rewrite (\(P1\)),
+gating or support restriction (\(P2\)), protocol or route mismatch (\(P3\)),
+staging/indexing/sectors (\(P4\)), packaging/closure (\(P5\)), and
+accounting/audit (\(P6\)). The present paper uses them asymmetrically. \(P5\) is
+the fixed-package object. \(P1/P2\) are the mechanisms of package change. \(P6\)
+fixes the frozen evaluation regime in which yield, cost, and efficiency are
+assessed. \(P4\) supplies the support/index axis on which representative
+comparison is meaningful. \(P3\) remains diagnostic-only: relevant for route
+mismatch, but not theorem-bearing in the main argument.
+
+The body now proceeds in theorem-paper order. Section~\ref{sec:primitive-roles}
+gives explicit definitions of closure packages, persistent growth witnesses,
+frozen slices, support cones, dominance, efficiency, cone agreement, slice
+invariance, and representative alignment targets. Section~\ref{sec:fixed-package}
+states and proves the base and bridge theorems: fixed-package saturation and
+package-change necessity. Section~\ref{sec:frozen-frontier} states the
+comparative results for frozen-slice dominance, efficiency transfer, and
+restricted alignment. Section~\ref{sec:conditional-lift} states the main
+conditional arithmetic theorem under an explicit assumption box and external
+contract.
+
+The resulting manuscript is theorem-led, but conditionally so. Its proof-carrying
+core is internal and Lean-backed~\cite{deMouraUllrich2021,Mathlib2020}. Its arithmetic lift is conditional on an
+explicit, finite external dependency contract. The vendor-backed PICA evidence
+plays a different role: it supports the primitive-role assignment and the scope
+limits of the manuscript, but it does not cross the proof boundary.
+
+\paragraph{Contributions.}
+The paper makes four contributions. First, it gives explicit body-level
+mathematical definitions for the packaged closure objects, frozen-slice
+comparison regime, and representative-alignment target used in the theorem route.
+Second, it proves an internal theorem ladder: fixed-package saturation,
+package-change necessity, and restricted alignment on a frozen slice. Third, it
+states and derives a conditional arithmetic lift under an explicit external
+dependency contract, thereby exposing rather than hiding the remaining arithmetic
+boundary. Fourth, it uses vendor-backed PICA evidence only to support
+primitive-role assignment and scope limits, not as theorem support.
+
+\paragraph{Roadmap.}
+Section~\ref{sec:primitive-roles} fixes the theorem objects and primitive-role
+assignment. Section~\ref{sec:fixed-package} proves the base and bridge theorems.
+Section~\ref{sec:frozen-frontier} proves the comparative transfer and
+restricted-alignment results on frozen slices. Section~\ref{sec:conditional-lift}
+states the main conditional arithmetic theorem and its assumption box.
+Section~\ref{sec:vendor-support} explains the supporting-only role of the
+vendor-backed evidence. Section~\ref{sec:scope-limits} records the manuscript's
+perimeter, including continuity with earlier Six-Birds work and the claims that
+remain out of scope.
+
+The theorem-bearing center of the manuscript is the conditional arithmetic lift of Section~\ref{sec:conditional-lift}; the earlier sections build the internal ladder on which it depends, and the later sections delimit its empirical and conceptual perimeter.
+
+\begin{table}[t]
+\caption{The theorem ladder used in the paper.}
+\label{tab:theorem-ladder}
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}l X X l@{}}
+\toprule
+Level & Structural claim & Lean theorem surface & Status \\
+\midrule
+Base & Fixed-package saturation and no persistent growth under self-iteration & \lid{closure\_iterate\_saturates\_one\_step};\newline \lid{frozen\_package\_no\_persistent\_growth} & in-house \\[6pt]
+Bridge & Any genuine strict-growth witness forces package change & \lid{persistent\_growth\_witness\_implies\_package\_change};\newline \lid{bridge\_candidate\_holds\_in\_frozen\_idempotent\_setting} & in-house \\[6pt]
+Comparative & Efficiency transfers across cone-equivalent representatives on a frozen slice; restricted alignment holds on the support cone & \lid{frontier\_efficiency\_transfer\_to\_cone\_equivalent};\newline \lid{restricted\_in\_house\_alignment\_lemma} & in-house \\[6pt]
+Conditional & Frontier-efficient arithmetic growth admits a canonical representative on the relevant cone under the explicit external contract & \lid{paper\_main\_conditional\_arithmetic\_frontier\_canonicality} & conditional \\
+\bottomrule
+\end{tabularx}
+\end{table}

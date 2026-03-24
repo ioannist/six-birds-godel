@@ -1,0 +1,12 @@
+ticket: ticket-r5
+status: pass
+section: paper/sections/05_conditional_lift.tex
+conventional_main_theorem_section: true
+mathematical_assumption_box_present: true
+single_displayed_main_theorem_present: true
+explicit_domain_cone_family_operator_notation: true
+proof_split_internal_external_conclusion: true
+arithmetic_reading_remark_present: true
+hidden_dependencies_introduced: false
+make_check: pass
+paper_build: pass

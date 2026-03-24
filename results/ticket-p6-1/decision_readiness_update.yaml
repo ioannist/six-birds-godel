@@ -1,0 +1,37 @@
+update_id: ticket_p6_1_decision_readiness
+version: 0.1.0
+scale_rule:
+  control:
+  - 32
+  core:
+  - 64
+  - 128
+  extended:
+  - 256
+  note: Conclusions must not rely only on n=32.
+question_updates:
+- question_class: pairwise_multi_cell_interaction_evidence
+  prior_status: partially_answered_by_shipped_data
+  updated_status: partially_answered_by_shipped_data
+  basis: resolved_core_comparisons=26; unresolved_core_comparisons=0
+- question_class: quantitative_effect_sizes_for_loo_ablations
+  prior_status: partially_answered_by_shipped_data
+  updated_status: answered_by_shipped_data
+  basis: core_cell_effect_rows=129
+- question_class: support_for_narrow_interaction_claim
+  prior_status: partially_answered_by_shipped_data
+  updated_status: partially_answered_by_shipped_data
+  basis: Shipped quantitative deltas now extracted, but unresolved simpler-subprogram
+    matches remain.
+- question_class: theorem_or_hybrid_paper_decision_readiness
+  prior_status: unanswered
+  updated_status: partially_answered_by_shipped_data
+  basis: Gap reduced by shipped deltas; robustness_partial_checks=3; unresolved interaction
+    comparisons remain.
+summary:
+  moderate_new_run_still_needed: partial
+  core_resolved_interaction_comparisons: 26
+  core_unresolved_interaction_comparisons: 0
+  core_cell_effect_rows: 129
+  robustness_partial_checks: 3
+  strongest_shipped_interaction_signal: A14_only@n=128 interaction_delta_abs_shift=0.33466364

@@ -1,0 +1,261 @@
+scan_id: ticket_p6_4a_gap_scan
+version: 0.2.0
+exp_lineage: EXP-112
+run_dirs_considered:
+- vendors/six-birds-pica/lab/runs/ticket_p6_4/ticket_p6_4_primary
+- vendors/six-birds-pica/lab/runs/ticket_p6_4/ticket_p6_4a_resume
+configs:
+- A14_only
+- baseline
+- full_action
+- full_all
+- A13_A14
+- A14_A19
+scales:
+- 64
+- 128
+required_seeds_per_cell: 10
+cells:
+- config: A14_only
+  scale: 64
+  good_seeds:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  good_seed_count: 10
+  missing_or_no_audit_seeds: []
+  missing_or_no_audit_count: 0
+  anchor_missing_seeds: []
+  anchor_missing_count: 0
+  anchor_pair_covered: true
+  remaining_required: 0
+- config: A14_only
+  scale: 128
+  good_seeds:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  good_seed_count: 10
+  missing_or_no_audit_seeds: []
+  missing_or_no_audit_count: 0
+  anchor_missing_seeds: []
+  anchor_missing_count: 0
+  anchor_pair_covered: true
+  remaining_required: 0
+- config: baseline
+  scale: 64
+  good_seeds:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  good_seed_count: 9
+  missing_or_no_audit_seeds: []
+  missing_or_no_audit_count: 0
+  anchor_missing_seeds:
+  - 4
+  anchor_missing_count: 1
+  anchor_pair_covered: true
+  remaining_required: 0
+- config: baseline
+  scale: 128
+  good_seeds:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  good_seed_count: 10
+  missing_or_no_audit_seeds: []
+  missing_or_no_audit_count: 0
+  anchor_missing_seeds: []
+  anchor_missing_count: 0
+  anchor_pair_covered: true
+  remaining_required: 0
+- config: full_action
+  scale: 64
+  good_seeds:
+  - 1
+  - 2
+  - 3
+  - 6
+  - 8
+  good_seed_count: 5
+  missing_or_no_audit_seeds: []
+  missing_or_no_audit_count: 0
+  anchor_missing_seeds:
+  - 0
+  - 4
+  - 5
+  - 7
+  - 9
+  anchor_missing_count: 5
+  anchor_pair_covered: true
+  remaining_required: 0
+- config: full_action
+  scale: 128
+  good_seeds:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  good_seed_count: 10
+  missing_or_no_audit_seeds: []
+  missing_or_no_audit_count: 0
+  anchor_missing_seeds: []
+  anchor_missing_count: 0
+  anchor_pair_covered: true
+  remaining_required: 0
+- config: full_all
+  scale: 64
+  good_seeds:
+  - 0
+  - 1
+  - 3
+  - 4
+  - 5
+  - 7
+  - 8
+  - 9
+  good_seed_count: 8
+  missing_or_no_audit_seeds: []
+  missing_or_no_audit_count: 0
+  anchor_missing_seeds:
+  - 2
+  - 6
+  anchor_missing_count: 2
+  anchor_pair_covered: true
+  remaining_required: 0
+- config: full_all
+  scale: 128
+  good_seeds:
+  - 0
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  good_seed_count: 8
+  missing_or_no_audit_seeds: []
+  missing_or_no_audit_count: 0
+  anchor_missing_seeds:
+  - 1
+  - 2
+  anchor_missing_count: 2
+  anchor_pair_covered: true
+  remaining_required: 0
+- config: A13_A14
+  scale: 64
+  good_seeds:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  good_seed_count: 10
+  missing_or_no_audit_seeds: []
+  missing_or_no_audit_count: 0
+  anchor_missing_seeds: []
+  anchor_missing_count: 0
+  anchor_pair_covered: true
+  remaining_required: 0
+- config: A13_A14
+  scale: 128
+  good_seeds:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  good_seed_count: 10
+  missing_or_no_audit_seeds: []
+  missing_or_no_audit_count: 0
+  anchor_missing_seeds: []
+  anchor_missing_count: 0
+  anchor_pair_covered: true
+  remaining_required: 0
+- config: A14_A19
+  scale: 64
+  good_seeds:
+  - 1
+  - 2
+  - 3
+  - 8
+  good_seed_count: 4
+  missing_or_no_audit_seeds: []
+  missing_or_no_audit_count: 0
+  anchor_missing_seeds:
+  - 0
+  - 4
+  - 5
+  - 6
+  - 7
+  - 9
+  anchor_missing_count: 6
+  anchor_pair_covered: true
+  remaining_required: 0
+- config: A14_A19
+  scale: 128
+  good_seeds:
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  good_seed_count: 8
+  missing_or_no_audit_seeds: []
+  missing_or_no_audit_count: 0
+  anchor_missing_seeds:
+  - 0
+  - 1
+  anchor_missing_count: 2
+  anchor_pair_covered: true
+  remaining_required: 0
+resume_job_count: 0
+missing_anchor_pairs: []
+primary_coverage_complete_now: true

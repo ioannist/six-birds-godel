@@ -1,0 +1,44 @@
+contract_id: primitive_role_contract
+version: 0.1.0
+paper_scope: current_theorem_track
+entries:
+  - primitive: P1
+    role_in_this_paper: package_change_mechanism
+    supporting_papers:
+      - docs/papers/Tsiokos_2026_To_Chart_a_Stone_with_Six_Birds_Emergence_Phase_Diagrams_for_Effective_Theories_in_Control_Space.tex
+      - docs/papers/Tsiokos_2026_To_Classify_a_Stone_with_Six_Birds_Primitive_Activation_and_Observable_Separation_of_Layer_Birth_Classes.tex
+    theorem_track_consequence: strict growth must be read as requiring rewrite-style package change when fixed package saturation blocks growth
+    experiment_track_consequence: no rerun required; future experiments should treat rewrite as approach/change parameter, not theorem class axis
+  - primitive: P2
+    role_in_this_paper: package_change_mechanism
+    supporting_papers:
+      - docs/papers/Tsiokos_2026_To_Chart_a_Stone_with_Six_Birds_Emergence_Phase_Diagrams_for_Effective_Theories_in_Control_Space.tex
+      - docs/papers/Tsiokos_2026_To_Classify_a_Stone_with_Six_Birds_Primitive_Activation_and_Observable_Separation_of_Layer_Birth_Classes.tex
+    theorem_track_consequence: strict growth may also be realized by gating/constraint change rather than operator rewrite alone
+    experiment_track_consequence: hold fixed in theorem-facing interpretation unless intentionally tested as package-change coordinate
+  - primitive: P3
+    role_in_this_paper: diagnostic_only
+    supporting_papers:
+      - docs/papers/Tsiokos_2026_To_Classify_a_Stone_with_Six_Birds_Primitive_Activation_and_Observable_Separation_of_Layer_Birth_Classes.tex
+    theorem_track_consequence: excluded from theorem-driving ladder; may annotate diagnostics only
+    experiment_track_consequence: keep out of theorem success criteria and class-driving narratives for this repo state
+  - primitive: P4
+    role_in_this_paper: indexing_support_axis
+    supporting_papers:
+      - docs/papers/Tsiokos_2026_To_Chart_a_Stone_with_Six_Birds_Emergence_Phase_Diagrams_for_Effective_Theories_in_Control_Space.tex
+      - docs/papers/Tsiokos_2026_To_Classify_a_Stone_with_Six_Birds_Primitive_Activation_and_Observable_Separation_of_Layer_Birth_Classes.tex
+    theorem_track_consequence: cone/stage/domain bookkeeping lives here; not a package-change mechanism in the present theorem path
+    experiment_track_consequence: preserve as indexing/support coordinate only
+  - primitive: P5
+    role_in_this_paper: fixed_package_object
+    supporting_papers:
+      - docs/papers/Tsiokos_2026_To_Chart_a_Stone_with_Six_Birds_Emergence_Phase_Diagrams_for_Effective_Theories_in_Control_Space.tex
+      - docs/papers/Tsiokos_2026_To_Classify_a_Stone_with_Six_Birds_Primitive_Activation_and_Observable_Separation_of_Layer_Birth_Classes.tex
+    theorem_track_consequence: bridge theorem is fixed-package idempotent saturation under P5 objecthood/packaging semantics
+    experiment_track_consequence: current theorem-facing interpretation keeps package fixed before reading any growth signal
+  - primitive: P6
+    role_in_this_paper: frozen_evaluation_regime
+    supporting_papers:
+      - docs/papers/Tsiokos_2026_To_Chart_a_Stone_with_Six_Birds_Emergence_Phase_Diagrams_for_Effective_Theories_in_Control_Space.tex
+    theorem_track_consequence: frozen slice/yield/cost ledger regime is the P6 role for the current theorem path
+    experiment_track_consequence: do not collapse P6 here to drive-only semantics; use it as fixed audit/evaluation regime

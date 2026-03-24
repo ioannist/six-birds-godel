@@ -1,0 +1,33 @@
+ticket: P7
+status: ok
+vendor_root: vendors/six-birds-pica
+runner_bin: vendors/six-birds-pica/target/release/runner
+build:
+  invoked: false
+  note: release runner already present
+  returncode: 0
+  wall_secs: 0.0
+run:
+  command: python analysis/run_batch.py run --jobs /home/repos/six-birds-godel/results/ticket-p7/jobs.json
+    --parallelism 2 --timeout 3600 --output-dir /home/repos/six-birds-godel/vendors/six-birds-pica/lab/runs
+    --binary /home/repos/six-birds-godel/vendors/six-birds-pica/target/release/runner
+  returncode: 0
+  wall_secs: 31.31
+  run_stage: ticket_p7_cleanroom_smoke
+  run_dir: vendors/six-birds-pica/lab/runs/ticket_p7_cleanroom_smoke
+  jobs_path: results/ticket-p7/jobs.json
+jobs:
+- exp: EXP-112
+  seed: 0
+  scale: 64
+  stage: ticket_p7_cleanroom_smoke
+  config: baseline
+  env:
+    SIX_BIRDS_AUDIT_RICH: '1'
+- exp: EXP-112
+  seed: 0
+  scale: 64
+  stage: ticket_p7_cleanroom_smoke
+  config: A14_only
+  env:
+    SIX_BIRDS_AUDIT_RICH: '1'

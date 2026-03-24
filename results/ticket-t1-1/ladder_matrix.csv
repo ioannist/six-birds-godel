@@ -1,0 +1,6 @@
+id,tier,selected,vision_alignment,toy_vendor_conflict,lean_tractability,status_note
+thm_finite_frontier_setup,base,no,low,none,high,demoted_to_base
+thm_closure_saturation_operator_change,bridge,yes,medium_high,none,medium,selected_bridge
+thm_frozen_slice_representative_canonicality,bridge,no,medium,partial,medium_low,not_selected
+thm_global_canonical_efficiency,overreach,no,high,high,low,discarded
+thm_target_canonical_efficiency,vision_target,no,target,unresolved,low,not_ready

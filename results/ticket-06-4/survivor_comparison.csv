@@ -1,0 +1,7 @@
+comparator_id,equivalence_rate_to_survivor,matching_contexts,total_contexts,mean_raw_instability,mean_pool_ratio_vs_baseline,relative_instability_gap_vs_survivor
+baseline_raw,0.89732143,402,448,0.82415609,1.0,0.03180397
+singleton__cell_pkg_gate,0.89732143,402,448,0.82415609,1.0,0.03180397
+singleton__cell_pkg_mode_from_acct,0.89732143,402,448,0.82415609,1.0,0.03180397
+surrogate_closure_only,0.14285714,64,448,0.71833887,0.57928434,-0.11081927
+surrogate_bounded_lift_le_1,0.86160714,386,448,0.65615728,0.62095101,-0.21608748
+surrogate_bounded_lift_le_2,0.89732143,402,448,0.81257742,0.91538686,0.01800785

@@ -1,0 +1,102 @@
+registry_id: claim_registry
+version: 0.1.0
+description: Claim registry for theorem-first program control.
+entries:
+  - id: clm_fixed_closure_saturation
+    title: Fixed closure saturation under fixed operator/theory
+    status: to_be_formalized
+    empirical_backing: toy_only
+    source_ids:
+      - src_int_six_birds_foundations
+      - src_int_to_count
+    dependencies:
+      - def_closure_operator
+      - trn_fixed_closure_iteration
+      - cst_proof_theoretic_strength
+      - rsk_framework_vagueness
+    risk_level: medium
+    intended_support_modes:
+      - lean_formalization
+      - structured_atlas
+  - id: clm_strict_growth_requires_change
+    title: Strict growth requires operator or theory change
+    status: to_be_formalized
+    empirical_backing: toy_only
+    source_ids:
+      - src_int_six_birds_foundations
+    dependencies:
+      - def_extension_operator
+      - trn_theory_extension
+      - trn_operator_rewrite
+      - bmk_toy_finite_family_placeholder
+    risk_level: medium
+    intended_support_modes:
+      - lean_formalization
+      - toy_model_search
+  - id: clm_godel_i_closure_gap
+    title: Godel I as closure gap signal
+    status: known_citation_backed
+    empirical_backing: not_empirical
+    source_ids:
+      - src_ext_godel_1931
+      - src_ext_rosser_1936
+      - src_ext_derivability_conditions_hbl
+    dependencies:
+      - def_internal_audit_barrier
+      - trn_reflection_extension
+      - rsk_forcing_proxy_conflation
+    risk_level: low
+    intended_support_modes:
+      - citation
+      - structured_atlas
+  - id: clm_godel_ii_internal_audit_barrier
+    title: Godel II as internal audit barrier
+    status: known_citation_backed
+    empirical_backing: not_empirical
+    source_ids:
+      - src_ext_godel_1931
+      - src_ext_derivability_conditions_hbl
+      - src_ext_beklemishev_reflection_progressions
+      - src_ext_montalban_walsh_consistency_operator
+    dependencies:
+      - def_internal_audit_barrier
+      - trn_consistency_extension
+      - cst_consistency_strength
+    risk_level: medium
+    intended_support_modes:
+      - citation
+      - external_theorem_dependency
+  - id: clm_canonical_efficiency_candidate
+    title: Candidate canonical efficiency theorem
+    status: conjectural
+    empirical_backing: vendor_backable
+    source_ids:
+      - src_ext_steel_maximize_unify
+    dependencies:
+      - def_yield_functional
+      - def_cost_functional
+      - def_pareto_dominance
+      - rsk_theorem_overclaim_canonical_efficiency
+      - rsk_cost_choice_sensitivity
+      - cst_computational_complexity
+    risk_level: high
+    intended_support_modes:
+      - toy_model_search
+      - structured_atlas
+  - id: clm_set_theoretic_invariance_frontier
+    title: Set theoretic invariance frontier application
+    status: to_be_formalized
+    empirical_backing: not_empirical
+    source_ids:
+      - src_ext_shoenfield_absoluteness
+      - src_ext_generic_absoluteness_large_cardinals
+    dependencies:
+      - bmk_set_theory_invariance_placeholder
+      - def_frontier_membership
+      - trn_forcing_extension_placeholder
+      - cst_conceptual_complexity_placeholder
+      - rsk_benchmark_dependence
+    risk_level: high
+    intended_support_modes:
+      - structured_atlas
+      - external_theorem_dependency

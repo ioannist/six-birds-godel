@@ -1,0 +1,37 @@
+cell_id,actor,informant,pair,status_code,status_name,prereqs,semantics
+A1,P1,P1,P1<-P1,A,Action,P1 rewrite history,History cooldown (avoid rewriting recently perturbed rows)
+A2,P1,P2,P1<-P2,A,Action,row sparsity / gated-edge counts,Sparsity-guided row targeting
+A3,P1,P3,P1<-P3,A,Action,route mismatch RM + active partition,RM-directed rewrite toward macro consistency
+A4,P1,P4,P1<-P4,A,Action,active partition (selected P4 lens),Sector-boundary targeting (near cluster boundaries)
+A5,P1,P5,P1<-P5,A,Action,active packaging (selected P5),Packaging defect targeting (idempotence failure)
+A6,P1,P6,P1<-P6,A,Action,audit metrics / budget ledger,Budget-gated suppression of P1 when budget low
+A7,P2,P1,P2<-P1,A,Action,P1 rewrite history,Protect rewrites (don't gate newly rewritten rows)
+A8,P2,P2,P2<-P2,A,Action,P2 flip history / cooldown,Flip cooldown (don't re-flip recent edges)
+A9,P2,P3,P2<-P3,A,Action,route mismatch RM + active partition,RM-guided gating (cross-cluster edges in high-RM clusters)
+A10,P2,P4,P2<-P4,A,Action,active partition (selected P4 lens),Spectral-guided gating (inter-cluster gating bias)
+A11,P2,P5,P2<-P5,A,Action,active packaging (selected P5),Package-boundary gating
+A12,P2,P6,P2<-P6,A,Action,audit metrics / budget ledger,SBRC (repairs free; violations penalized)
+I1,P3,P1,P3<-P1,I,Implicit,refresh cycle (implicit),implicit (RM refresh after P1)
+I2,P3,P2,P3<-P2,I,Implicit,refresh cycle (implicit),implicit (RM refresh after P2)
+A18,P3,P3,P3<-P3,A,Action,multi-scale RM convergence,adaptive tau from multi-scale RM convergence
+A19,P3,P4,P3<-P4,A,Action,active partition + per-sector RM,per-sector mixing weights (high-RM sectors get more P1/P2)
+A20,P3,P5,P3<-P5,A,Action,active packaging + per-package RM,packaging-derived mixing bias
+A13,P3,P6,P3<-P6,A,Action,audit metrics / budget ledger,frob-modulated mixer (structure-driven explore/consolidate)
+I3,P4,P1,P4<-P1,I,Implicit,refresh cycle (implicit),implicit (partition refresh after P1)
+I4,P4,P2,P4<-P2,I,Implicit,refresh cycle (implicit),implicit (partition refresh after P2)
+A14,P4,P3,P4<-P3,A,Action,route mismatch RM,RM-quantile partition
+A15,P4,P4,P4<-P4,A,Action,active kernel spectrum,spectral partition (canonical lens)
+A16,P4,P5,P4<-P5,A,Action,active packaging (selected P5),package-derived partition
+A17,P4,P6,P4<-P6,A,Action,audit metrics / EP flow,EP-flow partition
+I5,P5,P1,P5<-P1,I,Implicit,refresh cycle (implicit),implicit (packaging refresh after P1)
+I6,P5,P2,P5<-P2,I,Implicit,refresh cycle (implicit),implicit (packaging refresh after P2)
+A21,P5,P3,P5<-P3,A,Action,route mismatch RM,RM-similarity packaging
+A22,P5,P4,P5<-P4,A,Action,active partition (selected P4 lens),sector-balanced packaging (split oversized clusters)
+T2,P5,P5,P5<-P5,T,Trivial,tautology (trivial),packaging idempotence (trivial)
+A23,P5,P6,P5<-P6,A,Action,audit metrics / EP profile,EP-similarity packaging
+I7,P6,P1,P6<-P1,I,Implicit,refresh cycle (implicit),implicit (audit refresh after P1)
+I8,P6,P2,P6<-P2,I,Implicit,refresh cycle (implicit),implicit (audit refresh after P2)
+T3,P6,P3,P6<-P3,T,Trivial,tautology (trivial),trivial (RM is itself an audit metric; circular)
+A24,P6,P4,P6<-P4,A,Action,active partition + per-sector EP,sector-specific budget rate multiplier from per-sector EP
+U1,P6,P5,P6<-P5,U,Undefined,undefined (circular),undefined (no clear non-circular action)
+A25,P6,P6,P6<-P6,A,Action,audit metrics / retention ledger,EP retention feedback cap (tighten when retention low)

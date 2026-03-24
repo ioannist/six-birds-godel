@@ -1,0 +1,11 @@
+map_id: theorem_placement_map
+version: 0.1.0
+placements:
+  - theorem_id: thm_finite_frontier_setup
+    destination: app_lean_theorem_inventory
+  - theorem_id: thm_closure_saturation_operator_change
+    destination: sec_theorem_package
+  - theorem_id: restricted_in_house_alignment_lemma
+    destination: sec_conditional_arithmetic_lift
+  - theorem_id: paper_main_conditional_arithmetic_frontier_canonicality
+    destination: sec_conditional_arithmetic_lift

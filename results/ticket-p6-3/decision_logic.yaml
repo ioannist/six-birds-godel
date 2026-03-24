@@ -1,0 +1,24 @@
+decision_logic_id: ticket_p6_3_decision_logic
+version: 0.1.0
+theorem_ready_upgrade_if:
+- A14_only has delta_vs_baseline_frob >= 0.15 at n=64 and n=128.
+- A14_only exceeds A13_A14 and A14_A19 on primary_mean_abs(delta_vs_baseline_frob)
+  by >= 0.05.
+- 'Secondary metric passes: seed_count >=10 per primary (config,n) and anchor k_rung=4
+  coverage complete.'
+- No new robustness FAILs are introduced in confirmatory reporting slice.
+hybrid_only_if:
+- A14_only improves over baseline on at least one primary n and primary_mean_abs(delta)
+  >= 0.10.
+- But theorem comparator-separation margin (>=0.05 vs both nearest neighbors) is not
+  met, or robustness remains partial.
+falsify_a14_focus_if:
+- A14_only fails to beat baseline at both primary n (64 and 128).
+- Or both nearest neighbors (A13_A14 and A14_A19) match/exceed A14_only on primary_mean_abs(delta_vs_baseline_frob).
+- Or confirmatory slice fails minimum seed/rung comparability, making A14_only non-credible
+  as a focus target.
+decision_outputs:
+- theorem_ready
+- hybrid_ready
+- not_ready
+n32_guardrail: No upgrade decision may be made from n=32-only evidence.

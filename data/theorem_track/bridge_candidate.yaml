@@ -1,0 +1,27 @@
+bridge_selection_id: ticket_t1_1_bridge_selection
+version: 0.1.0
+candidates_evaluated:
+  - id: thm_closure_saturation_operator_change
+    selected: true
+    exact_hypotheses:
+      - fixed closure package
+      - monotone + inflationary + idempotent operator behavior
+      - strict growth measured on fixed benchmark/cost regime
+    exact_conclusion: strict growth requires operator/theory package change
+    blocked_generalizations:
+      - no global uniqueness
+      - no external-axis stability claims
+    vision_alignment: medium_high
+    toy_vendor_conflict: none_detected
+    lean_tractability: medium
+  - id: thm_frozen_slice_representative_canonicality
+    selected: false
+    exact_hypotheses:
+      - frozen family/benchmark/cost/tie/quotient slice
+    exact_conclusion: representative canonicality within frozen slice
+    blocked_generalizations:
+      - fragile to audit-convention externalization
+    vision_alignment: medium
+    toy_vendor_conflict: partial_fragility
+    lean_tractability: medium_low
+selected_bridge_candidate_id: thm_closure_saturation_operator_change

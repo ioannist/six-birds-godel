@@ -1,0 +1,17 @@
+relation,identifier,scheme,resource_type,bibkey,title
+Cites,10.48550/arXiv.2602.00134,DOI,other,Tsiokos2026Foundations,Six Birds: Foundations of Emergence Calculus
+Cites,10.5281/zenodo.18402004,DOI,other,Tsiokos2026ToCount,To Count a Stone with Six Birds: A Mathematics is A Theory
+Cites,10.5281/zenodo.18838994,DOI,other,Tsiokos2026ToCreate,To Create a Stone with Six Birds: Emergent Geometric and Thermodynamic Regimes from a Minimal Stochastic Substrate
+Cites,10.5281/zenodo.19038292,DOI,other,Tsiokos2026ToChart,To Chart a Stone with Six Birds: Emergence Phase Diagrams for Effective Theories in Control Space
+Cites,10.5281/zenodo.19047665,DOI,other,Tsiokos2026ToClassify,To Classify a Stone with Six Birds: Primitive Activation and Observable Separation of Layer Birth Classes
+Cites,10.1007/BF01700692,DOI,publication-article,Godel1931,Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I
+Cites,10.2140/pjm.1955.5.285,DOI,publication-article,TarskiFixedPoint1955,A lattice-theoretical fixpoint theorem and its applications
+Cites,10.1112/plms/s2-45.1.161,DOI,publication-article,Turing1939,Systems of Logic Based on Ordinals
+Cites,10.2307/2964649,DOI,publication-article,Feferman1962,Transfinite recursive progressions of axiomatic theories
+Cites,10.1070/RM2005v060n02ABEH000823,DOI,publication-article,BeklemishevReflection,Reflection principles and provability algebras in formal arithmetic
+Cites,10.1017/jsl.2020.9,DOI,publication-article,PakhomovWalsh2021,Reflection ranks and ordinal analysis
+Cites,10.2307/2274520,DOI,publication-article,Maddy1988,Believing the Axioms. I
+Cites,10.1007/978-3-030-79876-5_37,DOI,publication-conferencepaper,deMouraUllrich2021,The Lean 4 Theorem Prover and Programming Language
+Cites,10.1145/3372885.3373824,DOI,publication-conferencepaper,Mathlib2020,The Lean Mathematical Library
+Cites,9780195073409,ISBN,publication-book,MasColellWhinstonGreen1995,Microeconomic Theory
+Cites,10.1017/jsl.2018.65,DOI,publication-article,MontalbanWalshConsistency,On the inevitability of the consistency operator

@@ -1,0 +1,22 @@
+registry_id: transformation_registry
+version: 0.1.0
+description: Allowed transformation families applied to closure states.
+entries:
+  - id: trn_fixed_closure_iteration
+    title: Fixed closure iteration
+    transform_type: closure_iteration
+  - id: trn_theory_extension
+    title: Theory extension
+    transform_type: theory_extension
+  - id: trn_consistency_extension
+    title: Consistency extension
+    transform_type: consistency_extension
+  - id: trn_reflection_extension
+    title: Reflection extension
+    transform_type: reflection_extension
+  - id: trn_forcing_extension_placeholder
+    title: Forcing extension placeholder
+    transform_type: forcing_extension_placeholder
+  - id: trn_operator_rewrite
+    title: Operator rewrite
+    transform_type: operator_rewrite

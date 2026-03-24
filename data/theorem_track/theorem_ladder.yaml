@@ -1,0 +1,38 @@
+ladder_id: theorem_track_ladder
+version: 0.7.0
+paper_mode_read: theorem_led_conditional_ready
+ordered_entries:
+  - tier: base
+    theorem_id: thm_finite_frontier_setup
+    primitive_roles:
+      - P5_fixed_package_object
+    lean_anchor:
+      - finite_frontier_setup_exists
+      - finite_frontier_enumeration_invariant
+    role: base infrastructure around fixed-package candidate handling
+  - tier: bridge
+    theorem_id: thm_closure_saturation_operator_change
+    primitive_roles:
+      - P5_fixed_package_object
+      - P1_package_change_mechanism
+      - P2_package_change_mechanism
+    lean_anchor:
+      - closure_iterate_saturates_one_step
+      - frozen_package_no_persistent_growth
+      - persistent_growth_witness_implies_package_change
+    role: fixed P5 package saturates; persistent growth forces P1/P2-style change
+  - tier: arithmetic_candidate
+    theorem_id: thm_arithmetic_frontier_canonicality
+    primitive_roles:
+      - P6_frozen_evaluation_regime
+      - P4_indexing_support_axis
+    lean_anchor:
+      - arithmetic_canonicality_target_statement
+      - restricted_in_house_alignment_lemma
+      - conditional_arithmetic_canonicality_lift
+    role: frozen paper claim is conditional arithmetic theorem under explicit external discharge route
+  - tier: overreach_discarded
+    theorem_id: thm_global_canonical_efficiency
+    primitive_roles:
+      - P3_diagnostic_only_excluded
+    role: currently unsupported by toy/vendor boundaries and not driven by P3

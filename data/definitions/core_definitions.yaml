@@ -1,0 +1,31 @@
+registry_id: core_definitions
+version: 0.1.0
+description: Canonical definitions used by claim and validation registries.
+entries:
+  - id: def_closure_operator
+    name: closure_operator
+    statement: Endomorphism over statement sets capturing closure under inference.
+  - id: def_extension_operator
+    name: extension_operator
+    statement: Operator that extends language, axioms, or admissible rules.
+  - id: def_benchmark_family
+    name: benchmark_family
+    statement: Named class of benchmark instances with shared structural constraints.
+  - id: def_admissible_transformation_class
+    name: admissible_transformation_class
+    statement: Set of operator and theory changes allowed by protocol.
+  - id: def_yield_functional
+    name: yield_functional
+    statement: Functional measuring nontrivial informational yield of an extension.
+  - id: def_cost_functional
+    name: cost_functional
+    statement: Functional measuring resource burden for an extension.
+  - id: def_pareto_dominance
+    name: pareto_dominance
+    statement: Partial order where one method improves yield without increasing costs.
+  - id: def_frontier_membership
+    name: frontier_membership
+    statement: Membership criterion for maximal non-dominated closure states.
+  - id: def_internal_audit_barrier
+    name: internal_audit_barrier
+    statement: Limitation on internal consistency certification within a framework.

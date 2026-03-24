@@ -1,0 +1,3 @@
+During the preparation of this work, the author used ChatGPT (OpenAI; model GPT-5.2 Pro) to assist with (i) outlining and organizing the analysis plan and paper structure, (ii) improving clarity and readability of draft text, and (iii) generating initial code snippets for data processing and visualization.
+After using this tool, the author reviewed, verified, and edited all content and takes full responsibility for the content of the published article.
+No generative AI or AI-assisted tools were used to create or alter figures or images; all figures were produced programmatically from the deposited data using the author’s code.

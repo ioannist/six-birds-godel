@@ -1,0 +1,42 @@
+version: 0.1.0
+items:
+  - theorem_id: thm_one_step_saturation
+    body_proof_level: compressed_proof_needed
+    current_draft_too_thin: no
+    relies_too_much_on_commentary: no
+    note: displayed formula and short induction sketch already present; could tighten into a conventional proposition-plus-proof paragraph
+  - theorem_id: thm_no_persistent_growth
+    body_proof_level: compressed_proof_needed
+    current_draft_too_thin: yes
+    relies_too_much_on_commentary: yes
+    note: current body gives explanation but not a visible contradiction argument against PersistentGrowthWitness
+  - theorem_id: thm_package_change_necessity
+    body_proof_level: proof_sketch_needed
+    current_draft_too_thin: yes
+    relies_too_much_on_commentary: yes
+    note: body currently states the bridge in prose without a displayed implication or explicit dependency on no-persistent-growth
+  - theorem_id: thm_bridge_surface
+    body_proof_level: appendix_only_ok
+    current_draft_too_thin: no
+    relies_too_much_on_commentary: no
+    note: may be referenced as theorem-surface alias once the main bridge statement is displayed
+  - theorem_id: thm_dominance_congruence
+    body_proof_level: compressed_proof_needed
+    current_draft_too_thin: yes
+    relies_too_much_on_commentary: yes
+    note: current body lacks a displayed definition-level dependence on SliceInvariantOnCone
+  - theorem_id: thm_efficiency_transfer
+    body_proof_level: proof_sketch_needed
+    current_draft_too_thin: yes
+    relies_too_much_on_commentary: yes
+    note: proof idea is present but should be reformatted as an explicit contradiction argument from dominance
+  - theorem_id: thm_restricted_alignment
+    body_proof_level: proof_sketch_needed
+    current_draft_too_thin: yes
+    relies_too_much_on_commentary: yes
+    note: theorem currently reads as commentary on transfer rather than as a visible corollary with a short derivation
+  - theorem_id: thm_conditional_lift
+    body_proof_level: proof_sketch_needed
+    current_draft_too_thin: yes
+    relies_too_much_on_commentary: yes
+    note: main theorem section is the thinnest relative to its importance; assumptions are prose-listed but not assembled into a formal statement-and-proof surface

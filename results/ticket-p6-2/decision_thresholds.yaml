@@ -1,0 +1,28 @@
+version: 0.1.0
+scale_policy:
+  control_only:
+  - 32
+  primary_decision:
+  - 64
+  - 128
+  extended_if_available:
+  - 256
+candidate_surface: A14_only
+criteria:
+  interaction_signal_strength:
+    theorem_ready: abs(delta_vs_baseline_frob) >= 0.15 at n=64 and n=128
+    hybrid_ready: mean abs(delta_vs_baseline_frob) over n in {64,128} >= 0.10
+  comparator_separation:
+    theorem_ready: resolved strict comparator at n=64 and n=128 with abs(interaction_delta_abs_shift)
+      >= 0.10
+    hybrid_ready: resolved strict comparator at >=1 primary n with abs(interaction_delta_abs_shift)
+      >= 0.10
+  robustness:
+    theorem_ready: robustness FAIL count == 0 and PARTIAL count <= 1
+    hybrid_ready: robustness FAIL count <= 1 and PARTIAL count <= 3
+  ablation_support:
+    theorem_ready: primary-regime LOO effect rows >= 80
+    hybrid_ready: primary-regime LOO effect rows >= 40
+  low_scale_dependence:
+    theorem_ready: 'False'
+    hybrid_ready: 'False'

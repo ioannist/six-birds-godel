@@ -1,0 +1,8 @@
+ticket: ticket-r8
+status: pass
+carry_forward_r7_status_present: true
+reads_like_theorem_paper: true
+another_rewrite_needed_before_substantive_review: false
+local_fixes_only: true
+make_check: pass
+paper_build: pass

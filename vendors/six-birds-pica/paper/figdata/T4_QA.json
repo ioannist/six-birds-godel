@@ -1,0 +1,189 @@
+{
+  "config_count": 69,
+  "duplicate_assignments": [],
+  "exp_id": "EXP-112",
+  "family_counts": {
+    "Actor-row subalgebras": 10,
+    "Baseline skeleton": 1,
+    "Full": 2,
+    "Full amputations": 7,
+    "Generators": 6,
+    "Informant-column subalgebras": 6,
+    "Leave-one-out": 22,
+    "Null": 1,
+    "Pair kernels": 8,
+    "Singleton kernels": 6
+  },
+  "full_action_enabled_count": 24,
+  "full_action_minus_full_all": [],
+  "full_all_enabled_count": 25,
+  "full_all_is_all_action_cells": true,
+  "full_all_minus_full_action": [
+    "A16"
+  ],
+  "gen_configs": [
+    "gen2_A14_A13",
+    "gen3_A13_A14_A19",
+    "gen3_A13_A18_A19",
+    "gen4_core",
+    "gen5_core_A25",
+    "gen6_core_A12_A25"
+  ],
+  "loo_checks": {
+    "loo_A1": {
+      "added": [],
+      "ok": true,
+      "removed": [
+        "A1"
+      ]
+    },
+    "loo_A11": {
+      "added": [],
+      "ok": true,
+      "removed": [
+        "A11"
+      ]
+    },
+    "loo_A12": {
+      "added": [],
+      "ok": true,
+      "removed": [
+        "A12"
+      ]
+    },
+    "loo_A13": {
+      "added": [],
+      "ok": true,
+      "removed": [
+        "A13"
+      ]
+    },
+    "loo_A14": {
+      "added": [],
+      "ok": true,
+      "removed": [
+        "A14"
+      ]
+    },
+    "loo_A17": {
+      "added": [],
+      "ok": true,
+      "removed": [
+        "A17"
+      ]
+    },
+    "loo_A18": {
+      "added": [],
+      "ok": true,
+      "removed": [
+        "A18"
+      ]
+    },
+    "loo_A19": {
+      "added": [],
+      "ok": true,
+      "removed": [
+        "A19"
+      ]
+    },
+    "loo_A2": {
+      "added": [],
+      "ok": true,
+      "removed": [
+        "A2"
+      ]
+    },
+    "loo_A20": {
+      "added": [],
+      "ok": true,
+      "removed": [
+        "A20"
+      ]
+    },
+    "loo_A21": {
+      "added": [],
+      "ok": true,
+      "removed": [
+        "A21"
+      ]
+    },
+    "loo_A22": {
+      "added": [],
+      "ok": true,
+      "removed": [
+        "A22"
+      ]
+    },
+    "loo_A23": {
+      "added": [],
+      "ok": true,
+      "removed": [
+        "A23"
+      ]
+    },
+    "loo_A24": {
+      "added": [],
+      "ok": true,
+      "removed": [
+        "A24"
+      ]
+    },
+    "loo_A25": {
+      "added": [],
+      "ok": true,
+      "removed": [
+        "A25"
+      ]
+    },
+    "loo_A3": {
+      "added": [],
+      "ok": true,
+      "removed": [
+        "A3"
+      ]
+    },
+    "loo_A4": {
+      "added": [],
+      "ok": true,
+      "removed": [
+        "A4"
+      ]
+    },
+    "loo_A5": {
+      "added": [],
+      "ok": true,
+      "removed": [
+        "A5"
+      ]
+    },
+    "loo_A6": {
+      "added": [],
+      "ok": true,
+      "removed": [
+        "A6"
+      ]
+    },
+    "loo_A7": {
+      "added": [],
+      "ok": true,
+      "removed": [
+        "A7"
+      ]
+    },
+    "loo_A8": {
+      "added": [],
+      "ok": true,
+      "removed": [
+        "A8"
+      ]
+    },
+    "loo_A9": {
+      "added": [],
+      "ok": true,
+      "removed": [
+        "A9"
+      ]
+    }
+  },
+  "unassigned": []
+}

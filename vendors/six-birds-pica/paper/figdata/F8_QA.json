@@ -1,0 +1,150 @@
+{
+  "dataset_id": "campaign_v3_union",
+  "global_missingness_rate_key_configs": 0.25,
+  "groups_defined_count_lt2": [
+    {
+      "config_name": "full_action",
+      "defined_count": 0,
+      "n": 32,
+      "run_count": 10
+    },
+    {
+      "config_name": "full_action",
+      "defined_count": 1,
+      "n": 64,
+      "run_count": 10
+    }
+  ],
+  "key_configs": [
+    "empty",
+    "baseline",
+    "full_action",
+    "full_all"
+  ],
+  "n_values": [
+    32,
+    64,
+    128,
+    256
+  ],
+  "rev_heatmap_configs": [
+    "col_P3",
+    "col_P5",
+    "gen3_A13_A14_A19",
+    "gen5_core_A25",
+    "loo_A1",
+    "loo_A12",
+    "baseline",
+    "empty",
+    "full_action",
+    "full_all"
+  ],
+  "rev_totals_by_n": {
+    "128": {
+      "rev_count": 0,
+      "run_count": 100
+    },
+    "256": {
+      "rev_count": 0,
+      "run_count": 49
+    },
+    "32": {
+      "rev_count": 6,
+      "run_count": 100
+    },
+    "64": {
+      "rev_count": 0,
+      "run_count": 100
+    }
+  },
+  "sigma_ratio_missingness": {
+    "128": {
+      "baseline": {
+        "defined_count": 10,
+        "missing_count": 0,
+        "missing_rate": 0.0
+      },
+      "empty": {
+        "defined_count": 10,
+        "missing_count": 0,
+        "missing_rate": 0.0
+      },
+      "full_action": {
+        "defined_count": 10,
+        "missing_count": 0,
+        "missing_rate": 0.0
+      },
+      "full_all": {
+        "defined_count": 8,
+        "missing_count": 2,
+        "missing_rate": 0.2
+      }
+    },
+    "256": {
+      "baseline": {
+        "defined_count": 10,
+        "missing_count": 0,
+        "missing_rate": 0.0
+      },
+      "empty": {
+        "defined_count": 10,
+        "missing_count": 0,
+        "missing_rate": 0.0
+      },
+      "full_action": {
+        "defined_count": 10,
+        "missing_count": 0,
+        "missing_rate": 0.0
+      },
+      "full_all": {
+        "defined_count": 10,
+        "missing_count": 0,
+        "missing_rate": 0.0
+      }
+    },
+    "32": {
+      "baseline": {
+        "defined_count": 8,
+        "missing_count": 2,
+        "missing_rate": 0.2
+      },
+      "empty": {
+        "defined_count": 10,
+        "missing_count": 0,
+        "missing_rate": 0.0
+      },
+      "full_action": {
+        "defined_count": 0,
+        "missing_count": 10,
+        "missing_rate": 1.0
+      },
+      "full_all": {
+        "defined_count": 2,
+        "missing_count": 8,
+        "missing_rate": 0.8
+      }
+    },
+    "64": {
+      "baseline": {
+        "defined_count": 9,
+        "missing_count": 1,
+        "missing_rate": 0.1
+      },
+      "empty": {
+        "defined_count": 10,
+        "missing_count": 0,
+        "missing_rate": 0.0
+      },
+      "full_action": {
+        "defined_count": 1,
+        "missing_count": 9,
+        "missing_rate": 0.9
+      },
+      "full_all": {
+        "defined_count": 2,
+        "missing_count": 8,
+        "missing_rate": 0.8
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+ticket_id: ticket-w4
+status: pass
+section_02_inserted_correctly: true
+matches_primitive_role_contract: true
+proof_empirical_role_confusion_introduced: false
+make_check: pass
+paper_build:
+  status: pass
+  output_pdf: paper/main.pdf
+  notes:
+    - empty bibliography warning is expected until citations are added
+    - minor overfull box remains in Section 1 intro copy

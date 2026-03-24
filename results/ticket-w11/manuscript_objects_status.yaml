@@ -1,0 +1,21 @@
+ticket_id: ticket-w11
+status: pass
+carry_forward_w4_status_present: true
+carry_forward_w5_status_present: true
+carry_forward_w6_status_present: true
+carry_forward_w7_status_present: true
+carry_forward_w8_status_present: true
+carry_forward_w9_status_present: true
+carry_forward_w10_status_present: true
+tables_inserted_correctly: true
+citation_placement_integrated_correctly: true
+every_main_theorem_claim_has_support_or_explicit_external_discharge: true
+empirical_tables_supporting_only: true
+proof_empirical_role_confusion_introduced: false
+make_check: pass
+paper_build:
+  status: pass
+  output_pdf: paper/main.pdf
+  notes:
+    - W4-W10 status artifacts verified in fresh packaged snapshot zip
+    - non-blocking overfull and underfull box warnings remain in dense tables and long theorem-name passages

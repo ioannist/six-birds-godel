@@ -1,0 +1,23 @@
+register_id: theorem_track_obstacle_register
+version: 0.1.0
+entries:
+  - id: obs_toy_uniqueness_failure
+    blocker: broad uniqueness-style frontier conjectures are falsified in toy exhaustive search
+    class: falsified_generalization
+    evidence_ref: results/ticket-05/report.md
+  - id: obs_toy_sensitivity_failure
+    blocker: frontier membership is sensitive to benchmark/cost/tie conventions in broad families
+    class: falsified_generalization
+    evidence_ref: results/ticket-06/report.md
+  - id: obs_interaction_nontriviality_narrow
+    blocker: only narrow interaction slice survives anti-artifact checks
+    class: narrow_survivor_only
+    evidence_ref: results/ticket-06-4/report.md
+  - id: obs_vendor_theorem_gap
+    blocker: vendor-backed decision state is hybrid_ready, not theorem_ready
+    class: readiness_gap
+    evidence_ref: results/ticket-p6-4b/readiness_rescore.yaml
+  - id: obs_vendor_motivational_only
+    blocker: vendor evidence currently motivates theorem direction but does not provide theorem-grade proof support
+    class: support_mode_boundary
+    evidence_ref: results/ticket-p5/toy_vs_vendor_comparison.md

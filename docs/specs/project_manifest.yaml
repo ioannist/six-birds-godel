@@ -1,0 +1,15 @@
+project_slug: closure-frontier
+project_name: Closure Frontier
+python_package: closure_frontier
+lean_namespace: ClosureFrontier
+workstreams:
+  - infra
+  - finite_operator_lab
+  - lean_core
+  - arithmetic_atlas
+  - set_theory_atlas
+  - validation
+current_phase: finite_operator_lab_bootstrap
+rules:
+  - no paper prose
+  - do not rely on docs/knowledge-base unless explicitly instructed

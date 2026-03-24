@@ -1,0 +1,29 @@
+schema_id: external_support_schema
+registry_id: external_support
+id_prefix: src_ext_
+required_top_level_fields:
+  - registry_id
+  - version
+  - entries
+required_entry_fields:
+  - id
+  - canonical_key
+  - title
+  - source_cluster
+  - claim_links
+  - support_roles
+controlled_vocabularies:
+  source_cluster:
+    - godel_incompleteness
+    - rosser_undecidability
+    - derivability_conditions
+    - reflection_progressions
+    - inevitability_consistency_operator
+    - maximize_unify
+    - shoenfield_absoluteness
+    - generic_absoluteness_large_cardinals
+  support_roles:
+    - core_theorem_background
+    - theorem_dependency
+    - framing_context
+    - application_context

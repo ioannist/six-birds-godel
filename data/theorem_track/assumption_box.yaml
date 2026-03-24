@@ -1,0 +1,46 @@
+box_id: theorem_package_assumption_box
+version: 0.1.0
+entries:
+  - id: asm_frozen_slice
+    short_label: frozen evaluation slice
+    source_kind: in_house
+    lean_location: src/lean/ClosureFrontier/TheoremTrack/Frontier.lean
+    paper_discharge_required: false
+    source_ids: []
+  - id: asm_slice_invariant_on_cone
+    short_label: cone invariance of frozen slice
+    source_kind: in_house
+    lean_location: src/lean/ClosureFrontier/TheoremTrack/Alignment.lean
+    paper_discharge_required: false
+    source_ids: []
+  - id: asm_recursive_monotone_operator
+    short_label: recursive monotone extension operator
+    source_kind: in_house
+    lean_location: src/lean/ClosureFrontier/TheoremTrack/Frontier.lean
+    paper_discharge_required: false
+    source_ids: []
+  - id: asm_ext_canonical_family_closed_in_domain
+    short_label: canonical family closed in domain
+    source_kind: external
+    lean_location: src/lean/ClosureFrontier/TheoremTrack/ExternalBoundary.lean
+    paper_discharge_required: true
+    source_ids:
+      - src_ext_beklemishev_reflection_progressions
+      - src_ext_montalban_walsh_consistency_operator
+  - id: asm_ext_cone_canonicalization
+    short_label: cone canonicalization
+    source_kind: external
+    lean_location: src/lean/ClosureFrontier/TheoremTrack/ExternalBoundary.lean
+    paper_discharge_required: true
+    source_ids:
+      - src_ext_beklemishev_reflection_progressions
+      - src_ext_montalban_walsh_consistency_operator
+  - id: asm_ext_arithmetic_interpretation
+    short_label: canonical family arithmetic interpretation
+    source_kind: external
+    lean_location: data/theorem_track/external_dependency_contract.yaml
+    paper_discharge_required: true
+    source_ids:
+      - src_ext_beklemishev_reflection_progressions
+      - src_ext_montalban_walsh_consistency_operator
+      - src_ext_godel_1931

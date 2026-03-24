@@ -1,0 +1,16 @@
+ticket_id: ticket-w6
+status: pass
+carry_forward_w4_status_present: true
+carry_forward_w5_status_present: true
+section_04_inserted_correctly: true
+lean_theorem_name_alignment: true
+p6_frozen_evaluation_regime_clear: true
+p4_indexing_support_axis_clear: true
+arithmetic_overreach_introduced: false
+make_check: pass
+paper_build:
+  status: pass
+  output_pdf: paper/main.pdf
+  notes:
+    - empty bibliography warning is expected until citations are added
+    - non-blocking overfull box warnings remain in long theorem-name passages
