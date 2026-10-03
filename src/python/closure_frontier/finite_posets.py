@@ -2,7 +2,8 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from itertools import combinations
-from typing import Callable, Generic, Hashable, TypeVar
+from types import MappingProxyType
+from typing import Callable, Generic, Hashable, Mapping, TypeVar
 
 
 T = TypeVar("T", bound=Hashable)
@@ -14,20 +15,34 @@ class FinitePoset(Generic[T]):
 
     elements: tuple[T, ...]
     leq_fn: Callable[[T, T], bool]
-    rank: dict[T, int] | None = None
+    rank: Mapping[T, int] | None = None
 
     def __post_init__(self) -> None:
+        object.__setattr__(self, "elements", tuple(self.elements))
         unique = dict.fromkeys(self.elements)
         if len(unique) != len(self.elements):
             raise ValueError("elements must be unique")
         if not self.elements:
             raise ValueError("elements must be non-empty")
         if self.rank is not None:
+            object.__setattr__(self, "rank", MappingProxyType(dict(self.rank)))
             rank_keys = set(self.rank.keys())
             element_keys = set(self.elements)
             if rank_keys != element_keys:
                 raise ValueError("rank map must cover exactly the poset elements")
+            if any(not isinstance(value, int) or value < 0 for value in self.rank.values()):
+                raise ValueError("rank values must be non-negative integers")
+        # Snapshot the relation as well as the elements: a caller's mutable
+        # predicate must not invalidate an order after it has been checked.
+        relation = frozenset((x, y) for x in self.elements for y in self.elements
+                             if self.leq_fn(x, y))
+        object.__setattr__(self, "leq_fn", lambda x, y: (x, y) in relation)
         self.validate_order()
+        if self.rank is not None:
+            for x in self.elements:
+                for y in self.elements:
+                    if x != y and self.leq(x, y) and self.rank[x] >= self.rank[y]:
+                        raise ValueError("rank must strictly increase along strict order")
 
     @property
     def cardinality(self) -> int:

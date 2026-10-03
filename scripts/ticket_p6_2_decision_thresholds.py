@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import csv
+import math
 from pathlib import Path
 from typing import Any
 
@@ -27,7 +28,8 @@ def load_csv(path: Path) -> list[dict[str, str]]:
 
 def as_float(text: str) -> float | None:
     try:
-        return float(text)
+        value = float(text)
+        return value if math.isfinite(value) else None
     except (TypeError, ValueError):
         return None
 
@@ -86,7 +88,7 @@ def main() -> int:
         n = int(r["n"])
         v = as_float(r.get("interaction_delta_abs_shift", ""))
         if v is not None:
-            interaction_by_n[n] = abs(v)
+            interaction_by_n[n] = v
             label = (r.get("closest_simpler_config") or "").strip()
             if label:
                 comparator_labels.add(label)
@@ -118,8 +120,8 @@ def main() -> int:
                 "hybrid_ready": "mean abs(delta_vs_baseline_frob) over n in {64,128} >= 0.10",
             },
             "comparator_separation": {
-                "theorem_ready": "resolved strict comparator at n=64 and n=128 with abs(interaction_delta_abs_shift) >= 0.10",
-                "hybrid_ready": "resolved strict comparator at >=1 primary n with abs(interaction_delta_abs_shift) >= 0.10",
+                "theorem_ready": "resolved strict comparator at n=64 and n=128 with interaction_delta_abs_shift >= 0.10",
+                "hybrid_ready": "resolved strict comparator at >=1 primary n with interaction_delta_abs_shift >= 0.10",
             },
             "robustness": {
                 "theorem_ready": "robustness FAIL count == 0 and PARTIAL count <= 1",
@@ -137,10 +139,10 @@ def main() -> int:
     }
 
     crit_signal_theorem = all(abs(delta_by_n.get(n, 0.0)) >= 0.15 for n in PRIMARY_NS)
-    crit_signal_hybrid = primary_mean >= 0.10
+    crit_signal_hybrid = len(primary_deltas) == len(PRIMARY_NS) and primary_mean >= 0.10
 
     crit_sep_theorem = all(interaction_by_n.get(n, 0.0) >= 0.10 for n in PRIMARY_NS)
-    crit_sep_hybrid = any(interaction_by_n.get(n, 0.0) >= 0.10 for n in PRIMARY_NS)
+    crit_sep_hybrid = len(primary_interaction) == len(PRIMARY_NS) and any(interaction_by_n.get(n, 0.0) >= 0.10 for n in PRIMARY_NS)
 
     crit_rob_theorem = robust_fail == 0 and robust_partial <= 1
     crit_rob_hybrid = robust_fail <= 1 and robust_partial <= 3

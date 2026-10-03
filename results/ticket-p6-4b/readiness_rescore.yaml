@@ -3,7 +3,56 @@ version: 0.1.0
 canonical_metric_name: delta_vs_baseline_frob_from_rank1
 decision_logic_source: results/ticket-p6-3/decision_logic.yaml
 thresholds_drifted: false
-primary_coverage_complete: true
-final_verdict: hybrid_ready
-a14_only_remains_focus: true
-remaining_gap_cells: []
+primary_coverage_complete: false
+final_verdict: not_ready
+a14_only_remains_focus: false
+remaining_gap_cells:
+- config: baseline
+  scale: 64
+  remaining_required: 1
+  anchor_missing_count: 1
+- config: full_action
+  scale: 64
+  remaining_required: 5
+  anchor_missing_count: 5
+- config: full_all
+  scale: 64
+  remaining_required: 2
+  anchor_missing_count: 2
+- config: full_all
+  scale: 128
+  remaining_required: 2
+  anchor_missing_count: 2
+- config: A14_A19
+  scale: 64
+  remaining_required: 6
+  anchor_missing_count: 6
+- config: A14_A19
+  scale: 128
+  remaining_required: 2
+  anchor_missing_count: 2
+audit_correction:
+  date: '2026-10-03'
+  prior_final_verdict: hybrid_ready
+  reason: The frozen protocol requires a k=4 measurement for every primary seed; pair-level
+    presence and coverage alone did not satisfy it. No new experiment was run.
+primary_mean_abs_delta:
+  A14_only: 0.209244985
+  baseline: 0.0
+  full_action: 0.189030575
+  full_all: 0.104274585
+  A13_A14: 0.133944645
+  A14_A19: 0.1553271
+theorem_signal_pass: false
+theorem_comparator_separation_pass: true
+robustness_no_new_failures: null
+decision_reasons:
+- incomplete_seed_rung_or_metric_coverage:baseline@64
+- incomplete_seed_rung_or_metric_coverage:full_action@64
+- incomplete_seed_rung_or_metric_coverage:full_all@64
+- incomplete_seed_rung_or_metric_coverage:full_all@128
+- incomplete_seed_rung_or_metric_coverage:A14_A19@64
+- incomplete_seed_rung_or_metric_coverage:A14_A19@128
+- theorem_signal_below_threshold
+- no_new_robustness_failures_not_established
+decision_scope: frozen empirical criteria; no theorem proof support

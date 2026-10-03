@@ -53,6 +53,7 @@ def _parse_jsonl(path: Path) -> tuple[list[dict[str, Any]], int]:
             )
             continue
         if not isinstance(obj, dict):
+            bad += 1
             records.append(
                 {
                     "record_index": idx,

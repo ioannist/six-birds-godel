@@ -1,7 +1,8 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Generic, Hashable, TypeVar
+from types import MappingProxyType
+from typing import Generic, Hashable, Mapping, TypeVar
 
 from .finite_posets import FinitePoset
 
@@ -13,9 +14,10 @@ T = TypeVar("T", bound=Hashable)
 class FiniteMap(Generic[T]):
     """Total self-map on a finite domain."""
 
-    mapping: dict[T, T]
+    mapping: Mapping[T, T]
 
     def __post_init__(self) -> None:
+        object.__setattr__(self, "mapping", MappingProxyType(dict(self.mapping)))
         if not self.mapping:
             raise ValueError("mapping must be non-empty")
         domain = set(self.mapping.keys())
@@ -55,6 +57,8 @@ class FiniteMap(Generic[T]):
     def orbit(self, x: T, *, max_steps: int, until_stable: bool = False) -> list[T]:
         if max_steps < 0:
             raise ValueError("max_steps must be non-negative")
+        if x not in self.domain:
+            raise ValueError(f"point not in domain: {x}")
         values = [x]
         current = x
         for _ in range(max_steps):

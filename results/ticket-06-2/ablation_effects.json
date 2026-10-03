@@ -10,16 +10,16 @@
       "delta_instability_when_removed": 0.0
     },
     "cell_pkg_gate": {
-      "delta_instability_when_removed": 0.016589506172839497
+      "delta_instability_when_removed": 0.016589506172839552
     },
     "cell_pkg_mode_from_acct": {
-      "delta_instability_when_removed": 0.016589506172839497
+      "delta_instability_when_removed": 0.016589506172839552
     },
     "cell_pkg_rewrite": {
-      "delta_instability_when_removed": -0.07982202982202974
+      "delta_instability_when_removed": -0.0798220298220298
     }
   },
-  "baseline_raw_mean_instability": 0.8613496514272228,
+  "baseline_raw_mean_instability": 0.8613496514272226,
   "combined_core_mean_instability": 0.3660213243546577,
   "improves_over_baseline_programs": [
     "accounting_core",
@@ -51,12 +51,12 @@
   "program_summary": {
     "accounting_core": {
       "mean_candidate_pool_size": 14.38888888888889,
-      "mean_instability_total": 0.28619929453262793,
+      "mean_instability_total": 0.2861992945326279,
       "pool_ratio_vs_baseline": 0.42598684210526316
     },
     "baseline_raw": {
       "mean_candidate_pool_size": 33.77777777777778,
-      "mean_instability_total": 0.8613496514272228,
+      "mean_instability_total": 0.8613496514272226,
       "pool_ratio_vs_baseline": 1.0
     },
     "chain_step_fallback": {
@@ -86,27 +86,27 @@
     },
     "combined_minus_pkg_gate": {
       "mean_candidate_pool_size": 10.88888888888889,
-      "mean_instability_total": 0.38261083052749717,
+      "mean_instability_total": 0.3826108305274972,
       "pool_ratio_vs_baseline": 0.3223684210526316
     },
     "combined_minus_pkg_mode_from_acct": {
       "mean_candidate_pool_size": 10.88888888888889,
-      "mean_instability_total": 0.38261083052749717,
+      "mean_instability_total": 0.3826108305274972,
       "pool_ratio_vs_baseline": 0.3223684210526316
     },
     "combined_minus_pkg_rewrite": {
       "mean_candidate_pool_size": 10.555555555555555,
-      "mean_instability_total": 0.28619929453262793,
+      "mean_instability_total": 0.2861992945326279,
       "pool_ratio_vs_baseline": 0.3125
     },
     "lens_protocol_core": {
       "mean_candidate_pool_size": 33.77777777777778,
-      "mean_instability_total": 0.24674738841405514,
+      "mean_instability_total": 0.24674738841405508,
       "pool_ratio_vs_baseline": 1.0
     },
     "packaging_core": {
       "mean_candidate_pool_size": 11.222222222222221,
-      "mean_instability_total": 0.7963389324918846,
+      "mean_instability_total": 0.7963389324918847,
       "pool_ratio_vs_baseline": 0.3322368421052631
     }
   }

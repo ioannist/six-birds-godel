@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import csv
+import math
 from pathlib import Path
 from typing import Any
 
@@ -37,7 +38,8 @@ def load_yaml(path: Path) -> dict[str, Any]:
 
 def as_float(value: str) -> float | None:
     try:
-        return float(value)
+        number = float(value)
+        return number if math.isfinite(number) else None
     except (TypeError, ValueError):
         return None
 
@@ -58,7 +60,7 @@ def mean_abs_primary_delta(rows: list[dict[str, str]], config: str) -> tuple[flo
         if d is not None:
             vals.append(abs(d))
             min_count = min(min_count, c)
-    if not vals:
+    if len(vals) != len(PRIMARY_NS):
         return 0.0, 0
     return sum(vals) / len(vals), (0 if min_count == 10**9 else min_count)
 
@@ -73,7 +75,7 @@ def interaction_primary_mean(rows: list[dict[str, str]], config: str) -> tuple[f
         r = sub[0]
         v = as_float(r.get("interaction_delta_abs_shift", ""))
         if v is not None:
-            vals.append(abs(v))
+            vals.append(v)
         cmp_lbl = (r.get("closest_simpler_config") or "").strip()
         if cmp_lbl:
             comparator = cmp_lbl
@@ -136,7 +138,7 @@ def main() -> int:
                 "support_score": support_score,
                 "primary_mean_abs_delta_vs_baseline_frob": round(primary_mean_abs, 8),
                 "primary_min_sample_count": primary_min_count,
-                "primary_mean_abs_interaction_delta": round(inter_mean, 8),
+                "primary_mean_interaction_delta": round(inter_mean, 8),
                 "closest_simpler_comparator_seen": simpler,
                 "include_in_confirmatory_run": "yes" if include else "no",
                 "include_reason": reason,

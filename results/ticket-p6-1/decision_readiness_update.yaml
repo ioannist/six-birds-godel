@@ -19,15 +19,15 @@ question_updates:
   updated_status: answered_by_shipped_data
   basis: core_cell_effect_rows=129
 - question_class: support_for_narrow_interaction_claim
-  prior_status: partially_answered_by_shipped_data
+  prior_status: unanswered
   updated_status: partially_answered_by_shipped_data
-  basis: Shipped quantitative deltas now extracted, but unresolved simpler-subprogram
-    matches remain.
+  basis: Nearest-subprogram deltas are descriptive; positive gains over the best measured
+    strict subprogram at primary scales=0.
 - question_class: theorem_or_hybrid_paper_decision_readiness
   prior_status: unanswered
   updated_status: partially_answered_by_shipped_data
-  basis: Gap reduced by shipped deltas; robustness_partial_checks=3; unresolved interaction
-    comparisons remain.
+  basis: Descriptive deltas extracted; robustness_partial_checks=3; unresolved nearest
+    comparisons=0; positive best-subprogram gains=0.
 summary:
   moderate_new_run_still_needed: partial
   core_resolved_interaction_comparisons: 26
@@ -35,3 +35,5 @@ summary:
   core_cell_effect_rows: 129
   robustness_partial_checks: 3
   strongest_shipped_interaction_signal: A14_only@n=128 interaction_delta_abs_shift=0.33466364
+  strongest_signal_scope: nearest_nonempty_shipped_strict_subprogram
+  positive_best_subprogram_core_comparisons: 0

@@ -6,13 +6,12 @@ formalization_status:
   bridge_result_proved: true
   bridge_path_depends_on_axioms: false
 exact_hypotheses:
-  - closure package is fixed
-  - operator is idempotent (core frozen-package assumption)
-  - persistent strict growth witness means iterate(n+1,x) != iterate(n,x) for some n >= 1
+  - fixed package has an idempotent endomap
+  - for the constructive bridge, a second idempotent package moves a saturated point pkg(x)
 exact_conclusion:
-  - iterates saturate after one step under fixed idempotent package
-  - no persistent strict-growth witness can hold under fixed package
-  - therefore any persistent strict-growth witness implies frozen-package assumption is invalid
+  - positive self-iterates of a fixed idempotent map equal its first image
+  - fixed-package MapGrowthWitness is impossible
+  - if pkg_prime(pkg(x)) differs from pkg(x), then pkg and pkg_prime differ at pkg(x)
 blocked_generalizations:
   - no benchmark/cost perturbation robustness claim
   - no cross-package canonical collapse claim
@@ -25,3 +24,4 @@ boundary_evidence_refs:
   - results/ticket-06/report.md
   - results/ticket-06-4/report.md
   - results/ticket-p6-4b/readiness_rescore.yaml
+axiom_scope_note: No project-specific axioms; standard Lean foundational axioms may occur. P1/P2 classification is not formalized.

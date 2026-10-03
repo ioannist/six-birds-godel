@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import csv
 import gzip
+import math
 from pathlib import Path
 import statistics
 from typing import Any
@@ -39,7 +40,8 @@ def parse_float(value: str) -> float | None:
     if not text:
         return None
     try:
-        return float(text)
+        value = float(text)
+        return value if math.isfinite(value) else None
     except ValueError:
         return None
 
@@ -235,22 +237,11 @@ def main() -> int:
 
     for cfg in multi_configs:
         cfg_cells = members_by_label.get(cfg, set())
-        simpler_label = ""
-        simpler_size = -1
-        for cand, cand_cells in members_by_label.items():
-            if cand == cfg:
-                continue
-            if not cand_cells:
-                continue
-            if len(cand_cells) >= len(cfg_cells):
-                continue
-            if cand_cells.issubset(cfg_cells):
-                if len(cand_cells) > simpler_size:
-                    simpler_label = cand
-                    simpler_size = len(cand_cells)
-                elif len(cand_cells) == simpler_size and cand < simpler_label:
-                    simpler_label = cand
-
+        nearest = sorted(
+            (cand for cand, cells in members_by_label.items() if cells and cells < cfg_cells),
+            key=lambda cand: (-len(members_by_label[cand]), cand),
+        )
+        nearest_label = nearest[0] if nearest else ""
         for n in sorted(ALL_N):
             cfg_data = by_config_n.get((cfg, n), [])
             base_data = baseline_by_n.get(n, [])
@@ -263,19 +254,25 @@ def main() -> int:
                 continue
             delta_vs_base = cfg_mean - base_mean
 
-            comparison_status = "resolved"
-            simpler_mean = None
-            simpler_delta_vs_base = None
-            interaction_delta = None
-            if simpler_label:
-                simpler_data = by_config_n.get((simpler_label, n), [])
-                if simpler_data:
-                    simpler_mean, _, _ = summarize_metric(simpler_data, "frob_from_rank1")
-            if simpler_mean is None:
-                comparison_status = "unresolved"
-            else:
-                simpler_delta_vs_base = simpler_mean - base_mean
-                interaction_delta = abs(delta_vs_base) - abs(simpler_delta_vs_base)
+            # Preserve the declared nearest nonempty subprogram comparison.
+            # Audit the stronger best-measured-subprogram claim separately.
+            simpler_options = []
+            unmeasured = 0
+            for cand, cand_cells in members_by_label.items():
+                if not cand_cells < cfg_cells:
+                    continue
+                cand_mean, _, _ = summarize_metric(by_config_n.get((cand, n), []), "frob_from_rank1")
+                if cand_mean is None:
+                    unmeasured += 1
+                else:
+                    simpler_options.append((abs(cand_mean - base_mean), cand, cand_mean))
+            simpler_options.sort(key=lambda entry: (-entry[0], entry[1]))
+            simpler_label = nearest_label
+            simpler_mean, _, _ = summarize_metric(by_config_n.get((simpler_label, n), []), "frob_from_rank1")
+            comparison_status = "resolved" if simpler_mean is not None else "unresolved"
+            simpler_delta_vs_base = None if simpler_mean is None else simpler_mean - base_mean
+            interaction_delta = (None if simpler_delta_vs_base is None else
+                                 abs(delta_vs_base) - abs(simpler_delta_vs_base))
 
             interaction_rows.append(
                 {
@@ -291,6 +288,11 @@ def main() -> int:
                     "simpler_delta_vs_baseline": "" if simpler_delta_vs_base is None else round(simpler_delta_vs_base, 8),
                     "interaction_delta_abs_shift": "" if interaction_delta is None else round(interaction_delta, 8),
                     "comparison_status": comparison_status,
+                    "comparison_scope": "nearest_nonempty_shipped_strict_subprogram",
+                    "best_absolute_shift_subprogram": simpler_options[0][1] if simpler_options else "",
+                    "gain_over_best_absolute_shift": "" if not simpler_options else round(abs(delta_vs_base) - simpler_options[0][0], 8),
+                    "best_comparison_scope": "all_measured_shipped_strict_subprograms_including_empty",
+                    "unmeasured_strict_subprogram_count": unmeasured,
                     "sample_count": cfg_count,
                     "insufficient_if_control_only": int(n in CONTROL_N),
                 }
@@ -308,6 +310,11 @@ def main() -> int:
         1
         for row in interaction_rows
         if row["comparison_status"] == "unresolved" and row["n_tier"] == "core"
+    )
+    positive_best_core = sum(
+        1 for row in interaction_rows
+        if row["n_tier"] == "core" and row["gain_over_best_absolute_shift"] != ""
+        and float(row["gain_over_best_absolute_shift"]) > 0
     )
 
     robust_partial_count = sum(1 for row in t6_rows if (row.get("result_status") or "").strip() == "PARTIAL")
@@ -329,13 +336,13 @@ def main() -> int:
             "question_class": "support_for_narrow_interaction_claim",
             "prior_status": prior_by_class.get("support_for_narrow_interaction_claim", "unknown"),
             "updated_status": "partially_answered_by_shipped_data",
-            "basis": "Shipped quantitative deltas now extracted, but unresolved simpler-subprogram matches remain.",
+            "basis": f"Nearest-subprogram deltas are descriptive; positive gains over the best measured strict subprogram at primary scales={positive_best_core}.",
         },
         {
             "question_class": "theorem_or_hybrid_paper_decision_readiness",
             "prior_status": prior_by_class.get("theorem_or_hybrid_paper_decision_readiness", "unknown"),
             "updated_status": "partially_answered_by_shipped_data",
-            "basis": f"Gap reduced by shipped deltas; robustness_partial_checks={robust_partial_count}; unresolved interaction comparisons remain.",
+            "basis": f"Descriptive deltas extracted; robustness_partial_checks={robust_partial_count}; unresolved nearest comparisons={unresolved_interaction_core}; positive best-subprogram gains={positive_best_core}.",
         },
     ]
 
@@ -346,7 +353,7 @@ def main() -> int:
     ]
     strongest_signal = "none"
     if core_interaction_resolved:
-        best = max(core_interaction_resolved, key=lambda r: abs(float(r["interaction_delta_abs_shift"])))
+        best = max(core_interaction_resolved, key=lambda r: float(r["interaction_delta_abs_shift"]))
         strongest_signal = (
             f"{best['config_name']}@n={best['n']} interaction_delta_abs_shift={best['interaction_delta_abs_shift']}"
         )
@@ -371,6 +378,8 @@ def main() -> int:
             "core_cell_effect_rows": core_cell_effect_rows,
             "robustness_partial_checks": robust_partial_count,
             "strongest_shipped_interaction_signal": strongest_signal,
+            "strongest_signal_scope": "nearest_nonempty_shipped_strict_subprogram",
+            "positive_best_subprogram_core_comparisons": positive_best_core,
         },
     }
 
@@ -395,7 +404,8 @@ def main() -> int:
         "",
         "## Conservative note",
         "- Any signal driven only by n=32 is flagged as insufficient for decision-grade conclusions.",
-        "- Unresolved subprogram matching cases remain unresolved rather than inferred.",
+        "- The original nearest-nonempty comparison is retained. Separate columns audit the best measured strict subprogram including the empty control.",
+        "- Unmeasured subsets are counted; local gains are not a global synergy theorem.",
     ]
 
     write_csv(out_dir / "program_effect_sizes.csv", program_rows)

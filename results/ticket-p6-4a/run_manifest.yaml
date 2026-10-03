@@ -7,5 +7,5 @@ run_dirs_considered:
 - vendors/six-birds-pica/lab/runs/ticket_p6_4/ticket_p6_4a_resume
 attempted_unique_cells_seen: 120
 parsed_completed_cells: 120
-primary_coverage_complete: true
-resume_jobs_remaining: 0
+primary_coverage_complete: false
+resume_jobs_remaining: 18

@@ -13,9 +13,9 @@ criteria:
     theorem_ready: abs(delta_vs_baseline_frob) >= 0.15 at n=64 and n=128
     hybrid_ready: mean abs(delta_vs_baseline_frob) over n in {64,128} >= 0.10
   comparator_separation:
-    theorem_ready: resolved strict comparator at n=64 and n=128 with abs(interaction_delta_abs_shift)
+    theorem_ready: resolved strict comparator at n=64 and n=128 with interaction_delta_abs_shift
       >= 0.10
-    hybrid_ready: resolved strict comparator at >=1 primary n with abs(interaction_delta_abs_shift)
+    hybrid_ready: resolved strict comparator at >=1 primary n with interaction_delta_abs_shift
       >= 0.10
   robustness:
     theorem_ready: robustness FAIL count == 0 and PARTIAL count <= 1

@@ -1,5 +1,5 @@
 ladder_id: theorem_track_ladder
-version: 0.7.0
+version: 0.8.0
 paper_mode_read: theorem_led_conditional_ready
 ordered_entries:
   - tier: base
@@ -9,7 +9,8 @@ ordered_entries:
     lean_anchor:
       - finite_frontier_setup_exists
       - finite_frontier_enumeration_invariant
-    role: base infrastructure around fixed-package candidate handling
+      - finite_nondominated_exists
+    role: nonempty finite rational-scored frontier existence and enumeration invariance
   - tier: bridge
     theorem_id: thm_closure_saturation_operator_change
     primitive_roles:
@@ -20,7 +21,7 @@ ordered_entries:
       - closure_iterate_saturates_one_step
       - frozen_package_no_persistent_growth
       - persistent_growth_witness_implies_package_change
-    role: fixed P5 package saturates; persistent growth forces P1/P2-style change
+    role: idempotent self-iteration saturates; a second package moving a saturated point has a concrete package-change witness; P1/P2 labels are not classified
   - tier: arithmetic_candidate
     theorem_id: thm_arithmetic_frontier_canonicality
     primitive_roles:

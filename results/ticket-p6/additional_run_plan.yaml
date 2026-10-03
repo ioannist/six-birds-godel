@@ -1,7 +1,13 @@
 plan_id: ticket_p6_additional_run_plan
 version: 0.1.0
-genuinely_unanswered_count: 1
+genuinely_unanswered_count: 2
 items:
+- question_class: support_for_narrow_interaction_claim
+  next_action: cheap_new_run
+  label: targeted_missing_config_replay
+  ambiguity_resolved: Fills missing narrow interaction evidence on smallest unresolved
+    configuration slice.
+  cost_class: cheap_new_run
 - question_class: theorem_or_hybrid_paper_decision_readiness
   next_action: moderate_new_run
   label: interaction_delta_confirmatory_grid

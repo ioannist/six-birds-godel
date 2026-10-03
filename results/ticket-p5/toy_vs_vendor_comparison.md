@@ -5,9 +5,9 @@
 - Method: conservative support/provenance comparison only (no new runs, no claim promotion).
 
 ## Comparison
-- baseline-like configs vs richer structured configs: **supported_by_vendor** (baseline/full_action/full_all and row/group surfaces are all shipped and parsed).
-- heterogeneous cell importance: **supported_by_vendor** (LOO + row/group coverage is non-uniform in shipped program atlas).
-- interaction structure appears necessary: **supported_by_vendor (cautious)** (robustness/ablation surfaces are present; effect-size promotion deferred).
+- baseline-like configs vs richer structured configs: **not_assessable_from_surface_presence**; quantitative deltas are required.
+- heterogeneous cell importance: **not_assessable_from_coverage_counts**; quantitative ablation deltas are required.
+- necessity of interaction structure: **not_assessable_from_surface_presence**; a substantive comparator test is required.
 - broad uniqueness/stability-style claims: **not_assessable_from_shipped_data** (toy falsification exists, but no direct normalized vendor metric mapping for full equivalence test).
 
 ## Caution

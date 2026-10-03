@@ -1,26 +1,26 @@
 import ClosureFrontier.TheoremTrack.Core
+import Mathlib.Data.Real.Basic
+import Mathlib.Data.Set.Defs
 
 namespace ClosureFrontier.TheoremTrack
 
 structure BenchmarkProfile (α : Type) where
-  yield : α → Rat
+  yield : α → ℝ
 
 structure CostProfile (α : Type) where
-  cost : α → Rat
+  cost : α → ℝ
 
 structure ExtensionOperator (α : Type) where
   fn : α → α
-  recursive : Prop
-  monotone : Prop
 
 -- P6 role in the current theorem track: frozen evaluation regime.
 -- P4 appears here only as support/index bookkeeping, not as package change.
 structure FrozenSlice (α : Type) where
   benchmark : BenchmarkProfile α
   cost : CostProfile α
+  -- These metadata are fixed by the slice parameter; the Pareto theorems
+  -- consume only benchmark and cost, and do not prove transformation laws.
   transformationClass : α → α → Prop
-  tiePolicyFixed : Prop
-  quotientRuleFixed : Prop
   stageIndex : Nat := 0
 
 def FrontierDominates {α : Type}

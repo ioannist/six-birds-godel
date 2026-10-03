@@ -90,16 +90,10 @@ def build_matrix() -> list[dict[str, str]]:
     matrix.append(
         {
             "question_class": "baseline_vs_richer_structured_configs",
-            "status": "answered_by_shipped_data"
-            if (has_baseline and has_full_action and has_full_all and run_summary_present)
-            else "partially_answered_by_shipped_data",
+            "status": "partially_answered_by_shipped_data",
             "supporting_surfaces": "run_summary_table.csv.gz; program_atlas.yaml; ticket-p5/program_profiles.csv",
-            "main_blocker": ""
-            if (has_baseline and has_full_action and has_full_all and run_summary_present)
-            else "One or more core config surfaces missing in normalized/atlas support.",
-            "blocker_resolution": "none"
-            if (has_baseline and has_full_action and has_full_all and run_summary_present)
-            else "parse_more_shipped_artifacts",
+            "main_blocker": "Quantitative superiority must be read from measured program deltas; config presence alone is insufficient.",
+            "blocker_resolution": "parse_more_shipped_artifacts",
             "narrow_claim_relevance": "high",
         }
     )

@@ -1,5 +1,5 @@
 inventory_id: internal_proof_inventory
-version: 0.1.0
+version: 0.2.0
 entries:
   - theorem_name: finite_frontier_setup_exists
     file: src/lean/ClosureFrontier/TheoremTrack/Candidates.lean
@@ -33,3 +33,41 @@ entries:
     file: src/lean/ClosureFrontier/TheoremTrack/PaperMain.lean
     status: proved
     depends_on_external_assumptions: true
+  - theorem_name: finite_nondominated_exists
+    file: src/lean/ClosureFrontier/TheoremTrack/Candidates.lean
+    status: proved
+    depends_on_external_assumptions: false
+  - theorem_name: pareto_dominates_irrefl
+    file: src/lean/ClosureFrontier/TheoremTrack/Candidates.lean
+    status: proved
+    depends_on_external_assumptions: false
+  - theorem_name: pareto_dominates_trans
+    file: src/lean/ClosureFrontier/TheoremTrack/Candidates.lean
+    status: proved
+    depends_on_external_assumptions: false
+  - theorem_name: package_changed_iff_witness
+    file: src/lean/ClosureFrontier/TheoremTrack/Candidates.lean
+    status: proved
+    depends_on_external_assumptions: false
+  - theorem_name: idempotent_iff_no_persistent_growth
+    file: src/lean/ClosureFrontier/TheoremTrack/Candidates.lean
+    status: proved
+    depends_on_external_assumptions: false
+  - theorem_name: bridge_candidate_holds_in_frozen_idempotent_setting
+    file: src/lean/ClosureFrontier/TheoremTrack/Candidates.lean
+    status: proved
+    depends_on_external_assumptions: false
+  - theorem_name: frontier_dominates_congr_right
+    file: src/lean/ClosureFrontier/TheoremTrack/Alignment.lean
+    status: proved
+    depends_on_external_assumptions: false
+  - theorem_name: frontier_efficiency_transfer_to_cone_equivalent
+    file: src/lean/ClosureFrontier/TheoremTrack/Alignment.lean
+    status: proved
+    depends_on_external_assumptions: false
+current_verification_command: make test-lean validate-lean-proofs
+standard_kernel_axioms_permitted:
+  - propext
+  - Classical.choice
+  - Quot.sound
+arithmetic_scope: conditional composition; concrete arithmetic canonicalization is not discharged

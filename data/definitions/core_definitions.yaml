@@ -22,7 +22,7 @@ entries:
     statement: Functional measuring resource burden for an extension.
   - id: def_pareto_dominance
     name: pareto_dominance
-    statement: Partial order where one method improves yield without increasing costs.
+    statement: 'Strict Pareto dominance: at least as much yield and at most as much cost, with at least one strict improvement; irreflexive and transitive, not a reflexive partial order.'
   - id: def_frontier_membership
     name: frontier_membership
     statement: Membership criterion for maximal non-dominated closure states.

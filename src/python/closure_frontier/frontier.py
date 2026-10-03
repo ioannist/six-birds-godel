@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import math
 from typing import Iterable
 
 
@@ -9,6 +10,10 @@ class CandidateScore:
     id: str
     yield_score: float
     cost_score: float
+
+    def __post_init__(self) -> None:
+        if not math.isfinite(self.yield_score) or not math.isfinite(self.cost_score):
+            raise ValueError("candidate scores must be finite")
 
 
 def pareto_dominates(a: CandidateScore, b: CandidateScore) -> bool:

@@ -1,5 +1,5 @@
 contract_id: arithmetic_external_dependency_contract
-version: 0.4.0
+version: 0.5.0
 candidate_id: thm_arithmetic_frontier_canonicality
 paper_mode_read: theorem_led_conditional_ready
 stable_main_theorem_name: paper_main_conditional_arithmetic_frontier_canonicality
@@ -11,16 +11,25 @@ assumptions:
   - id: ext_canonical_family_closed_in_domain
     lean_name: canonicalFamilyClosedInDomain
     statement_shape: every operator in the canonical family lies in the frozen P6 comparison domain
-    source_mode: external_literature
+    source_mode: explicit_assumption
     proof_driving: true
+    literature_discharge_status: not_established_for_a_concrete_arithmetic_instance
+  - id: ext_canonical_family_admissible
+    lean_name: canonicalFamilyAdmissible
+    statement_shape: every canonical-family member is Computable for the declared encoding and Monotone for the declared order
+    source_mode: explicit_assumption
+    proof_driving: true
+    literature_discharge_status: not_established_for_a_concrete_arithmetic_instance
   - id: ext_cone_canonicalization
     lean_name: coneCanonicalization
-    statement_shape: every efficient operator on the frozen slice aligns on the cone with some canonical-family representative
-    source_mode: external_literature
+    statement_shape: the operator under study, if Computable, Monotone, and frontier-efficient, has a canonical-family representative agreeing on the declared cone
+    source_mode: explicit_assumption
     proof_driving: true
+    literature_discharge_status: not_established_for_a_concrete_arithmetic_instance
   - id: ext_arithmetic_interpretation
     lean_name: canonical_family_interpreted_as_consistency_or_reflection
     statement_shape: the canonical family is interpreted as the intended consistency/reflection progression family
     source_mode: citation_layer_only
     proof_driving: false
-minimality_note: only the first two assumptions are proof-driving for the Lean conditional lift
+minimality_note: 'Three proof-driving fields: domain membership, canonical admissibility, and cone canonicalization. Canonical admissibility cannot be inferred from cone agreement. Arithmetic interpretation is a separate, unmechanized obligation.'
+formalization_scope: Computable endomaps of a declared Primcodable preordered state type; real-valued frozen ledgers; no specific arithmetic-theory interpretation is mechanized.

@@ -257,6 +257,8 @@ def score_operator_set(
             continue
 
         sid = op_signature(transformed, ordered)
+        # Compare the resulting map, rather than the preimage that produced it.
+        op_id = operator_id(model_id, transformed, ordered)
         representative = by_sig.get(sid)
         if representative is None or op_id < representative[0]:
             by_sig[sid] = (op_id, transformed)

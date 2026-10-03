@@ -1,8 +1,8 @@
 {
   "baseline_raw": {
-    "quotient_instability": 0.3566175555555556,
+    "quotient_instability": 0.3566175555555555,
     "raw_composite": 0.6340107777777777,
-    "raw_instability": 0.3578773888888889,
+    "raw_instability": 0.35787738888888887,
     "tie_policy_sensitivity": 0.23325972222222222
   },
   "best_program_after_anti_artifact_audit": "pair__cell_pkg_gate__cell_pkg_mode_from_acct",
@@ -38,11 +38,11 @@
       "flag_hard_coded_packaging_choice": false,
       "flag_quotient_only_improvement": false,
       "flag_tie_suppression_artifact": true,
-      "interaction_gain": -0.0056728888888889495,
-      "quotient_instability": 0.3501306666666666,
-      "raw_instability": 0.3552677222222222,
+      "interaction_gain": -0.0056728888888888385,
+      "quotient_instability": 0.35013066666666665,
+      "raw_instability": 0.35526772222222225,
       "survives_all_artifact_flags": false,
-      "tie_policy_sensitivity": 0.18840266666666663
+      "tie_policy_sensitivity": 0.18840266666666666
     },
     "baseline_raw": {
       "candidate_pool_ratio_vs_baseline": 1.0,
@@ -52,8 +52,8 @@
       "flag_quotient_only_improvement": false,
       "flag_tie_suppression_artifact": false,
       "interaction_gain": 0.0,
-      "quotient_instability": 0.3566175555555556,
-      "raw_instability": 0.3578773888888889,
+      "quotient_instability": 0.3566175555555555,
+      "raw_instability": 0.35787738888888887,
       "survives_all_artifact_flags": true,
       "tie_policy_sensitivity": 0.23325972222222222
     },
@@ -86,14 +86,14 @@
       "flag_hard_coded_packaging_choice": false,
       "flag_quotient_only_improvement": false,
       "flag_tie_suppression_artifact": true,
-      "interaction_gain": -0.027982611111111055,
-      "quotient_instability": 0.3853440555555555,
-      "raw_instability": 0.3853440555555555,
+      "interaction_gain": -0.027982611111111166,
+      "quotient_instability": 0.38534405555555556,
+      "raw_instability": 0.38534405555555556,
       "survives_all_artifact_flags": false,
       "tie_policy_sensitivity": 0.11168044444444443
     },
     "lens_protocol_core": {
-      "candidate_pool_ratio_vs_baseline": 0.875174888888889,
+      "candidate_pool_ratio_vs_baseline": 0.8751748888888888,
       "cells": [
         "cell_acct_tie_protocol",
         "cell_lens_protocol"
@@ -103,8 +103,8 @@
       "flag_quotient_only_improvement": false,
       "flag_tie_suppression_artifact": true,
       "interaction_gain": 0.0,
-      "quotient_instability": 0.3566175555555556,
-      "raw_instability": 0.3566175555555556,
+      "quotient_instability": 0.3566175555555555,
+      "raw_instability": 0.3566175555555555,
       "survives_all_artifact_flags": false,
       "tie_policy_sensitivity": 0.19038605555555554
     },
@@ -120,10 +120,10 @@
       "flag_quotient_only_improvement": false,
       "flag_tie_suppression_artifact": true,
       "interaction_gain": 0.020981777777777766,
-      "quotient_instability": 0.35197072222222225,
-      "raw_instability": 0.3563217222222223,
+      "quotient_instability": 0.34981083333333335,
+      "raw_instability": 0.3563217222222222,
       "survives_all_artifact_flags": false,
-      "tie_policy_sensitivity": 0.14263199999999998
+      "tie_policy_sensitivity": 0.139827
     },
     "pair__cell_acct_gate__cell_acct_tie_protocol": {
       "candidate_pool_ratio_vs_baseline": 0.5701343888888889,
@@ -136,10 +136,10 @@
       "flag_quotient_only_improvement": false,
       "flag_tie_suppression_artifact": false,
       "interaction_gain": 0.0,
-      "quotient_instability": 0.3461334444444444,
-      "raw_instability": 0.35127049999999993,
+      "quotient_instability": 0.34613344444444444,
+      "raw_instability": 0.3512705,
       "survives_all_artifact_flags": true,
-      "tie_policy_sensitivity": 0.18672699999999998
+      "tie_policy_sensitivity": 0.186727
     },
     "pair__cell_acct_gate__cell_lens_protocol": {
       "candidate_pool_ratio_vs_baseline": 0.5090746666666667,
@@ -152,8 +152,8 @@
       "flag_quotient_only_improvement": false,
       "flag_tie_suppression_artifact": true,
       "interaction_gain": 0.05663661111111101,
-      "quotient_instability": 0.3461334444444444,
-      "raw_instability": 0.3461334444444444,
+      "quotient_instability": 0.34613344444444444,
+      "raw_instability": 0.34613344444444444,
       "survives_all_artifact_flags": false,
       "tie_policy_sensitivity": 0.14423377777777777
     },
@@ -168,10 +168,10 @@
       "flag_quotient_only_improvement": false,
       "flag_tie_suppression_artifact": false,
       "interaction_gain": 0.0,
-      "quotient_instability": 0.3461334444444444,
-      "raw_instability": 0.35127049999999993,
+      "quotient_instability": 0.34613344444444444,
+      "raw_instability": 0.3512705,
       "survives_all_artifact_flags": true,
-      "tie_policy_sensitivity": 0.18672699999999998
+      "tie_policy_sensitivity": 0.186727
     },
     "pair__cell_acct_gate__cell_pkg_mode_from_acct": {
       "candidate_pool_ratio_vs_baseline": 0.6277943888888889,
@@ -183,11 +183,11 @@
       "flag_hard_coded_packaging_choice": false,
       "flag_quotient_only_improvement": false,
       "flag_tie_suppression_artifact": true,
-      "interaction_gain": -0.0056728888888889495,
-      "quotient_instability": 0.3501306666666666,
-      "raw_instability": 0.3552677222222222,
+      "interaction_gain": -0.0056728888888888385,
+      "quotient_instability": 0.35013066666666665,
+      "raw_instability": 0.35526772222222225,
       "survives_all_artifact_flags": false,
-      "tie_policy_sensitivity": 0.18840266666666663
+      "tie_policy_sensitivity": 0.18840266666666666
     },
     "pair__cell_acct_gate__cell_pkg_rewrite": {
       "candidate_pool_ratio_vs_baseline": 0.5361309444444444,
@@ -200,13 +200,13 @@
       "flag_quotient_only_improvement": false,
       "flag_tie_suppression_artifact": true,
       "interaction_gain": -0.04959011111111111,
-      "quotient_instability": 0.400147111111111,
-      "raw_instability": 0.40445044444444433,
+      "quotient_instability": 0.399045,
+      "raw_instability": 0.40445044444444445,
       "survives_all_artifact_flags": false,
-      "tie_policy_sensitivity": 0.1600802222222222
+      "tie_policy_sensitivity": 0.15983733333333333
     },
     "pair__cell_acct_tie_protocol__cell_lens_protocol": {
-      "candidate_pool_ratio_vs_baseline": 0.875174888888889,
+      "candidate_pool_ratio_vs_baseline": 0.8751748888888888,
       "cells": [
         "cell_acct_tie_protocol",
         "cell_lens_protocol"
@@ -216,8 +216,8 @@
       "flag_quotient_only_improvement": false,
       "flag_tie_suppression_artifact": true,
       "interaction_gain": 0.0,
-      "quotient_instability": 0.3566175555555556,
-      "raw_instability": 0.3566175555555556,
+      "quotient_instability": 0.3566175555555555,
+      "raw_instability": 0.3566175555555555,
       "survives_all_artifact_flags": false,
       "tie_policy_sensitivity": 0.19038605555555554
     },
@@ -231,9 +231,9 @@
       "flag_hard_coded_packaging_choice": false,
       "flag_quotient_only_improvement": false,
       "flag_tie_suppression_artifact": false,
-      "interaction_gain": -0.025542611111111113,
-      "quotient_instability": 0.3566175555555556,
-      "raw_instability": 0.3578773888888889,
+      "interaction_gain": -0.025542611111111002,
+      "quotient_instability": 0.3566175555555555,
+      "raw_instability": 0.35787738888888887,
       "survives_all_artifact_flags": true,
       "tie_policy_sensitivity": 0.23325972222222222
     },
@@ -247,14 +247,14 @@
       "flag_hard_coded_packaging_choice": false,
       "flag_quotient_only_improvement": false,
       "flag_tie_suppression_artifact": false,
-      "interaction_gain": -0.025542611111111113,
-      "quotient_instability": 0.3566175555555556,
-      "raw_instability": 0.3578773888888889,
+      "interaction_gain": -0.025542611111111002,
+      "quotient_instability": 0.3566175555555555,
+      "raw_instability": 0.35787738888888887,
       "survives_all_artifact_flags": true,
       "tie_policy_sensitivity": 0.23325972222222222
     },
     "pair__cell_acct_tie_protocol__cell_pkg_rewrite": {
-      "candidate_pool_ratio_vs_baseline": 0.6911105555555555,
+      "candidate_pool_ratio_vs_baseline": 0.6911105555555556,
       "cells": [
         "cell_acct_tie_protocol",
         "cell_pkg_rewrite"
@@ -264,13 +264,13 @@
       "flag_quotient_only_improvement": false,
       "flag_tie_suppression_artifact": true,
       "interaction_gain": 0.004495444444444496,
-      "quotient_instability": 0.37208644444444444,
-      "raw_instability": 0.3764374444444445,
+      "quotient_instability": 0.36992655555555554,
+      "raw_instability": 0.37643744444444444,
       "survives_all_artifact_flags": false,
-      "tie_policy_sensitivity": 0.13900266666666666
+      "tie_policy_sensitivity": 0.13619766666666666
     },
     "pair__cell_lens_protocol__cell_pkg_gate": {
-      "candidate_pool_ratio_vs_baseline": 0.875174888888889,
+      "candidate_pool_ratio_vs_baseline": 0.8751748888888888,
       "cells": [
         "cell_lens_protocol",
         "cell_pkg_gate"
@@ -280,13 +280,13 @@
       "flag_quotient_only_improvement": false,
       "flag_tie_suppression_artifact": true,
       "interaction_gain": 0.0,
-      "quotient_instability": 0.3566175555555556,
-      "raw_instability": 0.3566175555555556,
+      "quotient_instability": 0.3566175555555555,
+      "raw_instability": 0.3566175555555555,
       "survives_all_artifact_flags": false,
       "tie_policy_sensitivity": 0.19038605555555554
     },
     "pair__cell_lens_protocol__cell_pkg_mode_from_acct": {
-      "candidate_pool_ratio_vs_baseline": 0.875174888888889,
+      "candidate_pool_ratio_vs_baseline": 0.8751748888888888,
       "cells": [
         "cell_lens_protocol",
         "cell_pkg_mode_from_acct"
@@ -296,13 +296,13 @@
       "flag_quotient_only_improvement": false,
       "flag_tie_suppression_artifact": true,
       "interaction_gain": 0.0,
-      "quotient_instability": 0.3566175555555556,
-      "raw_instability": 0.3566175555555556,
+      "quotient_instability": 0.3566175555555555,
+      "raw_instability": 0.3566175555555555,
       "survives_all_artifact_flags": false,
       "tie_policy_sensitivity": 0.19038605555555554
     },
     "pair__cell_lens_protocol__cell_pkg_rewrite": {
-      "candidate_pool_ratio_vs_baseline": 0.6307402222222221,
+      "candidate_pool_ratio_vs_baseline": 0.6307402222222223,
       "cells": [
         "cell_lens_protocol",
         "cell_pkg_rewrite"
@@ -311,11 +311,11 @@
       "flag_hard_coded_packaging_choice": false,
       "flag_quotient_only_improvement": false,
       "flag_tie_suppression_artifact": true,
-      "interaction_gain": 0.07796172222222209,
-      "quotient_instability": 0.3713105555555556,
-      "raw_instability": 0.3713105555555556,
+      "interaction_gain": 0.0779617222222222,
+      "quotient_instability": 0.37131055555555553,
+      "raw_instability": 0.37131055555555553,
       "survives_all_artifact_flags": false,
-      "tie_policy_sensitivity": 0.09773155555555557
+      "tie_policy_sensitivity": 0.09773155555555556
     },
     "pair__cell_pkg_gate__cell_pkg_mode_from_acct": {
       "candidate_pool_ratio_vs_baseline": 0.8101892222222222,
@@ -334,7 +334,7 @@
       "tie_policy_sensitivity": 0.19993288888888888
     },
     "pair__cell_pkg_gate__cell_pkg_rewrite": {
-      "candidate_pool_ratio_vs_baseline": 0.6911105555555555,
+      "candidate_pool_ratio_vs_baseline": 0.6911105555555556,
       "cells": [
         "cell_pkg_gate",
         "cell_pkg_rewrite"
@@ -344,13 +344,13 @@
       "flag_quotient_only_improvement": false,
       "flag_tie_suppression_artifact": true,
       "interaction_gain": 0.0,
-      "quotient_instability": 0.3734704444444444,
-      "raw_instability": 0.3778214444444445,
+      "quotient_instability": 0.37131055555555553,
+      "raw_instability": 0.37782144444444443,
       "survives_all_artifact_flags": false,
-      "tie_policy_sensitivity": 0.1421141111111111
+      "tie_policy_sensitivity": 0.1393091111111111
     },
     "pair__cell_pkg_mode_from_acct__cell_pkg_rewrite": {
-      "candidate_pool_ratio_vs_baseline": 0.6911105555555555,
+      "candidate_pool_ratio_vs_baseline": 0.6911105555555556,
       "cells": [
         "cell_pkg_mode_from_acct",
         "cell_pkg_rewrite"
@@ -360,10 +360,10 @@
       "flag_quotient_only_improvement": false,
       "flag_tie_suppression_artifact": true,
       "interaction_gain": 0.0,
-      "quotient_instability": 0.3734704444444444,
-      "raw_instability": 0.3778214444444445,
+      "quotient_instability": 0.37131055555555553,
+      "raw_instability": 0.37782144444444443,
       "survives_all_artifact_flags": false,
-      "tie_policy_sensitivity": 0.1421141111111111
+      "tie_policy_sensitivity": 0.1393091111111111
     },
     "singleton__cell_acct_gate": {
       "candidate_pool_ratio_vs_baseline": 0.5701343888888889,
@@ -375,10 +375,10 @@
       "flag_quotient_only_improvement": false,
       "flag_tie_suppression_artifact": false,
       "interaction_gain": 0.0,
-      "quotient_instability": 0.3461334444444444,
-      "raw_instability": 0.35127049999999993,
+      "quotient_instability": 0.34613344444444444,
+      "raw_instability": 0.3512705,
       "survives_all_artifact_flags": true,
-      "tie_policy_sensitivity": 0.18672699999999998
+      "tie_policy_sensitivity": 0.186727
     },
     "singleton__cell_acct_tie_protocol": {
       "candidate_pool_ratio_vs_baseline": 1.0,
@@ -390,13 +390,13 @@
       "flag_quotient_only_improvement": false,
       "flag_tie_suppression_artifact": false,
       "interaction_gain": 0.0,
-      "quotient_instability": 0.3566175555555556,
-      "raw_instability": 0.3578773888888889,
+      "quotient_instability": 0.3566175555555555,
+      "raw_instability": 0.35787738888888887,
       "survives_all_artifact_flags": true,
       "tie_policy_sensitivity": 0.23325972222222222
     },
     "singleton__cell_lens_protocol": {
-      "candidate_pool_ratio_vs_baseline": 0.875174888888889,
+      "candidate_pool_ratio_vs_baseline": 0.8751748888888888,
       "cells": [
         "cell_lens_protocol"
       ],
@@ -405,8 +405,8 @@
       "flag_quotient_only_improvement": false,
       "flag_tie_suppression_artifact": true,
       "interaction_gain": 0.0,
-      "quotient_instability": 0.3566175555555556,
-      "raw_instability": 0.3566175555555556,
+      "quotient_instability": 0.3566175555555555,
+      "raw_instability": 0.3566175555555555,
       "survives_all_artifact_flags": false,
       "tie_policy_sensitivity": 0.19038605555555554
     },
@@ -420,8 +420,8 @@
       "flag_quotient_only_improvement": false,
       "flag_tie_suppression_artifact": false,
       "interaction_gain": 0.0,
-      "quotient_instability": 0.3566175555555556,
-      "raw_instability": 0.3578773888888889,
+      "quotient_instability": 0.3566175555555555,
+      "raw_instability": 0.35787738888888887,
       "survives_all_artifact_flags": true,
       "tie_policy_sensitivity": 0.23325972222222222
     },
@@ -435,13 +435,13 @@
       "flag_quotient_only_improvement": false,
       "flag_tie_suppression_artifact": false,
       "interaction_gain": 0.0,
-      "quotient_instability": 0.3566175555555556,
-      "raw_instability": 0.3578773888888889,
+      "quotient_instability": 0.3566175555555555,
+      "raw_instability": 0.35787738888888887,
       "survives_all_artifact_flags": true,
       "tie_policy_sensitivity": 0.23325972222222222
     },
     "singleton__cell_pkg_rewrite": {
-      "candidate_pool_ratio_vs_baseline": 0.6911105555555555,
+      "candidate_pool_ratio_vs_baseline": 0.6911105555555556,
       "cells": [
         "cell_pkg_rewrite"
       ],
@@ -450,10 +450,10 @@
       "flag_quotient_only_improvement": false,
       "flag_tie_suppression_artifact": true,
       "interaction_gain": 0.0,
-      "quotient_instability": 0.3734704444444444,
-      "raw_instability": 0.3778214444444445,
+      "quotient_instability": 0.37131055555555553,
+      "raw_instability": 0.37782144444444443,
       "survives_all_artifact_flags": false,
-      "tie_policy_sensitivity": 0.1421141111111111
+      "tie_policy_sensitivity": 0.1393091111111111
     }
   },
   "programs_surviving_all_artifact_flags": [

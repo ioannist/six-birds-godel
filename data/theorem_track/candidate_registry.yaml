@@ -1,5 +1,5 @@
 registry_id: theorem_track_candidate_registry
-version: 0.2.0
+version: 0.3.0
 vision_target:
   target_id: thm_target_canonical_efficiency
   source: vision.md
@@ -13,7 +13,7 @@ entries:
       - finite non-empty candidate set
       - deterministic scalar yield/cost fields
       - fixed dominance convention
-    conclusion_shape: base existence of candidate element and permutation invariance of nondominated predicate
+    conclusion_shape: existence of a nondominated finite rational-scored candidate and permutation invariance of nondominance
     support_modes:
       - lean
       - toy_boundary
@@ -23,10 +23,9 @@ entries:
     label: Closure saturation implies operator/theory change for strict growth
     theorem_tier: bridge
     hypothesis_bundle:
-      - fixed closure operator package with monotone inflationary idempotent behavior
-      - fixed benchmark and cost definitions
-      - strict growth interpreted as additional decided/stable benchmark mass
-    conclusion_shape: if strict growth occurs then operator/theory package must change; fixed package saturates
+      - two idempotent package maps on the same state type
+      - the second map moves a state saturated by the first
+    conclusion_shape: the package maps differ at a concrete input; separately every fixed idempotent package saturates under self-iteration
     support_modes:
       - lean
       - citation
@@ -38,11 +37,12 @@ entries:
     label: Frozen-slice representative canonicality
     theorem_tier: bridge
     hypothesis_bundle:
-      - fixed operator family
-      - fixed benchmark profile
-      - fixed cost function
-      - fixed tie policy and quotient convention
-    conclusion_shape: frontier has representative in narrow normal-form class up to frozen quotient rule
+      - real-valued frozen yield and cost
+      - cone invariance
+      - efficient input
+      - supplied cone-agreeing canonical representative
+      - canonical family lies in the domain
+    conclusion_shape: the supplied canonical representative inherits efficiency and preserves cone agreement with the input
     support_modes:
       - lean
       - toy_boundary

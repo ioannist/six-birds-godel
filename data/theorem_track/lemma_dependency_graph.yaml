@@ -1,5 +1,5 @@
 graph_id: theorem_track_dependency_graph
-version: 0.4.0
+version: 0.5.0
 nodes:
   - id: finite_frontier_setup_exists
     class: proved_in_house
@@ -33,8 +33,8 @@ nodes:
       - P5_fixed_package_object
       - P1_package_change_mechanism
       - P2_package_change_mechanism
-    depends_on:
-      - frozen_package_no_persistent_growth
+    depends_on: []
+    statement_scope: pkg_prime(pkg(x)) != pkg(x) implies a differing input pkg(x) and unequal package maps; uses pkg.idempotent directly; does not classify P1/P2 mechanisms
   - id: frontier_object_layer
     class: definitional_formalization_complete
     owner: lean
@@ -57,8 +57,7 @@ nodes:
       - P6_frozen_evaluation_regime
       - P4_indexing_support_axis
     depends_on:
-      - frontier_object_layer
-      - arithmetic_canonicality_statement_shape
+      - frontier_efficiency_transfer_to_cone_equivalent
   - id: conditional_arithmetic_canonicality_lift
     class: conditional_on_external_assumptions
     owner: lean
@@ -68,19 +67,61 @@ nodes:
     depends_on:
       - restricted_in_house_alignment_lemma
       - arithmetic_canonical_family_alignment_on_cone
+      - canonical_family_domain_membership
+      - canonical_family_admissibility
   - id: finite_nondominated_exists
-    class: currently_unsupported_or_too_vague
-    owner: in_house
+    class: proved_in_house
+    owner: lean
     primitive_roles:
       - P5_fixed_package_object
     depends_on:
-      - finite_frontier_setup_exists
+      - pareto_dominates_irrefl
+      - pareto_dominates_trans
   - id: arithmetic_canonical_family_alignment_on_cone
-    class: external_theorem_dependency
+    class: explicit_external_assumption_not_discharged
     owner: external_literature
     primitive_roles:
       - P6_frozen_evaluation_regime
       - P4_indexing_support_axis
+    depends_on: []
+  - id: pareto_dominates_irrefl
+    class: proved_in_house
+    owner: lean
+    depends_on: []
+  - id: pareto_dominates_trans
+    class: proved_in_house
+    owner: lean
+    depends_on: []
+  - id: package_changed_iff_witness
+    class: proved_in_house
+    owner: lean
+    depends_on: []
+  - id: idempotent_iff_no_persistent_growth
+    class: proved_in_house
+    owner: lean
     depends_on:
-      - restricted_in_house_alignment_lemma
-      - persistent_growth_witness_implies_package_change
+      - frozen_package_no_persistent_growth
+  - id: frontier_dominates_congr_right
+    class: proved_in_house
+    owner: lean
+    depends_on:
+      - frontier_object_layer
+  - id: frontier_efficiency_transfer_to_cone_equivalent
+    class: proved_in_house
+    owner: lean
+    depends_on:
+      - frontier_dominates_congr_right
+  - id: canonical_family_domain_membership
+    class: explicit_external_assumption_not_discharged
+    owner: explicit_contract
+    depends_on: []
+  - id: canonical_family_admissibility
+    class: explicit_external_assumption_not_discharged
+    owner: explicit_contract
+    depends_on: []
+  - id: paper_main_conditional_arithmetic_frontier_canonicality
+    class: conditional_on_external_assumptions
+    owner: explicit_contract
+    depends_on:
+      - conditional_arithmetic_canonicality_lift
+dependency_scope_note: The exported conditional theorem uses the comparison/contract route; saturation and package-change lemmas are separate structural results, not transitive proof dependencies of this theorem.

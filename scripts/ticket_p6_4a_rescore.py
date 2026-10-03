@@ -2,19 +2,24 @@
 from __future__ import annotations
 
 import csv
-import json
 from pathlib import Path
 import re
+import sys
 from typing import Any
 
 import yaml
 
 
 ROOT = Path(__file__).resolve().parent.parent
+SRC = ROOT / "src" / "python"
+if str(SRC) not in sys.path:
+    sys.path.insert(0, str(SRC))
+
+from closure_frontier.confirmatory import read_exp112_audit, has_k4, confirmatory_readiness
+
 RUN_BASE = ROOT / "vendors" / "six-birds-pica" / "lab" / "runs" / "ticket_p6_4"
 RUN_DIRS = [RUN_BASE / "ticket_p6_4_primary", RUN_BASE / "ticket_p6_4a_resume"]
 OUT_DIR = ROOT / "results" / "ticket-p6-4a"
-GAP_SCAN = OUT_DIR / "gap_scan.yaml"
 
 CONFIGS = ["A14_only", "baseline", "full_action", "full_all", "A13_A14", "A14_A19"]
 PRIMARY_SCALES = [64, 128]
@@ -23,25 +28,7 @@ CANONICAL_METRIC = "delta_vs_baseline_frob_from_rank1"
 RX = re.compile(r"EXP-112_s(?P<seed>\d+)_n(?P<scale>\d+)_(?P<config>.+)\.log$")
 
 
-def parse_audit(path: Path) -> dict[str, Any] | None:
-    lines = path.read_text(encoding="utf-8", errors="replace").splitlines()
-    for line in reversed(lines):
-        if line.startswith("KEY_AUDIT_JSON "):
-            try:
-                return json.loads(line[len("KEY_AUDIT_JSON ") :])
-            except json.JSONDecodeError:
-                return None
-    return None
-
-
-def has_k4(audit: dict[str, Any] | None) -> bool:
-    if not isinstance(audit, dict):
-        return False
-    for item in audit.get("multi_scale_scan", []):
-        if isinstance(item, dict) and item.get("k") == 4:
-            return True
-    return False
-
+parse_audit = read_exp112_audit
 
 def mean(vals: list[float]) -> float | None:
     return sum(vals) / len(vals) if vals else None
@@ -61,7 +48,7 @@ def main() -> int:
             seed = int(m.group("seed"))
             scale = int(m.group("scale"))
             config = m.group("config")
-            if config not in CONFIGS or scale not in PRIMARY_SCALES:
+            if config not in CONFIGS or scale not in PRIMARY_SCALES or seed not in range(10):
                 continue
             key = (config, scale, seed)
             prev = latest.get(key)
@@ -76,7 +63,7 @@ def main() -> int:
                 "mtime": p.stat().st_mtime,
                 "has_audit": audit is not None,
                 "has_k4": has_k4(audit),
-                "frob": None if audit is None else float(audit.get("frob_from_rank1", 0.0)),
+                "frob": None if audit is None else float(audit["frob_from_rank1"]),
             }
 
     parsed_rows = [v for v in latest.values() if v["has_audit"]]
@@ -113,7 +100,7 @@ def main() -> int:
             flags = []
             if seed_count < SEED_REQUIRED:
                 flags.append("incomplete_primary_seed_coverage")
-            if anchor_ratio <= 0.0:
+            if anchor_ratio < 1.0:
                 flags.append("anchor_k4_missing")
 
             d = lambda other: "" if (other, n) not in means else round(cfg_mean - means[(other, n)], 8)
@@ -136,9 +123,19 @@ def main() -> int:
                 }
             )
 
-    gap = yaml.safe_load(GAP_SCAN.read_text(encoding="utf-8")) if GAP_SCAN.exists() else {}
-    primary_complete = bool(gap.get("primary_coverage_complete_now", False))
-    remaining_cells = [c for c in gap.get("cells", []) if c.get("remaining_required", 0) > 0]
+    decision = confirmatory_readiness(out_rows)
+    primary_complete = decision["primary_coverage_complete"]
+    remaining_cells = []
+    for cfg in CONFIGS:
+        for scale in PRIMARY_SCALES:
+            rows = by_cfg_scale.get((cfg, scale), [])
+            missing_count = SEED_REQUIRED - len(rows)
+            anchor_missing_count = sum(not row["has_k4"] for row in rows)
+            remaining = missing_count + anchor_missing_count
+            if remaining:
+                remaining_cells.append({"config": cfg, "scale": scale,
+                                        "remaining_required": remaining,
+                                        "anchor_missing_count": anchor_missing_count})
 
     readiness = {
         "rescore_id": "ticket_p6_4a_readiness_rescore",
@@ -147,8 +144,6 @@ def main() -> int:
         "decision_logic_source": "results/ticket-p6-3/decision_logic.yaml",
         "thresholds_drifted": False,
         "primary_coverage_complete": primary_complete,
-        "final_verdict": "hybrid_ready" if primary_complete else "not_ready",
-        "a14_only_remains_focus": True,
         "remaining_gap_cells": [
             {
                 "config": c.get("config"),
@@ -160,6 +155,8 @@ def main() -> int:
         ],
     }
 
+    readiness.update(decision)
+
     run_manifest = {
         "run_id": "ticket_p6_4a_resume",
         "version": "0.1.0",
@@ -169,7 +166,7 @@ def main() -> int:
         "attempted_unique_cells_seen": len(latest),
         "parsed_completed_cells": len(parsed_rows),
         "primary_coverage_complete": primary_complete,
-        "resume_jobs_remaining": int(gap.get("resume_job_count", 0)),
+        "resume_jobs_remaining": sum(c["remaining_required"] for c in remaining_cells),
     }
 
     # Write files
@@ -190,10 +187,11 @@ def main() -> int:
         f"- exp lineage: EXP-112",
         f"- canonical metric: {CANONICAL_METRIC}",
         f"- primary coverage complete: {'yes' if primary_complete else 'no'}",
-        f"- final readiness verdict: {'hybrid_ready' if primary_complete else 'not_ready'}",
-        f"- A14_only remains focus: yes",
+        f"- final readiness verdict: {readiness['final_verdict']}",
+        f"- A14_only remains focus: {readiness['a14_only_remains_focus']}",
         "",
-        "If primary coverage remains incomplete, readiness is scored conservatively.",
+        "Readiness applies the frozen signal, comparator, robustness, and per-seed rung coverage rules.",
+        "Rescoring existing logs does not constitute a new experiment or independent confirmation.",
     ]
     if remaining_cells:
         report.append("")

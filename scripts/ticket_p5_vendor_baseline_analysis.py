@@ -206,10 +206,10 @@ def assess_toy_takeaways(
     full_action = labels.get("full_action")
     full_all = labels.get("full_all")
     if baseline and full_action and full_all:
-        supported.append(
+        not_assessable.append(
             {
                 "id": "toy_baseline_weaker_than_richer_configs",
-                "note": "Vendor surfaces include baseline/full_action/full_all with direct shipped support; richer configs are materially represented.",
+                "note": "Baseline/full_action/full_all surfaces are present. Presence alone does not establish superiority; use quantitative program deltas.",
                 "evidence_paths": [
                     "data/pica_atlas/program_atlas.yaml",
                     "data/pica_normalized/figdata_records.jsonl",
@@ -228,10 +228,10 @@ def assess_toy_takeaways(
     if ablation_summary and max(float(r["impact_proxy_score"]) for r in ablation_summary) > min(
         float(r["impact_proxy_score"]) for r in ablation_summary
     ):
-        supported.append(
+        not_assessable.append(
             {
                 "id": "toy_heterogeneous_cell_importance",
-                "note": "Cell impact proxies are non-uniform across shipped LOO and row/group coverage.",
+                "note": "LOO and row/group coverage varies. Coverage counts are not cell effects; use the quantitative cell delta table.",
                 "evidence_paths": [
                     "data/pica_atlas/program_atlas.yaml",
                     "results/ticket-p5/ablation_summary.csv",
@@ -248,10 +248,10 @@ def assess_toy_takeaways(
         )
 
     if robust_headers:
-        supported.append(
+        not_assessable.append(
             {
                 "id": "toy_interaction_structure_needed",
-                "note": "Shipped robustness surface exists and is compatible with interaction-level auditing, but effect-size promotion remains deferred.",
+                "note": "A robustness surface is present. Its presence proves neither interaction gain nor the inadequacy of a scalar proxy.",
                 "evidence_paths": ["data/pica_normalized/figdata_records.jsonl"],
             }
         )
@@ -348,9 +348,9 @@ def main() -> int:
         "- Method: conservative support/provenance comparison only (no new runs, no claim promotion).",
         "",
         "## Comparison",
-        "- baseline-like configs vs richer structured configs: **supported_by_vendor** (baseline/full_action/full_all and row/group surfaces are all shipped and parsed).",
-        "- heterogeneous cell importance: **supported_by_vendor** (LOO + row/group coverage is non-uniform in shipped program atlas).",
-        "- interaction structure appears necessary: **supported_by_vendor (cautious)** (robustness/ablation surfaces are present; effect-size promotion deferred).",
+        "- baseline-like configs vs richer structured configs: **not_assessable_from_surface_presence**; quantitative deltas are required.",
+        "- heterogeneous cell importance: **not_assessable_from_coverage_counts**; quantitative ablation deltas are required.",
+        "- necessity of interaction structure: **not_assessable_from_surface_presence**; a substantive comparator test is required.",
         "- broad uniqueness/stability-style claims: **not_assessable_from_shipped_data** (toy falsification exists, but no direct normalized vendor metric mapping for full equivalence test).",
         "",
         "## Caution",

@@ -17,4 +17,5 @@
 
 ## Conservative note
 - Any signal driven only by n=32 is flagged as insufficient for decision-grade conclusions.
-- Unresolved subprogram matching cases remain unresolved rather than inferred.
+- The original nearest-nonempty comparison is retained. Separate columns audit the best measured strict subprogram including the empty control.
+- Unmeasured subsets are counted; local gains are not a global synergy theorem.

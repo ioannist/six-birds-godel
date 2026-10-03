@@ -5,6 +5,6 @@
 - parsed completed jobs: 34
 - required primary coverage complete: no
 - final readiness verdict: not_ready
-- A14_only remains focus: yes
+- A14_only remains focus: no
 
-Conservative scoring rule applied: incomplete primary seed coverage => not_ready.
+Readiness applies the frozen signal, comparator, robustness, and per-seed rung coverage rules.

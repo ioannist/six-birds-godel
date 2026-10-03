@@ -1,0 +1,182 @@
+review_id: mathematics_review_2026_10_03
+date: '2026-10-03'
+baseline_commit: b6edc3f
+pre_review_checkpoint_commit: c8d44f1
+review_mode: single_agent_construction_and_separate_self_review
+independent_agent_review: false
+skills_used:
+  - mathematics-proof-review
+  - six-birds-proof-construction
+scope:
+  - all project Lean modules and their actual kernel dependencies
+  - fixed-package saturation, package-change bridge, finite frontier, cone transport, and conditional main theorem
+  - core finite-poset Python implementation and exhaustive finite experiment calculations
+  - shipped PICA effect arithmetic, comparator scope, and frozen confirmatory scoring
+  - theorem registries and dependency graph against actual statements
+  - manuscript claim mapping for deferred correction, without manuscript edits
+requirements:
+  checkpoint_before_changes: fulfilled
+  repair_math_and_mechanization: fulfilled_for_declared_abstract_statements
+  preserve_main_conclusion: retained_and_strengthened_with_input_cone_agreement
+  expose_necessary_hypotheses: canonical_admissibility_added_explicitly
+  paper_files_edited: false
+  frozen_p6_3_protocol_or_decision_logic_edited: false
+  paper_and_frozen_protocol_diff_against_checkpoint: empty
+  new_vendor_experiments_run: false
+formal_endpoint:
+  theorem: ClosureFrontier.TheoremTrack.paper_main_conditional_arithmetic_frontier_canonicality
+  file: src/lean/ClosureFrontier/TheoremTrack/PaperMain.lean
+  statement: >-
+    On an encoded preordered state type, a computable monotone frontier-efficient
+    endomap has an efficient computable monotone canonical representative agreeing
+    with the input on the declared cone, provided the real-valued ledger is invariant
+    under cone agreement and the explicit external contract supplies canonical-family
+    domain membership, canonical admissibility, and cone canonicalization.
+  nature: abstract_conditional_transport_theorem
+  canonicalization_source: assumed_in_contract_not_derived_from_efficiency_alone
+  arithmetic_instantiation: not_discharged
+  actual_computability: Computable from Mathlib/Computability/Partrec.lean on the Primcodable state type
+  actual_monotonicity: Monotone_for_explicit_Preorder
+  extension_semantics: >-
+    ExtensionOperator wraps an endomap. No inflationarity, theory syntax, theorem
+    enumeration, consistency, or reflection semantics is supplied by that name.
+    An arithmetic instantiation must establish its own state coding, order, domain,
+    canonical family, and contract laws.
+findings:
+  - id: build_did_not_compile_math
+    before: Default lake build had no library target and make check could pass without compiling the mathematics.
+    repair: Default library target enabled; mathlib pinned to v4.28.0 with exact manifest revision; make check builds the library and compiles semantic tests.
+  - id: saturation_proof_invalid
+    before: Induction reused a hypothesis at another input and did not establish the required idempotent step.
+    repair: Correct iteration induction uses the package idempotence law.
+    theorem: closure_iterate_saturates_one_step
+    exact_scope: positive iterates of one fixed idempotent endomap at one fixed input
+  - id: finite_frontier_was_an_axiom
+    before: finite_nondominated_exists was a project axiom.
+    repair: List induction using proved irreflexivity and transitivity of strict Pareto dominance.
+    exact_scope: nonempty finite list of rational scored candidates; no infinite-frontier existence assertion
+  - id: arbitrary_proposition_labels
+    before: Recursive, monotone, and external laws were arbitrary proposition fields rather than the advertised properties and proofs.
+    repair: Actual Computable and Monotone predicates; contract fields are proofs of explicitly stated laws.
+  - id: canonical_admissibility_missing
+    before: Input computability and monotonicity were transferred to a different representative without a valid global transport theorem.
+    repair: Canonical-family computability and monotonicity added as an explicit necessary contract law.
+    evidence: tests/lean/MathReview.lean
+    necessity: >-
+      A computable nonmonotone map agrees with the identity on the nonempty cone {0}
+      and is efficient on a constant ledger. Domain membership and cone agreement
+      hold, while the representative target fails. Thus the old semantic hypotheses
+      do not imply the advertised target.
+    claim_impact: conditional_target_retained_with_necessary_assumption_exposed
+  - id: input_alignment_lost
+    before: Restricted alignment and main theorem conclusions omitted agreement with the original input; target self-alignment alone was trivial.
+    repair: Both conclusions export the supplied representative's agreement with the input.
+  - id: package_change_not_witnessed
+    before: Bridge was only an elimination of impossible frozen growth; P1/P2 constructors were mechanism labels with no changed-map witness.
+    repair: >-
+      Two idempotent packages and an observed change after applying the second to
+      the first result yield unequal maps, an explicit distinguishing point pkg.op x,
+      and a PackageChangeWitness. Mechanism labels are separately named.
+    additional_laws:
+      - idempotence is equivalent to absence of post-first-step growth at every fixed input
+      - package-map inequality is equivalent to existence of a distinguishing point
+    excluded_inference: Every observed growth implies P1 or P2 exclusively.
+    negative_control: A fixed non-idempotent successor map grows without any change of map.
+  - id: score_domain_and_metadata
+    before: Frozen arithmetic ledger used rationals despite the real-valued statement; arbitrary fixed-policy proposition fields suggested unproved guarantees.
+    repair: Real-valued frozen ledger; finite list frontier remains rational; unused policy propositions removed and metadata scope documented.
+  - id: proof_graph_circular_and_overstated
+    before: External canonicalization route had circular dependencies and implied saturation/bridge were used by the main proof.
+    repair: Acyclic graph matches actual congruence, efficiency transport, and three explicit external laws.
+    limitation: Saturation and package-change are proved companion results, not dependencies of the conditional main theorem.
+  - id: python_frozen_objects_mutable
+    before: Caller-owned dictionaries and order callbacks could mutate objects after validation; nonfinite scores and weights were accepted.
+    repair: Snapshot dictionaries, elements, and relation; validate rank, orbit input, finite scores and weights, and finite total weight.
+    evidence: tests/python/test_math_review.py
+  - id: rewritten_maps_kept_old_ids
+    before: Package-rewritten maps retained input IDs, corrupting raw equality and symmetry comparisons.
+    repair: Recompute IDs for resulting maps before deduplication and symmetry lookup; rerun finite audits.
+    retained_survivor: pair__cell_pkg_gate__cell_pkg_mode_from_acct
+  - id: surface_presence_claimed_effect
+    before: Presence of configs, coverage tables, or robustness files was treated as quantitative support.
+    repair: Presence-only claims are not assessable as quantitative effects; measured differences are kept separately.
+  - id: nearest_is_not_best
+    before: Nearest nonempty proper subprogram comparison could be read as a best-subprogram test.
+    repair: Preserve the original maximal-cardinality nonempty proper-subprogram comparator with lexical tie break and label its scope; add a separate per-scale best measured proper-subprogram audit including empty.
+    metric: abs(mean_frob_config_minus_mean_frob_baseline)
+    core_comparisons: 26
+    positive_gains_over_best_measured_proper_subprogram: 0
+    a14_only:
+      nearest_nonempty_comparator: baseline
+      nearest_gains_n64_n128: [0.08382633, 0.33466364]
+      best_measured_comparator: empty
+      best_gains_n64_n128: [-0.59450418, -0.43982242]
+    limitation: These are descriptive scalar comparisons over shipped subprograms, not a universal scalar-inadequacy theorem or a statistical interaction proof.
+  - id: deficit_counted_as_positive_separation
+    before: Absolute value of a negative interaction gain could pass a positive-gain threshold.
+    repair: Compare the signed gain; require both primary scales for two-scale summaries.
+  - id: confirmatory_gate_drift
+    before: Coverage alone produced hybrid_ready; one anchor per pair substituted for full seed/rung coverage; missing metrics defaulted to zero and job identity was unchecked.
+    repair: >-
+      Shared validated parser and frozen decision evaluator check actual finite metrics,
+      integer job identity, all declared primary seeds and their measured k=4 anchors,
+      both primary scales, signal, comparator, and robustness conditions. Exact decimal
+      fractions avoid threshold-rounding errors. Fresh gap reports use parsed logs.
+    completed_primary_metrics: 120
+    missing_primary_k4_measurements: 18
+    current_verdict: not_ready
+    theorem_signal_at_n64: 0.08382633_below_0.15
+    robustness_no_new_failures: not_established
+    corrected_historical_snapshot: results/ticket-p6-4b/readiness_rescore.yaml
+    provenance: Existing log summaries match shipped measurements; rescoring them is not a new or independent confirmatory experiment.
+  - id: smoke_and_jsonl_validation
+    before: Smoke relied on job counts/status without checking exact completed identities and actual audits; JSONL non-object records were not counted as bad.
+    repair: Exact expected job set and validated metrics required; non-object JSONL contributes to failed parsing count.
+validation:
+  aggregate_command: make check
+  aggregate_result: passed
+  lean_kernel_audit:
+    command: python3 scripts/validate_lean_proofs.py
+    declarations: 38
+    allowed_axioms: [propext, Classical.choice, Quot.sound]
+    project_axioms_or_sorries: none
+  lean_semantic_tests:
+    file: tests/lean/MathReview.lean
+    cases:
+      - canonical admissibility counterexample with computable maps and nonempty cone
+      - cone invariance counterexample
+      - efficient operator with empty canonical family
+      - inhabited corrected contract and exported main theorem
+      - explicit changed-package witness
+      - fixed non-idempotent growth
+      - empty frontier and tied candidates
+  python:
+    regression_tests: 39
+    independent_exhaustive_maps: 422
+    models: chains_2_through_6_and_boolean_lattices_1_through_3
+    exact_fraction_score_and_frontier_contexts: 128
+    limitation: Production experiment scores remain finite floating-point values; no general exact-arithmetic claim.
+  saved_numerical_audit:
+    command: python3 scripts/validate_experiment_math.py
+    source: vendors/six-birds-pica/paper/figdata/run_summary_table.csv.gz
+    program_rows: 328
+    ablation_rows: 188
+    scoped_comparison_rows: 44
+    published_decimal_error_bound: 5.01e-9
+    readiness_recomputed: [ticket-p6-4, ticket-p6-4a, ticket-p6-4b]
+deferred_paper_phase:
+  - State canonical admissibility, explicit coding/order, and the actual conditional proof boundary.
+  - Include original-input cone agreement in the conclusion; companion saturation results are not main-proof dependencies.
+  - Replace P1/P2 exclusivity language with the witnessed changed-map statement and label mechanism interpretation separately.
+  - Correct the saturation proof sketch base case; n=0 positive-iterate identity is immediate, with idempotence used in the inductive step.
+  - Keep valid nearest-subprogram comparisons within their scope; stronger best-subprogram claims need new evidence or narrowing.
+  - Replace historical hybrid_ready/complete-coverage language with the corrected frozen-gate verdict.
+  - Descriptive experiment differences and file presence do not certify arithmetic theorems, interaction significance, or robustness.
+open_research_not_claimed_as_completed:
+  - Concrete arithmetic state, coding, order, comparison domain, and canonical-family construction.
+  - Independent proof or accurately matched literature discharge of canonicalization and canonical admissibility for that instance.
+  - Any stronger empirical interaction theorem or new confirmatory data beyond existing logs.
+historical_record_policy: >-
+  Historical theorem-ticket receipts and manuscript placement files remain historical
+  records. Current source, kernel checks, corrected theorem inventory, and this audit
+  supersede their build/proof assertions. The manuscript itself is deliberately unchanged.

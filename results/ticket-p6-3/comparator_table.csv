@@ -1,7 +1,7 @@
-config,program_kind,support_class,support_score,primary_mean_abs_delta_vs_baseline_frob,primary_min_sample_count,primary_mean_abs_interaction_delta,closest_simpler_comparator_seen,include_in_confirmatory_run,include_reason
+config,program_kind,support_class,support_score,primary_mean_abs_delta_vs_baseline_frob,primary_min_sample_count,primary_mean_interaction_delta,closest_simpler_comparator_seen,include_in_confirmatory_run,include_reason
 A14_only,row_group,moderate_surface_support,2.5,0.20924498,10,0.20924498,baseline,yes,core anchor/control config
 baseline,baseline_style,strong_surface_support,4.5,0.0,10,0.0,,yes,core anchor/control config
 full_action,baseline_style,strong_surface_support,4.5,0.18903058,10,0.13782024,fa_no_inf_P5,yes,core anchor/control config
-full_all,row_group,moderate_surface_support,2.5,0.10427459,10,0.09503951,full_action,yes,core anchor/control config
-A13_A14,row_group,moderate_surface_support,2.5,0.13394465,10,0.07530034,A14_only,yes,nearest supported neighbor with primary-regime coverage
-A14_A19,row_group,moderate_surface_support,2.5,0.1553271,10,0.16022521,A14_only,yes,nearest supported neighbor with primary-regime coverage
+full_all,row_group,moderate_surface_support,2.5,0.10427459,10,-0.084756,full_action,yes,core anchor/control config
+A13_A14,row_group,moderate_surface_support,2.5,0.13394465,10,-0.07530034,A14_only,yes,nearest supported neighbor with primary-regime coverage
+A14_A19,row_group,moderate_surface_support,2.5,0.1553271,10,-0.05391789,A14_only,yes,nearest supported neighbor with primary-regime coverage

@@ -1,13 +1,12 @@
 bridge_selection_id: ticket_t1_1_bridge_selection
-version: 0.1.0
+version: 0.2.0
 candidates_evaluated:
   - id: thm_closure_saturation_operator_change
     selected: true
     exact_hypotheses:
-      - fixed closure package
-      - monotone + inflationary + idempotent operator behavior
-      - strict growth measured on fixed benchmark/cost regime
-    exact_conclusion: strict growth requires operator/theory package change
+      - two idempotent endomaps pkg and pkg_prime on the same state type
+      - pkg_prime(pkg(x)) differs from pkg(x)
+    exact_conclusion: package maps differ at the explicit input pkg(x); no theorem identifies the primitive mechanism of that difference
     blocked_generalizations:
       - no global uniqueness
       - no external-axis stability claims
@@ -17,8 +16,11 @@ candidates_evaluated:
   - id: thm_frozen_slice_representative_canonicality
     selected: false
     exact_hypotheses:
-      - frozen family/benchmark/cost/tie/quotient slice
-    exact_conclusion: representative canonicality within frozen slice
+      - real-valued frozen yield and cost ledger
+      - invariance under agreement on the declared cone
+      - efficient input in the declared domain
+      - supplied cone-agreeing canonical representative, with canonical family in domain
+    exact_conclusion: a canonical representative is efficient and agrees with the input on the cone
     blocked_generalizations:
       - fragile to audit-convention externalization
     vision_alignment: medium

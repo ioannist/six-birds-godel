@@ -44,14 +44,10 @@ theorem restricted_in_house_alignment_lemma
     (hEff : FrontierEfficient slice domain op)
     (hAlign : AlignsOnConeWithCanonicalFamily cone canon op)
     (hCanonInDomain : ∀ c, c ∈ canon → c ∈ domain) :
-    ∃ c, c ∈ canon ∧ FrontierEfficient slice domain c := by
-  cases hAlign with
-  | inl hInCanon =>
-      exact ⟨op, hInCanon, hEff⟩
-  | inr hRep =>
-      rcases hRep with ⟨c, hcCanon, hAgree⟩
-      refine ⟨c, hcCanon, ?_⟩
-      exact frontier_efficiency_transfer_to_cone_equivalent
-        slice domain cone hInv op c hEff hAgree (hCanonInDomain c hcCanon)
+    ∃ c, c ∈ canon ∧ FrontierEfficient slice domain c ∧ AgreeOnCone cone op c := by
+  rcases hAlign with ⟨c, hcCanon, hAgree⟩
+  exact ⟨c, hcCanon,
+    frontier_efficiency_transfer_to_cone_equivalent
+      slice domain cone hInv op c hEff hAgree (hCanonInDomain c hcCanon), hAgree⟩
 
 end ClosureFrontier.TheoremTrack

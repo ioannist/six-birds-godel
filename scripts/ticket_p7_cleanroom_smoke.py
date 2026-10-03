@@ -5,6 +5,7 @@ import csv
 import json
 import subprocess
 import time
+import sys
 from pathlib import Path
 from typing import Any
 
@@ -12,6 +13,12 @@ import yaml
 
 
 ROOT = Path(__file__).resolve().parent.parent
+SRC = ROOT / "src" / "python"
+if str(SRC) not in sys.path:
+    sys.path.insert(0, str(SRC))
+
+from closure_frontier.confirmatory import read_exp112_audit
+
 VENDOR_ROOT = ROOT / "vendors" / "six-birds-pica"
 RUN_BASE = VENDOR_ROOT / "lab" / "runs"
 STAGE = "ticket_p7_cleanroom_smoke"
@@ -44,17 +51,7 @@ def run_cmd(cmd: list[str], cwd: Path) -> tuple[int, str, str, float]:
     return proc.returncode, proc.stdout, proc.stderr, round(time.time() - t0, 2)
 
 
-def parse_audit_from_log(path: Path) -> dict[str, Any] | None:
-    lines = path.read_text(encoding="utf-8", errors="replace").splitlines()
-    for line in reversed(lines):
-        if line.startswith("KEY_AUDIT_JSON "):
-            payload = line[len("KEY_AUDIT_JSON ") :]
-            try:
-                return json.loads(payload)
-            except json.JSONDecodeError:
-                return None
-    return None
-
+parse_audit_from_log = read_exp112_audit
 
 def main() -> int:
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
@@ -178,7 +175,11 @@ def main() -> int:
         for row in audit_rows:
             writer.writerow(row)
 
-    success = run_rc == 0 and stage_status.get("n_ok", 0) == len(JOBS)
+    expected = {(job["config"], job["scale"], job["seed"]) for job in JOBS}
+    observed = {(row["config"], row["scale"], row["seed"]) for row in audit_rows}
+    success = (run_rc == 0 and stage_status.get("n_ok", 0) == len(JOBS)
+               and len(audit_rows) == len(JOBS) and observed == expected
+               and all(row["has_audit"] and row["status"] == "ok" for row in audit_rows))
     manifest = {
         "ticket": "P7",
         "status": "ok" if success else "failed",

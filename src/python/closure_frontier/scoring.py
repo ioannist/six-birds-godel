@@ -1,6 +1,9 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import math
+from types import MappingProxyType
+from typing import Mapping
 from typing import Generic, Hashable, Iterable, TypeVar
 
 from .finite_posets import FinitePoset
@@ -14,14 +17,17 @@ T = TypeVar("T", bound=Hashable)
 class WeightedBenchmark(Generic[T]):
     """Weighted finite benchmark family."""
 
-    weights: dict[T, float]
+    weights: Mapping[T, float]
 
     def __post_init__(self) -> None:
+        object.__setattr__(self, "weights", MappingProxyType(dict(self.weights)))
         if not self.weights:
             raise ValueError("weights must be non-empty")
         for token, weight in self.weights.items():
-            if weight < 0.0:
-                raise ValueError(f"weight must be non-negative: {token}")
+            if not math.isfinite(weight) or weight < 0.0:
+                raise ValueError(f"weight must be finite and non-negative: {token}")
+        if not math.isfinite(self.total_weight):
+            raise ValueError("total benchmark weight must be finite")
 
     @property
     def total_weight(self) -> float:

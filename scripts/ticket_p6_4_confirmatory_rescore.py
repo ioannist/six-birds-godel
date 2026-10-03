@@ -2,15 +2,21 @@
 from __future__ import annotations
 
 import csv
-import json
 from pathlib import Path
 import re
+import sys
 from typing import Any
 
 import yaml
 
 
 ROOT = Path(__file__).resolve().parent.parent
+SRC = ROOT / "src" / "python"
+if str(SRC) not in sys.path:
+    sys.path.insert(0, str(SRC))
+
+from closure_frontier.confirmatory import read_exp112_audit, has_k4, confirmatory_readiness
+
 RUN_DIR = ROOT / "vendors" / "six-birds-pica" / "lab" / "runs" / "ticket_p6_4" / "ticket_p6_4_primary"
 OUT_DIR = ROOT / "results" / "ticket-p6-4"
 
@@ -23,17 +29,7 @@ CANONICAL_METRIC = "delta_vs_baseline_frob_from_rank1"
 LOG_RE = re.compile(r"EXP-112_s(?P<seed>\d+)_n(?P<scale>\d+)_(?P<config>.+)\.log$")
 
 
-def parse_audit_from_log(path: Path) -> dict[str, Any] | None:
-    text = path.read_text(encoding="utf-8", errors="replace").splitlines()
-    for line in reversed(text):
-        if line.startswith("KEY_AUDIT_JSON "):
-            payload = line[len("KEY_AUDIT_JSON ") :]
-            try:
-                return json.loads(payload)
-            except json.JSONDecodeError:
-                return None
-    return None
-
+parse_audit_from_log = read_exp112_audit
 
 def mean(values: list[float]) -> float | None:
     if not values:
@@ -55,7 +51,7 @@ def main() -> int:
         seed = int(m.group("seed"))
         scale = int(m.group("scale"))
         config = m.group("config")
-        if config not in CONFIGS or scale not in PRIMARY_SCALES + OPTIONAL_SCALES:
+        if config not in CONFIGS or scale not in PRIMARY_SCALES + OPTIONAL_SCALES or seed not in range(10):
             continue
 
         attempted_rows.append({"config": config, "scale": scale, "seed": seed, "log_path": str(log_path.relative_to(ROOT))})
@@ -64,15 +60,14 @@ def main() -> int:
             continue
 
         # Anchor coverage from multi-scale scan k=4.
-        scan = audit.get("multi_scale_scan", [])
-        k4_present = any(isinstance(item, dict) and item.get("k") == 4 for item in scan)
+        k4_present = has_k4(audit)
 
         parsed_rows.append(
             {
                 "config": config,
                 "scale": scale,
                 "seed": seed,
-                "frob_from_rank1": float(audit.get("frob_from_rank1", 0.0)),
+                "frob_from_rank1": float(audit["frob_from_rank1"]),
                 "anchor_k4_present": k4_present,
                 "run_status": "ok",
                 "log_path": str(log_path.relative_to(ROOT)),
@@ -151,23 +146,10 @@ def main() -> int:
                 }
             )
 
-    # Coverage checks.
-    primary_coverage_ok = True
-    for cfg in CONFIGS:
-        for s in PRIMARY_SCALES:
-            rows = by_cfg_scale.get((cfg, s), [])
-            if len({r["seed"] for r in rows}) < SEED_REQUIRED:
-                primary_coverage_ok = False
-
-    # Rescore readiness with frozen logic, conservative on incomplete coverage.
-    # If primary coverage is incomplete -> not_ready by guardrail.
-    verdict = "not_ready"
-    a14_focus = True
-
-    # Compute provisional comparisons only if enough A14 data exists at primary scales.
-    a14_primary = {s: comparator_means.get(("A14_only", s)) for s in PRIMARY_SCALES}
-    if any(v is None for v in a14_primary.values()):
-        a14_focus = False
+    decision = confirmatory_readiness(confirm_rows)
+    primary_coverage_ok = decision["primary_coverage_complete"]
+    verdict = decision["final_verdict"]
+    a14_focus = decision["a14_only_remains_focus"]
 
     run_manifest = {
         "run_id": "ticket_p6_4_confirmatory",
@@ -198,6 +180,8 @@ def main() -> int:
         "run_status": "incomplete_primary_coverage" if not primary_coverage_ok else "complete",
     }
 
+    readiness.update(decision)
+
     # Write outputs.
     (OUT_DIR / "run_manifest.yaml").write_text(yaml.safe_dump(run_manifest, sort_keys=False), encoding="utf-8")
 
@@ -222,7 +206,7 @@ def main() -> int:
         f"- final readiness verdict: {verdict}",
         f"- A14_only remains focus: {'yes' if a14_focus else 'no'}",
         "",
-        "Conservative scoring rule applied: incomplete primary seed coverage => not_ready.",
+        "Readiness applies the frozen signal, comparator, robustness, and per-seed rung coverage rules.",
     ]
     (OUT_DIR / "report.md").write_text("\n".join(report_lines) + "\n", encoding="utf-8")
 

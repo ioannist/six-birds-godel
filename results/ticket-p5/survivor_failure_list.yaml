@@ -1,25 +1,26 @@
 version: 0.1.0
 analysis_id: ticket_p5_vendor_baseline
 programs:
-  supported_by_vendor:
+  supported_by_vendor: []
+  unsupported_by_vendor: []
+  not_assessable_from_shipped_data:
   - id: toy_baseline_weaker_than_richer_configs
-    note: Vendor surfaces include baseline/full_action/full_all with direct shipped
-      support; richer configs are materially represented.
+    note: Baseline/full_action/full_all surfaces are present. Presence alone does
+      not establish superiority; use quantitative program deltas.
     evidence_paths:
     - data/pica_atlas/program_atlas.yaml
     - data/pica_normalized/figdata_records.jsonl
   - id: toy_heterogeneous_cell_importance
-    note: Cell impact proxies are non-uniform across shipped LOO and row/group coverage.
+    note: LOO and row/group coverage varies. Coverage counts are not cell effects;
+      use the quantitative cell delta table.
     evidence_paths:
     - data/pica_atlas/program_atlas.yaml
     - results/ticket-p5/ablation_summary.csv
   - id: toy_interaction_structure_needed
-    note: Shipped robustness surface exists and is compatible with interaction-level
-      auditing, but effect-size promotion remains deferred.
+    note: A robustness surface is present. Its presence proves neither interaction
+      gain nor the inadequacy of a scalar proxy.
     evidence_paths:
     - data/pica_normalized/figdata_records.jsonl
-  unsupported_by_vendor: []
-  not_assessable_from_shipped_data:
   - id: toy_broad_uniqueness_stability_claims
     note: Toy falsification exists, but direct vendor-side uniqueness/stability equivalence
       is not directly testable from shipped normalized subset.

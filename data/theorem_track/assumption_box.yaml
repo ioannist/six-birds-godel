@@ -1,5 +1,5 @@
 box_id: theorem_package_assumption_box
-version: 0.1.0
+version: 0.2.0
 entries:
   - id: asm_frozen_slice
     short_label: frozen evaluation slice
@@ -14,9 +14,9 @@ entries:
     paper_discharge_required: false
     source_ids: []
   - id: asm_recursive_monotone_operator
-    short_label: recursive monotone extension operator
+    short_label: Computable endomap on a declared Primcodable preordered type, satisfying Monotone
     source_kind: in_house
-    lean_location: src/lean/ClosureFrontier/TheoremTrack/Frontier.lean
+    lean_location: src/lean/ClosureFrontier/TheoremTrack/ArithmeticCandidate.lean
     paper_discharge_required: false
     source_ids: []
   - id: asm_ext_canonical_family_closed_in_domain
@@ -27,6 +27,13 @@ entries:
     source_ids:
       - src_ext_beklemishev_reflection_progressions
       - src_ext_montalban_walsh_consistency_operator
+  - id: asm_ext_canonical_family_admissible
+    short_label: canonical-family members are Computable and Monotone
+    source_kind: external
+    lean_location: src/lean/ClosureFrontier/TheoremTrack/ExternalBoundary.lean
+    paper_discharge_required: true
+    source_ids: []
+    discharge_status: explicit_assumption_not_discharged
   - id: asm_ext_cone_canonicalization
     short_label: cone canonicalization
     source_kind: external

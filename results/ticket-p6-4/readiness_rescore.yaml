@@ -5,5 +5,31 @@ primary_coverage_complete: false
 decision_logic_source: results/ticket-p6-3/decision_logic.yaml
 thresholds_drifted: false
 final_verdict: not_ready
-a14_only_remains_focus: true
+a14_only_remains_focus: false
 run_status: incomplete_primary_coverage
+primary_mean_abs_delta:
+  A14_only: 0.093223685
+  baseline: 0.0
+  full_action: 0.14147109
+  A13_A14: 0.11186113
+  A14_A19: 0.08898408
+theorem_signal_pass: false
+theorem_comparator_separation_pass: false
+robustness_no_new_failures: null
+decision_reasons:
+- incomplete_seed_rung_or_metric_coverage:A14_only@64
+- incomplete_seed_rung_or_metric_coverage:A14_only@128
+- incomplete_seed_rung_or_metric_coverage:baseline@64
+- incomplete_seed_rung_or_metric_coverage:baseline@128
+- incomplete_seed_rung_or_metric_coverage:full_action@64
+- incomplete_seed_rung_or_metric_coverage:full_action@128
+- incomplete_seed_rung_or_metric_coverage:full_all@64
+- incomplete_seed_rung_or_metric_coverage:full_all@128
+- incomplete_seed_rung_or_metric_coverage:A13_A14@64
+- incomplete_seed_rung_or_metric_coverage:A13_A14@128
+- incomplete_seed_rung_or_metric_coverage:A14_A19@64
+- incomplete_seed_rung_or_metric_coverage:A14_A19@128
+- theorem_signal_below_threshold
+- theorem_comparator_separation_below_threshold
+- no_new_robustness_failures_not_established
+decision_scope: frozen empirical criteria; no theorem proof support

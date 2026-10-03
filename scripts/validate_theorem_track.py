@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import csv
 from pathlib import Path
+import re
 import sys
 from typing import Any
 
@@ -175,6 +176,21 @@ def main() -> int:
         ext_contract = load_yaml(ROOT / "data" / "theorem_track" / "external_dependency_contract.yaml")
         if not isinstance(ext_contract.get("assumptions"), list) or not ext_contract.get("assumptions"):
             raise ValidationError("external dependency contract assumptions must be non-empty list")
+        proof_driving_ids = {a.get("id") for a in ext_contract["assumptions"] if a.get("proof_driving")}
+        if proof_driving_ids != {
+            "ext_canonical_family_closed_in_domain", "ext_canonical_family_admissible",
+            "ext_cone_canonicalization",
+        }:
+            raise ValidationError("external contract must record domain membership, canonical admissibility, and cone canonicalization")
+
+        inventory = load_yaml(ROOT / "data" / "theorem_track" / "internal_proof_inventory.yaml")
+        for entry in inventory["entries"]:
+            path = ROOT / entry["file"]
+            name = entry["theorem_name"]
+            if not path.is_file() or not re.search(
+                rf"^theorem\s+{re.escape(name)}\b", path.read_text(encoding="utf-8"), re.MULTILINE
+            ):
+                raise ValidationError(f"proof inventory theorem not declared in its listed file: {name}")
 
         ladder_doc = load_yaml(ROOT / "data" / "theorem_track" / "theorem_ladder.yaml")
         ordered = ladder_doc.get("ordered_entries")
@@ -192,6 +208,27 @@ def main() -> int:
         for needed in ["restricted_in_house_alignment_lemma", "conditional_arithmetic_canonicality_lift"]:
             if not any(isinstance(n, dict) and n.get("id") == needed for n in nodes):
                 raise ValidationError(f"dependency graph missing {needed}")
+        by_id = {n["id"]: n for n in nodes}
+        if len(by_id) != len(nodes):
+            raise ValidationError("dependency graph contains duplicate node ids")
+        visiting: set[str] = set()
+        visited: set[str] = set()
+
+        def visit(node_id: str) -> None:
+            if node_id not in by_id:
+                raise ValidationError(f"dependency graph has unknown dependency: {node_id}")
+            if node_id in visiting:
+                raise ValidationError(f"dependency graph contains a cycle through: {node_id}")
+            if node_id in visited:
+                return
+            visiting.add(node_id)
+            for dependency in by_id[node_id].get("depends_on", []):
+                visit(dependency)
+            visiting.remove(node_id)
+            visited.add(node_id)
+
+        for node_id in by_id:
+            visit(node_id)
 
         for status_file, required_fields in [
             (ROOT / "results" / "ticket-t1-2" / "bridge_status.yaml", ["statement_formalized", "core_saturation_proved", "bridge_result_proved", "depends_on_axioms_on_bridge_path", "boundary_consistent_with_current_evidence"]),

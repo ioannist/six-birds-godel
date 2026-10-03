@@ -4,12 +4,19 @@ from __future__ import annotations
 import json
 from pathlib import Path
 import re
+import sys
 from typing import Any
 
 import yaml
 
 
 ROOT = Path(__file__).resolve().parent.parent
+SRC = ROOT / "src" / "python"
+if str(SRC) not in sys.path:
+    sys.path.insert(0, str(SRC))
+
+from closure_frontier.confirmatory import read_exp112_audit, has_k4
+
 RUN_BASE = ROOT / "vendors" / "six-birds-pica" / "lab" / "runs" / "ticket_p6_4"
 RUN_DIRS = [RUN_BASE / "ticket_p6_4_primary", RUN_BASE / "ticket_p6_4a_resume"]
 OUT_DIR = ROOT / "results" / "ticket-p6-4a"
@@ -20,25 +27,7 @@ SEEDS = list(range(10))
 RX = re.compile(r"EXP-112_s(?P<seed>\d+)_n(?P<scale>\d+)_(?P<config>.+)\.log$")
 
 
-def parse_audit(path: Path) -> dict[str, Any] | None:
-    lines = path.read_text(encoding="utf-8", errors="replace").splitlines()
-    for line in reversed(lines):
-        if line.startswith("KEY_AUDIT_JSON "):
-            try:
-                return json.loads(line[len("KEY_AUDIT_JSON ") :])
-            except json.JSONDecodeError:
-                return None
-    return None
-
-
-def has_k4(audit: dict[str, Any] | None) -> bool:
-    if not isinstance(audit, dict):
-        return False
-    for item in audit.get("multi_scale_scan", []):
-        if isinstance(item, dict) and item.get("k") == 4:
-            return True
-    return False
-
+parse_audit = read_exp112_audit
 
 def main() -> int:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -55,7 +44,7 @@ def main() -> int:
             seed = int(m.group("seed"))
             scale = int(m.group("scale"))
             config = m.group("config")
-            if config not in CONFIGS or scale not in SCALES:
+            if config not in CONFIGS or scale not in SCALES or seed not in SEEDS:
                 continue
             key = (config, scale, seed)
             prev = state.get(key)
@@ -74,7 +63,7 @@ def main() -> int:
     missing_anchor_pairs: list[dict[str, Any]] = []
     summary: dict[str, Any] = {
         "scan_id": "ticket_p6_4a_gap_scan",
-        "version": "0.2.0",
+        "version": "0.3.0",
         "exp_lineage": "EXP-112",
         "run_dirs_considered": [str(d.relative_to(ROOT)) for d in RUN_DIRS if d.exists()],
         "configs": CONFIGS,
@@ -99,7 +88,7 @@ def main() -> int:
                 else:
                     good.append(seed)
 
-            for seed in sorted(missing):
+            for seed in sorted(set(missing) | set(bad_anchor)):
                 missing_jobs.append(
                     {
                         "exp": "EXP-112",
@@ -114,23 +103,6 @@ def main() -> int:
             has_pair_anchor = len(good) > 0
             if not has_pair_anchor:
                 missing_anchor_pairs.append({"config": config, "scale": scale, "required_anchor": "k_rung=4"})
-                # Anchor rerun probe: use first available seed or seed 0 if none exists yet.
-                anchor_seed = 0
-                if bad_anchor:
-                    anchor_seed = sorted(bad_anchor)[0]
-                elif missing:
-                    anchor_seed = sorted(missing)[0]
-                missing_jobs.append(
-                    {
-                        "exp": "EXP-112",
-                        "seed": anchor_seed,
-                        "scale": scale,
-                        "stage": "ticket_p6_4a_resume",
-                        "config": config,
-                        "env": {"SIX_BIRDS_AUDIT_RICH": "1"},
-                        "reason": "anchor_k4_pair_missing",
-                    }
-                )
 
             summary["cells"].append(
                 {
@@ -143,7 +115,7 @@ def main() -> int:
                     "anchor_missing_seeds": sorted(bad_anchor),
                     "anchor_missing_count": len(bad_anchor),
                     "anchor_pair_covered": has_pair_anchor,
-                    "remaining_required": len(missing) + (0 if has_pair_anchor else 1),
+                    "remaining_required": len(missing) + len(bad_anchor),
                 }
             )
 

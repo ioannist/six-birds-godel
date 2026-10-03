@@ -350,7 +350,9 @@ def transform_pool(
             current = rewrite(current)
         else:
             raise ValueError(f"unknown order_mode: {order_mode}")
-        out.append((oid, current))
+        # Raw and symmetry lenses must both name the map after rewriting.
+        model_id = oid.split(":", 1)[0]
+        out.append((op_id(model_id, current, ordered), current))
 
     # Deduplicate transformed operators by mapping signature.
     by_sig: dict[str, tuple[str, FiniteMap[Hashable]]] = {}
