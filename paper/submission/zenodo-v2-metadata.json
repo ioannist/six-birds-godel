@@ -1,0 +1,144 @@
+{
+  "title": "Six Birds for Incompleteness: Fixed Packages, Package Change, and Conditional Arithmetic Lift",
+  "description": "<p>G&ouml;del's theorems tell us that no consistent, effectively axiomatized theory containing enough arithmetic can settle every arithmetic truth, so mathematics grows by adding axioms. They do not, by themselves, say how to describe that growth or how to compare different ways of growing. This paper studies theory growth through two ideas. A <em>package</em> is a fixed closure rule (an idempotent map) and a <em>frozen ledger</em> is a fixed way of scoring candidate extensions.</p>\n<p>The first idea yields exact statements about growth. Applying one idempotent package repeatedly changes nothing after the first step. If a second package moves the result of the first, the two packages provably differ at that result. Along any run of idempotent packages, the number of steps that change the state is at most one plus the number of times the package is switched. The bound is sharp: two computable, monotone, inflationary closures on the natural numbers, applied alternately, climb 0, 1, 2, &hellip; forever.</p>\n<p>The second idea yields exact statements about comparison. When the ledger cannot tell apart operators that agree on a support set (the <em>cone</em>), Pareto efficiency passes from an operator to any operator in the comparison domain that agrees with it on the cone. A designated family of canonical operators, contained in the comparison domain, supplies efficient representatives under <em>every</em> such ledger exactly when it meets every agreement class of the domain.</p>\n<p>Combining these results with an explicit three-part contract gives the main conditional theorem. Let the ledger be invariant under agreement on the cone. Suppose the canonical family lies in the comparison domain and consists of computable monotone maps, and that it contains a member agreeing on the cone with the computable, monotone, efficient input under study. Then the input has an efficient, computable, monotone canonical representative that agrees with it on the cone. A Lean counterexample shows that the admissibility clause cannot be dropped.</p>\n<p>We also give a concrete arithmetic case in elementary arithmetic EA. A guarded consistency extension, &phi; &and; (Con(EA) &rarr; Con<sub>EA</sub>(&phi;)), is provably equivalent to the ordinary consistency extension on a true cone and differs from it outside the cone. Under a nonconstant invariant ledger it is efficient and the identity is dominated. A theorem of Walsh yields the same kind of agreement for a restricted class of operators.</p>\n<p>All internal results are checked in Lean&nbsp;4 with mathlib. The second incompleteness theorem and Walsh's theorem are cited results and enter the formal statements as explicit hypotheses. Descriptive measurements from an earlier simulation study are reported for context only and support none of the theorems.</p>",
+  "publication_date": "2026-10-03",
+  "version": "v2.0",
+  "keywords": [
+    "Godel incompleteness",
+    "formal theories",
+    "closure operators",
+    "package change",
+    "theory growth",
+    "consistency operator",
+    "elementary arithmetic",
+    "Pareto efficiency",
+    "axiom choice",
+    "Lean 4",
+    "formal verification",
+    "Six Birds Theory",
+    "emergence calculus"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.48550/arXiv.2602.00134",
+      "relation": "cites",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.18402004",
+      "relation": "cites",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.18838994",
+      "relation": "cites",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.19038292",
+      "relation": "cites",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.19047665",
+      "relation": "cites",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.1007/BF01700692",
+      "relation": "cites",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.2140/pjm.1955.5.285",
+      "relation": "cites",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.1112/plms/s2-45.1.161",
+      "relation": "cites",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.2307/2964649",
+      "relation": "cites",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.1070/RM2005v060n02ABEH000823",
+      "relation": "cites",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.1017/jsl.2020.9",
+      "relation": "cites",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.2307/2274520",
+      "relation": "cites",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.1007/978-3-030-79876-5_37",
+      "relation": "cites",
+      "resource_type": "publication-conferencepaper",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.1145/3372885.3373824",
+      "relation": "cites",
+      "resource_type": "publication-conferencepaper",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "978-0-19-507340-9",
+      "relation": "cites",
+      "resource_type": "publication-book",
+      "scheme": "isbn"
+    },
+    {
+      "identifier": "10.1017/jsl.2018.65",
+      "relation": "cites",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.1090/proc/14948",
+      "relation": "cites",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.3233/COM-220400",
+      "relation": "cites",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.1007/1-4020-3521-7_3",
+      "relation": "cites",
+      "resource_type": "publication-section",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.1093/0198250754.001.0001",
+      "relation": "cites",
+      "resource_type": "publication-book",
+      "scheme": "doi"
+    }
+  ],
+  "notes": "Version 2 (October 3, 2026). Revised after a complete review of the Lean development and the supporting computations: repaired saturation proof and proved finite-frontier existence; main theorem restated with mathlib Computable/Monotone predicates, an explicit canonical-admissibility clause, and retained cone agreement with the input; witnessed package change; new results (package-switch budget and sharpness, invariant-ledger selection boundary, guarded consistency case in EA, restricted class via Walsh's dichotomy); empirical section rewritten after corrections to the supporting computations; corrected references. See the version-history appendix. Source: https://github.com/ioannist/six-birds-godel"
+}

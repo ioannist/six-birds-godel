@@ -17,13 +17,21 @@
 \usepackage[numbers]{natbib}
 \usepackage{doi}
 \usepackage{xurl}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,fit,calc,backgrounds,decorations.pathreplacing,patterns}
 \usepackage{hyperref}
 
-\newtheorem{theorem}{Theorem}
-\newtheorem{lemma}{Lemma}
-\newtheorem{proposition}{Proposition}
-\newtheorem{definition}{Definition}
-\newtheorem{remark}{Remark}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
 
 \urlstyle{same}
 \captionsetup{
@@ -49,7 +57,7 @@
 \allowdisplaybreaks[2]
 \fancypagestyle{firstpage}{%
   \fancyhf{}
-  \fancyfoot[C]{\scriptsize Automorph Inc., Wilmington, DE, USA \quad \texttt{ioannis@automorph.io} \quad \mbox{DOI: \href{https://doi.org/10.5281/zenodo.19201835}{10.5281/zenodo.19201835}} \quad \textcopyright\ 2026 \quad CC-BY 4.0 \quad Preprint --- not peer reviewed.}
+  \fancyfoot[C]{\scriptsize Automorph Inc., Wilmington, DE, USA \quad \texttt{ioannis@automorph.io} \quad \mbox{DOI: \href{https://doi.org/10.5281/zenodo.23119453}{10.5281/zenodo.23119453}} \quad \textcopyright\ 2026 \quad CC-BY 4.0 \quad Preprint --- not peer reviewed.}
   \renewcommand{\headrulewidth}{0pt}
   \renewcommand{\footrulewidth}{0pt}
 }
@@ -58,3 +66,26 @@
 \newcommand{\lid}[1]{{\small\ttfamily\hyphenchar\font=`\_ #1}}
 
 \newcommand{\PaperMainTheorem}{\lid{paper\_main\_conditional\_arithmetic\_frontier\_canonicality}}
+
+% Pointer from a proof to its Lean declaration
+\newcommand{\leanref}[1]{\par\smallskip\noindent{\small\raggedright\textit{Lean:} #1.\par}}
+
+% Notation
+\newcommand{\EA}{\mathsf{EA}}
+\newcommand{\Con}{\mathrm{Con}}
+\newcommand{\Eff}{\operatorname{Eff}}
+\newcommand{\Dom}{\succ}
+\newcommand{\agree}[1]{\mathrel{\sim_{#1}}}
+\newcommand{\eqv}[1]{\mathrel{\equiv_{#1}}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+
+% Figure palette (distinguishable in grayscale)
+\definecolor{provedfill}{RGB}{226,236,246}
+\definecolor{provedline}{RGB}{38,84,140}
+\definecolor{assumedfill}{RGB}{252,240,222}
+\definecolor{assumedline}{RGB}{176,104,20}
+\definecolor{importfill}{RGB}{236,236,236}
+\definecolor{importline}{RGB}{90,90,90}
+\definecolor{seriesA}{RGB}{38,84,140}
+\definecolor{seriesB}{RGB}{196,96,36}

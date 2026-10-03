@@ -1,0 +1,99 @@
+\section{A concrete case in elementary arithmetic}\label{sec:arithmetic-instance}
+
+This section shows that the comparison framework has nontrivial content in arithmetic. It does so in one explicit case and in one restricted class. Agreement is up to provable equivalence throughout, for the reasons given at the end of Section~\ref{sec:conditional-lift}. The arithmetic facts that are cited rather than proved are marked (I0)--(I3), and Appendix~\ref{app:contract-imports} gives precise sources.
+
+\subsection{Sentences, consistency and extension operators}
+
+Let $\EA$ be elementary arithmetic, in a language with $0$, successor, addition, multiplication, exponentiation, order and equality. Let $X$ be the set of its sentences, with a standard effective G\"odel numbering, and let $\top$ be the sentence $0=0$. Define
+\[
+\varphi\le\psi \;:\Longleftrightarrow\; \EA\vdash\varphi\to\psi,
+\qquad
+\varphi\equiv\psi \;:\Longleftrightarrow\; \varphi\le\psi\text{ and }\psi\le\varphi .
+\]
+Stronger sentences are lower in this preorder. For a sentence $\varphi$ let $\Con(\varphi)$ be the standard consistency sentence of the finite extension $\EA+\varphi$, built from the elementary presentation ``an axiom of $\EA$, or $\varphi$''. Put $\theta=\Con(\top)$, the consistency of $\EA$ itself.
+
+For a map $g\colon X\to X$, the associated \emph{extension operator} is $E_g(\varphi)=\varphi\wedge g(\varphi)$. Every extension operator strengthens its input: $E_g(\varphi)\le\varphi$. We use three operators.
+\[
+C(\varphi)=\varphi\wedge\Con(\varphi),\qquad
+F(\varphi)=\varphi\wedge\bigl(\theta\to\Con(\varphi)\bigr),\qquad
+I(\varphi)=\varphi .
+\]
+$C$ is the canonical consistency extension. $F$ is a \emph{guarded} version of it: $F$ adds consistency only under the hypothesis that $\EA$ itself is consistent. The \emph{cone} is $H=\{\varphi:\varphi\le\theta\}$, the set of sentences that prove the consistency of $\EA$. Two operators \emph{agree modulo $\EA$ on $H$} if their outputs are $\equiv$-equivalent at every $\varphi\in H$. Finally, define the ledger $L_\theta$ on operators by
+\[
+Y(a)=\begin{cases}1 & \text{if } a(\theta)\le\Con(\theta),\\ 0&\text{otherwise,}\end{cases}\qquad K(a)=0,
+\]
+so an operator earns yield $1$ exactly when its output at $\theta$ proves the consistency of $\EA+\theta$. The comparison domain is $D=\{F,C,I\}$.
+
+The proof uses the following standard facts about arithmetic.
+\begin{enumerate}
+\item[(I1)] \emph{Arithmetization.} Syntax operations, including $\varphi\mapsto\Con(\varphi)$, are computable on codes. If $\EA\vdash\varphi\to\psi$, then $\EA\vdash\Con(\varphi)\to\Con(\psi)$, because a proof of a contradiction from $\EA+\psi$ converts elementarily into one from $\EA+\varphi$~\cite{ArtemovBeklemishev2005}.
+\item[(I2)] \emph{Second incompleteness.} A consistent, elementarily presented extension $U$ of $\EA$ does not prove its own standard consistency sentence~\cite{ArtemovBeklemishev2005}.
+\end{enumerate}
+We also use the elementary semantic facts (I0): the standard model $\N$ satisfies $\EA$, and first-order logic is sound.
+
+\begin{theorem}[Guarded consistency in $\EA$]\label{thm:guarded}
+\leavevmode
+\begin{enumerate}
+\item[\textup{(a)}] $F$ and $C$ are computable on codes and monotone for $\le$.
+\item[\textup{(b)}] $\theta$ is true in $\N$ and belongs to $H$. In particular, the cone contains a true sentence.
+\item[\textup{(c)}] \emph{Agreement on the cone:} $F(\varphi)\equiv C(\varphi)$ for every $\varphi\in H$.
+\item[\textup{(d)}] \emph{Strict growth on the cone:} if $\varphi\in H$ and $\EA+\varphi$ is consistent, then $\varphi\not\le F(\varphi)$. Since $F(\varphi)\le\varphi$, the operator $F$ strictly strengthens $\varphi$.
+\item[\textup{(e)}] \emph{Disagreement off the cone:} $\top\notin H$, and $F(\top)\not\equiv C(\top)$.
+\item[\textup{(f)}] \emph{Efficiency:} $L_\theta$ is invariant under agreement modulo $\EA$ on $H$. Moreover $Y(F)=Y(C)=1$ and $Y(I)=0$. Both $F$ and $C$ are efficient in $D$, and $C$ dominates~$I$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(a) Conjunction, implication and $\Con$ are computable on codes by (I1). Monotonicity of $\Con$ is the second half of (I1). Conjunction is monotone in both arguments, and implication with a fixed antecedent is monotone in its consequent. Hence $C$ and $F$ are monotone.
+
+(b) $\N$ satisfies $\EA$, so $\EA$ is consistent by soundness, and $\theta$ is true. Trivially $\theta\le\theta$.
+
+(c) Let $\EA\vdash\varphi\to\theta$. From $F(\varphi)$ we obtain $\varphi$, hence $\theta$, hence $\Con(\varphi)$ by modus ponens, so $F(\varphi)\le C(\varphi)$. Conversely, $\Con(\varphi)$ implies $\theta\to\Con(\varphi)$, so $C(\varphi)\le F(\varphi)$.
+
+(d) If $\varphi\le F(\varphi)$, then by (c) $\varphi\le C(\varphi)\le\Con(\varphi)$, that is, $\EA+\varphi$ proves its own consistency. This contradicts (I2) applied to $U=\EA+\varphi$.
+
+(e) If $\top\in H$, then $\EA\vdash\theta$, contradicting (I2) for $U=\EA$, which is consistent by~(b). Next, $F(\top)=\top\wedge(\theta\to\theta)\equiv\top$ and $C(\top)=\top\wedge\theta\equiv\theta$. If they were equivalent, $\EA$ would prove $\theta$.
+
+(f) Agreement modulo $\EA$ on $H$ includes agreement at $\theta\in H$. Whether $a(\theta)\le\Con(\theta)$ depends only on the $\equiv$-class of $a(\theta)$, so $Y$ is invariant, and $K$ is constant. Since $C(\theta)=\theta\wedge\Con(\theta)\le\Con(\theta)$, we get $Y(C)=1$, and then $Y(F)=1$ by (c). The theory $\EA+\theta$ is consistent because $\theta$ is true. By (I2) it does not prove $\Con(\theta)$, so $I(\theta)=\theta\not\le\Con(\theta)$ and $Y(I)=0$. All costs are $0$, so $F$ and $C$, which have the maximal yield, are undominated, while $C$ dominates $I$.
+\leanref{\lid{guarded\_consistency\_computable}, \lid{guarded\_consistency\_monotone}, \lid{guarded\_consistency\_canonicalization}, \lid{guarded\_consistency\_strict\_on\_support}, \lid{guarded\_disagrees\_outside\_support}, \lid{consistency\_probe\_invariant}, \lid{guarded\_consistency\_frontier\_instance}}
+\end{proof}
+
+\begin{figure}[t]
+\centering
+\input{figures/fig_cone}
+\caption{The guarded case of Theorem~\ref{thm:guarded}, drawn in the implication order, with stronger sentences lower. The cone $H$ is everything below $\theta=\Con(\EA)$. Inside $H$, the guarded operator $F$ and the consistency operator $C$ send each $\varphi$ to the same sentence up to provable equivalence, strictly below $\varphi$ whenever $\EA+\varphi$ is consistent. At $\top$, outside $H$, the guard blocks the move: $F(\top)\equiv\top$, while $C(\top)\equiv\theta$.}
+\label{fig:cone}
+\end{figure}
+
+Figure~\ref{fig:cone} illustrates the theorem. Three features make the example informative and not merely formal. The cone contains a true sentence, so it is not vacuous. The operators genuinely differ off the cone, so agreement is not equality. The ledger is nonconstant, so efficiency is not automatic: the identity is dominated. The ledger $L_\theta$ is defined by provability and is not computable. The theorem asserts the existence of an efficient frontier for one declared ledger. It does not provide an algorithm for finding efficient operators.
+
+Theorem~\ref{thm:guarded} is the provable-equivalence analogue of the situation in Theorem~\ref{thm:conditional-arithmetic-lift} for $\mathcal{K}=\{C\}$ and $D=\{F,C,I\}$. Here (C1) holds because $C\in D$. (C2) holds by part (a). The analogue of (C3) is part (c), and it is \emph{proved}, not assumed.
+
+\paragraph{How the formal proof is organized.}
+Lean has no implementation of $\EA$ here. The Lean development instead works over an abstract \emph{sentence presentation}: an encoded preorder with conjunction, implication, a top element, a consistency map, a truth predicate and a consistency predicate. These satisfy the propositional laws and the computability and monotonicity facts that the proof uses. All logical steps of the proof above are checked over any such presentation. The uses of (I2) and the truth of $\theta$ are passed in as hypotheses, and the presentation's laws include that true sentences are consistent. The truth of $\theta$ and the consistency facts are established outside Lean, from $\N\models\EA$ and the soundness of first-order logic. The check that $\EA$ with the standard proof predicate supplies such a presentation is the ordinary mathematical argument recorded in (I1) and (I2). Lean also proves that agreement up to $\equiv$ is exactly equality in the quotient by~$\equiv$ (\lid{sentence\_equivalent\_iff\_quotient\_eq}). It does not assert that this quotient has a computable normal form. Small Boolean and modal presentations serve as regression fixtures for the logical steps. They are not models of~$\EA$.
+
+\subsection{A restricted class via Walsh's dichotomy}
+
+The guarded operator was chosen by hand. For a class of operators one needs a classification theorem, and here we use one due to Walsh. Let $T$ be a sound, effectively axiomatized extension of $\EA$. Let $\le_T$ and $\equiv_T$ be provable implication and equivalence over $T$, and let $\Con_T(\varphi)$ be the consistency sentence of $T+\varphi$.
+
+\begin{enumerate}
+\item[(I3)] \emph{Walsh's dichotomy}~\cite[Theorem~2.4]{Walsh2020Note}. Let $g$ be recursive and monotone for $\le_T$, with every value $g(\varphi)$ in a fixed class $\Pi_k$. Then either (W1) there is a true $\theta$ with $\varphi\le_T g(\varphi)$ for all $\varphi\le_T\theta$, or (W2) there is a true $\theta$ with $\varphi\wedge g(\varphi)\le_T\Con_T(\varphi)$ for all $\varphi\le_T\theta$.
+\end{enumerate}
+
+In words, on a suitable true cone $g$ either adds nothing or adds at least consistency.
+
+\begin{theorem}[Restricted Walsh class]\label{thm:walsh-class}
+Let $g$ satisfy the hypotheses of \textup{(I3)}, and in addition
+\begin{enumerate}
+\item[\textup{(i)}] \emph{strictness:} $\varphi\not\le_T g(\varphi)$ for every $\varphi$ such that $T+\varphi$ is consistent, and
+\item[\textup{(ii)}] \emph{upper bound:} $\varphi\wedge\Con_T(\varphi)\le_T g(\varphi)$ for every $\varphi$.
+\end{enumerate}
+Then there is a true sentence $\theta$ such that $E_g(\varphi)\equiv_T E_{\Con_T}(\varphi)$ for all $\varphi\le_T\theta$. Consequently, for every ledger that is invariant under agreement modulo $T$ on $\{\varphi:\varphi\le_T\theta\}$ and every domain $D$ containing $E_{\Con_T}$: if $E_g$ is efficient in $D$, then so is $E_{\Con_T}$. Moreover $E_{\Con_T}$ is computable and monotone.
+\end{theorem}
+
+\begin{proof}
+Apply (I3). In case (W1) the true sentence $\theta$ satisfies $\theta\le_T g(\theta)$. But $T+\theta$ is consistent because $T$ is sound and $\theta$ is true, so this contradicts~(i). Hence (W2) holds. For $\varphi\le_T\theta$ it gives $\varphi\wedge g(\varphi)\le_T\Con_T(\varphi)$, hence $E_g(\varphi)\le_T E_{\Con_T}(\varphi)$. The reverse inequality follows from~(ii). The efficiency statement is the provable-equivalence analogue of Theorem~\ref{thm:efficiency-transfer}, proved in the same way. Computability and monotonicity of $E_{\Con_T}$ follow as in Theorem~\ref{thm:guarded}(a).
+\leanref{\lid{walsh\_restricted\_canonicalization}, \lid{restricted\_arithmetic\_frontier\_lift}, with (I3) as the hypothesis \lid{WalshImportedLaw}}
+\end{proof}
+
+Three points fix the scope of Theorem~\ref{thm:walsh-class}. First, the class is not empty: $g=\Con_T$ satisfies all hypotheses, with strictness given by second incompleteness. This only shows that the hypotheses are consistent. It is not a new example. Second, the cone is \emph{produced} by the theorem. Nothing is claimed about agreement on a cone chosen in advance. Third, the guarded operator of Theorem~\ref{thm:guarded} does not belong to this class, because at $\top$ its guard makes it add nothing, which violates strictness. Its agreement with $C$ was proved directly and does not follow from Theorem~\ref{thm:walsh-class}.

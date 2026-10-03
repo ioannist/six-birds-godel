@@ -1,0 +1,53 @@
+\section{Scope, limits and open problems}\label{sec:scope-limits}
+
+\subsection{What is established}
+
+Table~\ref{tab:status} sorts the results by the kind of support they have. The growth results of Section~\ref{sec:fixed-package} and the comparison results of Section~\ref{sec:frozen-frontier} are unconditional and fully formal. The main theorem is formal but conditional on the contract (C1)--(C3). The arithmetic results are formal over an abstract sentence presentation and become statements about $\EA$ through cited theorems.
+
+\begin{table}[t]
+\caption{Status of the main results.}
+\label{tab:status}
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}l X l@{}}
+\toprule
+Result & Content & Support \\
+\midrule
+Prop.~\ref{prop:one-step-saturation}, Thm.~\ref{thm:idempotent-iff} & packages saturate; idempotence $\Leftrightarrow$ no further growth & Lean \\
+Thm.~\ref{thm:witnessed-change} & growth after a package locates a point where packages differ & Lean \\
+Thm.~\ref{thm:switch-budget}, Prop.~\ref{prop:sharpness} & changes $\le 1+{}$switches, sharp at every horizon & Lean \\
+Thm.~\ref{thm:efficiency-transfer}, Lemma~\ref{lem:restricted-alignment} & efficiency transfers along cone agreement & Lean \\
+Thm.~\ref{thm:ledger-boundary} & universal selection $\Leftrightarrow$ coverage of agreement classes & Lean \\
+Thm.~\ref{thm:conditional-arithmetic-lift} & conditional canonical representative & Lean, assuming (C1)--(C3) \\
+Prop.~\ref{prop:admissibility-necessary} & (C2) cannot be dropped & Lean \\
+Thm.~\ref{thm:guarded} & guarded consistency case in $\EA$ & Lean bridges + (I0)--(I2) \\
+Thm.~\ref{thm:walsh-class} & restricted class via Walsh's dichotomy & Lean bridges + (I0)--(I3) \\
+Ex.~\ref{ex:consistency-progression} & consistency progression as a switching schedule & informal \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{What is not claimed}
+
+\begin{itemize}[leftmargin=*, itemsep=2pt]
+\item \emph{No unconditional canonicalization.} Theorem~\ref{thm:conditional-arithmetic-lift} assumes (C3). Theorem~\ref{thm:ledger-boundary} shows that over unrestricted ledgers, efficiency cannot replace this assumption.
+\item \emph{No new arithmetic classification.} Theorems~\ref{thm:guarded} and~\ref{thm:walsh-class} use second incompleteness and Walsh's dichotomy. They do not reprove them, and they do not extend the classification of recursive monotone operators.
+\item \emph{No native formalization of $\EA$.} Lean checks the logical structure of the arithmetic arguments over an abstract presentation. It implements neither $\EA$'s proof calculus nor the original proofs of the cited theorems.
+\item \emph{No literal equality of sentences.} Arithmetic agreement is provable equivalence. Neither computable normal forms for the Lindenbaum algebra nor computability of the provability-based ledger $L_\theta$ is asserted.
+\item \emph{No robustness to ledger choice.} Efficiency is always relative to one frozen ledger. Apart from the universally quantified Theorem~\ref{thm:ledger-boundary}, nothing is claimed about how efficiency behaves when yields or costs are perturbed.
+\item \emph{No empirical support for the theorems,} and no claim that the PICA data establish interaction effects (Section~\ref{sec:empirical}).
+\item \emph{No mechanism attribution.} The theorems show that packages differ, not that rewrite or gating produced the difference.
+\end{itemize}
+
+\subsection{Place in the Six Birds series}
+
+The saturation results continue the closure analysis of \emph{Six Birds: Foundations of Emergence Calculus}, where a fixed closure does not by itself generate open-ended novelty~\cite{Tsiokos2026Foundations}. The view of mathematical theories as packages follows \emph{To Count a Stone with Six Birds}~\cite{Tsiokos2026ToCount}. The asymmetric use of the primitives follows the phase-diagram and classification studies of \emph{To Chart a Stone} and \emph{To Classify a Stone}~\cite{Tsiokos2026ToChart,Tsiokos2026ToClassify}. In those studies different systems activate different primitives rather than all six at once. Here closure (P5), accounting (P6) and indexing (P4) organize the statements, while protocol mismatch (P3) does not appear.
+
+\subsection{Open problems}
+
+\begin{enumerate}
+\item \emph{Ledgers that reward strength.} Theorem~\ref{thm:ledger-boundary} persists for every class of ledgers that contains a constant ledger, computable or not. Efficiency can therefore do selective work only under ledgers that exclude constant ones. Which natural classes of such ledgers, for example ledgers that strictly reward provably stronger extensions, allow canonical representatives without coverage of every agreement class?
+\item \emph{Larger arithmetic classes.} Theorem~\ref{thm:walsh-class} needs uniform strictness and a first-consistency upper bound. Which classes of operators, compared with which progressions of consistency or reflection statements, admit a canonicalization of the form (C3) on a true cone? Walsh's oscillation results show that some restriction is necessary~\cite{Walsh2022Evitable}.
+\item \emph{Native mechanization.} Formalizing $\EA$, its arithmetized proof predicate, and the cited theorems in Lean together with the standard-model and soundness facts (I0), would remove imports (I0)--(I3) and close the remaining gap between the formal and the informal parts of Section~\ref{sec:arithmetic-instance}.
+\item \emph{Confirmatory data.} The readiness check of Section~\ref{sec:empirical} lacks 18 anchor measurements. Supplying them would resolve the coverage criterion, although by itself it would not change the signal or the comparator results reported there.
+\end{enumerate}

@@ -1,0 +1,32 @@
+\section{Empirical details}\label{app:empirical-details}
+
+Table~\ref{tab:comparators} lists the 26 comparisons plotted in Figure~\ref{fig:comparators}. Every configuration and size has ten seeds. Comparators are drawn from the proper subprograms that appear in the study's program atlas, and every such subprogram is measured at both primary sizes. Proper subsets of cells that do not appear in the atlas are not compared. In every row the best comparator is the empty program. The table and figure are generated from the saved comparison table by \texttt{scripts/make\_paper\_figures.py}. The arithmetic of that table is recomputed from the vendored run summaries by \texttt{scripts/validate\_experiment\_math.py}, which runs as part of \texttt{make check}.
+
+\begin{table}[ht]
+\caption{Gains in absolute $\mathrm{frob}$ shift over the nearest nonempty proper subprogram and over the best measured proper subprogram, at the primary sizes $n=64$ and $n=128$. Values are rounded to three decimals.}
+\label{tab:comparators}
+\centering
+\small
+\input{figures/tab_comparators}
+\end{table}
+
+The readiness rules quoted in Section~\ref{sec:empirical} were frozen before the confirmatory runs, and the thresholds were not changed afterwards. The rescoring uses a shared parser. It checks the identity of every job, the finiteness of every metric, the presence of every required seed, and a measured $k=4$ anchor for each seed. Threshold comparisons use exact decimal arithmetic. Table~\ref{tab:readiness} summarizes the outcome.
+
+\begin{table}[ht]
+\caption{Frozen readiness criteria for \texttt{A14\_only} and their status on the existing logs.}
+\label{tab:readiness}
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}X l@{}}
+\toprule
+Criterion & Status \\
+\midrule
+Signed increase over baseline, $\overline{\mathrm{frob}}(P)-\overline{\mathrm{frob}}(\text{baseline})\ge 0.15$, at $n=64$ and $n=128$ & fails ($0.084$ at $n=64$; $0.335$ at $n=128$) \\
+Margin $\ge 0.05$ in mean absolute shift over \texttt{A13\_A14} and \texttt{A14\_A19} & met ($0.209$ vs.\ $0.134$, $0.155$) \\
+Ten seeds per primary cell with a measured $k=4$ anchor & fails (18 anchors missing in 6 cells) \\
+No new robustness failures & not established \\
+\midrule
+Verdict & not ready \\
+\bottomrule
+\end{tabularx}
+\end{table}

@@ -1,85 +1,36 @@
 \section{Introduction}\label{sec:introduction}
 
-G\"odel's incompleteness theorems show that no sufficiently expressive effective
-formal system closes over all arithmetic truth, and that no such system proves
-its own global consistency in the usual way~\cite{Godel1931,HilbertBernays1939}. What they do not by
-themselves provide is a structural language for theory growth: what is held
-fixed, what changes, and under which ledger distinct changes are compared.
-Foundational discussion often shifts among axiom strength, maximality, and
-informal mathematical practice without fixing that structural
-vocabulary~\cite{Maddy1988,SteelMaximizeUnify}. This paper proposes a more explicit
-alternative.
+Gödel's incompleteness theorems show that a consistent, effectively axiomatized theory that contains enough arithmetic cannot prove every arithmetic truth, and in particular cannot prove its own consistency~\cite{Godel1931,HilbertBernays1939}. Mathematics therefore grows by adding axioms. The theorems themselves say nothing about how to describe that growth: what stays fixed when a theory is extended, what changes, and how two different extensions should be compared. Foundational debates about new axioms often move between strength, maximality and mathematical practice without a common structural vocabulary~\cite{Maddy1988,Maddy1997}. This paper proposes one such vocabulary and proves what it can and cannot deliver.
 
-The paper treats a formal theory as a packaged closure object rather than as a
-bare list of axioms. Once that shift is made, a basic distinction appears.
-Iterating a fixed idempotent package is not the same operation as changing the
-package. The first saturates; the second is the only source of persistent strict
-growth. This distinction is structural before it is arithmetical.
+\paragraph{Two ideas.}
+The first idea is to treat a theory as a \emph{package}: a fixed closure rule, modelled as an idempotent map on a space of states. Deductive closure under a fixed set of axioms is the motivating example. It is idempotent, because closing a deductively closed set adds nothing. Iterating one package is then a different operation from switching to another package, and the two behave very differently. Iteration stops after one step. Switching is the only way to keep moving.
 
-Across the Six-Birds line, six primitive operations recur: rewrite (\(P1\)),
-gating or support restriction (\(P2\)), protocol or route mismatch (\(P3\)),
-staging/indexing/sectors (\(P4\)), packaging/closure (\(P5\)), and
-accounting/audit (\(P6\)). The present paper uses them asymmetrically. \(P5\) is
-the fixed-package object. \(P1/P2\) are the mechanisms of package change. \(P6\)
-fixes the frozen evaluation regime in which yield, cost, and efficiency are
-assessed. \(P4\) supplies the support/index axis on which representative
-comparison is meaningful. \(P3\) remains diagnostic-only: relevant for route
-mismatch, but not theorem-bearing in the main argument.
+The second idea is to compare extensions only after the scoring rule has been fixed. A \emph{frozen ledger} assigns each candidate extension operator a yield and a cost, and efficiency means Pareto efficiency for that ledger. The ledger is also tied to a \emph{cone}, a set of inputs on which it looks at the operators. If the ledger cannot distinguish operators that agree on the cone, then efficiency belongs to whole agreement classes and not to individual syntactic presentations. One can then ask when an efficient operator can be traded for a designated canonical one, such as the consistency extension.
 
-The body now proceeds in theorem-paper order. Section~\ref{sec:primitive-roles}
-gives explicit definitions of closure packages, persistent growth witnesses,
-frozen slices, support cones, dominance, efficiency, cone agreement, slice
-invariance, and representative alignment targets. Section~\ref{sec:fixed-package}
-states and proves the base and bridge theorems: fixed-package saturation and
-package-change necessity. Section~\ref{sec:frozen-frontier} states the
-comparative results for frozen-slice dominance, efficiency transfer, and
-restricted alignment. Section~\ref{sec:conditional-lift} states the main
-conditional arithmetic theorem under an explicit assumption box and external
-contract.
+\paragraph{What is proved.}
+The results fall into four groups. Figure~\ref{fig:architecture} shows how they depend on each other.
+\begin{enumerate}
+\item \emph{Packages and switching} (Section~\ref{sec:fixed-package}). A fixed idempotent package saturates after one application. Idempotence is equivalent to the absence of further growth at every input. If one package moves the output of another, the two maps differ at that output. Along any run of idempotent packages, the number of state changes is at most one plus the number of package switches (Theorem~\ref{thm:switch-budget}). Two explicit computable, monotone, inflationary closures on~$\N$ attain this bound at every horizon and produce unbounded growth (Proposition~\ref{prop:sharpness}).
+\item \emph{Comparison on a frozen ledger} (Section~\ref{sec:frozen-frontier}). Efficiency transfers across operators that agree on the cone (Theorem~\ref{thm:efficiency-transfer}). A canonical family contained in the comparison domain supplies efficient representatives under every invariant ledger if and only if it meets every agreement class of the domain (Theorem~\ref{thm:ledger-boundary}). Over any class of ledgers that contains a constant ledger, efficiency alone therefore cannot produce canonical representatives.
+\item \emph{The conditional main theorem} (Section~\ref{sec:conditional-lift}). For a ledger invariant under cone agreement and under an explicit contract with three clauses, a computable, monotone, efficient operator has an efficient, computable, monotone canonical representative that agrees with it on the cone (Theorem~\ref{thm:conditional-arithmetic-lift}). One clause requires the canonical family itself to be computable and monotone. A counterexample shows it cannot be dropped.
+\item \emph{A concrete case in arithmetic} (Section~\ref{sec:arithmetic-instance}). In elementary arithmetic~$\EA$, a guarded consistency extension agrees with the ordinary consistency extension, up to provable equivalence, on a true cone. It strictly strengthens every consistent input in that cone, differs from the consistency extension outside it, and is efficient under a nonconstant invariant ledger under which the identity is dominated (Theorem~\ref{thm:guarded}). Walsh's dichotomy for the consistency operator~\cite{Walsh2020Note} gives an analogous result for a restricted class of operators (Theorem~\ref{thm:walsh-class}).
+\end{enumerate}
 
-The resulting manuscript is theorem-led, but conditionally so. Its proof-carrying
-core is internal and Lean-backed~\cite{deMouraUllrich2021,Mathlib2020}. Its arithmetic lift is conditional on an
-explicit, finite external dependency contract. The vendor-backed PICA evidence
-plays a different role: it supports the primitive-role assignment and the scope
-limits of the manuscript, but it does not cross the proof boundary.
-
-\paragraph{Contributions.}
-The paper makes four contributions. First, it gives explicit body-level
-mathematical definitions for the packaged closure objects, frozen-slice
-comparison regime, and representative-alignment target used in the theorem route.
-Second, it proves an internal theorem ladder: fixed-package saturation,
-package-change necessity, and restricted alignment on a frozen slice. Third, it
-states and derives a conditional arithmetic lift under an explicit external
-dependency contract, thereby exposing rather than hiding the remaining arithmetic
-boundary. Fourth, it uses vendor-backed PICA evidence only to support
-primitive-role assignment and scope limits, not as theorem support.
-
-\paragraph{Roadmap.}
-Section~\ref{sec:primitive-roles} fixes the theorem objects and primitive-role
-assignment. Section~\ref{sec:fixed-package} proves the base and bridge theorems.
-Section~\ref{sec:frozen-frontier} proves the comparative transfer and
-restricted-alignment results on frozen slices. Section~\ref{sec:conditional-lift}
-states the main conditional arithmetic theorem and its assumption box.
-Section~\ref{sec:vendor-support} explains the supporting-only role of the
-vendor-backed evidence. Section~\ref{sec:scope-limits} records the manuscript's
-perimeter, including continuity with earlier Six-Birds work and the claims that
-remain out of scope.
-
-The theorem-bearing center of the manuscript is the conditional arithmetic lift of Section~\ref{sec:conditional-lift}; the earlier sections build the internal ladder on which it depends, and the later sections delimit its empirical and conceptual perimeter.
-
-\begin{table}[t]
-\caption{The theorem ladder used in the paper.}
-\label{tab:theorem-ladder}
+\begin{figure}[t]
 \centering
-\small
-\begin{tabularx}{\textwidth}{@{}l X X l@{}}
-\toprule
-Level & Structural claim & Lean theorem surface & Status \\
-\midrule
-Base & Fixed-package saturation and no persistent growth under self-iteration & \lid{closure\_iterate\_saturates\_one\_step};\newline \lid{frozen\_package\_no\_persistent\_growth} & in-house \\[6pt]
-Bridge & Any genuine strict-growth witness forces package change & \lid{persistent\_growth\_witness\_implies\_package\_change};\newline \lid{bridge\_candidate\_holds\_in\_frozen\_idempotent\_setting} & in-house \\[6pt]
-Comparative & Efficiency transfers across cone-equivalent representatives on a frozen slice; restricted alignment holds on the support cone & \lid{frontier\_efficiency\_transfer\_to\_cone\_equivalent};\newline \lid{restricted\_in\_house\_alignment\_lemma} & in-house \\[6pt]
-Conditional & Frontier-efficient arithmetic growth admits a canonical representative on the relevant cone under the explicit external contract & \lid{paper\_main\_conditional\_arithmetic\_frontier\_canonicality} & conditional \\
-\bottomrule
-\end{tabularx}
-\end{table}
+\input{figures/fig_architecture}
+\caption{How the results fit together. Solid blue boxes are proved in Lean from their stated premises. For the main theorem these premises include the contract, and for the arithmetic results they include the laws of an abstract sentence presentation and the cited theorems. The dashed orange box is the explicit contract assumed by the main theorem. Gray boxes are published arithmetic theorems that are cited, not reproved, and enter the Lean statements as hypotheses. Lean does not construct $\EA$ itself (Section~\ref{sec:arithmetic-instance}). Arrows mean ``is used to prove''. The package results of Section~\ref{sec:fixed-package} are independent of the main theorem. They describe growth, while Sections~\ref{sec:frozen-frontier}--\ref{sec:arithmetic-instance} describe comparison.}
+\label{fig:architecture}
+\end{figure}
+
+\paragraph{What is formal and what is cited.}
+Every internal result is checked in Lean~4 against mathlib~\cite{deMouraUllrich2021,Mathlib2020}. The formal statements use mathlib's \texttt{Computable} and \texttt{Monotone} predicates, not informal labels. The build audits every theorem and definition of the library for its kernel axioms. Only the three standard axioms of classical Lean appear, with no project axioms and no unfinished proofs (Appendix~\ref{app:lean-map}). The arithmetic results of Section~\ref{sec:arithmetic-instance} rest on two published theorems: the second incompleteness theorem for elementary presentations~\cite{ArtemovBeklemishev2005} and Walsh's dichotomy~\cite{Walsh2020Note}. Neither proof is reproduced in Lean. Each enters the formal statements as a named hypothesis, and the logical steps that use them are checked. Appendix~\ref{app:contract-imports} lists every assumption and import.
+
+\paragraph{Six Birds vocabulary.}
+The paper belongs to the Six Birds series, which describes emergent structure using six primitive operations: rewrite (P1), gating (P2), protocol or route mismatch (P3), staging and indexing (P4), packaging or closure (P5), and accounting or audit (P6)~\cite{Tsiokos2026Foundations,Tsiokos2026ToCount}. Here the primitives serve as interpretive labels only. A package is a P5 object. The ledger is a P6 object. The cone plays the role of the P4 index that fixes where comparison happens. Package changes are where P1 and P2 are read as acting. P3 plays no part in the proofs. The theorems never depend on these labels. In particular, the theorems show that two package maps differ but say nothing about \emph{which} mechanism changed them.
+
+\paragraph{Related work.}
+Closure operators and consequence relations go back to Tarski~\cite{TarskiConsequence1930,TarskiFixedPoint1955}. Extending theories by consistency and reflection statements is the subject of Turing's ordinal logics and Feferman's recursive progressions~\cite{Turing1939,Feferman1962}. It also underlies the modern analysis of reflection principles and reflection ranks~\cite{BeklemishevReflection,PakhomovWalsh2021}. The closest results to Section~\ref{sec:arithmetic-instance} are due to Montalbán and Walsh, and to Walsh. They compare recursive monotone operators with the consistency operator on true cones~\cite{MontalbanWalsh2019,Walsh2020Note}. Walsh also shows that the analogous classification by higher iterates of consistency fails: some recursive monotone operators, even with $\Pi_1$ values, oscillate cofinally between iterates~\cite{Walsh2022Evitable}. Our guarded case (Theorem~\ref{thm:guarded}) is proved directly from second incompleteness and propositional reasoning. Our restricted class (Theorem~\ref{thm:walsh-class}) is a corollary of Walsh's dichotomy. In both, our contribution is the frozen-ledger framing and the transfer of efficiency along these comparisons, not a new classification.
+
+\paragraph{Outline.}
+Section~\ref{sec:setting} fixes the definitions. Sections~\ref{sec:fixed-package}--\ref{sec:arithmetic-instance} contain the results listed above. Section~\ref{sec:empirical} reports, for context, descriptive measurements from an earlier simulation study in the same series and explains why they support none of the theorems. Section~\ref{sec:scope-limits} states what is not claimed and lists open problems. Appendix~\ref{app:lean-map} maps every result to its Lean declaration.

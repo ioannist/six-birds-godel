@@ -1,0 +1,63 @@
+\section{Setting}\label{sec:setting}
+
+This section collects the definitions used throughout. They are deliberately minimal. Each one corresponds to a Lean definition of the same content, listed in Appendix~\ref{app:lean-map}.
+
+\subsection{Packages and their orbits}
+
+Fix a set $X$ of \emph{states}. For a map $p\colon X\to X$ write $p^{[n]}$ for its $n$-fold iterate, with $p^{[0]}=\mathrm{id}$.
+
+\begin{definition}[Package]\label{def:package}
+A \emph{package} on $X$ is an idempotent map $p\colon X\to X$, that is, $p(p(x))=p(x)$ for all $x\in X$.
+\end{definition}
+
+Idempotence is the only law the growth results need. The standard examples are closure operators, which are in addition monotone and inflationary for some order on~$X$. Deductive closure under a fixed axiom set, acting on sets of sentences, is one. The explicit packages of Proposition~\ref{prop:sharpness} are closures in this stronger sense.
+
+\begin{definition}[Growth witness]\label{def:growth-witness}
+A point $x\in X$ is a \emph{persistent growth witness} for a map $p\colon X\to X$ if $p^{[n+1]}(x)\neq p^{[n]}(x)$ for some $n\ge 1$. In words, iterating $p$ from $x$ still changes the state after the first application.
+\end{definition}
+
+\begin{definition}[Package change]\label{def:package-change}
+Two packages $p,q$ on $X$ \emph{differ} if $p\neq q$ as maps. A \emph{change witness} for the pair is a point $z\in X$ with $p(z)\neq q(z)$.
+\end{definition}
+
+\begin{definition}[Schedule and orbit]\label{def:schedule}
+A \emph{schedule} is a sequence $(p_t)_{t\in\N}$ of packages on $X$. Its \emph{orbit} from $x\in X$ is the sequence
+\[
+x_0=x,\qquad x_{t+1}=p_t(x_t).
+\]
+Step $t$ is a \emph{state change} if $x_{t+1}\neq x_t$. Index $t$ is a \emph{switch} if $p_t\neq p_{t+1}$. For a horizon $n$ we count
+\[
+\mathrm{changes}_n=\#\{t\le n: x_{t+1}\neq x_t\},\qquad
+\mathrm{switches}_n=\#\{t<n: p_t\neq p_{t+1}\}.
+\]
+\end{definition}
+
+The orbit has no external inputs. Between steps the state is modified only by the scheduled packages.
+
+\subsection{Operators, ledgers and cones}
+
+The comparison results concern \emph{extension operators}, meaning arbitrary maps $e\colon X\to X$. Let $\mathcal{E}$ be the set of all such maps. Extension operators need not be idempotent. The consistency extension of Section~\ref{sec:arithmetic-instance} is not.
+
+\begin{definition}[Frozen ledger]\label{def:ledger}
+A \emph{frozen ledger} is a pair of real-valued functions $L=(Y,K)$ on $\mathcal{E}$. Here $Y(e)$ is the \emph{yield} and $K(e)$ the \emph{cost} of the operator~$e$.
+\end{definition}
+
+``Frozen'' is a methodological stance, not a mathematical property. All comparisons are made against one ledger fixed in advance, and nothing is concluded about other ledgers unless a theorem quantifies over them. No computability is required of $Y$ or $K$.
+
+\begin{definition}[Dominance and efficiency]\label{def:efficiency}
+Operator $e$ \emph{dominates} $f$ under $L$, written $e\Dom_L f$, if $Y(e)\ge Y(f)$, $K(e)\le K(f)$, and at least one inequality is strict. Given a \emph{comparison domain} $D\subseteq\mathcal{E}$, an operator $e$ is \emph{efficient in $D$}, written $\Eff_{L,D}(e)$, if $e\in D$ and no $g\in D$ satisfies $g\Dom_L e$.
+\end{definition}
+
+This is Pareto efficiency in the usual sense~\cite{MasColellWhinstonGreen1995}. Membership in $D$ is part of the definition, so an efficient operator is always a member of the domain it is efficient in.
+
+\begin{definition}[Cone agreement and invariance]\label{def:cone}
+Let $C\subseteq X$ be a set of inputs, called the \emph{cone}. Operators $e,f$ \emph{agree on $C$}, written $e\agree{C}f$, if $e(x)=f(x)$ for every $x\in C$. A ledger $L$ is \emph{invariant on $C$} if $e\agree{C}f$ implies $Y(e)=Y(f)$ and $K(e)=K(f)$.
+\end{definition}
+
+Agreement on $C$ is an equivalence relation on $\mathcal{E}$. An invariant ledger is exactly a pair of functions on its equivalence classes. In the arithmetic setting the cone is a set of sentences closed downward in the implication order, which motivates the name. The general results use no structure on~$C$.
+
+\begin{definition}[Canonical family and alignment]\label{def:alignment}
+A \emph{canonical family} is a set $\mathcal{K}\subseteq\mathcal{E}$. An operator $e$ is \emph{aligned with $\mathcal{K}$ on $C$} if $e\agree{C}c$ for some $c\in\mathcal{K}$.
+\end{definition}
+
+The question behind Sections~\ref{sec:frozen-frontier}--\ref{sec:arithmetic-instance} is when an efficient operator can be replaced by a canonical one without leaving the efficient set and without changing anything the ledger can see.

@@ -1,0 +1,28 @@
+% Figure 3: guarded vs. canonical consistency extension in the implication order
+\begin{tikzpicture}[x=1cm, y=1cm, font=\footnotesize,
+  pt/.style={circle, fill=black, inner sep=1.3pt},
+  move/.style={-{Stealth[length=2.2mm]}, line width=0.8pt},
+]
+  % strength axis: up = weaker, down = stronger
+  \draw[{Stealth[length=2mm]}-{Stealth[length=2mm]}, black!55, line width=0.5pt] (-5.4,-3.2) -- (-5.4,1.3);
+  \node[black!65, anchor=south] at (-5.4,1.35) {weaker};
+  \node[black!65, anchor=north] at (-5.4,-3.25) {stronger};
+  % cone H below theta
+  \fill[provedfill] (0,0) -- (-3.2,-3.3) -- (3.2,-3.3) -- cycle;
+  \draw[provedline, line width=0.7pt] (-3.2,-3.3) -- (0,0) -- (3.2,-3.3);
+  \node[provedline, font=\footnotesize\bfseries] at (1.55,-3.0) {$H=\{\varphi:\varphi\le\theta\}$};
+  % top and theta
+  \node[pt, label={[label distance=1pt]above:{$\top$}}] (top) at (0,1.25) {};
+  \node[pt, label={[label distance=2pt]left:{$\theta=\Con(\EA)$}}] (th) at (0,0) {};
+  % move at top
+  \draw[move, seriesB] (top) to[bend left=35] node[right, pos=0.5, align=left] {$C$: $C(\top)\equiv\theta$} (th);
+  \draw[move, seriesA] (top) to[out=160, in=200, looseness=12] (top);
+  \node[seriesA, anchor=east] at (-0.75,1.25) {$F$: $F(\top)\equiv\top$ (guard blocks)};
+  % a point phi inside H and its image
+  \node[pt, label={[label distance=1pt]left:{$\varphi$}}] (phi) at (-0.6,-1.25) {};
+  \node[pt] (img) at (-0.6,-2.45) {};
+  \node[anchor=west, align=left] at (-0.42,-2.45) {$F(\varphi)\equiv C(\varphi)$};
+  \draw[move, seriesA] ([xshift=-1.5pt]phi.south) -- ([xshift=-1.5pt]img.north);
+  \draw[move, seriesB] ([xshift=1.5pt]phi.south) -- ([xshift=1.5pt]img.north);
+  \node[anchor=west, align=left, font=\scriptsize] at (-0.42,-1.8) {strictly stronger when\\ $\EA+\varphi$ is consistent};
+\end{tikzpicture}

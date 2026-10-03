@@ -1,77 +1,61 @@
-\section{Conditional arithmetic lift}\label{sec:conditional-lift}
+\section{The conditional main theorem}\label{sec:conditional-lift}
 
-Sections~\ref{sec:fixed-package} and \ref{sec:frozen-frontier} provide the complete in-house theorem ladder used in the paper: fixed-package saturation, package-change necessity, and restricted alignment on a frozen slice. The present section states the main theorem obtained by combining that internal ladder with an explicit external arithmetic contract. The point is to make the conditional lift visible as a theorem, not merely as commentary on a theorem.
+The comparison results of Section~\ref{sec:frozen-frontier} are purely order-theoretic. To speak about effective extension operators, such as those that arise from arithmetic, the state space needs an effective structure. The missing canonicalization step then has to be stated as an explicit assumption.
 
-\subsection*{Standing notation and assumption box}
+\subsection{Effective setting and contract}
 
-Fix a state space $X$, a class $\mathcal{E}$ of endomaps on $X$, a comparison domain $D\subseteq \mathcal{E}$, a frozen slice
-\[
-s=(Y_s,K_s,C_s),
-\]
-and a designated canonical family
-\[
-\mathcal{K}\subseteq D.
-\]
-Let $e\in D$ be an \lid{ExtensionOperator} in the theorem-track sense, assumed recursive and monotone. The main theorem is stated relative to the following assumption box.
+From now on $X$ carries a preorder $\le$ and an effective encoding of its elements by natural numbers, in the sense of mathlib's \texttt{Primcodable} class. An operator $e$ is \emph{computable} if it is computable with respect to this encoding, and \emph{monotone} if $x\le y$ implies $e(x)\le e(y)$. In the intended application $X$ is a set of sentences, the encoding is a standard G\"odel numbering, and $\le$ is provable implication.
 
-\begin{center}
-\fbox{\hspace{0.4em}\begin{minipage}{0.90\textwidth}
-\textbf{Assumption box for the conditional lift.}
-\begin{enumerate}[leftmargin=3.2em]
-\item[(A1)] \(s=(Y_s,K_s,C_s)\) is a frozen slice and \(D\subseteq \mathcal{E}\) is a comparison domain.
-\item[(A2)] \(e\in D\) is a recursive monotone extension operator.
-\item[(A3)] The slice \(s\) is invariant on its cone \(C_s\).
-\item[(A4)] \(\mathcal{K}\subseteq D\) is the designated canonical family.
-\item[(A5)] The external contract supplies cone-level canonicalization for the operator under study: there exists \(c\in\mathcal{K}\) such that
-\[
-\operatorname{AgreeOnCone}_{C_s}(e,c).
-\]
-\item[(A6)] The external dependency contract holds for the tuple \((s,D,C_s,\mathcal{K},e)\) in the theorem-track sense of \lid{ExternalDependencyContract} and \lid{ExternalContractHolds}.
-\item[(A7)] In the intended arithmetic reading, the family \(\mathcal{K}\) is interpreted as the relevant consistency/reflection progression family~\cite{Turing1939,Feferman1962,BeklemishevReflection,PakhomovWalsh2021,MontalbanWalshConsistency}.
+Fix a ledger $L$, a domain $D$, a cone $C$, a canonical family $\mathcal{K}$, and an operator $e$ under study.
+
+\begin{definition}[Contract]\label{def:contract}
+The \emph{contract} for $(L,D,C,\mathcal{K},e)$ consists of three clauses.
+\begin{enumerate}
+\item[\textup{(C1)}] \emph{Membership:} $\mathcal{K}\subseteq D$.
+\item[\textup{(C2)}] \emph{Admissibility:} every $c\in\mathcal{K}$ is computable and monotone.
+\item[\textup{(C3)}] \emph{Canonicalization:} if $e$ is computable, monotone and efficient in $D$ under $L$, then $e$ is aligned with $\mathcal{K}$ on $C$.
 \end{enumerate}
-\end{minipage}\hspace{0.4em}}
-\end{center}
+\end{definition}
 
-Assumptions (A1)--(A4) are internal setup assumptions. Assumptions (A5) and (A6) are the proof-driving external boundary. Assumption (A7) is interpretation-driving rather than proof-driving for the formal conditional theorem.
+Clauses (C1)--(C3) are hypotheses of the main theorem, not results. They are not proved here for any arithmetic choice of $(X,D,C,\mathcal{K})$. Section~\ref{sec:arithmetic-instance} establishes the corresponding facts in one concrete arithmetic case, up to provable equivalence.
 
-\subsection*{Main conditional theorem}
+\subsection{Statement}
 
-\begin{theorem}[Conditional arithmetic lift]\label{thm:conditional-arithmetic-lift}
-Assume \textup{(A1)}--\textup{(A6)}. If
-\[
-\operatorname{FrontierEfficient}_{s,D}(e),
-\]
-then there exists \(c\in \mathcal{K}\) such that
-\[
-\operatorname{ArithmeticCanonicalityTarget}(s,D,C_s,\mathcal{K},c).
-\]
+\begin{theorem}[Conditional canonical representative]\label{thm:conditional-arithmetic-lift}
+Let $L$ be invariant on $C$, and let $e$ be computable, monotone and efficient in $D$ under $L$. If the contract \textup{(C1)--(C3)} holds for $(L,D,C,\mathcal{K},e)$, then there is $c\in\mathcal{K}$ such that
+\begin{enumerate}
+\item $c$ is computable and monotone,
+\item $c$ is efficient in $D$ under $L$, and
+\item $e\agree{C}c$.
+\end{enumerate}
 \end{theorem}
 
-\begin{proof}[Proof sketch]
-The proof has three layers.
-
-\emph{Internal theorem package.}
-By the in-house comparative theorem \lid{restricted\_in\_house\_alignment\_lemma}, efficiency transfers to a representative from the designated family whenever cone agreement is available and the frozen slice is invariant on its cone.
-
-\emph{External contract assumptions.}
-Assumption \textup{(A5)} supplies exactly the required cone-equivalent representative \(c\in\mathcal{K}\). Assumption \textup{(A6)} records that the remaining external contract data needed for the arithmetic target are in force.
-
-\emph{Conclusion.}
-Applying the restricted alignment lemma to the representative \(c\) obtained from \textup{(A5)}, and then reading the result through the external contract recorded in \textup{(A6)}, yields
-\[
-\operatorname{ArithmeticCanonicalityTarget}(s,D,C_s,\mathcal{K},c).
-\]
-In Lean this conditional route is formalized by \lid{conditional\_arithmetic\_canonicality\_lift}, and the stable exported theorem surface for the manuscript is \PaperMainTheorem.
+\begin{proof}
+Clause (C3) makes $e$ aligned with $\mathcal{K}$ on $C$. Lemma~\ref{lem:restricted-alignment}, which uses (C1) and the invariance of~$L$, gives $c\in\mathcal{K}$ that is efficient in $D$ with $e\agree{C}c$. Clause (C2) gives computability and monotonicity of~$c$.
+\leanref{\lid{conditional\_arithmetic\_canonicality\_lift}, exported as \PaperMainTheorem}
 \end{proof}
 
-\subsection*{Remark on the arithmetic reading}
+The proof is short because the substantive step, canonicalization, is assumed. The value of the theorem lies in its exact hypotheses. Each clause is needed, and the conclusion keeps the link $e\agree{C}c$ to the original operator. The package results of Section~\ref{sec:fixed-package} are not used. They concern growth, while this theorem concerns comparison.
 
-\begin{remark}[Intended arithmetic reading]\label{rem:arithmetic-reading}
-Under assumption \textup{(A7)}, the designated family \(\mathcal{K}\) is read as the relevant consistency/reflection progression family. Theorem~\ref{thm:conditional-arithmetic-lift} then says that, under the explicit external contract, a frontier-efficient recursive monotone extension operator admits a canonical representative on the comparison cone tracked by the frozen slice.
-\end{remark}
+\subsection{Why admissibility must be assumed}
 
-\subsection*{Boundary of the theorem}
+It might seem that $c$ should inherit computability and monotonicity from $e$, since the two agree on the cone. They do not. Agreement on $C$ says nothing about values outside $C$, while computability and monotonicity are global properties.
 
-Theorem~\ref{thm:conditional-arithmetic-lift} is the theorem-bearing summit of the paper. It is conditional, not unconditional. It does not claim a global canonical-collapse theorem, and it does not assert that every possible ledger or support regime selects the same representative family. It says only that once the comparison domain, support cone, and frozen ledger have been fixed, and once the explicit external contract has been granted, frontier-efficient growth admits a canonical representative on the relevant cone.
+\begin{proposition}[Clause (C2) cannot be dropped]\label{prop:admissibility-necessary}
+Take $X=\N$ with its usual order and encoding, $C=\{0\}$, $D=\mathcal{E}$, the constant ledger $Y\equiv K\equiv 0$, and $e=\mathrm{id}$. Let $b(n)=2$ for odd $n$ and $b(n)=0$ for even $n$, and put $\mathcal{K}=\{b\}$. Then $L$ is invariant on $C$, the identity is computable, monotone and efficient, and (C1) and (C3) hold. Yet no $c\in\mathcal{K}$ is monotone.
+\end{proposition}
 
-The section also fixes the proof boundary. The internal theorem package carries the saturation, package-change, and restricted-alignment work. The external contract carries the remaining arithmetic burden. No vendor-backed evidence appears in the proof route. That material remains supportive and disciplinary, not proof-carrying. Section~\ref{sec:vendor-support} returns to that distinction explicitly.
+\begin{proof}
+Under a constant ledger no operator dominates another, so every member of $D$ is efficient. (C1) holds because $D$ contains every operator. (C3) holds because $b(0)=0=\mathrm{id}(0)$. The map $b$ is computable but not monotone, since $1\le 2$ while $b(1)=2>0=b(2)$.
+\leanref{\lid{canonical\_admissibility\_is\_necessary} in \texttt{tests/lean/MathReview.lean}}
+\end{proof}
+
+The regression file also shows that invariance of the ledger cannot be dropped from Theorem~\ref{thm:efficiency-transfer}. It further shows that an efficient operator need not have any representative in a given family, for instance the empty one. Theorem~\ref{thm:ledger-boundary} states the general form of the second point.
+
+\subsection{The intended arithmetic reading}
+
+The intended reading takes $X$ to be arithmetic sentences, the order to be provable implication over a base theory, $e$ to be a recursive monotone extension operator, and $\mathcal{K}$ to be a family of canonical extensions by consistency or reflection statements, in the tradition of~\cite{Turing1939,Feferman1962,BeklemishevReflection,PakhomovWalsh2021}. Two cautions apply.
+
+First, literal agreement $e(x)=c(x)$ on sentence codes is too strong for arithmetic. Two operators that produce provably equivalent but syntactically different sentences do not agree in this sense. The natural notion is agreement up to provable equivalence. Passing to the Lindenbaum quotient would turn equivalence into equality, but no computable normal form for that quotient is available, so computability on codes would be lost. Section~\ref{sec:arithmetic-instance} therefore works with equivalence explicitly. It proves the analogue of Theorem~\ref{thm:efficiency-transfer} for ledgers invariant under provable equivalence on the cone.
+
+Second, canonicalization for \emph{all} recursive monotone operators cannot be expected. Walsh has shown that comparison with the iterates of the consistency operator breaks down for general recursive monotone operators. There are such operators, even with $\Pi_1$ values, whose strength oscillates cofinally between different iterates~\cite{Walsh2022Evitable}. Clause (C3) must therefore be established for restricted classes. Section~\ref{sec:arithmetic-instance} does this for one explicit operator and for one class defined by Walsh's hypotheses.

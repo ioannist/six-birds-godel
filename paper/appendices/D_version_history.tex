@@ -1,0 +1,13 @@
+\section{Version history}\label{app:version-history}
+
+\paragraph{v1 (March 24, 2026).} First release.
+
+\paragraph{v2 (October 3, 2026).} This version follows a complete review of the Lean development and the supporting computations.
+\begin{itemize}[leftmargin=*, itemsep=2pt]
+\item \emph{Formal verification.} The default build now compiles the mathematical library, with mathlib pinned, and runs regression files and an axiom audit. The one-step saturation proof was repaired. Existence of a finite frontier, formerly an axiom, is now proved.
+\item \emph{Main theorem.} ``Recursive'' and ``monotone'' are now mathlib's \texttt{Computable} and \texttt{Monotone}. The contract gains the admissibility clause (C2), which Proposition~\ref{prop:admissibility-necessary} shows to be necessary. The conclusion now retains agreement with the original operator on the cone. The package results are no longer described as inputs to the main theorem.
+\item \emph{Package change.} The bridge theorem now produces an explicit point at which two packages differ (Theorem~\ref{thm:witnessed-change}). It no longer asserts which primitive mechanism caused the change.
+\item \emph{New results.} The switch budget and its sharpness (Theorem~\ref{thm:switch-budget}, Proposition~\ref{prop:sharpness}), the ledger boundary (Theorem~\ref{thm:ledger-boundary}), and the arithmetic results of Section~\ref{sec:arithmetic-instance}.
+\item \emph{Empirical section.} The section was rewritten after corrections to the supporting computations. These corrections recomputed identifiers of rewritten maps, separated the nearest-subprogram and best-subprogram comparisons, stopped negative deficits from counting as positive separation, and rescored the confirmatory readiness check with the frozen criteria. The readiness verdict recorded in the repository changed from ``hybrid ready'' to ``not ready''. The v1 statements that baseline-like configurations are weaker than richer ones, that cell importance is heterogeneous, and that richer interaction structure matters were based on the presence of result files, not on measured effects, and have been withdrawn.
+\item \emph{References.} Author names and publication details of two Walsh papers were corrected, and the cited sources for the arithmetic results were added.
+\end{itemize}

@@ -1,0 +1,45 @@
+\section{Assumptions and cited results}\label{app:contract-imports}
+
+This appendix lists every ingredient that the formal development does not prove from definitions. These are the three contract clauses of the main theorem, the cited arithmetic results used in Section~\ref{sec:arithmetic-instance}, and the elementary semantic facts listed as (I0) below.
+
+\begin{table}[ht]
+\caption{Contract clauses of Theorem~\ref{thm:conditional-arithmetic-lift}. All three are hypotheses. None is discharged for a general arithmetic choice of state space, domain, cone and canonical family.}
+\label{tab:contract}
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}l X X@{}}
+\toprule
+Clause & Statement & Remarks \\
+\midrule
+(C1) membership & $\mathcal{K}\subseteq D$ & Needed so that efficiency can transfer into $\mathcal{K}$. \\[3pt]
+(C2) admissibility & every $c\in\mathcal{K}$ is computable and monotone & Not implied by cone agreement (Prop.~\ref{prop:admissibility-necessary}). \\[3pt]
+(C3) canonicalization & a computable, monotone, efficient $e$ is aligned with $\mathcal{K}$ on $C$ & If alignment is required for every efficient member of $D$ under every invariant ledger, without the admissibility restriction on $e$, it is equivalent to class coverage (Thm.~\ref{thm:ledger-boundary}). With the restriction, the same argument characterizes coverage of the computable monotone members of $D$. Proved up to $\equiv$ in the case of Thm.~\ref{thm:guarded}. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[ht]
+\caption{Semantic facts and cited arithmetic results used in Section~\ref{sec:arithmetic-instance}.}
+\label{tab:imports}
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}l X X l@{}}
+\toprule
+Import & Content used & Source & In Lean \\
+\midrule
+(I0) & $\N\models\EA$; soundness of first-order logic; hence $\theta=\Con(\EA)$ is true and true sentences give consistent extensions & standard model theory & hypothesis that $\theta$ is true; field \lid{true\_consistent} \\[3pt]
+(I1) & effective syntax; elementary presentation of $\EA+\varphi$; formalized proof transformation, giving provable monotonicity of $\Con$ & Artemov and Beklemishev~\cite{ArtemovBeklemishev2005}, \S\S3.1--3.2, Prop.~17 & fields of \lid{SentencePresentation} \\[3pt]
+(I2) & a consistent, elementarily presented extension of $\EA$ does not prove its standard consistency sentence & \cite{ArtemovBeklemishev2005}, Thm.~19(i) & explicit hypotheses \\[3pt]
+(I3) & dichotomy for recursive monotone operators of bounded $\Pi_k$ range over a sound effective extension of $\EA$ & Walsh~\cite{Walsh2020Note}, Thm.~2.4 (see also Thm.~1.5) & hypothesis \lid{WalshImportedLaw} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\paragraph{How (I2) is applied.}
+In Theorem~\ref{thm:guarded}, second incompleteness is applied only to theories of the form $\EA+\varphi$, with the standard proof predicate of the presentation ``an axiom of $\EA$, or $\varphi$''. It is never applied to an arbitrary formula that merely happens to be called a consistency statement. The applications are to $\EA$ itself in part~(e), to $\EA+\theta$ in~(f), and to $\EA+\varphi$ for consistent $\varphi\in H$ in~(d). In addition, the remark after Theorem~\ref{thm:walsh-class} that $g=\Con_T$ belongs to the restricted class uses second incompleteness for the theories $T+\varphi$, with the corresponding standard consistency sentences.
+
+\paragraph{How (I3) is applied.}
+Walsh's theorem is applied to a sound, effectively axiomatized $T\supseteq\EA$, with its hypotheses of recursiveness, monotonicity and bounded range complexity stated explicitly in Theorem~\ref{thm:walsh-class}. The theorem asserts that \emph{some} true cone exists. It is never used to obtain agreement on a cone chosen in advance.
+
+\paragraph{Intended interpretation.}
+In the intended reading of Section~\ref{sec:conditional-lift}, the canonical family $\mathcal{K}$ is a family of extensions by consistency or reflection statements~\cite{Turing1939,Feferman1962,BeklemishevReflection,PakhomovWalsh2021,MontalbanWalsh2019}. This reading guides the choice of examples, but no proof depends on it.

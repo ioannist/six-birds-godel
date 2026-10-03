@@ -1,0 +1,46 @@
+\section{Lean map}\label{app:lean-map}
+
+The formal development is in the repository \url{https://github.com/ioannist/six-birds-godel}, under \texttt{src/lean/ClosureFrontier/TheoremTrack/}. It uses Lean~4 (toolchain \texttt{v4.28.0}) and mathlib pinned to the matching release. The command \texttt{make check} builds the library and compiles two regression files, \texttt{tests/lean/MathReview.lean} and \texttt{tests/lean/Strengthening.lean}, with warnings treated as errors. It then audits the transitive kernel dependencies of every theorem and definition in the library, including noncomputable definitions. This covers $92$ declarations. The audit admits only \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}, so no project axiom or \texttt{sorry} can occur.
+
+Table~\ref{tab:lean-map} lists the declaration behind each result. All names live in the namespace \texttt{ClosureFrontier.TheoremTrack}, except \lid{canonical\_admissibility\_is\_necessary}, which is in \texttt{ClosureFrontier.MathReview} in the regression file.
+
+\begin{table}[ht]
+\caption{Results and their Lean declarations.}
+\label{tab:lean-map}
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}l X l@{}}
+\toprule
+Result & Lean declaration(s) & File \\
+\midrule
+Prop.~\ref{prop:one-step-saturation} & \lid{closure\_iterate\_saturates\_one\_step} & \texttt{Candidates} \\
+Thm.~\ref{thm:idempotent-iff} & \lid{frozen\_package\_no\_persistent\_growth}, \lid{idempotent\_iff\_no\_persistent\_growth} & \texttt{Candidates} \\
+Thm.~\ref{thm:witnessed-change} & \lid{persistent\_growth\_witness\_implies\_package\_change}, \lid{package\_changed\_iff\_witness} & \texttt{Candidates} \\
+Lemma~\ref{lem:orbit-switch} & \lid{orbit\_change\_requires\_switch} & \texttt{Dynamics} \\
+Thm.~\ref{thm:switch-budget} & \lid{package\_switch\_budget} & \texttt{Dynamics} \\
+Cor.~\ref{cor:unbounded} & \lid{unbounded\_changes\_require\_unbounded\_switches} & \texttt{Dynamics} \\
+Prop.~\ref{prop:sharpness} & \lid{odd\_round\_laws}, \lid{even\_round\_laws}, \lid{odd\_round\_computable}, \lid{even\_round\_computable}, \lid{alternating\_orbit\_exact}, \lid{alternating\_switches\_every\_step}, \lid{alternating\_budget\_sharp} & \texttt{Dynamics} \\
+Prop.~\ref{prop:dominance-congruence} & \lid{frontier\_dominates\_congr\_right} & \texttt{Alignment} \\
+Thm.~\ref{thm:efficiency-transfer} & \lid{frontier\_efficiency\_transfer\_to\_cone\_equivalent} & \texttt{Alignment} \\
+Lemma~\ref{lem:restricted-alignment} & \lid{restricted\_in\_house\_alignment\_lemma} & \texttt{Alignment} \\
+Thm.~\ref{thm:ledger-boundary} & \lid{universal\_ledger\_canonicality\_iff\_coverage} & \texttt{LedgerBoundary} \\
+Cor.~\ref{cor:counterledger} & \lid{uncovered\_class\_has\_counterledger} & \texttt{LedgerBoundary} \\
+Finite frontiers (\S\ref{sec:frozen-frontier}) & \lid{finite\_nondominated\_exists}, \lid{finite\_frontier\_enumeration\_invariant} & \texttt{Candidates} \\
+Thm.~\ref{thm:conditional-arithmetic-lift} & \lid{conditional\_arithmetic\_canonicality\_lift}; exported as \PaperMainTheorem & \texttt{ExternalBoundary}, \texttt{PaperMain} \\
+Prop.~\ref{prop:admissibility-necessary} & \lid{canonical\_admissibility\_is\_necessary} & \texttt{tests/lean/MathReview} \\
+Thm.~\ref{thm:guarded} & \lid{extension\_by\_computable}, \lid{extension\_by\_monotone}, \lid{guarded\_consistency\_computable}, \lid{guarded\_consistency\_monotone}, \lid{guarded\_consistency\_canonicalization}, \lid{guarded\_consistency\_strict\_on\_support}, \lid{guarded\_disagrees\_outside\_support}, \lid{consistency\_probe\_invariant}, \lid{consistency\_probe\_efficient}, \lid{consistency\_probe\_separates\_identity}, \lid{guarded\_consistency\_frontier\_instance} & \texttt{ArithmeticBridge} \\
+Thm.~\ref{thm:walsh-class} & \lid{walsh\_restricted\_canonicalization}, \lid{frontier\_efficiency\_transfer\_modulo}, \lid{restricted\_arithmetic\_frontier\_lift} & \texttt{ArithmeticBridge} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\paragraph{Correspondence notes.}
+The formal objects match the definitions of Section~\ref{sec:setting} with four differences in presentation, none of which affects the statements.
+\begin{itemize}[leftmargin=*, itemsep=2pt]
+\item A package is a structure \lid{ClosurePackage} that bundles a map with a proof of idempotence. An extension operator is a structure \lid{ExtensionOperator} that wraps a map. The name implies no further properties.
+\item A frozen ledger is a structure \lid{FrozenSlice} with real-valued yield and cost. It also carries two metadata fields, a transformation-class relation and a stage index, which no theorem uses. The cone is passed as a separate argument.
+\item In Section~\ref{sec:conditional-lift} the state type carries \texttt{[Preorder]} and \texttt{[Primcodable]} instances. Computability and monotonicity are mathlib's \texttt{Computable} and \texttt{Monotone}. The contract is the structure \lid{ExternalDependencyContract}, whose three fields are proofs of (C1)--(C3). The target predicate \lid{ArithmeticCanonicalityTarget} bundles computability, monotonicity, efficiency and alignment.
+\item The finite-frontier lemma uses a separate type of finite candidate lists with rational scores.
+\end{itemize}
+
+The arithmetic results are stated over the structure \lid{SentencePresentation}. Its fields are the logical operations, the predicates for truth, consistency and $\Pi_k$-membership, and the laws used in Section~\ref{sec:arithmetic-instance}. Agreement up to provable equivalence is \lid{AgreeModuloCone}, and the corresponding ledger invariance is \lid{SliceInvariantModuloCone}. Uses of second incompleteness appear as explicit hypotheses of the individual theorems. Walsh's dichotomy appears as the hypothesis \lid{WalshImportedLaw}. Neither is declared as an axiom.

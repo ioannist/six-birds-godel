@@ -1,4 +1,12 @@
 plan.md
+# Local tooling and credentials (never commit)
+.env
+*.env
+.codex/
+paper/.codex_thread_id
+
+# Built release artifacts (regenerate with make paper-build)
+paper/submission/artifacts/
 .lake/
 .elan/
 build/

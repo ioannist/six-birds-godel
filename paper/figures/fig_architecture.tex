@@ -1,0 +1,42 @@
+% Figure 1: dependency structure of the results (hand-drawn TikZ)
+\begin{tikzpicture}[
+  font=\footnotesize,
+  node distance=4.2mm and 6mm,
+  box/.style={rectangle, rounded corners=2pt, align=center, text width=40mm,
+    inner sep=3pt, minimum height=9mm},
+  proved/.style={box, draw=provedline, fill=provedfill, line width=0.6pt},
+  assumed/.style={box, draw=assumedline, fill=assumedfill, dashed, line width=0.8pt},
+  imported/.style={box, draw=importline, fill=importfill, double, double distance=0.8pt},
+  head/.style={font=\footnotesize\bfseries, align=center, text width=40mm},
+  arr/.style={-{Stealth[length=2.2mm]}, line width=0.55pt, draw=black!70},
+]
+% Column 1: growth
+\node[head] (h1) {Growth (Section~\ref{sec:fixed-package})};
+\node[proved, below=2mm of h1] (sat) {One-step saturation;\\ idempotent $\Leftrightarrow$ no further growth\\ (Prop.~\ref{prop:one-step-saturation}, Thm.~\ref{thm:idempotent-iff})};
+\node[proved, below=of sat] (wit) {Witnessed package change\\ (Thm.~\ref{thm:witnessed-change})};
+\node[proved, below=of wit] (bud) {Switch budget\\ $\#\text{changes}\le 1+\#\text{switches}$\\ (Thm.~\ref{thm:switch-budget})};
+\node[proved, below=of bud] (shp) {Sharpness: two closures\\ give $x_t=t$ (Prop.~\ref{prop:sharpness})};
+\draw[arr] (sat) -- (wit);
+\draw[arr] (wit) -- (bud);
+\draw[arr] (bud) -- (shp);
+
+% Column 2: comparison
+\node[head, right=of h1] (h2) {Comparison (Section~\ref{sec:frozen-frontier})};
+\node[proved, below=2mm of h2] (cong) {Dominance is invariant\\ under cone agreement\\ (Prop.~\ref{prop:dominance-congruence})};
+\node[proved, below=of cong] (tr) {Efficiency transfer\\ (Thm.~\ref{thm:efficiency-transfer})};
+\node[proved, below=of tr] (al) {Restricted alignment\\ (Lemma~\ref{lem:restricted-alignment})};
+\node[proved, below=of al] (lb) {Ledger boundary: universal\\ selection $\Leftrightarrow$ class coverage\\ (Thm.~\ref{thm:ledger-boundary})};
+\draw[arr] (cong) -- (tr);
+\draw[arr] (tr) -- (al);
+\draw[arr] (al) -- (lb);
+
+% Column 3: conditional theorem and arithmetic
+\node[head, right=of h2] (h3) {Main theorem and $\EA$\\ (Sections~\ref{sec:conditional-lift}--\ref{sec:arithmetic-instance})};
+\node[assumed, below=2mm of h3] (con) {Contract (C1)--(C3):\\ membership, admissibility,\\ canonicalization};
+\node[proved, below=of con] (main) {Conditional main theorem\\ (Thm.~\ref{thm:conditional-arithmetic-lift})};
+\node[imported, below=of main] (imp) {Cited theorems:\\ second incompleteness,\\ Walsh's dichotomy};
+\node[proved, below=of imp] (ea) {Guarded case in $\EA$;\\ restricted Walsh class\\ (Thms.~\ref{thm:guarded}, \ref{thm:walsh-class})\\[1pt] {\scriptsize uses transfer modulo $\equiv$}};
+\draw[arr] (con) -- (main);
+\draw[arr] (al.east) -- ++(3mm,0) |- (main.west);
+\draw[arr] (imp) -- (ea);
+\end{tikzpicture}

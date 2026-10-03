@@ -1,166 +1,68 @@
-\section{Frozen frontier and restricted alignment}\label{sec:frozen-frontier}
+\section{Comparison on a frozen ledger}\label{sec:frozen-frontier}
 
-Section~\ref{sec:fixed-package} isolated the structural source of strict growth: once a closure package is genuinely fixed and idempotent, self-iteration does not sustain persistent growth, so any genuine growth witness forces package change. The next task is comparative. Once different package changes are in play, how should they be compared? The present section answers that question only after the evaluation regime has been frozen. The point is not to let a moving ledger determine which package change looks efficient. The point is to fix the ledger first, then compare representatives relative to the support the ledger actually sees.
+Section~\ref{sec:fixed-package} showed that growth requires switching packages. Different switches lead to different extensions, so the next question is how to compare extensions. We fix a ledger $L=(Y,K)$, a comparison domain $D$ and a cone $C$, and ask what efficiency under $L$ can and cannot tell us.
 
-\subsection*{Frozen slices and comparative objects}
+\subsection{Efficiency belongs to agreement classes}
 
-Let $X$ be a nonempty state space, let $\mathcal{E}$ be a class of endomaps $e\colon X\to X$, and let $D\subseteq \mathcal{E}$ be a comparison domain. The objects introduced in Section~\ref{sec:primitive-roles} are repeated here in displayed form so that the comparative theorems can be read directly from the body of the paper.
-
-\begin{definition}[Frozen slice]\label{def:frozen-slice}
-A frozen slice is a triple
-\[
-s=(Y_s,K_s,C_s),
-\]
-where
-\[
-Y_s\colon \mathcal{E}\to\mathbb{R},\qquad
-K_s\colon \mathcal{E}\to\mathbb{R},
-\]
-and
-\[
-C_s\subseteq X.
-\]
-The functions \(Y_s\) and \(K_s\) are the yield and cost functionals of the slice, and \(C_s\) is its support cone.
-\end{definition}
-
-\begin{definition}[Frontier dominance]\label{def:frontier-dominance}
-Let \(s=(Y_s,K_s,C_s)\) be a frozen slice, and let \(e,f\in D\). One says that \(e\) dominates \(f\) on \(s\), written
-\[
-\operatorname{FrontierDominates}_s(e,f),
-\]
-if
-\[
-Y_s(e)\ge Y_s(f),\qquad K_s(e)\le K_s(f),
-\]
-and at least one of these inequalities is strict.
-\end{definition}
-
-\begin{definition}[Frontier efficiency]\label{def:frontier-efficiency}
-Let \(s\) be a frozen slice and let \(D\subseteq \mathcal{E}\). An operator \(e\in D\) is frontier-efficient on \(s\), written
-\[
-\operatorname{FrontierEfficient}_{s,D}(e),
-\]
-if there is no \(g\in D\) such that \(\operatorname{FrontierDominates}_s(g,e)\).
-\end{definition}
-
-\begin{definition}[Agreement on the support cone]\label{def:agree-on-cone}
-Let \(C\subseteq X\), and let \(e,f\in\mathcal{E}\). One says that \(e\) and \(f\) agree on the cone \(C\), written
-\[
-\operatorname{AgreeOnCone}_C(e,f),
-\]
-if
-\[
-e(x)=f(x)\qquad\text{for all }x\in C.
-\]
-\end{definition}
-
-\begin{definition}[Slice invariance on the cone]\label{def:slice-invariance}
-A frozen slice \(s=(Y_s,K_s,C_s)\) is invariant on its cone if for all \(e,f\in\mathcal{E}\),
-\[
-\operatorname{AgreeOnCone}_{C_s}(e,f)
-\quad\Longrightarrow\quad
-Y_s(e)=Y_s(f)\ \text{ and }\ K_s(e)=K_s(f).
-\]
-\end{definition}
-
-Definitions~\ref{def:frozen-slice}--\ref{def:slice-invariance} isolate the comparison regime used throughout the paper. In primitive language, \(P6\) appears here as the frozen ledger \((Y_s,K_s)\), while \(P4\) appears as the support cone \(C_s\) relative to which representative agreement is evaluated. Neither primitive is a package-change mechanism in this section. The package-change burden remains with \(P1/P2\), as established in Section~\ref{sec:fixed-package}.
-
-The language of dominance and efficiency is used here in the standard Pareto sense, specialized to the frozen comparison regime fixed by the slice~\cite{MasColellWhinstonGreen1995}.
-
-\subsection*{Dominance under cone-equivalent replacement}
-
-The first comparative fact is a congruence principle. If the frozen slice is invariant on its cone, then it cannot distinguish two right-hand comparison targets that agree on that cone. Dominance should therefore be stable under cone-equivalent replacement.
-
-\begin{proposition}[Dominance is stable under cone-equivalent replacement]\label{prop:dominance-congruence}
-Let \(s=(Y_s,K_s,C_s)\) be a frozen slice, let \(D\subseteq \mathcal{E}\), and let \(e,f,f'\in D\). Assume:
-\begin{enumerate}
-\item \(\operatorname{FrontierDominates}_s(e,f)\),
-\item \(\operatorname{AgreeOnCone}_{C_s}(f,f')\),
-\item \(s\) is invariant on its cone.
-\end{enumerate}
-Then
-\[
-\operatorname{FrontierDominates}_s(e,f').
-\]
+\begin{proposition}[Dominance is invariant under cone agreement]\label{prop:dominance-congruence}
+Let $L$ be invariant on $C$, and let $f\agree{C}f'$. Then for every operator $g$, $g\Dom_L f$ if and only if $g\Dom_L f'$.
 \end{proposition}
 
-\begin{proof}[Proof sketch]
-By cone agreement and slice invariance,
-\[
-Y_s(f)=Y_s(f')\qquad\text{and}\qquad K_s(f)=K_s(f').
-\]
-Substituting these equalities into the defining inequalities for \(\operatorname{FrontierDominates}_s(e,f)\) yields the corresponding inequalities for \(\operatorname{FrontierDominates}_s(e,f')\). The strictness clause is preserved because the right-hand target contributes only through the values of \(Y_s\) and \(K_s\), which are unchanged on the cone. In Lean this is the theorem \lid{frontier\_dominates\_congr\_right}.
+\begin{proof}
+Invariance gives $Y(f)=Y(f')$ and $K(f)=K(f')$. Dominance of $f$ by $g$ depends on $f$ only through these two numbers.
+\leanref{\lid{frontier\_dominates\_congr\_right}}
 \end{proof}
 
-The role of Proposition~\ref{prop:dominance-congruence} is structural. It says that once the slice has been frozen, comparison cannot legitimately depend on distinctions that the slice itself is blind to on its support cone.
-
-\subsection*{Efficiency transfer on a frozen slice}
-
-The preceding congruence principle lifts immediately from dominance to efficiency. If an operator is efficient, and if a second operator is indistinguishable from it on the cone under a cone-invariant slice, then efficiency transfers to that second operator.
-
-\begin{theorem}[Efficiency transfers to a cone-equivalent representative]\label{thm:efficiency-transfer}
-Let \(s=(Y_s,K_s,C_s)\) be a frozen slice, let \(D\subseteq \mathcal{E}\), and let \(e,e'\in D\). Assume:
-\begin{enumerate}
-\item \(\operatorname{FrontierEfficient}_{s,D}(e)\),
-\item \(\operatorname{AgreeOnCone}_{C_s}(e,e')\),
-\item \(s\) is invariant on its cone.
-\end{enumerate}
-Then
-\[
-\operatorname{FrontierEfficient}_{s,D}(e').
-\]
+\begin{theorem}[Efficiency transfer]\label{thm:efficiency-transfer}
+Let $L$ be invariant on $C$. If $\Eff_{L,D}(e)$, $e\agree{C}e'$ and $e'\in D$, then $\Eff_{L,D}(e')$.
 \end{theorem}
 
-\begin{proof}[Proof sketch]
-Assume toward contradiction that \(e'\) is not frontier-efficient. Then there exists \(g\in D\) such that
-\[
-\operatorname{FrontierDominates}_s(g,e').
-\]
-By Proposition~\ref{prop:dominance-congruence}, applied with the cone-equivalent pair \(e',e\), it follows that
-\[
-\operatorname{FrontierDominates}_s(g,e),
-\]
-contradicting the assumed efficiency of \(e\). Hence \(e'\) is frontier-efficient. In Lean this is the theorem \lid{frontier\_efficiency\_transfer\_to\_cone\_equivalent}.
+\begin{proof}
+Suppose some $g\in D$ dominates $e'$. By Proposition~\ref{prop:dominance-congruence}, applied to $e'\agree{C}e$, the same $g$ dominates $e$, contradicting efficiency of $e$.
+\leanref{\lid{frontier\_efficiency\_transfer\_to\_cone\_equivalent}}
 \end{proof}
 
-Theorem~\ref{thm:efficiency-transfer} is the key comparative transfer result. It shows that efficiency belongs, on a frozen slice, not to an arbitrary syntactic representative but to the cone-equivalence class that the slice can actually see.
-
-\subsection*{Restricted alignment}
-
-The paper does not need unrestricted global canonicality. What it needs is a restricted alignment statement on the support cone carried by a frozen slice. Let \(\mathcal{K}\subseteq D\) be a designated representative family.
-
-\begin{definition}[Representative alignment target]\label{def:alignment-target}
-Let \(s=(Y_s,K_s,C_s)\) be a frozen slice, let \(D\subseteq\mathcal{E}\), let \(\mathcal{K}\subseteq D\), and let \(e\in D\). One says that \(e\) satisfies the representative alignment target relative to \((s,D,\mathcal{K})\) if there exists \(c\in \mathcal{K}\) such that
-\[
-\operatorname{AgreeOnCone}_{C_s}(e,c).
-\]
-\end{definition}
-
-With this definition in place, the internal comparative theorem can be stated directly.
+Under an invariant ledger, then, efficiency is a property of agreement classes. The ledger cannot reward one representative of a class over another. This yields the basic replacement step used later.
 
 \begin{lemma}[Restricted alignment]\label{lem:restricted-alignment}
-Let \(s=(Y_s,K_s,C_s)\) be a frozen slice, let \(D\subseteq \mathcal{E}\), let \(\mathcal{K}\subseteq D\), and let \(e\in D\). Assume:
-\begin{enumerate}
-\item \(\operatorname{FrontierEfficient}_{s,D}(e)\),
-\item \(e\) satisfies the representative alignment target relative to \((s,D,\mathcal{K})\),
-\item \(s\) is invariant on its cone.
-\end{enumerate}
-Then there exists \(c\in\mathcal{K}\) such that
-\[
-\operatorname{FrontierEfficient}_{s,D}(c)
-\qquad\text{and}\qquad
-\operatorname{AgreeOnCone}_{C_s}(e,c).
-\]
+Let $L$ be invariant on $C$, let $\mathcal{K}\subseteq D$, and let $e$ be efficient in $D$ and aligned with $\mathcal{K}$ on $C$. Then there is $c\in\mathcal{K}$ that is efficient in $D$ and satisfies $e\agree{C}c$.
 \end{lemma}
 
-\begin{proof}[Proof sketch]
-By the representative alignment target, choose \(c\in\mathcal{K}\) such that \(\operatorname{AgreeOnCone}_{C_s}(e,c)\). Then Theorem~\ref{thm:efficiency-transfer} applies directly: since \(e\) is frontier-efficient and the slice is invariant on its cone, \(c\) is frontier-efficient as well. The cone-agreement clause is inherited from the chosen witness \(c\). In Lean this is the theorem \lid{restricted\_in\_house\_alignment\_lemma}.
+\begin{proof}
+Choose $c\in\mathcal{K}$ with $e\agree{C}c$. Since $c\in D$, Theorem~\ref{thm:efficiency-transfer} applies.
+\leanref{\lid{restricted\_in\_house\_alignment\_lemma}}
 \end{proof}
 
-Lemma~\ref{lem:restricted-alignment} is the strongest internal comparative statement needed for the paper. It does not claim that every efficient object is globally identical to a canonical representative, nor that every possible ledger collapses to the same family. It claims only that, once comparison is frozen and cone invariance is imposed, an efficient class admits a representative from the designated family on the support cone that matters.
+The conclusion keeps the agreement $e\agree{C}c$ with the original operator. Without it the statement would be trivial, since any efficient canonical operator is aligned with itself.
 
-\subsection*{Interpretation}
+\subsection{What efficiency cannot do}
 
-The section's structure mirrors the logic of the comparison problem. Definitions~\ref{def:frozen-slice}--\ref{def:slice-invariance} fix the ledger and the support it can see. Proposition~\ref{prop:dominance-congruence} shows that dominance cannot depend on distinctions erased by cone invariance. Theorem~\ref{thm:efficiency-transfer} lifts this to efficiency. Lemma~\ref{lem:restricted-alignment} then packages the result in the exact form needed for the next section.
+Lemma~\ref{lem:restricted-alignment} \emph{assumes} alignment. A natural hope is that efficiency could \emph{supply} it, so that being efficient under every reasonable ledger forces an operator into the class of some canonical operator. The next theorem shows that, without restrictions on the ledger, this happens only when the canonical family already meets every agreement class.
 
-Nothing here is yet arithmetic. The results are fully internal to the frozen comparison regime and make no appeal to external discharge assumptions. Their role is to isolate the comparative fact on which the conditional arithmetic lift depends: once the ledger is frozen and the relevant cone is fixed, efficiency can be transferred to an aligned representative from the designated family. Section~\ref{sec:conditional-lift} adds the explicit external contract needed to interpret that representative family arithmetically.
+\begin{theorem}[Ledger boundary]\label{thm:ledger-boundary}
+Let $\mathcal{K}\subseteq D$. The following are equivalent.
+\begin{enumerate}
+\item[\textup{(i)}] For every ledger $L$ invariant on $C$ and every $e$ efficient in $D$ under $L$, some $c\in\mathcal{K}$ is efficient in $D$ under $L$ and satisfies $e\agree{C}c$.
+\item[\textup{(ii)}] Every $e\in D$ is aligned with $\mathcal{K}$ on $C$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(ii)$\Rightarrow$(i) is Lemma~\ref{lem:restricted-alignment}, because efficient operators lie in $D$. For (i)$\Rightarrow$(ii), fix $e\in D$ and use the \emph{indicator ledger} of its class: $Y(f)=1$ if $f\agree{C}e$ and $Y(f)=0$ otherwise, with $K\equiv 0$. Since $\agree{C}$ is an equivalence relation, this ledger is invariant on $C$. Nothing has yield above $1$, so $e$ is efficient in $D$. Statement~(i) now supplies $c\in\mathcal{K}$ with $e\agree{C}c$.
+\leanref{\lid{universal\_ledger\_canonicality\_iff\_coverage}}
+\end{proof}
+
+\begin{corollary}[Counterledger]\label{cor:counterledger}
+If some $e\in D$ is not aligned with $\mathcal{K}$ on $C$, there is a ledger invariant on $C$ under which $e$ is efficient in $D$ and has no canonical representative on~$C$.
+\leanref{\lid{uncovered\_class\_has\_counterledger}}
+\end{corollary}
+
+Two remarks delimit the theorem. First, coverage does not require $\mathcal{K}=D$. A proper subfamily suffices as long as it meets every class, and the Lean regression tests contain such an example. Second, restricting the ledgers, for instance to computable ones, does not weaken the theorem. The direction (i)$\Rightarrow$(ii) needs only a single ledger, and the constant ledger $Y\equiv K\equiv 0$ already works. It is computable and invariant on every cone, and under it no operator dominates another, so every member of $D$ is efficient. Hence the equivalence holds for every class of ledgers that contains a constant ledger. The Lean proof uses the indicator ledger described above; this one-line variant is not separately formalized. The undecidability of cone agreement plays no role.
+
+In short, efficiency can select canonical representatives beyond what coverage already provides only if the admissible ledgers exclude the constant ones, for example by requiring ledgers to reward strictly stronger extensions. Otherwise any route to canonical representatives must establish coverage of the agreement classes directly. Section~\ref{sec:conditional-lift} takes this route as an explicit assumption. Section~\ref{sec:arithmetic-instance} establishes the analogous fact in a concrete arithmetic case.
+
+\subsection{Finite frontiers}
+
+For finite candidate lists a frontier always exists. If a nonempty finite list of candidates carries rational yield and cost scores, some candidate is not dominated by any other. The proof is by induction on the list and uses that strict Pareto dominance is irreflexive and transitive. The set of nondominated candidates does not depend on the order in which the list is enumerated. (Lean: \lid{finite\_nondominated\_exists}, \lid{finite\_frontier\_enumeration\_invariant}.)
+
+Existence is all one gets, however. A computer search over all $422$ monotone inflationary self-maps of the chains with $2$ to $6$ elements and of the Boolean lattices of rank $1$ to $3$ evaluated these maps under several benchmark weightings and cost functions. Uniqueness of the efficient map fails already in the smallest models, the two-element chain and lattice. Stability of the frontier under reweighting of the benchmark fails on the three-element chain and the rank-$2$ Boolean lattice. Containment of the frontier in a natural ``step'' family on chains fails on the three-element chain. These are finite computations. The enumeration of the $422$ maps was checked independently, and $128$ of the scoring and frontier computations were repeated in exact rational arithmetic. They are consistent with Theorem~\ref{thm:ledger-boundary}: efficiency by itself does not pick out a canonical operator.
