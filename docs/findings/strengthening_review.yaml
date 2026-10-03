@@ -1,0 +1,107 @@
+review_id: strengthening_completion_self_review_2026_10_03
+review_kind: adversarial_self_review
+independent_reviewer: false
+baseline_commit: b438fff
+package: data/theorem_track/strengthening_package.yaml
+arithmetic_proof: docs/findings/restricted_arithmetic_proof.yaml
+judgment: All requirements of the mathematics-strengthening goal are met at their declared scope; arithmetic source proofs remain imported and the manuscript is unchanged.
+requirements:
+  - requirement: Establish a concrete restricted arithmetic canonicalization case.
+    evidence:
+      - docs/findings/restricted_arithmetic_proof.yaml, concrete_guarded_case and presentation_interpretation
+      - src/lean/ClosureFrontier/TheoremTrack/ArithmeticBridge.lean, guarded_consistency_canonicalization
+      - src/lean/ClosureFrontier/TheoremTrack/ArithmeticBridge.lean, guarded_consistency_strict_on_support
+      - src/lean/ClosureFrontier/TheoremTrack/ArithmeticBridge.lean, guarded_disagrees_outside_support
+      - src/lean/ClosureFrontier/TheoremTrack/ArithmeticBridge.lean, guarded_consistency_frontier_instance
+    conclusion: In standard EA, the guarded extension F(phi)=phi and (Con_EA(top) -> Con_EA(phi)) agrees modulo provability with ordinary consistency on a true inhabited cone, strictly strengthens supported consistent inputs, differs at top, and is efficient under a nonconstant declared ledger with dominated identity.
+    verification: Mathematical instantiation checked against the standard elementary proof presentation, formalized deduction, and second incompleteness; every displayed logical bridge is kernel checked. The finite modal fixture checks compatibility of the specific true-guard and two unprovability premises, without substituting for EA.
+    status: verified
+  - requirement: Prove a quantitative package-switch bound.
+    evidence:
+      - src/lean/ClosureFrontier/TheoremTrack/Dynamics.lean, orbit_change_requires_switch
+      - src/lean/ClosureFrontier/TheoremTrack/Dynamics.lean, package_switch_budget
+      - tests/lean/Strengthening.lean, fixedPackages initial-transition control
+    conclusion: For x_(t+1)=p_t(x_t), with each p_t idempotent, at most 1 plus the adjacent-map switch count can change state. The additive 1 allows the first application; no exogenous input changes are admitted.
+    verification: All state spaces, schedules, initial inputs, and natural horizons are quantified in the Lean theorem; the proof injects every changed transition after the first into a preceding map-switch index.
+    status: verified
+  - requirement: Supply an unbounded-growth example.
+    evidence:
+      - src/lean/ClosureFrontier/TheoremTrack/Dynamics.lean, odd_round_laws and even_round_laws
+      - src/lean/ClosureFrontier/TheoremTrack/Dynamics.lean, odd_round_computable and even_round_computable
+      - src/lean/ClosureFrontier/TheoremTrack/Dynamics.lean, alternating_orbit_exact and alternating_orbit_unbounded
+      - src/lean/ClosureFrontier/TheoremTrack/Dynamics.lean, alternating_uses_two_packages and alternating_budget_sharp
+    conclusion: Two explicitly defined computable monotone inflationary idempotent natural-number maps suffice; their alternating orbit from zero is x_t=t and attains the budget at every horizon.
+    verification: Unboundedness follows from the proved all-time exact orbit, rather than extrapolation from finite observations. Distinct package count is separated from switch count.
+    status: verified
+  - requirement: Characterize limits of canonical selection across invariant ledgers.
+    evidence:
+      - src/lean/ClosureFrontier/TheoremTrack/LedgerBoundary.lean, universal_ledger_canonicality_iff_coverage
+      - src/lean/ClosureFrontier/TheoremTrack/LedgerBoundary.lean, uncovered_class_has_counterledger
+      - tests/lean/Strengthening.lean, proper canonical family and uncovered-class controls
+    conclusion: Across all invariant real ledgers, universal efficient canonical representation holds exactly when the canonical family covers every represented cone-equivalence class. An uncovered class admits an invariant indicator counterledger.
+    verification: Both directions are proved, with canon contained in domain. The forward direction constructs a separating ledger; the reverse transfers efficiency. A proper canonical subset may cover every class. The ledger quantifier includes noncomputable functions.
+    status: verified
+  - requirement: Mechanize new internal results and arithmetic bridges.
+    evidence:
+      - src/lean/ClosureFrontier/TheoremTrack/Dynamics.lean
+      - src/lean/ClosureFrontier/TheoremTrack/LedgerBoundary.lean
+      - src/lean/ClosureFrontier/TheoremTrack/ArithmeticBridge.lean
+      - tests/lean/Strengthening.lean
+      - scripts/validate_lean_proofs.py
+    conclusion: New structural proofs and logical/effectivity compositions are mechanized, including the restricted Walsh corollary, provable-equivalence quotient bridge, guarded construction, and nonconstant-ledger frontier result.
+    verification: Fresh lake build and both regression files passed; 92 project definitions/theorems were audited for transitive kernel axioms. Arithmetic results expose their source parameters; source proof reimplementation and a native EA calculus are not asserted.
+    status: verified
+  - requirement: Distinguish imported theorems from assumptions and validate exact coverage.
+    evidence:
+      - docs/findings/restricted_arithmetic_proof.yaml, imports and formalization_boundary
+      - data/theorem_track/internal_proof_inventory.yaml
+      - data/theorem_track/lemma_dependency_graph.yaml
+      - data/theorem_track/strengthening_package.yaml
+      - scripts/validate_theorem_track.py, validate_strengthening
+    conclusion: Walsh and second-incompleteness applications have named sources, checked source hypotheses, explicit Lean proof parameters, and dependency nodes. The broader canonicalization contract remains an undischarged assumption for its original generality.
+    verification: The traceability validator checks theorem/file references and import mappings, while the self-review checks their mathematical meaning. A build is never used as evidence that a supplied source parameter was independently proved.
+    status: verified
+  - requirement: Preserve the broader conditional theorem and leave the paper unchanged.
+    evidence:
+      - git comparison against b438fff for every pre-existing Lean source and paper/manuscript file
+      - src/lean/ClosureFrontier/TheoremTrack/PaperMain.lean
+      - src/lean/ClosureFrontier/TheoremTrack/ExternalBoundary.lean
+    conclusion: Companion imports add new results without changing the original theorem's statement, assumptions, or proof. The manuscript awaits a later revision.
+    verification: Content comparison passed; only the root import file changes among pre-existing Lean sources.
+    status: verified
+adversarial_checks:
+  - issue: Literal code equality versus arithmetic provable equivalence.
+    resolution: The original AgreeOnCone is preserved. Companion arithmetic theorems use mutual implication explicitly; the quotient equality bridge proves exactly that relation and asserts no effective quotient normal form.
+  - issue: Weak Walsh branch might survive without actual strictness.
+    resolution: The proof eliminates it at its true generator using true_consistent and the independent all-consistent-input strictness premise. A finite fixture explicitly inhabits the weak branch when strictness is absent.
+  - issue: The guarded operator does not satisfy global uniform strictness.
+    resolution: Its agreement is proved directly. It is never presented as an example of the globally strict Walsh class; the ordinary consistency operator witnesses nonemptiness of that class.
+  - issue: Imported consistency must match the finite extension's proof presentation.
+    resolution: The instance fixes Ax_(EA+phi)=Ax_EA or the numeral code(phi) and the corresponding standard proof predicate. Theorems are not applied to arbitrary formulas merely named consistency.
+  - issue: Efficiency might be vacuous or encode universal classification.
+    resolution: The declared domain contains F, C, and identity; yields distinguish identity from the other two. The ledger is invariant but generally undecidable. Its construction proves this example and supplies no global selection or computational optimization theorem.
+  - issue: Finite fixtures might stand in for actual arithmetic.
+    resolution: They verify algebraic mechanisms only. The arithmetic case has a separate ordinary mathematical proof and source-hypothesis mapping. Native EA syntax and source theorem proofs remain outside the mechanization claim.
+  - issue: An elementary structural theorem might be oversold as new incompleteness.
+    resolution: The switch budget and selection boundary are stated as structural companion results, without novelty or unconditional arithmetic-classification claims.
+verification_receipt:
+  aggregate_command: make check
+  aggregate_exit_code: 0
+  python_tests_passed: 39
+  lean_build_jobs: 896
+  lean_regression_files: [tests/lean/MathReview.lean, tests/lean/Strengthening.lean]
+  audited_project_definitions_and_theorems: 92
+  permitted_kernel_axioms: [propext, Classical.choice, Quot.sound]
+  inventory_theorems: 52
+  project_axioms_or_proof_holes: none
+  source_matches:
+    - Walsh, A note on the consistency operator, arXiv v3, Theorem 2.4, printed page 4.
+    - Artemov and Beklemishev, Provability Logic, Sections 3.1-3.2; Proposition 17 and Theorem 19(i), printed page 28.
+  whitespace_check: passed
+  paper_and_original_theorem_content_comparison: passed
+  provenance_negative_controls: Hiding a Godel dependency flag and deleting the Walsh source edge each caused the traceability validator to reject the modified in-memory records.
+remaining_outside_goal:
+  - Revise the paper to integrate these companion results.
+  - Reimplement the complete EA calculus or original literature proofs in Lean if a later goal requests that stronger mechanization scope.
+  - Restrict ledgers to effective or independently motivated resource profiles before asserting computable optimization or robustness.
+  - Fresh confirmatory vendor experiments remain a separate empirical task.

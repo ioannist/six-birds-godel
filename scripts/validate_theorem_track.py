@@ -67,6 +67,8 @@ REQUIRED_FILES = [
     ROOT / "src" / "lean" / "ClosureFrontier" / "TheoremTrack" / "PrimitiveRoles.lean",
     ROOT / "src" / "lean" / "ClosureFrontier" / "TheoremTrack" / "PaperMain.lean",
     ROOT / "src" / "lean" / "ClosureFrontier" / "TheoremTrack" / "Candidates.lean",
+    ROOT / "data" / "theorem_track" / "strengthening_package.yaml",
+    ROOT / "docs" / "findings" / "restricted_arithmetic_proof.yaml",
 ]
 
 class ValidationError(Exception):
@@ -90,6 +92,80 @@ def require_nonempty_csv(path: Path) -> None:
         rows = list(csv.DictReader(h))
     if not rows:
         raise ValidationError(f"{path.relative_to(ROOT)} is empty")
+
+
+def validate_strengthening(inventory: dict[str, Any], nodes: dict[str, Any]) -> None:
+    """Check traceability and import boundaries; semantic proofs need Lean/review."""
+    package = load_yaml(ROOT / "data/theorem_track/strengthening_package.yaml")
+    proof = load_yaml(ROOT / package["arithmetic_results"]["concrete_instance"]["proof"])
+    entries = {e["theorem_name"]: e for e in inventory["entries"]}
+    if len(entries) != len(inventory["entries"]):
+        raise ValidationError("proof inventory contains duplicate theorem names")
+
+    def check_theorem(name: str, file: str | None = None) -> None:
+        if name not in entries or entries[name].get("status") != "proved":
+            raise ValidationError(f"strengthening theorem missing from proved inventory: {name}")
+        if file is not None and entries[name]["file"] != file:
+            raise ValidationError(f"strengthening theorem file mismatch: {name}")
+        if name not in nodes:
+            raise ValidationError(f"strengthening theorem missing from dependency graph: {name}")
+
+    for result in package["native_results"]:
+        check_theorem(result["theorem"], result["file"])
+        for field in ("witness_theorem", "infinite_corollary", "counterexample_theorem"):
+            if field in result:
+                check_theorem(result[field], result["file"])
+        for name in result.get("supporting_theorems", []):
+            check_theorem(name, result["file"])
+    arithmetic = package["arithmetic_results"]
+    for name in arithmetic["concrete_instance"]["mechanized_bridges"]:
+        check_theorem(name)
+    check_theorem(arithmetic["general_restricted_class"]["theorem"],
+                  arithmetic["general_restricted_class"]["file"])
+    check_theorem(arithmetic["effectivity_boundary"]["quotient_bridge"])
+    for step in proof["concrete_guarded_case"]["proof"]:
+        names = step.get("lean", [])
+        for name in [names] if isinstance(names, str) else names:
+            check_theorem(name)
+    for name in proof["general_first_consistency_case"]["lean"]:
+        check_theorem(name)
+
+    imports = {item["id"]: item for item in proof["imports"]}
+    if len(imports) != len(proof["imports"]):
+        raise ValidationError("arithmetic proof has duplicate import ids")
+    for item in imports.values():
+        if not all(item.get(field) for field in ("url", "location", "content_used", "lean_status")):
+            raise ValidationError("arithmetic import lacks source or formalization scope")
+    # Source theorem obligations must stay visible in the exported proof parameters.
+    source_nodes = {
+        "hWalsh": ("walsh_theorem_2_4_import_obligation", "walsh_dichotomy"),
+        "hGodel": ("second_incompleteness_import_obligation", "second_incompleteness"),
+    }
+    for file in {e["file"] for e in entries.values() if e.get("proof_scope")}:
+        source = (ROOT / file).read_text(encoding="utf-8")
+        declarations = re.findall(r"^theorem\s+(\w+)(.*?)\s*:=", source, re.MULTILINE | re.DOTALL)
+        for name, signature in declarations:
+            check_theorem(name, file)
+            for parameter, (node, import_id) in source_nodes.items():
+                if re.search(rf"\b{parameter}\s*:", signature):
+                    entry = entries[name]
+                    if entry.get("depends_on_external_assumptions") is not True:
+                        raise ValidationError(f"named arithmetic import hidden in inventory: {name}")
+                    if not set(entry.get("arithmetic_application_imports", [])) <= imports.keys():
+                        raise ValidationError(f"unknown arithmetic application import: {name}")
+                    if import_id not in entry.get("arithmetic_application_imports", []):
+                        raise ValidationError(f"arithmetic source mapping missing: {name}")
+                    # The lift may inherit its source obligation through another theorem.
+                    def reaches(start: str, target: str) -> bool:
+                        return start == target or any(reaches(dep, target)
+                            for dep in nodes[start].get("depends_on", []))
+                    if not reaches(name, node):
+                        raise ValidationError(f"named import missing from dependency graph: {name}")
+    if (arithmetic["concrete_instance"]["full_EA_Lean_formalization"] is not False
+            or arithmetic["general_restricted_class"]["source_proof_remechanized"] is not False
+            or arithmetic["general_restricted_class"]["guard_is_in_this_global_class"] is not False
+            or arithmetic["effectivity_boundary"]["quotient_computability_asserted"] is not False):
+        raise ValidationError("strengthening package overstates its arithmetic/effectivity scope")
 
 
 def main() -> int:
@@ -229,6 +305,8 @@ def main() -> int:
 
         for node_id in by_id:
             visit(node_id)
+
+        validate_strengthening(inventory, by_id)
 
         for status_file, required_fields in [
             (ROOT / "results" / "ticket-t1-2" / "bridge_status.yaml", ["statement_formalized", "core_saturation_proved", "bridge_result_proved", "depends_on_axioms_on_bridge_path", "boundary_consistent_with_current_evidence"]),

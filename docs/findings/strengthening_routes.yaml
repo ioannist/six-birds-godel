@@ -13,17 +13,13 @@ routes:
       title: A note on the consistency operator
       author: James Walsh
       url: https://arxiv.org/pdf/1905.00998
-      theorem: '2.4 (also 1.5)'
+      theorem: 2.4 (also 1.5)
     setting: A sound effectively axiomatized extension T of EA; recursive implication-monotone sentence operator g with range in a fixed Pi_k complexity class.
     additional_hypotheses:
       - For every T-consistent phi, T + phi does not prove g(phi).
       - For every phi, T + phi + Con_T(phi) proves g(phi).
     derived_conclusion: There exists a true cone C on which T proves (phi and g(phi)) iff (phi and Con_T(phi)).
-    derivation: >-
-      Walsh's dichotomy supplies either a true cone where g adds no strength or a
-      true cone where adding g proves consistency. The first option contradicts
-      uniform strictness at a true sentence. On the second cone the upper bound
-      supplies the reverse implication, giving provable equivalence.
+    derivation: Walsh's dichotomy supplies either a true cone where g adds no strength or a true cone where adding g proves consistency. The first option contradicts uniform strictness at a true sentence. On the second cone the upper bound supplies the reverse implication, giving provable equivalence.
     contribution_scope: Imported arithmetic theorem plus an explicit bridge; not a new proof of Walsh's classification.
     remaining_bridges:
       - Computability acts on sentence syntax codes; arithmetic agreement is provable equivalence, not literal equality of codes.
@@ -37,14 +33,11 @@ routes:
     status: mathematical_derivation_available_not_mechanized
     hypotheses: A sequence of idempotent endomaps p_t on one state space, with x_(t+1) = p_t(x_t) and no exogenous input updates.
     conclusion: In any finite horizon, the number of changed-state transitions is at most one plus the number of switches between consecutive package maps.
-    proof: >-
-      For t >= 1, if p_t = p_(t-1), then x_(t+1) = p_t(p_(t-1)(x_(t-1)))
-      = p_(t-1)(x_(t-1)) = x_t by idempotence. Thus each changed-state transition
-      after the first injects into a same-index package switch. Count those indices.
+    proof: For t >= 1, if p_t = p_(t-1), then x_(t+1) = p_t(p_(t-1)(x_(t-1))) = p_(t-1)(x_(t-1)) = x_t by idempotence. Thus each changed-state transition after the first injects into a same-index package switch. Count those indices.
     corollary: Infinitely many changed-state transitions require infinitely many package switches.
     positive_example:
       carrier: natural_numbers_with_usual_order
-      maps: 'p(2k)=2k+1, p(2k+1)=2k+1; q(2k)=2k, q(2k+1)=2k+2'
+      maps: p(2k)=2k+1, p(2k+1)=2k+1; q(2k)=2k, q(2k+1)=2k+2
       laws: Both maps are computable, monotone, inflationary, and idempotent.
       orbit: Starting at zero and alternating p,q yields x_t=t.
       interpretation: Two available packages suffice for unbounded growth through repeated switches; infinitely many distinct packages are unnecessary.
@@ -54,12 +47,9 @@ routes:
     status: mathematical_derivation_available_not_mechanized
     setting: Fixed cone-equivalence relation on a domain D, canonical family K contained in D, and all real-valued ledgers invariant under that equivalence.
     equivalence: Every efficient operator has a K representative for every invariant ledger iff K intersects every cone-equivalence class represented in D.
-    proof_forward: >-
-      Fix x in D. Use yield 1 on x's cone-equivalence class and 0 elsewhere,
-      with constant zero cost. This ledger is invariant and x is efficient.
-      Universal-ledger canonicality therefore supplies a K representative for x.
+    proof_forward: Fix x in D. Use yield 1 on x's cone-equivalence class and 0 elsewhere, with constant zero cost. This ledger is invariant and x is efficient. Universal-ledger canonicality therefore supplies a K representative for x.
     proof_reverse: Class coverage already supplies a representative for every operator, hence for every efficient operator under every ledger.
-    consequence: Under unrestricted invariant ledgers, efficiency alone cannot force a proper canonical family; any positive selection theorem must use additional structure in the admissible ledgers or operator domain.
+    consequence: Under unrestricted invariant ledgers, efficiency cannot compensate for an uncovered cone-equivalence class. A proper canonical subset can still suffice when it covers all classes represented in the domain.
     limitation: The class-indicator ledger is set-theoretic. This argument does not establish the corresponding result for computable ledgers with undecidable cone equivalence.
 literature_boundary:
   source:
@@ -81,3 +71,13 @@ self_review:
     - Dynamic budget fixes the recurrence and input; map switches are distinct from the number of distinct maps.
     - Arithmetic route preserves equivalence versus literal equality and existence versus preselected support quantifiers.
     - Literature counterexamples do not silently downgrade the existing conditional theorem.
+historical_plan_note: Initial route analysis at 763a330; the implementation update below supersedes the original unmechanized statuses.
+implementation_update:
+  package: data/theorem_track/strengthening_package.yaml
+  arithmetic_proof: docs/findings/restricted_arithmetic_proof.yaml
+  review: docs/findings/strengthening_review.yaml
+  quantitative_package_change_budget: proved in Lean, with sharpness and all-time unbounded orbit
+  universal_ledger_canonicality_boundary: proved in Lean for all set-theoretic invariant real ledgers
+  first_consistency_arithmetic_instance: concrete guarded EA case established using standard named imports; logical bridges and restricted Walsh composition proved in Lean
+  paper_edited: false
+  broader_conditional_theorem_preserved: true

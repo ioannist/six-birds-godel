@@ -1,5 +1,5 @@
 graph_id: theorem_track_dependency_graph
-version: 0.5.0
+version: 0.6.0
 nodes:
   - id: finite_frontier_setup_exists
     class: proved_in_house
@@ -124,4 +124,198 @@ nodes:
     owner: explicit_contract
     depends_on:
       - conditional_arithmetic_canonicality_lift
+  - id: orbit_change_requires_switch
+    class: proved_in_house
+    owner: lean
+    depends_on: []
+  - id: package_switch_budget
+    class: proved_in_house
+    owner: lean
+    depends_on:
+      - orbit_change_requires_switch
+  - id: unbounded_changes_require_unbounded_switches
+    class: proved_in_house
+    owner: lean
+    depends_on:
+      - orbit_change_requires_switch
+  - id: odd_round_laws
+    class: proved_in_house
+    owner: lean
+    depends_on: []
+  - id: even_round_laws
+    class: proved_in_house
+    owner: lean
+    depends_on: []
+  - id: odd_round_computable
+    class: proved_in_house
+    owner: lean
+    depends_on: []
+  - id: even_round_computable
+    class: proved_in_house
+    owner: lean
+    depends_on: []
+  - id: alternating_orbit_exact
+    class: proved_in_house
+    owner: lean
+    depends_on: []
+  - id: alternating_orbit_unbounded
+    class: proved_in_house
+    owner: lean
+    depends_on:
+      - alternating_orbit_exact
+  - id: alternating_uses_two_packages
+    class: proved_in_house
+    owner: lean
+    depends_on: []
+  - id: alternating_switches_every_step
+    class: proved_in_house
+    owner: lean
+    depends_on:
+      - orbit_change_requires_switch
+      - alternating_orbit_exact
+  - id: alternating_budget_sharp
+    class: proved_in_house
+    owner: lean
+    depends_on:
+      - alternating_switches_every_step
+      - alternating_orbit_exact
+  - id: agree_on_cone_refl
+    class: proved_in_house
+    owner: lean
+    depends_on: []
+  - id: agree_on_cone_symm
+    class: proved_in_house
+    owner: lean
+    depends_on: []
+  - id: agree_on_cone_trans
+    class: proved_in_house
+    owner: lean
+    depends_on: []
+  - id: class_indicator_invariant
+    class: proved_in_house
+    owner: lean
+    depends_on:
+      - agree_on_cone_trans
+      - agree_on_cone_symm
+  - id: class_indicator_target_efficient
+    class: proved_in_house
+    owner: lean
+    depends_on:
+      - agree_on_cone_refl
+  - id: universal_ledger_canonicality_iff_coverage
+    class: proved_in_house
+    owner: lean
+    depends_on:
+      - class_indicator_target_efficient
+      - class_indicator_invariant
+      - restricted_in_house_alignment_lemma
+  - id: uncovered_class_has_counterledger
+    class: proved_in_house
+    owner: lean
+    depends_on:
+      - class_indicator_target_efficient
+      - class_indicator_invariant
+  - id: sentence_equivalent_iff_quotient_eq
+    class: proved_in_house
+    owner: lean
+    depends_on: []
+  - id: extension_by_computable
+    class: proved_in_house
+    owner: lean
+    depends_on: []
+  - id: extension_by_monotone
+    class: proved_in_house
+    owner: lean
+    depends_on: []
+  - id: extension_by_strengthens_input
+    class: proved_in_house
+    owner: lean
+    depends_on: []
+  - id: walsh_restricted_canonicalization
+    class: conditional_on_named_arithmetic_import
+    owner: lean
+    depends_on:
+      - walsh_theorem_2_4_import_obligation
+  - id: frontier_efficiency_transfer_modulo
+    class: proved_in_house
+    owner: lean
+    depends_on: []
+  - id: restricted_arithmetic_frontier_lift
+    class: conditional_on_named_arithmetic_import
+    owner: lean
+    depends_on:
+      - walsh_restricted_canonicalization
+      - extension_by_computable
+      - extension_by_monotone
+      - frontier_efficiency_transfer_modulo
+  - id: guarded_consistency_computable
+    class: proved_in_house
+    owner: lean
+    depends_on: []
+  - id: impl_monotone_right
+    class: proved_in_house
+    owner: lean
+    depends_on: []
+  - id: guarded_consistency_monotone
+    class: proved_in_house
+    owner: lean
+    depends_on:
+      - impl_monotone_right
+  - id: guarded_consistency_canonicalization
+    class: proved_in_house
+    owner: lean
+    depends_on: []
+  - id: guarded_consistency_strict_on_support
+    class: conditional_on_named_arithmetic_import
+    owner: lean
+    depends_on:
+      - guarded_consistency_canonicalization
+      - second_incompleteness_import_obligation
+    scope: Generic unprovability parameter in Lean; standard second incompleteness supplies it in the documented EA application.
+  - id: guarded_disagrees_outside_support
+    class: conditional_on_named_arithmetic_import
+    owner: lean
+    depends_on:
+      - second_incompleteness_import_obligation
+    scope: Generic unprovability parameter in Lean; standard second incompleteness supplies it in the documented EA application.
+  - id: consistency_probe_invariant
+    class: proved_in_house
+    owner: lean
+    depends_on: []
+  - id: consistency_probe_efficient
+    class: proved_in_house
+    owner: lean
+    depends_on: []
+  - id: consistency_probe_separates_identity
+    class: conditional_on_named_arithmetic_import
+    owner: lean
+    depends_on:
+      - second_incompleteness_import_obligation
+    scope: Generic unprovability parameter in Lean; standard second incompleteness supplies it in the documented EA application.
+  - id: guarded_consistency_frontier_instance
+    class: conditional_on_named_arithmetic_import
+    owner: lean
+    depends_on:
+      - guarded_consistency_canonicalization
+      - extension_by_computable
+      - extension_by_monotone
+      - guarded_consistency_computable
+      - guarded_consistency_monotone
+      - consistency_probe_invariant
+      - consistency_probe_efficient
+      - consistency_probe_separates_identity
+      - second_incompleteness_import_obligation
+    scope: Generic unprovability parameter in Lean; standard second incompleteness supplies it in the documented EA application.
+  - id: walsh_theorem_2_4_import_obligation
+    class: named_literature_import_not_remechanized
+    owner: external_literature
+    depends_on: []
+    source: https://arxiv.org/pdf/1905.00998, Theorem 2.4
+    scope: Matched for actual arithmetic in restricted_arithmetic_proof.yaml; a proof parameter in Lean, not a project axiom.
+  - id: second_incompleteness_import_obligation
+    class: named_literature_import_not_remechanized
+    owner: external_literature
+    depends_on: []
+    source: https://sartemov.ws.gc.cuny.edu/files/2012/10/Artemov-Beklemishev.-Provability-logic.pdf, Theorem 19(i), printed page 28
+    scope: Consistent elementary presented extensions of EA with the standard proof predicate; application hypotheses checked in restricted_arithmetic_proof.yaml. Not a project axiom.
 dependency_scope_note: The exported conditional theorem uses the comparison/contract route; saturation and package-change lemmas are separate structural results, not transitive proof dependencies of this theorem.

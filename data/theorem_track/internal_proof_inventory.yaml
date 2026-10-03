@@ -1,5 +1,5 @@
 inventory_id: internal_proof_inventory
-version: 0.2.0
+version: 0.3.0
 entries:
   - theorem_name: finite_frontier_setup_exists
     file: src/lean/ClosureFrontier/TheoremTrack/Candidates.lean
@@ -65,9 +65,208 @@ entries:
     file: src/lean/ClosureFrontier/TheoremTrack/Alignment.lean
     status: proved
     depends_on_external_assumptions: false
+  - theorem_name: orbit_change_requires_switch
+    file: src/lean/ClosureFrontier/TheoremTrack/Dynamics.lean
+    status: proved
+    depends_on_external_assumptions: false
+    proof_scope: internal structural theorem
+  - theorem_name: package_switch_budget
+    file: src/lean/ClosureFrontier/TheoremTrack/Dynamics.lean
+    status: proved
+    depends_on_external_assumptions: false
+    proof_scope: internal structural theorem
+  - theorem_name: unbounded_changes_require_unbounded_switches
+    file: src/lean/ClosureFrontier/TheoremTrack/Dynamics.lean
+    status: proved
+    depends_on_external_assumptions: false
+    proof_scope: internal structural theorem
+  - theorem_name: odd_round_laws
+    file: src/lean/ClosureFrontier/TheoremTrack/Dynamics.lean
+    status: proved
+    depends_on_external_assumptions: false
+    proof_scope: internal structural theorem
+  - theorem_name: even_round_laws
+    file: src/lean/ClosureFrontier/TheoremTrack/Dynamics.lean
+    status: proved
+    depends_on_external_assumptions: false
+    proof_scope: internal structural theorem
+  - theorem_name: odd_round_computable
+    file: src/lean/ClosureFrontier/TheoremTrack/Dynamics.lean
+    status: proved
+    depends_on_external_assumptions: false
+    proof_scope: internal structural theorem
+  - theorem_name: even_round_computable
+    file: src/lean/ClosureFrontier/TheoremTrack/Dynamics.lean
+    status: proved
+    depends_on_external_assumptions: false
+    proof_scope: internal structural theorem
+  - theorem_name: alternating_orbit_exact
+    file: src/lean/ClosureFrontier/TheoremTrack/Dynamics.lean
+    status: proved
+    depends_on_external_assumptions: false
+    proof_scope: internal structural theorem
+  - theorem_name: alternating_orbit_unbounded
+    file: src/lean/ClosureFrontier/TheoremTrack/Dynamics.lean
+    status: proved
+    depends_on_external_assumptions: false
+    proof_scope: internal structural theorem
+  - theorem_name: alternating_uses_two_packages
+    file: src/lean/ClosureFrontier/TheoremTrack/Dynamics.lean
+    status: proved
+    depends_on_external_assumptions: false
+    proof_scope: internal structural theorem
+  - theorem_name: alternating_switches_every_step
+    file: src/lean/ClosureFrontier/TheoremTrack/Dynamics.lean
+    status: proved
+    depends_on_external_assumptions: false
+    proof_scope: internal structural theorem
+  - theorem_name: alternating_budget_sharp
+    file: src/lean/ClosureFrontier/TheoremTrack/Dynamics.lean
+    status: proved
+    depends_on_external_assumptions: false
+    proof_scope: internal structural theorem
+  - theorem_name: agree_on_cone_refl
+    file: src/lean/ClosureFrontier/TheoremTrack/LedgerBoundary.lean
+    status: proved
+    depends_on_external_assumptions: false
+    proof_scope: internal structural theorem
+  - theorem_name: agree_on_cone_symm
+    file: src/lean/ClosureFrontier/TheoremTrack/LedgerBoundary.lean
+    status: proved
+    depends_on_external_assumptions: false
+    proof_scope: internal structural theorem
+  - theorem_name: agree_on_cone_trans
+    file: src/lean/ClosureFrontier/TheoremTrack/LedgerBoundary.lean
+    status: proved
+    depends_on_external_assumptions: false
+    proof_scope: internal structural theorem
+  - theorem_name: class_indicator_invariant
+    file: src/lean/ClosureFrontier/TheoremTrack/LedgerBoundary.lean
+    status: proved
+    depends_on_external_assumptions: false
+    proof_scope: internal structural theorem
+  - theorem_name: class_indicator_target_efficient
+    file: src/lean/ClosureFrontier/TheoremTrack/LedgerBoundary.lean
+    status: proved
+    depends_on_external_assumptions: false
+    proof_scope: internal structural theorem
+  - theorem_name: universal_ledger_canonicality_iff_coverage
+    file: src/lean/ClosureFrontier/TheoremTrack/LedgerBoundary.lean
+    status: proved
+    depends_on_external_assumptions: false
+    proof_scope: internal structural theorem
+  - theorem_name: uncovered_class_has_counterledger
+    file: src/lean/ClosureFrontier/TheoremTrack/LedgerBoundary.lean
+    status: proved
+    depends_on_external_assumptions: false
+    proof_scope: internal structural theorem
+  - theorem_name: sentence_equivalent_iff_quotient_eq
+    file: src/lean/ClosureFrontier/TheoremTrack/ArithmeticBridge.lean
+    status: proved
+    depends_on_external_assumptions: false
+    proof_scope: logical bridge on a supplied sentence presentation
+  - theorem_name: extension_by_computable
+    file: src/lean/ClosureFrontier/TheoremTrack/ArithmeticBridge.lean
+    status: proved
+    depends_on_external_assumptions: false
+    proof_scope: logical bridge on a supplied sentence presentation
+  - theorem_name: extension_by_monotone
+    file: src/lean/ClosureFrontier/TheoremTrack/ArithmeticBridge.lean
+    status: proved
+    depends_on_external_assumptions: false
+    proof_scope: logical bridge on a supplied sentence presentation
+  - theorem_name: extension_by_strengthens_input
+    file: src/lean/ClosureFrontier/TheoremTrack/ArithmeticBridge.lean
+    status: proved
+    depends_on_external_assumptions: false
+    proof_scope: logical bridge on a supplied sentence presentation
+  - theorem_name: walsh_restricted_canonicalization
+    file: src/lean/ClosureFrontier/TheoremTrack/ArithmeticBridge.lean
+    status: proved
+    depends_on_external_assumptions: true
+    proof_scope: named-import composition on a supplied sentence presentation
+    arithmetic_application_imports:
+      - standard_arithmetic_coding
+      - walsh_dichotomy
+  - theorem_name: frontier_efficiency_transfer_modulo
+    file: src/lean/ClosureFrontier/TheoremTrack/ArithmeticBridge.lean
+    status: proved
+    depends_on_external_assumptions: false
+    proof_scope: logical bridge on a supplied sentence presentation
+  - theorem_name: restricted_arithmetic_frontier_lift
+    file: src/lean/ClosureFrontier/TheoremTrack/ArithmeticBridge.lean
+    status: proved
+    depends_on_external_assumptions: true
+    proof_scope: named-import composition on a supplied sentence presentation
+    arithmetic_application_imports:
+      - standard_arithmetic_coding
+      - walsh_dichotomy
+  - theorem_name: guarded_consistency_computable
+    file: src/lean/ClosureFrontier/TheoremTrack/ArithmeticBridge.lean
+    status: proved
+    depends_on_external_assumptions: false
+    proof_scope: logical bridge on a supplied sentence presentation
+  - theorem_name: impl_monotone_right
+    file: src/lean/ClosureFrontier/TheoremTrack/ArithmeticBridge.lean
+    status: proved
+    depends_on_external_assumptions: false
+    proof_scope: logical bridge on a supplied sentence presentation
+  - theorem_name: guarded_consistency_monotone
+    file: src/lean/ClosureFrontier/TheoremTrack/ArithmeticBridge.lean
+    status: proved
+    depends_on_external_assumptions: false
+    proof_scope: logical bridge on a supplied sentence presentation
+  - theorem_name: guarded_consistency_canonicalization
+    file: src/lean/ClosureFrontier/TheoremTrack/ArithmeticBridge.lean
+    status: proved
+    depends_on_external_assumptions: false
+    proof_scope: logical bridge on a supplied sentence presentation
+  - theorem_name: guarded_consistency_strict_on_support
+    file: src/lean/ClosureFrontier/TheoremTrack/ArithmeticBridge.lean
+    status: proved
+    depends_on_external_assumptions: true
+    proof_scope: logical bridge with explicit unprovability parameter; second-incompleteness import in the EA application
+    arithmetic_application_imports:
+      - standard_arithmetic_coding
+      - second_incompleteness
+  - theorem_name: guarded_disagrees_outside_support
+    file: src/lean/ClosureFrontier/TheoremTrack/ArithmeticBridge.lean
+    status: proved
+    depends_on_external_assumptions: true
+    proof_scope: logical bridge with explicit unprovability parameter; second-incompleteness import in the EA application
+    arithmetic_application_imports:
+      - standard_arithmetic_coding
+      - second_incompleteness
+  - theorem_name: consistency_probe_invariant
+    file: src/lean/ClosureFrontier/TheoremTrack/ArithmeticBridge.lean
+    status: proved
+    depends_on_external_assumptions: false
+    proof_scope: logical bridge on a supplied sentence presentation
+  - theorem_name: consistency_probe_efficient
+    file: src/lean/ClosureFrontier/TheoremTrack/ArithmeticBridge.lean
+    status: proved
+    depends_on_external_assumptions: false
+    proof_scope: logical bridge on a supplied sentence presentation
+  - theorem_name: consistency_probe_separates_identity
+    file: src/lean/ClosureFrontier/TheoremTrack/ArithmeticBridge.lean
+    status: proved
+    depends_on_external_assumptions: true
+    proof_scope: logical bridge with explicit unprovability parameter; second-incompleteness import in the EA application
+    arithmetic_application_imports:
+      - standard_arithmetic_coding
+      - second_incompleteness
+  - theorem_name: guarded_consistency_frontier_instance
+    file: src/lean/ClosureFrontier/TheoremTrack/ArithmeticBridge.lean
+    status: proved
+    depends_on_external_assumptions: true
+    proof_scope: logical bridge with explicit unprovability parameter; second-incompleteness import in the EA application
+    arithmetic_application_imports:
+      - standard_arithmetic_coding
+      - second_incompleteness
 current_verification_command: make test-lean validate-lean-proofs
 standard_kernel_axioms_permitted:
   - propext
   - Classical.choice
   - Quot.sound
-arithmetic_scope: conditional composition; concrete arithmetic canonicalization is not discharged
+arithmetic_scope: Broader main theorem remains conditional. Restricted EA guard instance established mathematically with named standard imports; sentence-presentation bridges and restricted Walsh composition mechanized. EA proof calculus and literature proofs are not reimplemented in Lean.
+external_dependency_flag_scope: Flags record named imports in the intended arithmetic application; generic logical bridges remain theorems over explicitly supplied presentation and unprovability parameters. A proved status never means those external source proofs are remechanized.

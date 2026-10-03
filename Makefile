@@ -12,6 +12,7 @@ build-lean:
 
 test-lean: build-lean
 	lake env lean -DwarningAsError=true tests/lean/MathReview.lean
+	lake env lean -DwarningAsError=true tests/lean/Strengthening.lean
 
 validate-lean-proofs: build-lean
 	$(PYTHON) scripts/validate_lean_proofs.py

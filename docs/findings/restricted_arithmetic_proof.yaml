@@ -1,0 +1,151 @@
+proof_id: restricted_arithmetic_case_2026_10_03
+foundation: Ordinary classical mathematics with the standard natural-number model of arithmetic.
+paper_edited: false
+status: mathematical_instance_established_using_named_imports_and_mechanized_logical_bridges
+actual_theory: EA with its standard elementary axiom presentation and proof predicate.
+sentence_space: Closed formulas of the language (0, successor, addition, multiplication, exponentiation, order, equality), with a standard effective syntax encoding.
+order: 'a <= b means EA proves a -> b; a stronger sentence is smaller in this implication preorder.'
+agreement: Mutual implication over EA; this is not equality of the original syntax codes.
+presentation_interpretation:
+  carrier_and_encoding: Closed formulas form a decidable subset of a standard effective formula coding; syntax constructors and numeral substitution induce computable maps on this carrier. This is the mathematical instance of the Primcodable interface, not a Lean implementation of that carrier.
+  preorder: Reflexivity and transitivity of EA-provable implication follow from first-order logic; antisymmetry is neither imposed nor required on formula codes.
+  conj_and_impl: The ordinary formula constructors; the five interface inference laws and le_top are propositional derivations in EA.
+  con: The consistency formula for the explicitly elementary presented finite extension EA+phi.
+  trueSentence: Truth in the standard natural-number model.
+  consistent: Syntactic consistency of EA+phi, distinct from truth of phi.
+  true_consistent: A true phi and the true EA axioms have the standard model; soundness of first-order proof rules prevents a contradiction.
+  piClass: The fixed arithmetical Pi_k range class in Walsh's theorem, interpreted on syntax; no computability of arithmetic truth is assumed.
+  strengthening_direction: Extension outputs entail their inputs, so F(phi) <= phi and C(phi) <= phi in this preorder. The arithmetic consistency extension is not claimed to be an idempotent closure package.
+notation:
+  top: '0 = 0'
+  consistency: 'Con_EA(phi) = not Prov_(EA+phi)(code(0=1))'
+  extension_presentation: 'Ax_(EA+phi)(x) = Ax_EA(x) or x = code(phi)'
+  theta: 'Con_EA(top)'
+  canonical_operator_C: 'C(phi) = phi and Con_EA(phi)'
+  guarded_operator_F: 'F(phi) = phi and (theta -> Con_EA(phi))'
+  identity_I: 'I(phi) = phi'
+  support_H: '{phi : EA proves phi -> theta}'
+  domain_D: '{F,C,I}, as syntax operators; no quotient encoding is assumed'
+imports:
+  - id: standard_arithmetic_coding
+    source_title: Provability Logic
+    authors: Sergei N. Artemov and Lev D. Beklemishev
+    url: https://sartemov.ws.gc.cuny.edu/files/2012/10/Artemov-Beklemishev.-Provability-logic.pdf
+    location: Sections 3.1-3.2, especially Proposition 17, printed pages 25-28.
+    content_used: Standard elementary axiom/proof presentations, effective numeral substitution, and formalized deduction.
+    lean_status: Arithmetic syntax, proof predicates, and their coding are external to this repository; SentencePresentation exposes the precise logical/effectivity interface used by the bridges.
+  - id: second_incompleteness
+    source_title: Provability Logic
+    authors: Sergei N. Artemov and Lev D. Beklemishev
+    url: https://sartemov.ws.gc.cuny.edu/files/2012/10/Artemov-Beklemishev.-Provability-logic.pdf
+    location: Theorem 19(i), printed page 28.
+    content_used: A consistent elementary presented extension U of EA does not prove its standard Con(U).
+    applications: [EA_plus_top, EA_plus_theta, EA_plus_arbitrary_consistent_supported_phi]
+    lean_status: Unprovability appears as an explicit proof parameter; no local axiom declares this literature result.
+  - id: walsh_dichotomy
+    source_title: A note on the consistency operator
+    author: James Walsh
+    url: https://arxiv.org/pdf/1905.00998
+    version: arXiv_v3_2019_10_28
+    publication: Proceedings of the American Mathematical Society 148 (2020), 2645-2654.
+    location: Theorem 2.4, printed page 4; also Theorem 1.5.
+    content_used: For a recursive implication-monotone operator of bounded Pi complexity over a sound effective extension of EA, a true cone has either no added strength or a consistency lower bound.
+    lean_status: WalshImportedLaw is an explicit imported-theorem obligation, not an independently proved arithmetic classification or a project axiom.
+concrete_guarded_case:
+  statement: >-
+    F and C are computable implication-monotone extension operators. H is an
+    inhabited true cone on which F and C are EA-provably equivalent. They disagree
+    modulo EA at top, outside H. For the nonconstant invariant ledger below, F and C
+    are efficient in D and C dominates the identity. Supported consistent inputs
+    are strictly strengthened by F.
+  proof:
+    - step: effective_syntax_and_monotonicity
+      derivation: >-
+        Use the uniform elementary presentation EA+phi. Construct its consistency
+        sentence by inserting the numeral code(phi) into the fixed proof predicate;
+        this is an effective syntax transformation. Conjunction and implication are
+        effective constructors, so C and F are computable on syntax. If EA proves
+        phi -> psi, an elementary proof transformation converts EA+psi proofs into
+        EA+phi proofs. Formalizing that transformation gives EA proofs of
+        Con_EA(phi) -> Con_EA(psi). Fixed antecedent implication and conjunction
+        preserve this implication order. Both operators entail their input.
+      lean: [extension_by_computable, extension_by_monotone, extension_by_strengthens_input, guarded_consistency_computable, guarded_consistency_monotone]
+    - step: true_nonempty_support
+      derivation: >-
+        The standard natural-number model satisfies the defining equations and
+        every bounded induction instance of EA. First-order logical soundness
+        makes EA+top consistent, so theta is true. Its reflexive implication places
+        theta in H. EA+theta also has the standard natural-number model, hence is
+        consistent. These are metatheoretic facts, not EA proofs of its consistency.
+    - step: agreement_on_support
+      derivation: >-
+        If EA proves phi -> theta, then F(phi) proves both theta and
+        theta -> Con_EA(phi), hence Con_EA(phi), so F(phi) entails C(phi).
+        Conversely C(phi) entails theta -> Con_EA(phi) by propositional logic and
+        therefore entails F(phi). No classification or canonicalization assumption
+        is used in this construction.
+      lean: guarded_consistency_canonicalization
+    - step: strict_growth_on_consistent_supported_inputs
+      derivation: >-
+        For any EA-consistent phi in H, the finite extension EA+phi is elementary
+        presented and contains EA. Second incompleteness prohibits it from proving
+        Con_EA(phi). Thus phi does not entail C(phi), and the support agreement
+        prohibits phi from entailing F(phi), while F(phi) entails phi.
+      lean: guarded_consistency_strict_on_support
+    - step: outside_support_control
+      derivation: >-
+        Apply second incompleteness to the consistent elementary theory EA+top:
+        EA does not prove theta. Hence top is outside H. Since theta implies itself,
+        F(top) is EA-equivalent to top; C(top) is EA-equivalent to theta. Agreement
+        at top would therefore prove theta, contradicting the imported theorem.
+      lean: guarded_disagrees_outside_support
+    - step: declared_invariant_nonconstant_ledger
+      definition: 'Y(a)=1 if EA+a(theta) proves Con_EA(theta), and Y(a)=0 otherwise; K(a)=0.'
+      derivation: >-
+        This is a fixed real-valued ledger on syntax operators. Agreement modulo EA
+        on H includes agreement at theta, so it preserves this consequence predicate
+        and hence both scores. C(theta) proves Con_EA(theta); agreement gives the
+        same for F(theta). In contrast I(theta)=theta cannot prove Con_EA(theta),
+        by second incompleteness applied to consistent EA+theta. Thus Y(C)=Y(F)=1
+        and Y(I)=0. Costs are zero. Both F and C are efficient in D, and C strictly
+        dominates I. The ledger is not a constant-score or singleton-domain example.
+      lean: [consistency_probe_invariant, consistency_probe_efficient, consistency_probe_separates_identity, guarded_consistency_frontier_instance]
+      limitation: Provability scores are set-theoretic and generally undecidable. This is an existence example for a declared support and ledger, not an effective optimizer or a robustness theorem.
+general_first_consistency_case:
+  scope: Fix any sound effectively axiomatized extension T of EA with standard sentence syntax.
+  operator_class:
+    - g is recursive on syntax and monotone for T-provable implication.
+    - There exists one fixed k such that every g(phi) is in Pi_k, in the source theorem's sense.
+    - For every T-consistent phi, T+phi does not prove g(phi).
+    - For every phi, T+phi+Con_T(phi) proves g(phi).
+  conclusion: There exists a true cone on which phi and g(phi) is T-provably equivalent to phi and Con_T(phi).
+  derivation:
+    - Apply Walsh's Theorem 2.4 with its actual theory, encoding, monotonicity, and range-complexity hypotheses.
+    - Its weak branch includes a true generator theta with T+theta proving g(theta). Soundness makes T+theta consistent, contradicting uniform strictness.
+    - The strong branch supplies a true cone where T+phi+g(phi) proves Con_T(phi).
+    - Combine this direction with the stipulated upper bound to obtain mutual implication of the extended sentences on that cone.
+    - On this cone, any declared invariant ledger transfers frontier efficiency to the computable monotone consistency representative, provided it belongs to the comparison domain.
+  nonempty_operator_class: The ordinary consistency operator itself satisfies these independent hypotheses; strictness is the standard second-incompleteness import for T+phi and the range is Pi_1. This is a nonemptiness check, not a novel classification example.
+  lean: [walsh_restricted_canonicalization, restricted_arithmetic_frontier_lift]
+  distinction_from_guarded_case: The guarded operator adds nothing at top and therefore fails global uniform strictness. Its concrete support agreement is proved directly, not misrepresented as an application of the globally strict Walsh corollary.
+  cone_quantifier: The source constructs some true cone; it does not supply agreement on every preselected cone.
+formalization_boundary:
+  completely_mechanized:
+    - The package-switch budget, sharpness, and all-time unbounded-growth construction.
+    - Universal invariant-ledger selection versus cone-class coverage and counterledger construction.
+    - Logical elimination of the weak Walsh branch and reconstruction of canonical output equivalence.
+    - Computability and monotonicity compositions on a supplied effective sentence presentation.
+    - Agreement modulo implication and its exact quotient-equality bridge, without quotient effectivity.
+    - Guarded construction, its outside-support control, and the nonconstant-ledger efficiency proofs.
+  imported_mathematical_content:
+    - Standard effective syntax, elementary presentations, formalized proof transformations, and logical soundness for actual arithmetic.
+    - Second incompleteness with the standard proof predicate, not an arbitrary consistency formula.
+    - Walsh's Theorem 2.4 for the general restricted class.
+  not_claimed:
+    - A full Lean implementation of EA's syntax, axiom calculus, arithmetized proof predicate, or Walsh's original proof.
+    - A computable normal form for the Lindenbaum quotient.
+    - Literal equality of syntactically distinct output formulas.
+    - Global classification by consistency/reflection iterates.
+    - A proof of arithmetic canonicalization solely from the abstract efficiency predicate.
+  test_fixtures: Boolean and finite modal presentations are logical regression fixtures, never substituted for the actual arithmetic instance.
+relationship_to_existing_main: The broader original conditional theorem is unchanged; these are companion results with explicit arithmetic provenance and output equivalence.

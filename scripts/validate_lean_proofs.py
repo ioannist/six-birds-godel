@@ -19,7 +19,7 @@ def main() -> int:
         declarations.extend(
             f"{namespace}.{name}"
             for name in re.findall(
-                r"^(?:theorem|def|abbrev|axiom|opaque)\s+([A-Za-z_][A-Za-z_0-9]*)",
+                r"^(?:noncomputable\s+)?(?:theorem|def|abbrev|axiom|opaque)\s+([A-Za-z_][A-Za-z_0-9]*)",
                 source, re.MULTILINE,
             )
         )

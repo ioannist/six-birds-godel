@@ -1,0 +1,109 @@
+package_id: strengthening_package_2026_10_03
+baseline_commit: b438fff
+paper_edited: false
+broader_main_theorem_preserved: true
+broader_main_theorem: paper_main_conditional_arithmetic_frontier_canonicality
+native_results:
+  - id: quantitative_package_switch_bound
+    file: src/lean/ClosureFrontier/TheoremTrack/Dynamics.lean
+    theorem: package_switch_budget
+    exact_statement: For every schedule of idempotent maps, fixed initial input, and n, the count of changed-state transitions among steps 0 through n is at most 1 plus the count of map switches between steps 0 through n.
+    hypotheses: The only state updates are the declared packageOrbit recurrence; each package map is idempotent.
+    witness_theorem: orbit_change_requires_switch
+    infinite_corollary: unbounded_changes_require_unbounded_switches
+    arithmetic_order_assumptions: none
+  - id: unbounded_growth_from_two_closures
+    file: src/lean/ClosureFrontier/TheoremTrack/Dynamics.lean
+    theorem: alternating_orbit_exact
+    exact_statement: Alternating the two defined packages from zero gives x_t=t for every natural t.
+    supporting_theorems:
+      - odd_round_laws
+      - even_round_laws
+      - odd_round_computable
+      - even_round_computable
+      - alternating_orbit_unbounded
+      - alternating_uses_two_packages
+      - alternating_switches_every_step
+      - alternating_budget_sharp
+    map_laws: actual Computable, Monotone, inflationary, and idempotent
+    sharpness: The bound is attained at every finite horizon.
+    excluded_overread: Unbounded growth does not require infinitely many distinct package maps.
+  - id: invariant_ledger_selection_boundary
+    file: src/lean/ClosureFrontier/TheoremTrack/LedgerBoundary.lean
+    theorem: universal_ledger_canonicality_iff_coverage
+    exact_statement: Universal canonical efficient representation across all invariant real ledgers is equivalent to canonical coverage of the cone-equivalence classes of the comparison domain.
+    hypotheses: Fixed domain, cone, and canonical family contained in the domain.
+    counterexample_theorem: uncovered_class_has_counterledger
+    separating_ledger: Yield 1 on an uncovered class, 0 elsewhere; constant zero cost.
+    ledger_class: All set-theoretic real-valued invariant ledgers, including noncomputable ones.
+    excluded_overread: Does not establish a computable-ledger version for undecidable cone equivalence; does not require the canonical family to equal the domain as a set.
+arithmetic_results:
+  concrete_instance:
+    theory: Standard elementary arithmetic EA.
+    proof: docs/findings/restricted_arithmetic_proof.yaml
+    construction: Guard the consistency sentence Con_EA(phi) by theta=Con_EA(top), then conjoin the input phi.
+    cone: Sentences implying theta over EA.
+    domain: Guarded consistency extension, ordinary consistency extension, identity.
+    equality_used: EA-provable equivalence of output sentences.
+    ledger: Whether the output at theta proves Con_EA(theta); zero cost.
+    facts:
+      - true_nonempty_cone
+      - computable_maps
+      - implication_monotone_maps
+      - strict_growth_on_consistent_support
+      - equivalent_on_support
+      - disagreement_at_top
+      - nonconstant_invariant_ledger
+      - efficient_guarded_and_canonical_operators
+      - dominated_identity
+    mechanized_bridges:
+      - guarded_consistency_canonicalization
+      - guarded_consistency_strict_on_support
+      - guarded_disagrees_outside_support
+      - guarded_consistency_frontier_instance
+    canonicalization_import: none; the displayed guard-and-implication construction proves its own restricted equivalence
+    independent_imports: Standard arithmetic syntax/proof formalization and second incompleteness for the standard elementary proof presentation.
+    full_EA_Lean_formalization: false
+  general_restricted_class:
+    theory: Any sound effectively axiomatized extension of EA satisfying Walsh's source hypotheses.
+    theorem: restricted_arithmetic_frontier_lift
+    file: src/lean/ClosureFrontier/TheoremTrack/ArithmeticBridge.lean
+    source: Walsh, A note on the consistency operator, Theorem 2.4.
+    independent_conditions: actual syntax Computable, implication Monotone, bounded Pi range complexity, strict strengthening on every consistent input, and a first-consistency upper bound
+    source_obligation: WalshImportedLaw must be justified by the precisely matched source theorem in the actual arithmetic presentation.
+    result: A true support cone on which the first-consistency representative agrees modulo provability; efficiency transfers for any invariant ledger whose domain contains the representative.
+    guard_is_in_this_global_class: false
+    reason: The guard adds nothing at top, so global uniform strictness fails; its concrete agreement has a separate direct proof.
+    source_proof_remechanized: false
+  effectivity_boundary:
+    syntax_presentation: SentencePresentation requires actual Computable constructor and consistency maps.
+    equivalence: SentenceEquivalent is mutual implication in the declared preorder.
+    quotient_bridge: sentence_equivalent_iff_quotient_eq
+    quotient_computability_asserted: false
+    provability_score_computability_asserted: false
+    actual_arithmetic_interpretation: Mathematical instantiation documented with checked named sources; Lean verifies compositions over its explicitly supplied presentation.
+validation:
+  command: make check
+  semantic_test_file: tests/lean/Strengthening.lean
+  fixture_scope: Finite Boolean and modal logical fixtures validate the algebraic mechanisms; they are not EA, PA, or substitutes for the arithmetic source proof.
+  controls:
+    - First application can change state even with zero package switches.
+    - Sharp growth budget for all horizons and infinite switching witness.
+    - Proper canonical subset can cover every represented cone class.
+    - Nonempty domain and support can have an uncovered efficient class under its counterledger.
+    - Weak Walsh branch is inhabited and must be excluded by the strictness hypothesis.
+    - Finite logical Walsh law can be supplied without a new axiom.
+    - Distinct codes can be mutually equivalent in a preorder.
+    - The guard, both consistency unprovability premises, and a true support coexist in the finite modal regression fixture.
+    - Nonconstant arithmetic-style ledger and dominated identity control.
+  status: passed
+  exit_code: 0
+  python_tests_passed: 39
+  audited_project_definitions_and_theorems: 92
+  completion_review: docs/findings/strengthening_review.yaml
+claim_boundary:
+  - No new unconditional arithmetic classification or new proof of incompleteness.
+  - No promotion of literature proof parameters to independently mechanized facts.
+  - No canonicalization of arbitrary recursive monotone operators on a preassigned cone.
+  - The original broader conditional theorem and manuscript files remain unchanged.
+  - No new vendor experiment or empirical interaction claim is part of this strengthening.
