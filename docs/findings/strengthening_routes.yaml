@@ -1,0 +1,83 @@
+review_id: strengthening_routes_2026_10_03
+based_on_commit: 763a330
+paper_edited: false
+recommendation: Add a discharged restricted arithmetic case and substantive structural theorems before broadening the headline.
+current_hinge:
+  fact: The conditional main theorem assumes cone canonicalization and derives efficiency transport.
+  consequence: More abstract transport lemmas alone do not supply the missing arithmetic representative.
+routes:
+  - id: first_consistency_arithmetic_instance
+    priority: highest_value
+    status: literature_based_derivation_identified_not_mechanized
+    imported_source:
+      title: A note on the consistency operator
+      author: James Walsh
+      url: https://arxiv.org/pdf/1905.00998
+      theorem: '2.4 (also 1.5)'
+    setting: A sound effectively axiomatized extension T of EA; recursive implication-monotone sentence operator g with range in a fixed Pi_k complexity class.
+    additional_hypotheses:
+      - For every T-consistent phi, T + phi does not prove g(phi).
+      - For every phi, T + phi + Con_T(phi) proves g(phi).
+    derived_conclusion: There exists a true cone C on which T proves (phi and g(phi)) iff (phi and Con_T(phi)).
+    derivation: >-
+      Walsh's dichotomy supplies either a true cone where g adds no strength or a
+      true cone where adding g proves consistency. The first option contradicts
+      uniform strictness at a true sentence. On the second cone the upper bound
+      supplies the reverse implication, giving provable equivalence.
+    contribution_scope: Imported arithmetic theorem plus an explicit bridge; not a new proof of Walsh's classification.
+    remaining_bridges:
+      - Computability acts on sentence syntax codes; arithmetic agreement is provable equivalence, not literal equality of codes.
+      - Use an equivalence relation on outputs or an explicitly justified quotient; arbitrary quotient encodings do not supply effective sentence representatives.
+      - The source yields existence of a true cone, not agreement on any preassigned cone.
+      - Establish a declared nonconstant ledger's invariance on the selected support before transferring efficiency.
+      - Give a concrete operator/domain example satisfying the hypotheses.
+    strongest_honest_endpoint: A restricted arithmetic corollary with canonicalization supplied by a named established theorem, retaining the broader abstract conditional theorem separately.
+  - id: quantitative_package_change_budget
+    priority: feasible_structural_strengthening
+    status: mathematical_derivation_available_not_mechanized
+    hypotheses: A sequence of idempotent endomaps p_t on one state space, with x_(t+1) = p_t(x_t) and no exogenous input updates.
+    conclusion: In any finite horizon, the number of changed-state transitions is at most one plus the number of switches between consecutive package maps.
+    proof: >-
+      For t >= 1, if p_t = p_(t-1), then x_(t+1) = p_t(p_(t-1)(x_(t-1)))
+      = p_(t-1)(x_(t-1)) = x_t by idempotence. Thus each changed-state transition
+      after the first injects into a same-index package switch. Count those indices.
+    corollary: Infinitely many changed-state transitions require infinitely many package switches.
+    positive_example:
+      carrier: natural_numbers_with_usual_order
+      maps: 'p(2k)=2k+1, p(2k+1)=2k+1; q(2k)=2k, q(2k+1)=2k+2'
+      laws: Both maps are computable, monotone, inflationary, and idempotent.
+      orbit: Starting at zero and alternating p,q yields x_t=t.
+      interpretation: Two available packages suffice for unbounded growth through repeated switches; infinitely many distinct packages are unnecessary.
+    novelty_judgment: Elementary structural theorem; useful connection between saturation and controlled dynamics, not a new incompleteness theorem.
+  - id: universal_ledger_canonicality_boundary
+    priority: feasible_scope_theorem
+    status: mathematical_derivation_available_not_mechanized
+    setting: Fixed cone-equivalence relation on a domain D, canonical family K contained in D, and all real-valued ledgers invariant under that equivalence.
+    equivalence: Every efficient operator has a K representative for every invariant ledger iff K intersects every cone-equivalence class represented in D.
+    proof_forward: >-
+      Fix x in D. Use yield 1 on x's cone-equivalence class and 0 elsewhere,
+      with constant zero cost. This ledger is invariant and x is efficient.
+      Universal-ledger canonicality therefore supplies a K representative for x.
+    proof_reverse: Class coverage already supplies a representative for every operator, hence for every efficient operator under every ledger.
+    consequence: Under unrestricted invariant ledgers, efficiency alone cannot force a proper canonical family; any positive selection theorem must use additional structure in the admissible ledgers or operator domain.
+    limitation: The class-indicator ledger is set-theoretic. This argument does not establish the corresponding result for computable ledgers with undecidable cone equivalence.
+literature_boundary:
+  source:
+    title: Evitable iterates of the consistency operator
+    author: James Walsh
+    url: https://arxiv.org/pdf/2202.01174
+    theorem: '1.7'
+  implication: Broad recursive-monotone classification by consistency iterates on a true cone cannot be assumed from general monotonicity and effectivity; counterexamples oscillate between strengths cofinally.
+  exact_match_warning: These counterexamples constrain the standard arithmetic reading; they do not refute every specially restricted domain, ledger, or supplied contract.
+empirical_priority:
+  recommendation: Keep existing descriptive comparisons scoped; treat fresh confirmation as a separate supporting task after choosing the mathematical endpoint.
+  reason: Completing 18 missing anchors does not by itself prove an interaction effect, repair the missing arithmetic bridge, or establish best-subprogram superiority.
+self_review:
+  independent_review: false
+  new_lean_results_claimed: false
+  arithmetic_representative_independently_derived_in_repo: false
+  checks:
+    - Universal-ledger proof explicitly quantifies over all invariant ledgers and distinguishes computable restrictions.
+    - Dynamic budget fixes the recurrence and input; map switches are distinct from the number of distinct maps.
+    - Arithmetic route preserves equivalence versus literal equality and existence versus preselected support quantifiers.
+    - Literature counterexamples do not silently downgrade the existing conditional theorem.
